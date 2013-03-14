@@ -1,0 +1,67 @@
+C:\MoSync\workspace\testproject\Output\Release\Android\Android\main.s:  \
+ C:\MoSync\workspace\testproject\main.cpp c:/MoSync/include/conprint.h \
+  c:/MoSync/include/ma.h c:/MoSync/include/maapi.h \
+  c:/MoSync/include/maapi_defs.h c:/MoSync/include/maarg.h \
+  c:/MoSync/include/mastring.h c:/MoSync/include/mactype.h \
+  c:/MoSync/include/mavsprintf.h c:/MoSync/include/maassert.h \
+  c:/MoSync/include/MAUtil/Moblet.h c:/MoSync/include/ma.h \
+  c:/MoSync/include/MAUtil/Environment.h \
+  c:/MoSync/include/MAUtil/Vector.h \
+  c:/MoSync/include/MAUtil/ListenerSet.h \
+  c:/MoSync/include/Wormhole/HybridMoblet.h \
+  c:/MoSync/include/MAUtil/Environment.h \
+  c:/MoSync/include/MAUtil/Vector.h \
+  c:/MoSync/include/Wormhole/CustomMoblet.h \
+  c:/MoSync/include/Wormhole/MessageHandler.h \
+  c:/MoSync/include/MAUtil/String.h c:/MoSync/include/MAUtil/RefCounted.h \
+  c:/MoSync/include/MAUtil/HashMap.h c:/MoSync/include/MAUtil/HashDict.h \
+  c:/MoSync/include/maheap.h c:/MoSync/include/kazlib/hash.h \
+  c:/MoSync/include/limits.h c:/MoSync/include/MAUtil/collection_common.h \
+  c:/MoSync/include/MAUtil/String.h \
+  c:/MoSync/include/MAUtil/HashDict_impl.h \
+  c:/MoSync/include/MAUtil/HashMap_impl.h \
+  c:/MoSync/include/NativeUI/WebView.h \
+  c:/MoSync/include/NativeUI/Widget.h c:/MoSync/include/MAUtil/Map.h \
+  c:/MoSync/include/MAUtil/Dictionary.h c:/MoSync/include/kazlib/dict.h \
+  c:/MoSync/include/MAUtil/Dictionary_impl.h \
+  c:/MoSync/include/MAUtil/util.h c:/MoSync/include/IX_WIDGET.h \
+  c:/MoSync/include/NativeUI/WidgetUtil.h \
+  c:/MoSync/include/Wormhole/WebAppMoblet.h \
+  c:/MoSync/include/NativeUI/Screen.h \
+  c:/MoSync/include/Wormhole/WebViewMessage.h \
+  c:/MoSync/include/Wormhole/FileUtil.h \
+  c:/MoSync/include/Wormhole/MessageProtocol.h \
+  c:/MoSync/include/Wormhole/MessageStream.h \
+  c:/MoSync/include/Wormhole/Libs/JSONMessage.h \
+  c:/MoSync/include/Wormhole/MessageStreamJSON.h \
+  c:/MoSync/include/yajl/YAJLDom.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/PhoneGapMessageHandler.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/../../FileUtil.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/../JSONMessage.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/PhoneGapSensors.h \
+  c:/MoSync/include/Wormhole/WebViewMessage.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/PhoneGapFile.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/PhoneGapCapture.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/PhoneGapCamera.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/../W3C/SensorManager.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/../Notification/PushNotificationManager.h \
+  c:/MoSync/include/Notification/PushNotificationListener.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/../Notification/../JSONMessage.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/../Notification/TCPConnection.h \
+  c:/MoSync/include/MAUtil/Connection.h \
+  c:/MoSync/include/Wormhole/Libs/JSNativeUI/NativeUIMessageHandler.h \
+  c:/MoSync/include/Wormhole/Libs/JSNativeUI/../../MessageStream.h \
+  c:/MoSync/include/Wormhole/Libs/JSNativeUI/ResourceMessageHandler.h \
+  c:/MoSync/include/MAUtil/Downloader.h \
+  c:/MoSync/include/MAUtil/Connection.h c:/MoSync/include/MAUtil/util.h \
+  c:/MoSync/include/Wormhole/Libs/JSNativeUI/../../FileUtil.h \
+  c:/MoSync/include/Wormhole/Encoder.h \
+  c:/MoSync/include/Wormhole/FunTable.h \
+  c:/MoSync/include/Wormhole/WebAppMoblet.h \
+  c:/MoSync/include/Wormhole/MessageProtocol.h \
+  c:/MoSync/include/Wormhole/MessageStream.h \
+  c:/MoSync/include/Wormhole/Libs/JSONMessage.h \
+  c:/MoSync/include/Wormhole/Libs/PhoneGap/PhoneGapMessageHandler.h \
+  c:/MoSync/include/Wormhole/Libs/JSNativeUI/NativeUIMessageHandler.h \
+  c:/MoSync/include/Wormhole/Libs/JSNativeUI/ResourceMessageHandler.h \
+  c:/MoSync/include/Wormhole/Encoder.h c:/MoSync/include/maapi.h
