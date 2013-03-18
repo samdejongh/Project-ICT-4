@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using MessageBox = System.Windows.MessageBox;
+using Path = System.IO.Path;
 
 namespace WpfApplication10
 {
@@ -43,7 +45,6 @@ namespace WpfApplication10
                 }
             }
         }
-
         private void Debug_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             debug2.Items.Clear(); //anders blijft er meer en meer bijkomen bij een verandering
@@ -67,6 +68,17 @@ namespace WpfApplication10
                 
             
 
+        }
+
+        private void wDocument_Click(object sender, RoutedEventArgs e)
+        {
+            debug2.SelectAll();
+            string test = debug2.SelectedItems.ToString();
+            foreach (var VARIABLE in debug2.SelectedItems)
+            {
+            }
+            //MessageBox.Show(test);
+            
         }
     }
 }
