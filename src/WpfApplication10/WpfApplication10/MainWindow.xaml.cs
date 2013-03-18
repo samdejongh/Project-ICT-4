@@ -41,7 +41,8 @@ namespace WpfApplication10
                 string[] files = Directory.GetFiles(folder.SelectedPath);
                 foreach (var file in files)
                 {
-                    debug.Items.Add(file);
+                    debug.Items.Add(Path.GetFileName(file));
+                    
                 }
             }
         }
