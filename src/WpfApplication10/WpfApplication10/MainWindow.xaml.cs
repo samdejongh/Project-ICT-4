@@ -23,6 +23,8 @@ namespace WpfApplication10
     /// </summary>
     public partial class MainWindow : Window
     {
+        int countingtitle=0; //zodat die datum enzo er maar 1 keer opstaat
+
         public MainWindow()
         {
             InitializeComponent();
@@ -44,7 +46,27 @@ namespace WpfApplication10
 
         private void Debug_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            debug.SelectedItems.ToString();
+            debug2.Items.Clear(); //anders blijft er meer en meer bijkomen bij een verandering
+            countingtitle = 0;
+
+            for (int i = 0; i < debug.SelectedItems.Count; i++)
+            {
+                using (StreamReader reader = new StreamReader(Convert.ToString(debug.SelectedItems[i]))) //vanaf hier gewoon simpelweg elke selecteditem in die 2delistbox zetten (debug2)
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        if (countingtitle==0 || line.ToString().Contains("Date") == false)
+                        {
+                            debug2.Items.Add(line);
+                            countingtitle = 1; //zo komt er dus maar 1 keer die datum in
+                        }
+                    }
+                }
+            }
+                
+            
+
         }
     }
 }
