@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WpfApplication10.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="CSV to Excel" Height="350" Width="525">
     
     <Grid>
         <Grid.RowDefinitions>
@@ -9,12 +9,16 @@
             <RowDefinition Height="0.6*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Menu IsMainMenu="True" Height="27">
-            <MenuItem Header="_File" />
-            <MenuItem Header="_Edit" />
-            <MenuItem Header="_View" />
-            <MenuItem Header="_Window" />
-            <MenuItem Header="_Help" />
+        <Menu IsMainMenu="True" >
+            <MenuItem Header="_File" Click="MenuItem_OnClick">
+                <MenuItem Header="_Read Folder" Click="rFolder_Click"/>
+                <MenuItem Header="_Write Document" Click="wDocument_Click"/>
+                <Separator />
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+            <MenuItem Header="_Edit" >
+                <MenuItem Header="Select All" Click="sAll_Click"></MenuItem>
+            </MenuItem>
         </Menu>
         <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button x:Name="rFolder" Click="rFolder_Click" Margin="5" Content="Read Folder"/>

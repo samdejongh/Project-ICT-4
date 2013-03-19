@@ -41,7 +41,9 @@ namespace WpfApplication10
                 string[] files = Directory.GetFiles(folder.SelectedPath);
                 foreach (var file in files)
                 {
-                    debug.Items.Add(Path.GetFileName(file));
+                    debug.Items.Add(file);//dit werk wel maar ni voor de volgende stap
+                                                            // ik heb effe zitte sukkelen me nen databinder naar de listbox maar da was zo veel gezever da
+                                                            //ik da heb opgegeven
                     
                 }
             }
@@ -85,6 +87,17 @@ namespace WpfApplication10
         private void sAll_Click(object sender, RoutedEventArgs e)
         {
             debug.SelectAll();
+        }
+
+        private void MenuItem_OnClick(object sender, RoutedEventArgs e)//exit button van menu
+        {
+            MessageBoxResult dialogResult = MessageBox.Show(@"Do you want to quit?", @"Sure", MessageBoxButton.YesNo);//vraag in een message box
+            if (dialogResult == MessageBoxResult.Yes)
+            {
+                Close();//afsluiten van het programma
+            }
+            
+            
         }
     }
 }
