@@ -81,5 +81,10 @@ namespace WpfApplication10
             //MessageBox.Show(test);
             
         }
+
+        private void sAll_Click(object sender, RoutedEventArgs e)
+        {
+            debug.SelectAll();
+        }
     }
 }
