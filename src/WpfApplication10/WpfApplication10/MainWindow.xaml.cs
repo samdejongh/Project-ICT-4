@@ -27,7 +27,8 @@ namespace WpfApplication10
     public partial class MainWindow : Window
     {
         int countingtitle = 0; //zodat die datum enzo er maar 1 keer opstaat
-        string[] allewoorden;
+        List<string> words;
+        int teller;
 
 
         public MainWindow()
@@ -47,8 +48,6 @@ namespace WpfApplication10
                     debug.Items.Add(file);//dit werk wel maar ni voor de volgende stap
                     // ik heb effe zitte sukkelen me nen databinder naar de listbox maar da                                                                                                      was zo veel gezever da
                     //ik da heb opgegeven
-
-                    debug.Items.Add(file); //Path.GetFileName(file)
                 }
             }
         }
@@ -73,8 +72,7 @@ namespace WpfApplication10
                 }
             }
 
-
-
+            stringSplit();
         }
 
         private void wDocument_Click(object sender, RoutedEventArgs e)
@@ -93,11 +91,7 @@ namespace WpfApplication10
             for (int i = 0; i < debug2.Items.Count; i++)
             {
                 string s = Convert.ToString(debug2.Items[i]);
-                string[] words = s.Split('\t');
-                foreach (string word in words)
-                {
-                    
-                }
+                words = s.Split('\t');
             }
         }
 
