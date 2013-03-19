@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using MessageBox = System.Windows.MessageBox;
 using Path = System.IO.Path;
+using OfficeOpenXml;
 
 namespace WpfApplication10
 {
@@ -25,7 +26,7 @@ namespace WpfApplication10
     /// </summary>
     public partial class MainWindow : Window
     {
-        int countingtitle=0; //zodat die datum enzo er maar 1 keer opstaat
+        int countingtitle = 0; //zodat die datum enzo er maar 1 keer opstaat
 
         public MainWindow()
         {
@@ -42,9 +43,10 @@ namespace WpfApplication10
                 foreach (var file in files)
                 {
                     debug.Items.Add(file);//dit werk wel maar ni voor de volgende stap
-                                                            // ik heb effe zitte sukkelen me nen databinder naar de listbox maar da was zo veel gezever da
-                                                            //ik da heb opgegeven
-                    
+                    // ik heb effe zitte sukkelen me nen databinder naar de listbox maar da                                                                                                      was zo veel gezever da
+                    //ik da heb opgegeven
+
+                    debug.Items.Add(file); //Path.GetFileName(file)
                 }
             }
         }
@@ -60,7 +62,7 @@ namespace WpfApplication10
                     string line;
                     while ((line = reader.ReadLine()) != null)
                     {
-                        if (countingtitle==0 || line.ToString().Contains("Date") == false)
+                        if (countingtitle == 0 || line.ToString().Contains("Date") == false)
                         {
                             debug2.Items.Add(line);
                             countingtitle = 1; //zo komt er dus maar 1 keer die datum in
@@ -68,20 +70,47 @@ namespace WpfApplication10
                     }
                 }
             }
-                
-            
+
+
 
         }
 
         private void wDocument_Click(object sender, RoutedEventArgs e)
         {
-            debug2.SelectAll();
-            string test = debug2.SelectedItems.ToString();
-            foreach (var VARIABLE in debug2.SelectedItems)
+            AddtoExcel2();
+            //debug2.SelectAll();
+            //string test = debug2.SelectedItems.ToString();
+            //foreach (var VARIABLE in debug2.SelectedItems)
             {
             }
             //MessageBox.Show(test);
-            
+        }
+
+        void stringSplit()
+        {
+            for (int i = 0; i < debug2.Items.Count; i++)
+            {
+                string s = Convert.ToString(debug2.Items[i]);
+                string[] words = s.Split('\t');
+                foreach (string word in words)
+                {
+
+                }
+            }
+        }
+
+        void AddtoExcel2()
+        {
+            FileInfo newFile = new FileInfo(@"C:\Users\brent\Documents\mynewfile.xlsx");
+            using (ExcelPackage xlPackage = new ExcelPackage(newFile))
+            {
+                ExcelWorksheet worksheet = xlPackage.Workbook.Worksheets.Add("sheet 2");
+                //worksheet.Cell(1, 1).Value = "";
+
+                xlPackage.Workbook.Properties.Title = "Titel";
+                xlPackage.Workbook.Properties.Author = "Maker";
+                xlPackage.Save();
+            }
         }
 
         private void sAll_Click(object sender, RoutedEventArgs e)
@@ -91,13 +120,16 @@ namespace WpfApplication10
 
         private void MenuItem_OnClick(object sender, RoutedEventArgs e)//exit button van menu
         {
-            MessageBoxResult dialogResult = MessageBox.Show(@"Do you want to quit?", @"Sure", MessageBoxButton.YesNo);//vraag in een message box
+            MessageBoxResult dialogResult = MessageBox.Show(@"Do you want to quit?", @"Sure", MessageBoxButton.YesNo);
+            
+            //vraag ineen message box
+
             if (dialogResult == MessageBoxResult.Yes)
             {
                 Close();//afsluiten van het programma
             }
-            
-            
+
+
         }
 
         private void About(object sender, RoutedEventArgs e)

@@ -1,5 +1,4 @@
-﻿/*
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +17,7 @@ namespace WpfApplication10
         public void Init()
         {
             xlApp = new Microsoft.Office.Interop.Excel.Application();
-            xlWorkBook = xlApp.Workbooks.Open("email.xls", 0, false, 5, "", "", false, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
+            xlWorkBook = xlApp.Workbooks.Add(misValue);
 
             xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
             range = xlWorkSheet.UsedRange;
@@ -44,7 +43,7 @@ namespace WpfApplication10
             catch (Exception ex)
             {
                 obj = null;
-                MessageBox.Show("Het object kan niet weergegeven worden " + ex.ToString());
+                System.Windows.MessageBox.Show("Het object kan niet weergegeven worden " + ex.ToString());
             }
             finally
             {
@@ -53,4 +52,3 @@ namespace WpfApplication10
         }
     }
 }
-*/

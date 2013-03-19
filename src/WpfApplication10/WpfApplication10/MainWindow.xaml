@@ -40,6 +40,5 @@
                 ></ListBox>
             <ListBox Grid.Column="1" x:Name="debug2" SelectionMode="Extended"></ListBox>
         </Grid>
-        
     </Grid>
 </Window>
