@@ -99,5 +99,12 @@ namespace WpfApplication10
             
             
         }
+
+        private void About(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(
+                "This software is coded by Brent and Senne \nIf you want to use this software please contact us",
+                "About");
+        }
     }
 }
