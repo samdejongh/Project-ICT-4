@@ -106,7 +106,6 @@ namespace WpfApplication10
             {
                 ExcelWorksheet worksheet = xlPackage.Workbook.Worksheets.Add("sheet 2");
                 //worksheet.Cell(1, 1).Value = "";
-
                 xlPackage.Workbook.Properties.Title = "Titel";
                 xlPackage.Workbook.Properties.Author = "Maker";
                 xlPackage.Save();
