@@ -27,6 +27,8 @@ namespace WpfApplication10
     public partial class MainWindow : Window
     {
         int countingtitle = 0; //zodat die datum enzo er maar 1 keer opstaat
+        string[] allewoorden;
+
 
         public MainWindow()
         {
@@ -94,7 +96,7 @@ namespace WpfApplication10
                 string[] words = s.Split('\t');
                 foreach (string word in words)
                 {
-
+                    
                 }
             }
         }
