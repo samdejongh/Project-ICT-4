@@ -27,6 +27,7 @@
             <Button x:Name="rFolder" Click="rFolder_Click" Margin="5" Content="Read Folder"/>
             <Button x:Name="sAll" Click="sAll_Click" Margin="5" Content="Select All"/>
             <Button x:Name="wDocument" Margin="5" Content="Write Document" Click="wDocument_Click"/>
+            <Button x:Name="Export" Click="Export_Click"> export to csv file</Button>
         </StackPanel>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
