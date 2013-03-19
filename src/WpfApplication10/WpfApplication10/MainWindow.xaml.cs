@@ -27,9 +27,9 @@ namespace WpfApplication10
     public partial class MainWindow : Window
     {
         int countingtitle = 0; //zodat die datum enzo er maar 1 keer opstaat
-        List<string> words;
+        string[] words;
         int teller;
-
+        List<string> ls = new List<string>();
 
         public MainWindow()
         {
@@ -88,19 +88,36 @@ namespace WpfApplication10
 
         void stringSplit()
         {
+            string s="";
             for (int i = 0; i < debug2.Items.Count; i++)
             {
-                string s = Convert.ToString(debug2.Items[i]);
-                words = s.Split('\t');
+                s += Convert.ToString(debug2.Items[i]);
+                
+
             }
+            words = s.Split('\t');
+
         }
 
         void AddtoExcel2()
         {
-            FileInfo newFile = new FileInfo(@"C:\Users\brent\Documents\mynewfile.xlsx");
+            int i = 1;
+            int j = 1;
+            FileInfo newFile = new FileInfo(@"C:\Users\senne\Documents\mynewfile.xlsx");
             using (ExcelPackage xlPackage = new ExcelPackage(newFile))
             {
                 ExcelWorksheet worksheet = xlPackage.Workbook.Worksheets.Add("sheet 2");
+                foreach (string word in words)
+                {
+                    
+                            worksheet.Cell(i, j).Value = word;
+                    j++;
+                    if (j == 159)
+                    {
+                        j = 1;
+                        i++;
+                    }
+                }
                 //worksheet.Cell(1, 1).Value = "";
                 xlPackage.Workbook.Properties.Title = "Titel";
                 xlPackage.Workbook.Properties.Author = "Maker";
