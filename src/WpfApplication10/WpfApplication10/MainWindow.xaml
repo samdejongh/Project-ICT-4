@@ -12,7 +12,7 @@
         <Menu IsMainMenu="True" >
             <MenuItem Header="_File" Click="MenuItem_OnClick">
                 <MenuItem Header="_Read Folder" Click="rFolder_Click"/>
-                <MenuItem Header="_Write Document" Click="wDocument_Click"/>
+                <MenuItem Header="_Export to csv file" Click="Export_Click"></MenuItem>
                 <Separator />
                 <MenuItem Header="_Exit" />
             </MenuItem>
@@ -26,8 +26,7 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button x:Name="rFolder" Click="rFolder_Click" Margin="5" Content="Read Folder"/>
             <Button x:Name="sAll" Click="sAll_Click" Margin="5" Content="Select All"/>
-            <Button x:Name="wDocument" Margin="5" Content="Write Document" Click="wDocument_Click"/>
-            <Button x:Name="Export" Click="Export_Click"> export to csv file</Button>
+            <Button x:Name="Export" Click="Export_Click" Margin="5"> export to csv file</Button>
         </StackPanel>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>

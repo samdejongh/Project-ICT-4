@@ -18,6 +18,8 @@ using Microsoft.Win32;
 using MessageBox = System.Windows.MessageBox;
 using Path = System.IO.Path;
 using OfficeOpenXml;
+using FileDialog = System.Windows.Forms.FileDialog;
+using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 
 namespace WpfApplication10
 {
@@ -71,64 +73,13 @@ namespace WpfApplication10
                     }
                 }
             }
-
-            stringSplit();
         }
 
-        private void wDocument_Click(object sender, RoutedEventArgs e)
-        {
-            AddtoExcel2();
-            //debug2.SelectAll();
-            //string test = debug2.SelectedItems.ToString();
-            //foreach (var VARIABLE in debug2.SelectedItems)
-            {
-            }
-            //MessageBox.Show(test);
-        }
+        
 
-        void stringSplit()
-        {
-            string s="";
-            for (int i = 0; i < debug2.Items.Count; i++)
-            {
-<<<<<<< HEAD
-                s += Convert.ToString(debug2.Items[i]);
-                
-=======
-                string s = Convert.ToString(debug2.Items[i]);
->>>>>>> refs/remotes/origin/master
+        
 
-            }
-            words = s.Split('\t');
-
-        }
-
-        void AddtoExcel2()
-        {
-            int i = 1;
-            int j = 1;
-            FileInfo newFile = new FileInfo(@"C:\Users\senne\Documents\mynewfile.xlsx");
-            using (ExcelPackage xlPackage = new ExcelPackage(newFile))
-            {
-                ExcelWorksheet worksheet = xlPackage.Workbook.Worksheets.Add("sheet 2");
-                foreach (string word in words)
-                {
-                    
-                            worksheet.Cell(i, j).Value = word;
-                    j++;
-                    if (j == 159)
-                    {
-                        j = 1;
-                        i++;
-                    }
-                }
-                //worksheet.Cell(1, 1).Value = "";
-                xlPackage.Workbook.Properties.Title = "Titel";
-                xlPackage.Workbook.Properties.Author = "Maker";
-                xlPackage.Save();
-            }
-        }
-
+       
         private void sAll_Click(object sender, RoutedEventArgs e)
         {
             debug.SelectAll();
@@ -157,13 +108,26 @@ namespace WpfApplication10
 
         private void Export_Click(object sender, RoutedEventArgs e)
         {
-            StreamWriter myOutputStream = new StreamWriter(@"C:\Users\brent\Documents\Myfile.txt");
-            foreach (var item in debug2.Items)
+            string s=" ";
+            string t = " ";
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "csv files (*.csv)|*.csv";
+            dlg.Title = "Export in CSV format";
+            dlg.CheckPathExists = true;
+            //If InitialDirectory is not specified, the default path is My Documents
+            //dlg.InitialDirectory = Application.StartupPath; 
+            dlg.ShowDialog();
+            if (dlg.FileName != "")
             {
-                myOutputStream.WriteLine(item.ToString());
+                StreamWriter myOutputStream = new StreamWriter(dlg.FileName);
+                for (int i = 0; i < debug2.Items.Count; i++)
+                {
+                    s = Convert.ToString(debug2.Items[i]);
+                    t = s.Replace('\t', ';');
+                    myOutputStream.WriteLine(t);
+                }
+                myOutputStream.Close();
             }
-
-            myOutputStream.Close();
         }
     }
 }
