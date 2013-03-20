@@ -17,7 +17,8 @@
                 <MenuItem Header="_Exit" />
             </MenuItem>
             <MenuItem Header="_Edit" >
-                <MenuItem Header="Select All" Click="sAll_Click"></MenuItem>
+                <MenuItem Header="Select _All" Click="sAll_Click"></MenuItem>
+                <MenuItem Header="_Clear" Click="clAll_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="_Help">
                 <MenuItem Header="_About" Click="About"/>
@@ -25,7 +26,8 @@
         </Menu>
         <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button x:Name="rFolder" Click="rFolder_Click" Margin="5" Content="Read Folder"/>
-            <Button x:Name="sAll" Click="sAll_Click" Margin="5" Content="Select All"/>
+            <Button ToolTip="Select all files in the left column" x:Name="sAll" Click="sAll_Click" Margin="5" Content="Select All"/>
+            <Button ToolTip="Clear all files" x:Name="clAll" Click="clAll_Click" Margin="5" Content="Clear"/>
             <Button x:Name="Export" Click="Export_Click" Margin="5"> export to csv file</Button>
         </StackPanel>
         <Grid Grid.Row="2">

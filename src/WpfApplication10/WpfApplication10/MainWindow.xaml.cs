@@ -30,7 +30,7 @@ namespace WpfApplication10
             folder.ShowDialog();
             if (folder.SelectedPath != string.Empty)
             {
-                string[] files = Directory.GetFiles(folder.SelectedPath);
+                string[] files = Directory.GetFiles(folder.SelectedPath,"*.txt");
                 foreach (var file in files)
                 {
                     debug.Items.Add(file); //dit werk wel maar ni voor de volgende stap
@@ -70,7 +70,12 @@ namespace WpfApplication10
 
         private void sAll_Click(object sender, RoutedEventArgs e)
         {
+            if(debug.HasItems)
             debug.SelectAll();
+            else
+            {
+                MessageBox.Show("There are no file's selected", "Error");
+            }
         }
 
         private void MenuItem_OnClick(object sender, RoutedEventArgs e) //exit button van menu
@@ -98,23 +103,49 @@ namespace WpfApplication10
         {
             string s = " ";
             string t = " ";
-            SaveFileDialog dlg = new SaveFileDialog();
-            dlg.Filter = "csv files (*.csv)|*.csv";
-            dlg.Title = "Export in CSV format";
-            dlg.CheckPathExists = true;
-            //If InitialDirectory is not specified, the default path is My Documents
-            //dlg.InitialDirectory = Application.StartupPath; 
-            dlg.ShowDialog();
-            if (dlg.FileName != "")
+            if (debug.SelectedItems!=null&& debug2.HasItems)
             {
-                StreamWriter myOutputStream = new StreamWriter(dlg.FileName);
-                for (int i = 0; i < debug2.Items.Count; i++)
+                SaveFileDialog dlg = new SaveFileDialog();
+                dlg.Filter = "csv files (*.csv)|*.csv";
+                dlg.Title = "Export in CSV format";
+                dlg.CheckPathExists = true;
+                //If InitialDirectory is not specified, the default path is My Documents
+                //dlg.InitialDirectory = Application.StartupPath; 
+                dlg.ShowDialog();
+                if (dlg.FileName != "")
                 {
-                    s = Convert.ToString(debug2.Items[i]);
-                    t = s.Replace('\t', ';');
-                    myOutputStream.WriteLine(t);
+                    StreamWriter myOutputStream = new StreamWriter(dlg.FileName);
+                    for (int i = 0; i < debug2.Items.Count; i++)
+                    {
+                        s = Convert.ToString(debug2.Items[i]);
+                        t = s.Replace('\t', ';');
+                        myOutputStream.WriteLine(t);
+                    }
+                    myOutputStream.Close();
                 }
-                myOutputStream.Close();
+            }
+            else if (!debug.HasItems)
+            {
+                MessageBox.Show("There are no file's", "Error");
+            }
+            else if (!debug2.HasItems && debug.HasItems)
+            {
+                MessageBox.Show("There are no file's selected", "Error");
+            }
+            else
+            {
+                MessageBox.Show("Unknown Error", "Error"); 
+            }
+
+        }
+
+        private void clAll_Click(object sender, RoutedEventArgs e)
+        {
+            if(debug.HasItems)
+            debug.Items.Clear();
+            else
+            {
+                MessageBox.Show("There are no files to remove", "Error");
             }
         }
     }
