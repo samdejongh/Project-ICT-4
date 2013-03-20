@@ -91,8 +91,12 @@ namespace WpfApplication10
             string s="";
             for (int i = 0; i < debug2.Items.Count; i++)
             {
+<<<<<<< HEAD
                 s += Convert.ToString(debug2.Items[i]);
                 
+=======
+                string s = Convert.ToString(debug2.Items[i]);
+>>>>>>> refs/remotes/origin/master
 
             }
             words = s.Split('\t');
@@ -149,6 +153,17 @@ namespace WpfApplication10
             MessageBox.Show(
                 "This software is coded by Brent and Senne \nIf you want to use this software please contact us",
                 "About");
+        }
+
+        private void Export_Click(object sender, RoutedEventArgs e)
+        {
+            StreamWriter myOutputStream = new StreamWriter(@"C:\Users\brent\Documents\Myfile.txt");
+            foreach (var item in debug2.Items)
+            {
+                myOutputStream.WriteLine(item.ToString());
+            }
+
+            myOutputStream.Close();
         }
     }
 }
