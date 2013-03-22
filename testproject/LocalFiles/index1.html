@@ -5,23 +5,21 @@
 <script type="text/javascript" charset="utf-8" src="js/wormhole.js"></script>
 <script type="text/javascript"
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true">
+	
 </script>
 <script type="text/javascript" charset="utf-8" src="js/Maps.js">
 	
 </script>
-<script type="text/javascript">
-document.addEventListener("backbutton", function() {
-	history.go(-1);
-}, false);
-</script>
+
 </head>
-<body onload="initialize()">
+<body onload="initialize()"><!--roep de functie initalize op in de file map.js-->
 	<div id="map_canvas" style="width: 100%; height: 70%"></div>
 	<div>
 		<p id="geolocation">Finding geolocation...</p>
+		<p id="speed">Snelheid</p>
 		<p id="debug">debug</p>
 		<div class="pane button" onclick="vibrate()">Vibrate</div>
-		
+		<div class="pane button" onclick="startGPS()">Start GPS</div>
 	</div>
 </body>
 </html>

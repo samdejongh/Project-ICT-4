@@ -18,9 +18,9 @@
 </script>
 <script type="text/javascript">
 
-	document.addEventListener("backbutton", function() {
+	/* document.addEventListener("backbutton", function() {
 		mosync.app.exit();
-	}, false);
+	}, false); */
 
 	$('#select-native-1').live('change', function(e) {
 		x = $(this).val();
@@ -58,7 +58,7 @@
 
 			<div id="btn_TrainingHistory">
 				<img id="img_TrainingHistory" src="traininghistory_icon.png"
-					width="100%" alt="" />
+					width="100%" alt="" onclick="changePage('traininghistory.html')"/>
 			</div>
 
 			<div>
