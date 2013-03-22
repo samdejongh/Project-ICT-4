@@ -46,7 +46,7 @@ function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
 	lati = position.coords.latitude;
 	longi = position.coords.longitude;
 	speed = position.coords.speed;
-	document.getElementById("speed").innerHTML=speed+'m/s'//weergeven van de snelheid
+	document.getElementById("speed").innerHTML='Speed: '+speed+'m/s'//weergeven van de snelheid
 	MapUpdate();//roep de functie mapUpdate aan
 
 }

@@ -10,16 +10,37 @@
 <script type="text/javascript" charset="utf-8" src="js/Maps.js">
 	
 </script>
-
+<style type="text/css">
+p#speed{}
+#map_canvas{
+	position:relative;
+	left:0px;
+	top:0px;
+	z-index:-1;
+}
+#speed{
+		position:absolute;
+		left:10%;
+		top:5.5%;
+		z-index:+1;
+		font-size:14px;
+		font-weight:bold;
+}
+#text{
+	position:relative;
+}
+</style>
 </head>
-<body onload="initialize()"><!--roep de functie initalize op in de file map.js-->
-	<div id="map_canvas" style="width: 100%; height: 70%"></div>
-	<div>
+<body onLoad="initialize()"><!--roep de functie initalize op in de file map.js-->
+	<div id="map_canvas" style="width: 100%; height: 70%">
+    </div>
+    <div align="left"  id="speed">Speed</div>
+	<div id="text">
 		<p id="geolocation">Finding geolocation...</p>
-		<p id="speed">Snelheid</p>
+		
 		<p id="debug">debug</p>
-		<div class="pane button" onclick="vibrate()">Vibrate</div>
-		<div class="pane button" onclick="startGPS()">Start GPS</div>
+		<div class="pane button" onClick="vibrate()">Vibrate</div>
+		<div class="pane button" onClick="startGPS()">Start GPS</div>
 	</div>
 </body>
 </html>
