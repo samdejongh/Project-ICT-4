@@ -9,10 +9,7 @@ function initialize() {//laad de map layout en roep de functie startGPS aan
 	var mapOptions = {
 		center : new google.maps.LatLng(lati, longi),
 		zoom : 10,
-		mapTypeControl : true,//optie om de zoom buttons te laten zien
-		mapTypeControlOptions : {
-			style : google.maps.MapTypeControlStyle.DEFAULT//de panning buttons(staan af momenteel)
-		},
+		mapTypeControl : false,//optie om de zoom buttons te laten zien
 		zoomControl : true,
 		zoomControlOptions : {
 			style : google.maps.ZoomControlStyle.SMALL//de zoom buttons staan aan
@@ -41,11 +38,12 @@ function startGPS() {
 }
 function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
 	var element = document.getElementById('geolocation');
-	element.innerHTML = 'Latitude: ' + position.coords.latitude + '<br />'
-			+ 'Longitude: ' + position.coords.longitude + '<br />';//weergeven van de positie op de pagina
+	element.innerHTML = 'Latitude: ' + position.coords.latitude + ' '
+			+ 'Longitude: ' + position.coords.longitude ;//weergeven van de positie op de pagina
 	lati = position.coords.latitude;
 	longi = position.coords.longitude;
-	speed = position.coords.speed;
+	//speed = Math.round(position.coords.speed);
+	speed =(Math.round(position.coords.speed * 10) / 10).toFixed(1)
 	document.getElementById("speed").innerHTML='Speed: '+speed+'m/s'//weergeven van de snelheid
 	MapUpdate();//roep de functie mapUpdate aan
 
