@@ -5,7 +5,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
-using GemBox.Spreadsheet;
 using Microsoft.Office.Interop.Excel;
 using MessageBox = System.Windows.MessageBox;
 using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
@@ -62,11 +61,6 @@ namespace WpfApplication10
                 }
             }
         }
-
-
-
-
-
 
         private void sAll_Click(object sender, RoutedEventArgs e)
         {
