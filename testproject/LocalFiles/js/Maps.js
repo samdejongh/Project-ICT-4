@@ -18,7 +18,6 @@ function initialize() {//laad de map layout en roep de functie startGPS aan
 		mapTypeId : google.maps.MapTypeId.ROADMAP//welk type van map je laat zien
 	};
 	map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-	alert("test3");
 }
 function startGPS() {
 	alert("gps loaded");//voor debugging
