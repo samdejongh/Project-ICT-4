@@ -37,8 +37,8 @@ function startGPS() {
 function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
 	var element = document.getElementById('geolocation');
 	
-	lati = (Math.round(position.coords.latitude * 10) / 10).toFixed(1);
-	longi = (Math.round(position.coords.longitude * 10) / 10).toFixed(1);
+	lati = position.coords.latitude;
+	longi =position.coords.longitude;
 	speed =((Math.round((position.coords.speed*3.6) * 10) / 10).toFixed(1));
 	document.getElementById("speed").innerHTML='Speed: '+speed+' km/s'//weergeven van de snelheid
 //	element.innerHTML = 'Latitude: ' + position.coords.latitude + '</br> '
