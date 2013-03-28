@@ -13,8 +13,10 @@
 <script
 	src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
 </script>
-<script type="text/javascript"
+<!-- <script type="text/javascript"
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true">
+</script> -->
+<script type="text/javascript" charset="utf-8" src="js/Main.js">
 </script>
 <script type="text/javascript">
 
@@ -32,7 +34,7 @@
 	}
 </script>
 </head>
-<body>
+<body onLoad="checkConnection()">
 	<div id="home" data-role="page">
 		<div data-role="header">
 			<h1>mainpage</h1>
@@ -52,13 +54,13 @@
 			</div>
 
 			<div id="btn_Settings">
-				<a data-transition="slide" onclick="changePage('settings.html')"> <img
+				<a data-transition="slide" onclick="changePage('database.html')"> <img
 					id="img_Settings" src="settings_icon.png" width="100%" alt="" /></a>
 			</div>
 
 			<div id="btn_TrainingHistory">
 				<img id="img_TrainingHistory" src="traininghistory_icon.png"
-					width="100%" alt="" onclick="changePage('traininghistory.html')"/>
+					width="100%" alt="" onclick="changePage('settings.html')"/>
 			</div>
 
 			<div>

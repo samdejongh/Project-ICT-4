@@ -1,9 +1,11 @@
 
+
 var lati = 65.012482;
 var longi = 25.472181;
 var map;
 var marker;
 var speed;
+
 function initialize() {//laad de map layout en roep de functie startGPS aan
 	startGPS();
 	var mapOptions = {
@@ -66,4 +68,9 @@ function MapUpdate() {//de kaart centreren naar de nieuwe locatie
 
 function onError(error) {
 	alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+}
+function data()
+{
+	alert("data");
+	sendtodb("1",lati,longi,"200");
 }
