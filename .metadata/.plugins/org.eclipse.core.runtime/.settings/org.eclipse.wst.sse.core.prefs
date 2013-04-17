@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 task-tag-projects-already-scanned=testproject
+=======
+task-tag-projects-already-scanned=testproject,testproject_Brent
+>>>>>>> 31db4b7... update
