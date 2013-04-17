@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-INDEX VERSION 1.122+C:\Users\senne\Documents\Git\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3513893081.index
-=======
 INDEX VERSION 1.122+C:\Users\brent\Documents\Project ICT4\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2223410785.index
 4235353894.index
-4211502661.index
 1605668934.index
->>>>>>> 31db4b7... update
-1752846413.index
+4101014959.index
+2223410785.index
+4211502661.index

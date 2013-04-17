@@ -1,34 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="21" version="2.0">
+<workbench progressCount="25" version="2.0">
 <workbenchAdvisor/>
-<<<<<<< HEAD
-<window height="768" maximized="true" width="1024" x="192" y="192">
-=======
-<window height="728" maximized="true" width="1024" x="26" y="0">
->>>>>>> 31db4b7... update
+<window height="728" maximized="true" width="1024" x="78" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<<<<<<< HEAD
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="126" y="30"/>
-<coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="com.mobilesorcery.sdk.ui.targetphone" itemType="typeToolBarContribution" x="96" y="30"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="99" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="57" y="30"/>
-<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="99" y="30"/>
-<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="com.mobilesorcery.sdk.ui.changeActiveConfigToolbar" itemType="typeToolBarContribution" x="178" y="30"/>
-<coolItem id="com.mobilesorcery.sdk.ui.profile.toolbar" itemType="typeToolBarContribution" x="249" y="30"/>
-<coolItem id="com.mobilesorcery.sdk.help.searchbox" itemType="typeToolBarContribution" x="165" y="30"/>
-<coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="30"/>
-<coolItem id="group.editor" itemType="typeGroupMarker"/>
-=======
 <coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="153" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.mobilesorcery.sdk.ui.targetphone" itemType="typeToolBarContribution" x="92" y="30"/>
@@ -47,21 +26,14 @@
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
->>>>>>> 31db4b7... update
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page focus="true" label="Workspace - MoSync">
+<page aggregateWorkingSetId="Aggregate for window 1366189144627" focus="true" label="Workspace - MoSync">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<<<<<<< HEAD
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
-</folder>
-</info>
-</editorArea>
-=======
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
@@ -71,13 +43,12 @@
 </editorArea>
 <editor id="org.eclipse.wst.html.core.htmlsource.source" name="index1.html" partName="index1.html" path="C:/Users/brent/Documents/Project ICT4/testproject_Brent/LocalFiles/index1.html" title="index1.html" tooltip="testproject_Brent/LocalFiles/index1.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject_Brent/LocalFiles/index1.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="385" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1163" selectionTopPixel="0"/>
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" partName="Maps.js" path="C:/Users/brent/Documents/Project ICT4/testproject_Brent/LocalFiles/js/Maps.js" title="Maps.js" tooltip="testproject_Brent/LocalFiles/js/Maps.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject_Brent/LocalFiles/js/Maps.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4687" selectionTopPixel="1778"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5243" selectionTopPixel="2251"/>
 </editor>
->>>>>>> 31db4b7... update
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -85,15 +56,10 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<<<<<<< HEAD
-<columnWidths org.eclipse.ui.ide.locationField="120" org.eclipse.ui.ide.markerType="120" org.eclipse.ui.ide.pathField="160" org.eclipse.ui.ide.resourceField="120" org.eclipse.ui.ide.severityAndDescriptionField="400"/>
-=======
 <expanded>
-<category IMemento.internal.id="Errors (13 items)"/>
-<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Errors (1 item)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
->>>>>>> 31db4b7... update
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -101,16 +67,11 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
-<<<<<<< HEAD
-</views>
-<perspectives activePart="org.eclipse.ui.views.ProblemView" activePerspective="com.mobilesorcery.ui.perspective">
-=======
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
 </views>
 <perspectives activePart="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" activePerspective="com.mobilesorcery.ui.perspective">
->>>>>>> 31db4b7... update
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.mobilesorcery.ui.perspective.PerspectiveFactory" id="com.mobilesorcery.ui.perspective" label="MoSync"/>
 <alwaysOnActionSet id="com.mobilesorcery.sdk.help.actionset"/>
@@ -132,10 +93,7 @@
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
-<<<<<<< HEAD
-=======
 <view id="org.eclipse.ui.console.ConsoleView"/>
->>>>>>> 31db4b7... update
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars/>
 <layout>
@@ -149,31 +107,13 @@
 </presentation>
 </folder>
 </info>
-<<<<<<< HEAD
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@d5a9c7" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="topLeft">
-=======
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@19bf878" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="topLeft">
->>>>>>> 31db4b7... update
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="topLeft">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<<<<<<< HEAD
-<info folder="true" part="bottomRight" ratio="0.7495908" ratioLeft="458" ratioRight="153" relationship="4" relative="topLeft">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
-</folder>
-</info>
-<info part="org.eclipse.ui.editorss" ratio="0.249499" ratioLeft="249" ratioRight="749" relationship="2" relative="topLeft"/>
-<info folder="true" part="topRight" ratio="0.69959944" ratioLeft="524" ratioRight="225" relationship="2" relative="org.eclipse.ui.editorss">
-=======
 <info folder="true" part="bottomRight" ratio="0.75" ratioLeft="438" ratioRight="146" relationship="4" relative="topLeft">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -186,7 +126,6 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="topLeft"/>
 <info folder="true" part="topRight" ratio="0.7" ratioLeft="525" ratioRight="225" relationship="2" relative="org.eclipse.ui.editorss">
->>>>>>> 31db4b7... update
 <folder appearance="2" expanded="2">
 <page content="com.mobilesorcery.sdk.profiles.ui.view" label="LabelNotFound"/>
 <page content="com.mobilesorcery.sdk.finalizer.ui.view" label="LabelNotFound"/>
@@ -198,70 +137,67 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<<<<<<< HEAD
-<navigationHistory/>
-=======
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/testproject_Brent/LocalFiles/index1.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/Maps.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject/LocalFiles/js/Maps.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/testproject_Brent/LocalFiles/index1.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/testproject_Brent/LocalFiles/index1.html"/>
 </editors>
 <item historyLabel="index1.html" index="0">
-<position info="not_deleted" x="502" y="0"/>
+<position info="not_deleted" x="427" y="0"/>
 </item>
 <item historyLabel="Maps.js" index="1">
-<position info="not_deleted" x="4943" y="0"/>
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Maps.js" index="1">
-<position/>
-</item>
-<item historyLabel="index1.html" index="0">
-<position info="not_deleted" x="519" y="0"/>
-</item>
-<item historyLabel="Maps.js" index="1">
-<position info="not_deleted" x="335" y="0"/>
+<item historyLabel="index1.html" index="2">
+<position info="not_deleted" x="996" y="25"/>
 </item>
 <item historyLabel="Maps.js" index="1">
 <position/>
 </item>
-<item historyLabel="index1.html" index="0">
-<position info="not_deleted" x="431" y="0"/>
+<item historyLabel="Maps.js" index="1">
+<position info="not_deleted" x="4767" y="0"/>
 </item>
 <item historyLabel="Maps.js" index="1">
-<position info="not_deleted" x="567" y="0"/>
-</item>
-<item historyLabel="index1.html" index="0">
-<position info="not_deleted" x="282" y="0"/>
+<position info="not_deleted" x="5070" y="0"/>
 </item>
 <item historyLabel="Maps.js" index="1">
-<position info="not_deleted" x="4237" y="0"/>
+<position info="not_deleted" x="5147" y="0"/>
 </item>
 <item historyLabel="Maps.js" index="1">
-<position info="not_deleted" x="2418" y="0"/>
-</item>
-<item historyLabel="index1.html" index="0">
-<position info="not_deleted" x="385" y="0"/>
+<position/>
 </item>
 <item historyLabel="Maps.js" index="1">
-<position info="not_deleted" x="4716" y="0"/>
-</item>
-<item historyLabel="Maps.js" index="2">
-<position info="not_deleted" x="5315" y="3"/>
+<position/>
 </item>
 <item historyLabel="Maps.js" index="1">
-<position info="not_deleted" x="4690" y="0"/>
+<position/>
+</item>
+<item historyLabel="Maps.js" index="1">
+<position/>
+</item>
+<item historyLabel="index1.html" index="3">
+<position info="not_deleted" x="1163" y="0"/>
+</item>
+<item historyLabel="Maps.js" index="1">
+<position info="not_deleted" x="1725" y="0"/>
+</item>
+<item historyLabel="Maps.js" index="1">
+<position info="not_deleted" x="316" y="0"/>
 </item>
 <item active="true" historyLabel="Maps.js" index="1">
-<position/>
+<position info="not_deleted" x="5245" y="0"/>
 </item>
 </navigationHistory>
->>>>>>> 31db4b7... update
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="topLeft"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -269,16 +205,11 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottomRight"/>
 </trimArea>
 </trimLayout>
 </window>
-<<<<<<< HEAD
-<mruList/>
-=======
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" tooltip="testproject/LocalFiles/js/Maps.js">
-<persistable path="/testproject/LocalFiles/js/Maps.js"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" tooltip="testproject_Brent/LocalFiles/js/Maps.js">
 <persistable path="/testproject_Brent/LocalFiles/js/Maps.js"/>
 </file>
@@ -286,5 +217,4 @@
 <persistable path="/testproject_Brent/LocalFiles/index1.html"/>
 </file>
 </mruList>
->>>>>>> 31db4b7... update
 </workbench>

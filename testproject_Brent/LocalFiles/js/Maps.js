@@ -13,8 +13,9 @@ var northEast;
 var southWest;
 var bounds;
 
+var myVar=setInterval(function(){UpdateLocation()},5000);
+
 function initialize() {//laad de map layout en roep de functie startGPS aan
-alert("ini");
     startGPS();
     	mapOptions = {
         center: new google.maps.LatLng(Current_lat, Current_lng),
@@ -47,14 +48,14 @@ function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
     var element = document.getElementById('geolocation');
 
     Current_lat = position.coords.latitude;
-    alert(Current_lat);
     Current_lng = position.coords.longitude;
+    alert(Current_lat);
+    alert(Current_lng);
     speed = ((Math.round((position.coords.speed * 3.6) * 10) / 10).toFixed(1));
     document.getElementById("speed").innerHTML = 'Speed: ' + speed + ' km/s'//weergeven van de snelheid
     //	element.innerHTML = 'Current_lattude: ' + position.coords.Current_lattude + '</br> '
     //	+ 'Current_lngtude: ' + position.coords.Current_lngtude ;//weergeven van de positie op de pagina
     MapUpdate();//roep de functie mapUpdate aan
-
 }
 
 function MapUpdate() {//de kaart centreren naar de nieuwe locatie
@@ -83,9 +84,7 @@ function onError(error) {
 function Fysics() {
 		// Deletes all markers in the array by removing references to them
 	deleteOverlays();
-	
-	alert(Current_lat);
-	 //map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+		 //map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
     //This calculates the points for the orienteering guide	
     
         var lngSpan = northEast.lng() - southWest.lng(); // gives the span of the Current_lngtude (east-west position)
@@ -116,7 +115,9 @@ function UserToPointDistance()
 
     for (var i = 0; i < 10; i++) {
 	var distance = google.maps.geometry.spherical.computeDistanceBetween(currentlanglong,PointsArray[i]);
-	alert(distance);
+	//alert("point "+ i + " distance = " + Math.round(distance)+" meters");
+	
+	CheckPointDistanceClose(distance);
 	}
 
 }
@@ -132,6 +133,23 @@ function deleteOverlays() {
     markersArray.length = 0;
 	PointsArray = [];
 	markserArray = [];
-	alert("delete");
   }
+}
+
+function CheckPointDistanceClose(distance)
+{
+	if(distance < 10)
+	{
+		alert('Punt Gevonden');
+	}
+	
+	else
+	{
+		alert("Punt te ver");
+	}
+}
+
+UpdateLocation()
+{
+    
 }

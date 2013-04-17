@@ -1,6 +1,6 @@
 .model full
-	.sourcedir 'C:\Users\senne\Documents\Git\testproject/'
-	.sourcefile 'C:\Users\senne\Documents\Git\testproject\main.cpp'
+	.sourcedir 'C:\Users\brent\Documents\Project ICT4\testproject/'
+	.sourcefile 'C:\Users\brent\Documents\Project ICT4\testproject\main.cpp'
 	.stabs	"gcc2_compiled.",60,0,0,0
 	.stabs	"__vtbl_ptr_type:t(0,1)=*(0,2)=f(0,3)=r(0,3);-2147483648;2147483647;",128,0,0,0
 	.stabs	"bool:t(0,4)=@s8;-16;",128,0,0,0
@@ -595,7 +595,7 @@ Lscope16:
 	.stabs	"message:P(46,42)",64,0,45,13
 
 .func __ZN8MyMoblet5orentERN8Wormhole13MessageStreamE, 2, void
-	.stabs	"C:\\Users\\senne\\Documents\\Git\\testproject\\main.cpp",132,0,0,Ltext3
+	.stabs	"C:\\Users\\brent\\Documents\\Project ICT4\\testproject\\main.cpp",132,0,0,Ltext3
 Ltext3:
 	.line 45
 	push rt,d2
