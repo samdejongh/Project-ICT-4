@@ -1,0 +1,3 @@
+INDEX VERSION 1.122+C:\Users\senne\Documents\Git\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3513893081.index
+1752846413.index

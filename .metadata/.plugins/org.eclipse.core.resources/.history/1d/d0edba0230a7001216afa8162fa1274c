@@ -1,0 +1,91 @@
+body
+{
+	/*margin-left:1%;
+	margin-right:1%;
+	margin-top:1%;*/
+	-webkit-transform: scale(0.5, 0.5);
+    -moz-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+}
+
+#header
+{
+	width:100%;
+	background-color:#333;
+}
+
+#btn_RouteGuide
+{
+	position:relative;
+	float:left;
+	left:1%;
+	width:48.5%;
+	margin-top:1%;
+/*	background-size:cover;
+	background-repeat: no-repeat;
+	background-image:url('runnerguide_icon.png');*/
+}
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+#btn_OrienteeringTrainer
+{
+	position:relative;
+	float:right;
+    width:48.5%;
+	right:1%;
+	margin-top:1%;
+	/*background-size:cover;
+	background-repeat: no-repeat;
+	background-image:url('orienteeringtrainer_icon.png');*/
+}
+
+#btn_Settings
+{
+	position:relative;
+	float:left;
+	left:1%;
+	width:48.5%;
+	margin-top:1%;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-image:url('settings_icon.png');
+}
+
+#btn_TrainingHistory
+{
+	position:relative;
+	float:right;
+    width:48.5%;
+	right:1%;
+	margin-top:1%;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-image:url('traininghistory_icon.png');
+}
+
+#img_RouterGuide
+{
+}
+#img_OrienteeringTrainer
+{
+}
+#img_Settings
+{
+}
+#img_TrainingHistory
+{
+}
+
+#test
+{
+	background-color:black;
+	width:100%;
+	
+}

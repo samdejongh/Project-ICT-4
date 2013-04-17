@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta name="viewport" content="width=320, user-scalable=no">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title></title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="no title" charset="utf-8">
+<script type="text/javascript" charset="utf-8" src="js/wormhole.js"></script>
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.7.2.min.js">
+</script>
+<script
+	src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+</script>
+<!-- <script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true">
+</script> -->
+<script type="text/javascript" charset="utf-8" src="js/Main.js">
+</script>
+<script type="text/javascript">
+
+	/* document.addEventListener("backbutton", function() {
+		mosync.app.exit();
+	}, false); */
+
+	$('#select-native-1').live('change', function(e) {
+		x = $(this).val();
+		window.location = "orienteeringtrainer.html#" + x;
+	});
+	function changePage(page) {
+		mosync.bridge.send([ "Custom", "Change", page ]);
+		alert("succes");
+	}
+</script>
+</head>
+<body onLoad="checkConnection()">
+	<div id="home" data-role="page">
+		<div data-role="header">
+			<h1>mainpage</h1>
+		</div>
+
+		<div data-role="content">
+			<div id="btn_RouteGuide">
+				<a href="#ChooseLenght" data-rel="popup" data-position-to="window"
+					data-transition="pop"> <img id="img_RouterGuide"
+					src="runnerguide_icon.png" width="100%" style="left: 50%" alt="" /></a>
+			</div>
+
+			<div id="btn_OrienteeringTrainer">
+				<a data-transition="pop" href="#" onClick="changePage('index1.html')"> <img
+					id="img_OrienteeringTrainer" src="orienteeringtrainer_icon.png"
+					width="100%" alt="" /></a>
+			</div>
+
+			<div id="btn_Settings">
+				<a data-transition="slide" onClick="changePage('database.html')"> <img
+					id="img_Settings" src="settings_icon.png" width="100%" alt="" /></a>
+			</div>
+
+			<div id="btn_TrainingHistory">
+				<img id="img_TrainingHistory" src="traininghistory_icon.png"
+					width="100%" alt="" onClick="changePage('settings.html')"/>
+			</div>
+
+			<div>
+				<div data-role="popup" id="popupMenu" data-theme="a">
+					<div data-role="popup" id="ChooseLenght" data-theme="a"
+						class="ui-corner-all">
+						<form action="">
+							<div style="padding: 10px 20px;">
+								<div data-role="fieldcontain">
+									    <label for="select-native-1">lenght</label> <select
+										name="select-native-1" id="select-native-1">
+										<option value="1">1 km</option>
+										<option value="2">2 km</option>
+										<option value="3">3 km</option>
+										<option value="4">4 km</option>
+										<option value="5">5 km</option>
+										<option value="6">6 km</option>
+										<option value="7">7 km</option>
+										<option value="8">8 km</option>
+										<option value="9">9 km</option>
+										<option value="10">10 km</option>
+										<option value="11">11 km</option>
+										<option value="12">12 km</option>
+										<option value="13">13 km</option>
+										<option value="14">14 km</option>
+										<option value="15">15 km</option>
+									</select>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

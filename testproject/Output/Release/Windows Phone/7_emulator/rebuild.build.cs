@@ -15,10 +15,10 @@
 public class CoreNativeProgram : MoSync.CoreNative
 {
 
-protected const int ds_len = 34152;
+protected const int ds_len = 33936;
 protected const int bs_len = 18696;
-protected const int all_len = 52848;
-protected const int max_data = 34152;
+protected const int all_len = 52632;
+protected const int max_data = 33936;
 
 public override void Main()
 {
@@ -508,40 +508,6 @@ private int __ZN8Wormhole12CustomMoblet11handleEventERK7MAEvent_3(int i0, int i1
 } // __ZN8Wormhole12CustomMoblet11handleEventERK7MAEvent
 
 //****************************************
-// Function: __ZN8MyMoblet5startERN8Wormhole13MessageStreamE
-//****************************************
-
-//             rrrrrrrrrrrrrrrriiiiddddddddfrsz
-//             fedcba9876543210321076543210rtpr
-//src_reg    = 00000000000000001111000000000010
-//dst_reg    = 01000000000000001111000000001000
-//assign_reg = 00000000000000001111000000001000
-//uninit_reg = 00000000000000000000000000000010
-//used_reg   = 01000000000000001111000000001010
-//tfr        = 01000000000000001111000000001010
-
-private void __ZN8MyMoblet5startERN8Wormhole13MessageStreamE_3(int i0, int i1)
-{
-	int fr=0, i2=0, i3=0, r14=0;
-
-	//push rt,2
-	sp -= 8;
-	fr = sp;
-	fr += 8;
-label_1:
-	i0 = 37;
-	i1 = 0;
-	i2 = i1;
-	i3 = i1;
-	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
-label_2:
-	//pop  fr,2
-	sp += 8;
-
-	return;
-} // __ZN8MyMoblet5startERN8Wormhole13MessageStreamE
-
-//****************************************
 // Function: __ZN8MyMoblet5orentERN8Wormhole13MessageStreamE
 //****************************************
 
@@ -638,19 +604,19 @@ label_2:
 } // __ZN8MyMoblet7vibrateERN8Wormhole13MessageStreamE
 
 //****************************************
-// Function: __ZThn176_N8MyMoblet11customEventERK7MAEvent
+// Function: __ZThn164_N8MyMoblet13keyPressEventEii
 //****************************************
 
 //             rrrrrrrrrrrrrrrriiiiddddddddfrsz
 //             fedcba9876543210321076543210rtpr
-//src_reg    = 00000000000000000011000000000010
+//src_reg    = 00000000000000000111000000000010
 //dst_reg    = 00000000000000000001000000001000
-//assign_reg = 00000000000000000011000000001000
+//assign_reg = 00000000000000000111000000001000
 //uninit_reg = 00000000000000000000000000000010
-//used_reg   = 00000000000000000011000000001010
+//used_reg   = 00000000000000000111000000001010
 //tfr        = 00000000000000000001000000001010
 
-private void __ZThn176_N8MyMoblet11customEventERK7MAEvent_3(int i0, int i1)
+private void __ZThn164_N8MyMoblet13keyPressEventEii_3(int i0, int i1, int i2)
 {
 	int fr=0;
 
@@ -658,214 +624,121 @@ private void __ZThn176_N8MyMoblet11customEventERK7MAEvent_3(int i0, int i1)
 	sp -= 8;
 	fr = sp;
 	fr += 8;
-	i0 += -176;
-	__ZN8MyMoblet11customEventERK7MAEvent_3(i0, i1);
+	i0 += -164;
+	__ZN8MyMoblet13keyPressEventEii_3(i0, i1, i2);
 	//pop  fr,2
 	sp += 8;
 
 	return;
-} // __ZThn176_N8MyMoblet11customEventERK7MAEvent
+} // __ZThn164_N8MyMoblet13keyPressEventEii
 
 //****************************************
-// Function: __ZN8MyMoblet11customEventERK7MAEvent
+// Function: __ZN8MyMoblet13keyPressEventEii
 //****************************************
 
 //             rrrrrrrrrrrrrrrriiiiddddddddfrsz
 //             fedcba9876543210321076543210rtpr
-//src_reg    = 11000000000000011111001111111010
-//dst_reg    = 11000000000000011111001111111010
-//assign_reg = 11000000000000011111001111111010
-//uninit_reg = 00000000000000001100000000000000
-//used_reg   = 11000000000000011111001111111010
-//tfr        = 11000000000000011111001111111010
+//src_reg    = 01000000000000011111000011111010
+//dst_reg    = 11000000000000011111000011111010
+//assign_reg = 01000000000000011111000011111010
+//uninit_reg = 00000000000000001000000000000000
+//used_reg   = 11000000000000011111000011111010
+//tfr        = 01000000000000011111000011111010
 
-private void __ZN8MyMoblet11customEventERK7MAEvent_3(int i0, int i1)
+private void __ZN8MyMoblet13keyPressEventEii_3(int i0, int i1, int i2)
 {
-	int fr=0, d0=0, d1=0, d2=0, d3=0, d4=0, d5=0, i2=0, i3=0, r0=0, r14=0, r15=0;
+	int fr=0, d0=0, d1=0, d2=0, d3=0, i3=0, r0=0, r14=0, r15=0;
 
-	//push rt,8
-	sp -= 32;
-	sp -= 268;
+	//push rt,6
+	sp -= 24;
+	sp -= 12;
 	fr = sp;
-	fr += 300;
-	d4 = i0;
-	d0 = i1;
+	fr += 36;
+	d2 = i0;
 label_1:
-	r14 = mDataMemory.ReadInt32(i1);
-	r0 = 16;
-	if (r14 == r0) goto label_6;
+	r14 = 292;
+	if (i1 == r14) goto label_3;
 label_2:
-	r15 = 17;
-	if (r14 == r15) goto label_10;
-	mDataMemory.WriteInt32(sp, r14);
-	i0 = 288;
-	r14 = _printf_5(i0);
-	d0 = fr;
-	d0 += -244;
-	i0 = d0;
-	i1 = 305;
+	sp += 12;
+	//pop  d3,6
+	sp += 24;
+	goto label_0;	// return
 label_3:
-	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
-	r14 = mDataMemory.ReadInt32(d4);
-	d1 = mDataMemory.ReadInt32(r14+140);
-	i0 = d4;
-	i1 = d0;
-	r14 = CallReg(d1, i0, i1, i2, i3);
-	r15 = __dbl_high;
-
-	i0 = d0;
-label_4:
-	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-label_5:
-	sp += 268;
-	//pop  d5,8
-	sp += 32;
-	goto label_0;	// return
-label_6:
-	d5 = mDataMemory.ReadInt32(i1+4);
-label_7:
-	d0 = mDataMemory.ReadInt32(d5+12);
-	d1 = mDataMemory.ReadInt32(d5+16);
-	i0 = d0;
-	i1 = d1;
-	i2 = 0;
-	i3 = -1067024384;
-	r14 = ___ltdf2_15(i0, i1, i2, i3);
-	r15 = 0;
-	if (r14 < r15) goto label_8;
-	i0 = d0;
-	i1 = d1;
-	i2 = 0;
-	i3 = 1080459264;
-	r14 = ___gtdf2_15(i0, i1, i2, i3);
-	r0 = 0;
-	if (r14 <= r0) goto label_11;
-label_8:
-	i0 = 323;
-	r14 = _puts_5(i0);
-label_9:
-	sp += 268;
-	//pop  d5,8
-	sp += 32;
-	goto label_0;	// return
-label_10:
-	i0 = fr;
-	i0 += -256;
-	i1 = 392;
-	i2 = 12;
-	r14 = mSyscallInvoker.memcpy(i0, i1, i2);
-	r14 = mDataMemory.ReadInt32(d0+4);
-	r14 = (int)( r14 << 2);
-	r0 = -32;
-	r0 += fr;
-	r14 += r0;
-	r14 = mDataMemory.ReadInt32(r14+-228);
-	mDataMemory.WriteInt32(sp, r14);
-	i0 = 404;
-	r14 = _printf_5(i0);
-	d0 = fr;
-	d0 += -244;
-	i0 = d0;
-	i1 = 422;
-	goto label_3;
-label_11:
-	d0 = mDataMemory.ReadInt32(d5+4);
-	d1 = mDataMemory.ReadInt32(d5+8);
-	i0 = d0;
-	i1 = d1;
-	i2 = 0;
-	i3 = -1068072960;
-	r14 = ___ltdf2_15(i0, i1, i2, i3);
-	r15 = 0;
-	if (r14 < r15) goto label_8;
-	i0 = d0;
-	i1 = d1;
-	i2 = 0;
-	i3 = 1079410688;
-	r14 = ___gtdf2_15(i0, i1, i2, i3);
-	r0 = 0;
-	if (r14 > r0) goto label_8;
-label_12:
-	r14 = mDataMemory.ReadInt32(d5);
-	mDataMemory.WriteInt32(sp, r14);
-	r14 = mDataMemory.ReadInt32(d5+4);
-	r15 = mDataMemory.ReadInt32(d5+8);
-	mDataMemory.WriteInt32(sp+4, r14);
-	mDataMemory.WriteInt32(sp+8, r15);
-	r14 = mDataMemory.ReadInt32(d5+12);
-	r15 = mDataMemory.ReadInt32(d5+16);
-	mDataMemory.WriteInt32(sp+12, r14);
-	mDataMemory.WriteInt32(sp+16, r15);
-	r14 = mDataMemory.ReadInt32(d5+20);
-	r15 = mDataMemory.ReadInt32(d5+24);
-	mDataMemory.WriteInt32(sp+20, r14);
-	mDataMemory.WriteInt32(sp+24, r15);
-	r14 = mDataMemory.ReadInt32(d5+28);
-	r15 = mDataMemory.ReadInt32(d5+32);
-	mDataMemory.WriteInt32(sp+28, r14);
-	mDataMemory.WriteInt32(sp+32, r15);
-	i0 = mDataMemory.ReadInt32(d5+36);
-	r14 = mSyscallInvoker.__extendsfdf2(i0);
-	r15 = __dbl_high;
-	mDataMemory.WriteInt32(sp+36, r14);
-	mDataMemory.WriteInt32(sp+40, r15);
-	i0 = 454;
-	r14 = _printf_5(i0);
 	d3 = fr;
-	d3 += -36;
+	d3 += -28;
+	r14 = mDataMemory.ReadInt32(i0);
+	d0 = mDataMemory.ReadInt32(r14+96);
+	r14 = CallReg(d0, i0, i1, i2, i3);
+	r15 = __dbl_high;
+
+	r0 = mDataMemory.ReadInt32(r14);
+	d0 = mDataMemory.ReadInt32(r0+164);
 	i0 = d3;
-	i1 = mDataMemory.ReadInt32(d5+4);
-	i2 = mDataMemory.ReadInt32(d5+8);
-	i3 = 5;
-	r14 = __ZN6MAUtil14doubleToStringEdi_75(i0, i1, i2, i3);
-	d2 = fr;
-	d2 += -40;
-	i0 = d2;
-	i1 = mDataMemory.ReadInt32(d5+12);
-	i2 = mDataMemory.ReadInt32(d5+16);
-	i3 = 5;
-	r14 = __ZN6MAUtil14doubleToStringEdi_75(i0, i1, i2, i3);
+	i1 = r14;
+	r14 = CallReg(d0, i0, i1, i2, i3);
+	r15 = __dbl_high;
+
 	d1 = fr;
-	d1 += -240;
-	r14 = mDataMemory.ReadInt32(d5+4);
-	r15 = mDataMemory.ReadInt32(d5+8);
-	mDataMemory.WriteInt32(sp, r14);
-	mDataMemory.WriteInt32(sp+4, r15);
-	r14 = mDataMemory.ReadInt32(d5+12);
-	r15 = mDataMemory.ReadInt32(d5+16);
-	mDataMemory.WriteInt32(sp+8, r14);
-	mDataMemory.WriteInt32(sp+12, r15);
+	d1 += -32;
+	i0 = d3;
+	r14 = __ZNK6MAUtil11BasicStringIcE6lengthEv_74(i0);
 	i0 = d1;
-	i1 = 483;
-	r14 = _sprintf_22(i0, i1);
-	d0 = fr;
-	d0 += -244;
-	i0 = d0;
+	i1 = d3;
+	i2 = r14;
+	i2 += -10;
+	i3 = 10;
+	r14 = __ZNK6MAUtil11BasicStringIcE6substrEii_74(i0, i1, i2, i3);
+	i0 = d3;
 	i1 = d1;
+	r14 = __ZN6MAUtil11BasicStringIcEaSERKS1__74(i0, i1);
+	i0 = d1;
+	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
+	i0 = d1;
+	i1 = 288;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
-	r14 = mDataMemory.ReadInt32(d4);
+	i0 = d3;
+	i1 = d1;
+	r14 = __ZNK6MAUtil11BasicStringIcEeqERKS1__74(i0, i1);
+	d0 = r14;
+	i0 = d1;
+	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
+	d0 &= 255;
+	r14 = 0;
+	if (d0 == r14) goto label_5;
+	r14 = mDataMemory.ReadInt32(d2);
+	d0 = mDataMemory.ReadInt32(r14+52);
+	i0 = d2;
+	r14 = CallReg(d0, i0, i1, i2, i3);
+	r15 = __dbl_high;
+
+	i0 = d3;
+	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
+label_4:
+	sp += 12;
+	//pop  d3,6
+	sp += 24;
+	goto label_0;	// return
+label_5:
+	d0 = fr;
+	d0 += -36;
+	i0 = d0;
+	i1 = 299;
+	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
+	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+140);
-	i0 = d4;
+	i0 = d2;
 	i1 = d0;
 	r14 = CallReg(d1, i0, i1, i2, i3);
 	r15 = __dbl_high;
 
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-label_13:
-	i0 = 37;
-	i1 = 0;
-	i2 = i1;
-	i3 = i1;
-	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
-label_14:
-	i0 = d2;
-	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d3;
+	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	goto label_4;
 label_0:;
 	return;
-} // __ZN8MyMoblet11customEventERK7MAEvent
+} // __ZN8MyMoblet13keyPressEventEii
 
 //****************************************
 // Function: _MAMain
@@ -910,31 +783,24 @@ label_3:
 	d0 = fr;
 	d0 += -20;
 	i0 = d0;
-	i1 = 504;
+	i1 = 288;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d1;
 	i1 = d0;
 	__ZN8Wormhole12HybridMoblet8showPageERKN6MAUtil11BasicStringIcEE_130(i0, i1);
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-	r14 = mDataMemory.ReadInt32(516);
-	r15 = mDataMemory.ReadInt32(520);
+	r14 = mDataMemory.ReadInt32(316);
+	r15 = mDataMemory.ReadInt32(320);
 	i0 = d1;
-	i1 = 524;
+	i1 = 324;
 	i2 = r14;
 	i3 = r15;
 	__ZN8Wormhole12HybridMoblet13addMessageFunEPKcMNS_9FunObjectEFvRNS_13MessageStreamEE_130(i0, i1, i2, i3);
-	r14 = mDataMemory.ReadInt32(532);
-	r15 = mDataMemory.ReadInt32(536);
+	r14 = mDataMemory.ReadInt32(332);
+	r15 = mDataMemory.ReadInt32(336);
 	i0 = d1;
-	i1 = 540;
-	i2 = r14;
-	i3 = r15;
-	__ZN8Wormhole12HybridMoblet13addMessageFunEPKcMNS_9FunObjectEFvRNS_13MessageStreamEE_130(i0, i1, i2, i3);
-	r14 = mDataMemory.ReadInt32(548);
-	r15 = mDataMemory.ReadInt32(552);
-	i0 = d1;
-	i1 = 556;
+	i1 = 340;
 	i2 = r14;
 	i3 = r15;
 	__ZN8Wormhole12HybridMoblet13addMessageFunEPKcMNS_9FunObjectEFvRNS_13MessageStreamEE_130(i0, i1, i2, i3);
@@ -1175,34 +1041,34 @@ label_1:
 	sp -= 8;
 	fr = sp;
 	fr += 8;
-	r14 = mDataMemory.ReadInt32(34180);
+	r14 = mDataMemory.ReadInt32(33964);
 	r14 += 1;
-	mDataMemory.WriteInt32(34180, r14);
+	mDataMemory.WriteInt32(33964, r14);
 	r0 = 0;
-	mDataMemory.WriteInt32(34176, r0);
-	r0 = mDataMemory.ReadInt32(34156);
+	mDataMemory.WriteInt32(33960, r0);
+	r0 = mDataMemory.ReadInt32(33940);
 	if (r14 >= r0) goto label_2;
 	//pop  fr,2
 	sp += 8;
 	goto label_0;	// return
 label_2:
-	i0 = mDataMemory.ReadInt32(34160);
+	i0 = mDataMemory.ReadInt32(33944);
 	i0 *= 96;
-	r14 = mDataMemory.ReadInt32(34184);
+	r14 = mDataMemory.ReadInt32(33968);
 	i0 += r14;
 	i1 = 0;
 	i2 = 96;
 	r14 = mSyscallInvoker.memset(i0, i1, i2);
-	r0 = mDataMemory.ReadInt32(34160);
+	r0 = mDataMemory.ReadInt32(33944);
 	r0 += 1;
-	r1 = mDataMemory.ReadInt32(34156);
+	r1 = mDataMemory.ReadInt32(33940);
 	r14 = r0;
 	r14 /= r1;
 	r14 *= r1;
 	r0 -= r14;
-	mDataMemory.WriteInt32(34160, r0);
+	mDataMemory.WriteInt32(33944, r0);
 	r1 += -1;
-	mDataMemory.WriteInt32(34180, r1);
+	mDataMemory.WriteInt32(33964, r1);
 	//pop  fr,2
 	sp += 8;
 
@@ -1234,7 +1100,7 @@ label_1:
 	fr = sp;
 	fr += 140;
 	r14 = mSyscallInvoker.maGetScrSize();
-	mDataMemory.WriteInt32(34172, r14);
+	mDataMemory.WriteInt32(33956, r14);
 	i0 = 0;
 	i1 = i0;
 	i2 = r14;
@@ -1257,28 +1123,28 @@ label_2:
 	i0 += -140;
 	r14 = mSyscallInvoker.maGetTextSize(i0);
 	r14 = (int)((short) r14);
-	mDataMemory.WriteInt32(34164, r14);
-	r0 = mDataMemory.ReadInt16(34172);
+	mDataMemory.WriteInt32(33948, r14);
+	r0 = mDataMemory.ReadInt16(33956);
 	i0 = (int)((short) r0);
 	i0 /= r14;
-	mDataMemory.WriteInt32(34156, i0);
+	mDataMemory.WriteInt32(33940, i0);
 	r1 = 0;
-	mDataMemory.WriteInt32(34176, r1);
+	mDataMemory.WriteInt32(33960, r1);
 	i0 += -1;
-	mDataMemory.WriteInt32(34180, i0);
+	mDataMemory.WriteInt32(33964, i0);
 	i0 += 1;
-	mDataMemory.WriteInt32(34160, r1);
-	mDataMemory.WriteInt32(34168, r1);
+	mDataMemory.WriteInt32(33944, r1);
+	mDataMemory.WriteInt32(33952, r1);
 	i0 *= 96;
 	r14 = _malloc_16(i0);
 	r0 = r14;
-	mDataMemory.WriteInt32(34184, r14);
+	mDataMemory.WriteInt32(33968, r14);
 	d0 = 0;
-	r14 = mDataMemory.ReadInt32(34156);
+	r14 = mDataMemory.ReadInt32(33940);
 	if (r14 > d0) goto label_4;
 	goto label_5;
 label_3:
-	r0 = mDataMemory.ReadInt32(34184);
+	r0 = mDataMemory.ReadInt32(33968);
 label_4:
 	i0 = d0;
 	i0 *= 96;
@@ -1287,11 +1153,11 @@ label_4:
 	i2 = 96;
 	r14 = mSyscallInvoker.memset(i0, i1, i2);
 	d0 += 1;
-	r14 = mDataMemory.ReadInt32(34156);
+	r14 = mDataMemory.ReadInt32(33940);
 	if (r14 > d0) goto label_3;
 label_5:
 	r14 = 1;
-	mDataMemory.WriteInt32(34152, r14);
+	mDataMemory.WriteInt32(33936, r14);
 	sp += 128;
 	//pop  d0,3
 	sp += 12;
@@ -1321,32 +1187,32 @@ label_1:
 	sp -= 12;
 	fr = sp;
 	fr += 12;
-	r14 = mDataMemory.ReadInt32(572);
+	r14 = mDataMemory.ReadInt32(356);
 	r0 = 0;
 	if (r14 != r0) goto label_2;
 	//pop  d0,3
 	sp += 12;
 	goto label_0;	// return
 label_2:
-	i3 = mDataMemory.ReadInt32(34172);
+	i3 = mDataMemory.ReadInt32(33956);
 	i0 = r0;
 	i1 = r0;
 	i2 = i3;
 	i2 = (int)( i2 >> 16);
 	i3 = (int)((short) i3);
 	mSyscallInvoker.maSetClipRect(i0, i1, i2, i3);
-	r14 = mDataMemory.ReadInt32(568);
+	r14 = mDataMemory.ReadInt32(352);
 	r0 = 0;
 	if (r14 != r0) goto label_6;
 label_3:
-	i0 = mDataMemory.ReadInt32(588);
+	i0 = mDataMemory.ReadInt32(372);
 	r14 = mSyscallInvoker.maSetColor(i0);
 	d0 = 0;
-	r14 = mDataMemory.ReadInt32(34156);
+	r14 = mDataMemory.ReadInt32(33940);
 	if (r14 <= d0) goto label_5;
 	r1 = r14;
 label_4:
-	r14 = mDataMemory.ReadInt32(34160);
+	r14 = mDataMemory.ReadInt32(33944);
 	r14 += d0;
 	r0 = r14;
 	r0 /= r1;
@@ -1354,13 +1220,13 @@ label_4:
 	r14 -= r0;
 	r14 *= 96;
 	i0 = 0;
-	i1 = mDataMemory.ReadInt32(34164);
+	i1 = mDataMemory.ReadInt32(33948);
 	i1 *= d0;
-	i2 = mDataMemory.ReadInt32(34184);
+	i2 = mDataMemory.ReadInt32(33968);
 	i2 += r14;
 	mSyscallInvoker.maDrawTextW(i0, i1, i2);
 	d0 += 1;
-	r1 = mDataMemory.ReadInt32(34156);
+	r1 = mDataMemory.ReadInt32(33940);
 	if (r1 > d0) goto label_4;
 label_5:
 	mSyscallInvoker.maUpdateScreen();
@@ -1368,9 +1234,9 @@ label_5:
 	sp += 12;
 	goto label_0;	// return
 label_6:
-	i0 = mDataMemory.ReadInt32(584);
+	i0 = mDataMemory.ReadInt32(368);
 	r14 = mSyscallInvoker.maSetColor(i0);
-	i3 = mDataMemory.ReadInt32(34172);
+	i3 = mDataMemory.ReadInt32(33956);
 	i0 = 0;
 	i1 = i0;
 	i2 = i3;
@@ -1407,10 +1273,10 @@ label_1:
 	d2 = i0;
 	d5 = sp;
 	d3 = 0;
-	r14 = mDataMemory.ReadInt32(580);
+	r14 = mDataMemory.ReadInt32(364);
 	if (r14 != d3) goto label_15;
 label_2:
-	d0 = mDataMemory.ReadInt32(576);
+	d0 = mDataMemory.ReadInt32(360);
 	r14 = 0;
 	if (d0 <= r14) goto label_6;
 label_3:
@@ -1428,11 +1294,11 @@ label_5:
 	r0 = 0;
 	if (r14 < r0) goto label_26;
 label_6:
-	r14 = mDataMemory.ReadInt32(34152);
+	r14 = mDataMemory.ReadInt32(33936);
 	r1 = 0;
 	if (r14 == r1) goto label_25;
 label_7:
-	r14 = mDataMemory.ReadInt32(34168);
+	r14 = mDataMemory.ReadInt32(33952);
 	r0 = 0;
 	if (r14 != r0) goto label_24;
 label_8:
@@ -1445,24 +1311,24 @@ label_8:
 label_9:
 	r0 = 10;
 	if (r14 == r0) goto label_10;
-	r0 = mDataMemory.ReadInt32(34180);
-	r1 = mDataMemory.ReadInt32(34160);
+	r0 = mDataMemory.ReadInt32(33964);
+	r1 = mDataMemory.ReadInt32(33944);
 	r0 += r1;
 	r14 = r0;
-	r1 = mDataMemory.ReadInt32(34156);
+	r1 = mDataMemory.ReadInt32(33940);
 	r14 /= r1;
 	r14 *= r1;
 	r0 -= r14;
 	r0 *= 96;
-	r14 = mDataMemory.ReadInt32(34184);
+	r14 = mDataMemory.ReadInt32(33968);
 	r0 += r14;
-	r1 = mDataMemory.ReadInt32(34176);
+	r1 = mDataMemory.ReadInt32(33960);
 	r14 = r1;
 	r14 += r1;
 	r14 += r0;
 	mDataMemory.WriteUInt16(r14, (ushort)r3);
 	r1 += 1;
-	mDataMemory.WriteInt32(34176, r1);
+	mDataMemory.WriteInt32(33960, r1);
 	r0 = 46;
 	if (r1 <= r0) goto label_11;
 label_10:
@@ -1471,7 +1337,7 @@ label_10:
 	r1 = 0;
 	if (r14 != r1) goto label_14;
 	r14 = 1;
-	mDataMemory.WriteInt32(34168, r14);
+	mDataMemory.WriteInt32(33952, r14);
 label_11:
 	d3 += 1;
 	r2 = d3;
@@ -1488,7 +1354,7 @@ label_12:
 	r1 = 13;
 	if (r14 != r1) goto label_9;
 	r14 = 0;
-	mDataMemory.WriteInt32(34176, r14);
+	mDataMemory.WriteInt32(33960, r14);
 	d3 += 1;
 	r2 = d3;
 	r2 += d3;
@@ -1498,7 +1364,7 @@ label_12:
 	r0 = 0;
 	if (r14 != r0) goto label_12;
 label_13:
-	r14 = mDataMemory.ReadInt32(564);
+	r14 = mDataMemory.ReadInt32(348);
 	r1 = 0;
 	if (r14 != r1) goto label_23;
 	sp = d5;
@@ -1509,11 +1375,11 @@ label_14:
 	_FeedLine_5();
 	goto label_11;
 label_15:
-	i0 = 592;
+	i0 = 376;
 	r14 = _strlen_19(i0);
 label_16:
 	i0 = 28;
-	i1 = 592;
+	i1 = 376;
 	i2 = r14;
 	i3 = d3;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
@@ -1552,7 +1418,7 @@ label_20:
 	if (r14 == r1) goto label_22;
 label_21:
 	i0 = 28;
-	i1 = 607;
+	i1 = 391;
 	i2 = 1;
 	i3 = d3;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
@@ -1568,13 +1434,13 @@ label_23:
 label_24:
 	_FeedLine_5();
 	r1 = 0;
-	mDataMemory.WriteInt32(34168, r1);
+	mDataMemory.WriteInt32(33952, r1);
 	goto label_8;
 label_25:
 	_InitConsole_5();
 	goto label_7;
 label_26:
-	i1 = 609;
+	i1 = 393;
 	mSyscallInvoker.maPanic(i0, i1);
 label_0:;
 	return;
@@ -1603,7 +1469,7 @@ label_1:
 	fr = sp;
 	fr += 8;
 	_PrintConsole_5(i0);
-	r14 = mDataMemory.ReadInt32(34168);
+	r14 = mDataMemory.ReadInt32(33952);
 	r0 = 0;
 	if (r14 == r0) goto label_2;
 	r14 = 0;
@@ -1647,7 +1513,7 @@ label_1:
 	d0 += -4108;
 	mDataMemory.WriteInt32(sp, i0);
 	i0 = d0;
-	i1 = 634;
+	i1 = 418;
 	r14 = _wsprintf_24(i0, i1);
 	i0 = d0;
 	r14 = _wputs_5(i0);
@@ -1703,7 +1569,7 @@ label_1:
 	goto label_0;	// return
 label_2:
 	i0 = 1;
-	i1 = 640;
+	i1 = 424;
 	mSyscallInvoker.maPanic(i0, i1);
 label_0:;
 	return r14;
@@ -1867,7 +1733,7 @@ label_1:
 	mDataMemory.WriteInt32(sp, r14);
 	mDataMemory.WriteInt32(sp+4, d1);
 	i0 = d0;
-	i1 = 820;
+	i1 = 604;
 	r14 = _sprintf_22(i0, i1);
 	i0 = d2;
 	i1 = d0;
@@ -1907,7 +1773,7 @@ label_2:
 	mDataMemory.WriteInt32(sp, i0);
 	mDataMemory.WriteInt32(sp+4, i1);
 	i0 = d0;
-	i1 = 830;
+	i1 = 614;
 	r14 = _sprintf_22(i0, i1);
 	i0 = 1;
 	i1 = d0;
@@ -1945,7 +1811,7 @@ label_1:
 	r14 = 0;
 	r0 = 127;
 	if (i0 > r0) goto label_2;
-	r14 = mDataMemory.ReadInt8(i0+841);
+	r14 = mDataMemory.ReadInt8(i0+625);
 	r14 &= 3;
 label_2:
 	//pop  fr,1
@@ -1979,7 +1845,7 @@ label_1:
 	r14 = 0;
 	r0 = 127;
 	if (i0 > r0) goto label_2;
-	r14 = mDataMemory.ReadInt8(i0+841);
+	r14 = mDataMemory.ReadInt8(i0+625);
 	r14 &= 1;
 label_2:
 	//pop  fr,1
@@ -2013,7 +1879,7 @@ label_1:
 	r14 = 0;
 	r0 = 127;
 	if (i0 > r0) goto label_2;
-	r14 = mDataMemory.ReadInt8(i0+841);
+	r14 = mDataMemory.ReadInt8(i0+625);
 	r14 &= 4;
 label_2:
 	//pop  fr,1
@@ -2047,7 +1913,7 @@ label_1:
 	r14 = 0;
 	r0 = 127;
 	if (i0 > r0) goto label_2;
-	r14 = mDataMemory.ReadInt8(i0+841);
+	r14 = mDataMemory.ReadInt8(i0+625);
 	r14 &= 8;
 label_2:
 	//pop  fr,1
@@ -2291,7 +2157,7 @@ private void _default_malloc_handler_16(int i0)
 	sp -= 8;
 	fr = sp;
 	fr += 8;
-	i1 = 992;
+	i1 = 776;
 	mSyscallInvoker.maPanic(i0, i1);
 	return;
 } // _default_malloc_handler
@@ -2318,8 +2184,8 @@ label_1:
 	sp -= 4;
 	fr = sp;
 	fr += 4;
-	r14 = mDataMemory.ReadInt32(984);
-	mDataMemory.WriteInt32(984, i0);
+	r14 = mDataMemory.ReadInt32(768);
+	mDataMemory.WriteInt32(768, i0);
 	//pop  fr,1
 	sp += 4;
 
@@ -2348,8 +2214,8 @@ label_1:
 	sp -= 4;
 	fr = sp;
 	fr += 4;
-	r14 = mDataMemory.ReadInt32(976);
-	mDataMemory.WriteInt32(976, i0);
+	r14 = mDataMemory.ReadInt32(760);
+	mDataMemory.WriteInt32(760, i0);
 	//pop  fr,1
 	sp += 4;
 
@@ -2378,8 +2244,8 @@ label_1:
 	sp -= 4;
 	fr = sp;
 	fr += 4;
-	r14 = mDataMemory.ReadInt32(980);
-	mDataMemory.WriteInt32(980, i0);
+	r14 = mDataMemory.ReadInt32(764);
+	mDataMemory.WriteInt32(764, i0);
 	//pop  fr,1
 	sp += 4;
 
@@ -2408,8 +2274,8 @@ label_1:
 	sp -= 4;
 	fr = sp;
 	fr += 4;
-	r14 = mDataMemory.ReadInt32(972);
-	mDataMemory.WriteInt32(972, i0);
+	r14 = mDataMemory.ReadInt32(756);
+	mDataMemory.WriteInt32(756, i0);
 	//pop  fr,1
 	sp += 4;
 
@@ -2444,8 +2310,8 @@ label_1:
 	r14 = mSyscallInvoker.maCheckInterfaceVersion(i0);
 	r0 = -463677200;
 	if (r14 != r0) goto label_3;
-	mDataMemory.WriteInt32(34188, d1);
-	mDataMemory.WriteInt32(34192, d0);
+	mDataMemory.WriteInt32(33972, d1);
+	mDataMemory.WriteInt32(33976, d0);
 	r14 = 0;
 	if (d0 <= r14) goto label_2;
 	i0 = d0;
@@ -2453,13 +2319,13 @@ label_1:
 	r14 = _init_memory_pool_37(i0, i1);
 	r0 = 0;
 	if (r14 < r0) goto label_4;
-	i0 = -536870802;
+	i0 = -536870803;
 	r14 = _set_malloc_hook_16(i0);
-	i0 = -536870801;
+	i0 = -536870802;
 	r14 = _set_free_hook_16(i0);
-	i0 = -536870800;
+	i0 = -536870801;
 	r14 = _set_realloc_hook_16(i0);
-	i0 = -536870799;
+	i0 = -536870800;
 	r14 = _set_block_size_hook_16(i0);
 label_2:
 	//pop  d1,4
@@ -2467,11 +2333,11 @@ label_2:
 	goto label_0;	// return
 label_3:
 	i0 = 1;
-	i1 = 1078;
+	i1 = 862;
 	mSyscallInvoker.maPanic(i0, i1);
 label_4:
 	i0 = 1;
-	i1 = 1106;
+	i1 = 890;
 	mSyscallInvoker.maPanic(i0, i1);
 label_0:;
 	return;
@@ -2500,7 +2366,7 @@ label_1:
 	fr = sp;
 	fr += 16;
 	d1 = i0;
-	d0 = mDataMemory.ReadInt32(984);
+	d0 = mDataMemory.ReadInt32(768);
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
 
@@ -2514,14 +2380,14 @@ label_3:
 	sp += 16;
 	goto label_0;	// return
 label_4:
-	d0 = mDataMemory.ReadInt32(988);
+	d0 = mDataMemory.ReadInt32(772);
 	if (d0 == r14) goto label_3;
 	i0 = d1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
 
 	i0 = d1;
-	d0 = mDataMemory.ReadInt32(984);
+	d0 = mDataMemory.ReadInt32(768);
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
 
@@ -2554,7 +2420,7 @@ label_1:
 	fr += 12;
 	r14 = 0;
 	if (i0 == r14) goto label_2;
-	d0 = mDataMemory.ReadInt32(980);
+	d0 = mDataMemory.ReadInt32(764);
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
 
@@ -2589,7 +2455,7 @@ label_1:
 	fr += 20;
 	d2 = i0;
 	d1 = i1;
-	d0 = mDataMemory.ReadInt32(976);
+	d0 = mDataMemory.ReadInt32(760);
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
 
@@ -2603,7 +2469,7 @@ label_3:
 	sp += 20;
 	goto label_0;	// return
 label_4:
-	d0 = mDataMemory.ReadInt32(988);
+	d0 = mDataMemory.ReadInt32(772);
 	if (d0 == r14) goto label_3;
 	i0 = d1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
@@ -2611,7 +2477,7 @@ label_4:
 
 	i0 = d2;
 	i1 = d1;
-	d0 = mDataMemory.ReadInt32(976);
+	d0 = mDataMemory.ReadInt32(760);
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
 
@@ -2667,7 +2533,7 @@ label_2:
 	r14 = 10;
 	if (d2 <= r14) goto label_2;
 	i0 = -6;
-	i1 = 1148;
+	i1 = 932;
 	mSyscallInvoker.maPanic(i0, i1);
 label_3:
 	r14 = -d1;
@@ -3107,7 +2973,7 @@ label_6:
 label_7:
 	r14 = r1;
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+1428);
+	r14 = mDataMemory.ReadInt32(r14+1212);
 	if (r14 >= r15) goto label_14;
 label_8:
 	i0 += 1;
@@ -3128,7 +2994,7 @@ label_10:
 label_11:
 	r14 = r1;
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+1428);
+	r14 = mDataMemory.ReadInt32(r14+1212);
 	r15 += r14;
 	r14 = 0;
 	if (r15 >= r14) goto label_14;
@@ -3154,7 +3020,7 @@ label_13:
 	r1 = 1;
 	r14 = r1;
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+1428);
+	r14 = mDataMemory.ReadInt32(r14+1212);
 	if (r14 < r15) goto label_8;
 label_14:
 	i0 += -1900;
@@ -3162,7 +3028,7 @@ label_14:
 	mDataMemory.WriteInt32(i1+28, r15);
 	i0 = r1;
 	i0 *= 48;
-	i0 += 1332;
+	i0 += 1116;
 	r0 = 0;
 	mDataMemory.WriteInt32(i1+16, r0);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -3219,11 +3085,11 @@ label_1:
 	d0 = i1;
 	r14 = mDataMemory.ReadInt32(i0+24);
 	r14 *= 3;
-	r14 += 1436;
+	r14 += 1220;
 	mDataMemory.WriteInt32(sp, r14);
 	r14 = mDataMemory.ReadInt32(i0+16);
 	r14 *= 3;
-	r14 += 1457;
+	r14 += 1241;
 	mDataMemory.WriteInt32(sp+4, r14);
 	r14 = mDataMemory.ReadInt32(i0+12);
 	mDataMemory.WriteInt32(sp+8, r14);
@@ -3237,7 +3103,7 @@ label_1:
 	r14 += 1900;
 	mDataMemory.WriteInt32(sp+24, r14);
 	i0 = i1;
-	i1 = 1493;
+	i1 = 1277;
 	r14 = _sprintf_22(i0, i1);
 	r14 = d0;
 	sp += 28;
@@ -3274,7 +3140,7 @@ label_1:
 	i1 += -44;
 	r14 = _split_time_21(i0, i1);
 	i0 = r14;
-	i1 = 34212;
+	i1 = 33996;
 	r14 = _sprint_tm_21(i0, i1);
 	sp += 36;
 	//pop  fr,2
@@ -3692,12 +3558,12 @@ label_1:
 	fr += 72;
 	r2 = mDataMemory.ReadInt32(fr);
 	r3 = mDataMemory.ReadInt32(fr+4);
-	r4 = mDataMemory.ReadInt32(1608);
+	r4 = mDataMemory.ReadInt32(1392);
 	r14 = r3;
 	r14 &= 64;
 	r0 = 0;
 	if (r14 == r0) goto label_2;
-	r4 = mDataMemory.ReadInt32(1564);
+	r4 = mDataMemory.ReadInt32(1348);
 label_2:
 	r14 = r3;
 	r14 &= 16;
@@ -3894,7 +3760,7 @@ label_27:
 	r14 = 48;
 	mDataMemory.WriteUInt8(i0, (byte)r14);
 	i0 += 1;
-	r14 = mDataMemory.ReadInt32(1608);
+	r14 = mDataMemory.ReadInt32(1392);
 	r14 = mDataMemory.ReadInt8(r14+33);
 	mDataMemory.WriteUInt8(i0, (byte)r14);
 	i0 += 1;
@@ -4201,7 +4067,7 @@ label_31:
 label_32:
 	r5 = 0;
 	r3 = r5;
-	r6 = mDataMemory.ReadInt32(1608);
+	r6 = mDataMemory.ReadInt32(1392);
 label_33:
 	r1 = 0;
 	if (r3 == r1) goto label_34;
@@ -4518,12 +4384,12 @@ label_76:
 	r6 = mDataMemory.ReadInt32(r14);
 	r4 = d3;
 label_77:
-	r5 = mDataMemory.ReadInt32(1608);
+	r5 = mDataMemory.ReadInt32(1392);
 	r14 = d2;
 	r14 &= 64;
 	r3 = 0;
 	if (r14 == r3) goto label_78;
-	r5 = mDataMemory.ReadInt32(1564);
+	r5 = mDataMemory.ReadInt32(1348);
 label_78:
 	r3 = 0;
 	r2 = r3;
@@ -4802,10 +4668,10 @@ label_115:
 	r14 += 32;
 	goto label_93;
 label_116:
-	d1 = 1612;
+	d1 = 1396;
 	goto label_52;
 label_117:
-	d1 = 1626;
+	d1 = 1410;
 	goto label_46;
 label_118:
 	r14 = fr;
@@ -5665,13 +5531,13 @@ label_1:
 	fr += 136;
 	r2 = mDataMemory.ReadInt32(fr);
 	r3 = mDataMemory.ReadInt32(fr+4);
-	r7 = mDataMemory.ReadInt32(2132);
+	r7 = mDataMemory.ReadInt32(1916);
 	r4 = r7;
 	r14 = r3;
 	r14 &= 64;
 	r0 = 0;
 	if (r14 == r0) goto label_2;
-	r4 = mDataMemory.ReadInt32(2052);
+	r4 = mDataMemory.ReadInt32(1836);
 label_2:
 	r14 = r3;
 	r14 &= 16;
@@ -6171,7 +6037,7 @@ label_31:
 label_32:
 	r4 = 0;
 	r3 = r4;
-	r6 = mDataMemory.ReadInt32(2132);
+	r6 = mDataMemory.ReadInt32(1916);
 label_33:
 	r2 = 0;
 	if (r3 == r2) goto label_34;
@@ -6495,12 +6361,12 @@ label_78:
 	r6 = mDataMemory.ReadInt32(r14);
 	r4 = d3;
 label_79:
-	r5 = mDataMemory.ReadInt32(2132);
+	r5 = mDataMemory.ReadInt32(1916);
 	r14 = d2;
 	r14 &= 64;
 	r3 = 0;
 	if (r14 == r3) goto label_80;
-	r5 = mDataMemory.ReadInt32(2052);
+	r5 = mDataMemory.ReadInt32(1836);
 label_80:
 	r3 = 0;
 	r2 = r3;
@@ -6785,10 +6651,10 @@ label_115:
 	r14 += 32;
 	goto label_95;
 label_116:
-	d1 = 2136;
+	d1 = 1920;
 	goto label_52;
 label_117:
-	d1 = 2150;
+	d1 = 1934;
 	goto label_46;
 label_118:
 	r14 = fr;
@@ -7467,7 +7333,7 @@ label_1:
 	d1 = i0;
 	r0 = i0;
 	r0 = (int)( r0 << 2);
-	r0 += 34248;
+	r0 += 34032;
 	r14 = mDataMemory.ReadInt32(r0);
 	r1 = 0;
 	if (r14 == r1) goto label_3;
@@ -7520,7 +7386,7 @@ label_1:
 	if (i0 == r0) goto label_2;
 	r14 = mDataMemory.ReadInt32(i0+4);
 	r14 = (int)( r14 << 2);
-	r14 += 34248;
+	r14 += 34032;
 	r0 = mDataMemory.ReadInt32(r14);
 	mDataMemory.WriteInt32(i0, r0);
 	mDataMemory.WriteInt32(r14, i0);
@@ -7947,7 +7813,7 @@ label_2:
 	d1 = (int)( d1 >> 2);
 	r14 = 0;
 	if (d1 == r14) goto label_8;
-	d2 = mDataMemory.ReadInt32(34312);
+	d2 = mDataMemory.ReadInt32(34096);
 	d0 = d2;
 	if (d2 == r14) goto label_11;
 label_3:
@@ -7988,7 +7854,7 @@ label_8:
 	goto label_0;	// return
 label_9:
 	r14 = (int)( r14 << 2);
-	i1 = mDataMemory.ReadInt32(r14+2764);
+	i1 = mDataMemory.ReadInt32(r14+2548);
 	i2 = r0;
 	r14 = _multadd_27(i0, i1, i2);
 	d3 = r14;
@@ -8004,7 +7870,7 @@ label_10:
 label_11:
 	i0 = 625;
 	r14 = _i2b_27(i0);
-	mDataMemory.WriteInt32(34312, r14);
+	mDataMemory.WriteInt32(34096, r14);
 	d2 = r14;
 	mDataMemory.WriteInt32(r14, d0);
 	goto label_3;
@@ -8493,8 +8359,8 @@ label_13:
 	if (d6 <= r14) goto label_15;
 	r14 = d6;
 	r14 = (int)( r14 << 3);
-	i0 = mDataMemory.ReadInt32(r14+2512);
-	i1 = mDataMemory.ReadInt32(r14+2516);
+	i0 = mDataMemory.ReadInt32(r14+2296);
+	i1 = mDataMemory.ReadInt32(r14+2300);
 	r14 = mSyscallInvoker.__muldf3(i0, i1, i2, i3);
 	r15 = __dbl_high;
 	d0 = r14;
@@ -8713,8 +8579,8 @@ label_37:
 	goto label_33;
 label_38:
 	r0 = (int)( r0 << 3);
-	i0 = mDataMemory.ReadInt32(r0+2584);
-	i1 = mDataMemory.ReadInt32(r0+2588);
+	i0 = mDataMemory.ReadInt32(r0+2368);
+	i1 = mDataMemory.ReadInt32(r0+2372);
 	i2 = d4;
 	i3 = d5;
 	r14 = mSyscallInvoker.__muldf3(i0, i1, i2, i3);
@@ -9449,8 +9315,8 @@ label_111:
 	r0 = (int)( r0 << 3);
 	i0 = d4;
 	i1 = d5;
-	i2 = mDataMemory.ReadInt32(r0+2584);
-	i3 = mDataMemory.ReadInt32(r0+2588);
+	i2 = mDataMemory.ReadInt32(r0+2368);
+	i3 = mDataMemory.ReadInt32(r0+2372);
 	r14 = mSyscallInvoker.__divdf3(i0, i1, i2, i3);
 	r15 = __dbl_high;
 	d4 = r14;
@@ -9472,8 +9338,8 @@ label_113:
 	if (r14 == r3) goto label_114;
 	r14 = d0;
 	r14 = (int)( r14 << 3);
-	i0 = mDataMemory.ReadInt32(r14+2504);
-	i1 = mDataMemory.ReadInt32(r14+2508);
+	i0 = mDataMemory.ReadInt32(r14+2288);
+	i1 = mDataMemory.ReadInt32(r14+2292);
 	i2 = d4;
 	i3 = d5;
 	r14 = mSyscallInvoker.__muldf3(i0, i1, i2, i3);
@@ -9489,8 +9355,8 @@ label_115:
 	d6 = d4;
 	d7 = d5;
 	d0 = (int)( d0 << 3);
-	d1 = mDataMemory.ReadInt32(d0+2508);
-	d0 = mDataMemory.ReadInt32(d0+2504);
+	d1 = mDataMemory.ReadInt32(d0+2292);
+	d0 = mDataMemory.ReadInt32(d0+2288);
 	i0 = d0;
 	i1 = d1;
 	i2 = d4;
@@ -9542,8 +9408,8 @@ label_117:
 	if (r14 == r1) goto label_118;
 	r14 = d0;
 	r14 = (int)( r14 << 3);
-	i0 = mDataMemory.ReadInt32(r14+2544);
-	i1 = mDataMemory.ReadInt32(r14+2548);
+	i0 = mDataMemory.ReadInt32(r14+2328);
+	i1 = mDataMemory.ReadInt32(r14+2332);
 	i2 = d4;
 	i3 = d5;
 	r14 = mSyscallInvoker.__muldf3(i0, i1, i2, i3);
@@ -9558,8 +9424,8 @@ label_118:
 label_119:
 	d5 += -55574528;
 	d0 = (int)( d0 << 3);
-	i0 = mDataMemory.ReadInt32(d0+2544);
-	i1 = mDataMemory.ReadInt32(d0+2548);
+	i0 = mDataMemory.ReadInt32(d0+2328);
+	i1 = mDataMemory.ReadInt32(d0+2332);
 	i2 = d4;
 	i3 = d5;
 	r14 = mSyscallInvoker.__muldf3(i0, i1, i2, i3);
@@ -9608,8 +9474,8 @@ label_122:
 	r1 -= r0;
 	mDataMemory.WriteInt32(fr+-76, r1);
 	r0 = (int)( r0 << 3);
-	i0 = mDataMemory.ReadInt32(r0+2584);
-	i1 = mDataMemory.ReadInt32(r0+2588);
+	i0 = mDataMemory.ReadInt32(r0+2368);
+	i1 = mDataMemory.ReadInt32(r0+2372);
 	i2 = d4;
 	i3 = d5;
 	r14 = mSyscallInvoker.__muldf3(i0, i1, i2, i3);
@@ -9617,8 +9483,8 @@ label_122:
 	r2 = mDataMemory.ReadInt32(fr+-76);
 	r2 = (int)( r2 << 3);
 	mDataMemory.WriteInt32(fr+-76, r2);
-	i0 = mDataMemory.ReadInt32(r2+2584);
-	i1 = mDataMemory.ReadInt32(r2+2588);
+	i0 = mDataMemory.ReadInt32(r2+2368);
+	i1 = mDataMemory.ReadInt32(r2+2372);
 	i2 = r14;
 	i3 = r15;
 	r14 = mSyscallInvoker.__muldf3(i0, i1, i2, i3);
@@ -9694,8 +9560,8 @@ label_129:
 label_130:
 	r3 = (int)( r3 << 3);
 	mDataMemory.WriteInt32(fr+-76, r3);
-	i0 = mDataMemory.ReadInt32(r3+2584);
-	i1 = mDataMemory.ReadInt32(r3+2588);
+	i0 = mDataMemory.ReadInt32(r3+2368);
+	i1 = mDataMemory.ReadInt32(r3+2372);
 	i2 = d4;
 	i3 = d5;
 	r14 = mSyscallInvoker.__muldf3(i0, i1, i2, i3);
@@ -9709,8 +9575,8 @@ label_131:
 	mDataMemory.WriteInt32(fr+-76, r3);
 	i0 = d4;
 	i1 = d5;
-	i2 = mDataMemory.ReadInt32(r3+2584);
-	i3 = mDataMemory.ReadInt32(r3+2588);
+	i2 = mDataMemory.ReadInt32(r3+2368);
+	i3 = mDataMemory.ReadInt32(r3+2372);
 	r14 = mSyscallInvoker.__divdf3(i0, i1, i2, i3);
 	r15 = __dbl_high;
 	d4 = r14;
@@ -10371,7 +10237,7 @@ label_26:
 	r14 = r0;
 	r14 = (int)((uint) r14 >> r1);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r14 += r1;
 label_27:
 	r14 += -5;
@@ -10392,7 +10258,7 @@ label_29:
 	r14 = r0;
 	r14 = (int)((uint) r14 >> r2);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r14 += r2;
 label_30:
 	r14 += -5;
@@ -10413,7 +10279,7 @@ label_32:
 	r14 = r0;
 	r14 = (int)((uint) r14 >> r2);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r14 += r2;
 label_33:
 	r14 += -5;
@@ -10431,7 +10297,7 @@ label_34:
 	r14 = r0;
 	r14 = (int)((uint) r14 >> r1);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r14 += r1;
 label_35:
 	r14 += -5;
@@ -10577,7 +10443,7 @@ label_1:
 	r14 = mDataMemory.ReadInt32(i1);
 	r2 = 710539865;
 	if (r14 == r2) goto label_10;
-	mDataMemory.WriteInt32(34316, i1);
+	mDataMemory.WriteInt32(34100, i1);
 	i0 = i1;
 	i1 = 0;
 	i2 = 3188;
@@ -10632,7 +10498,7 @@ label_5:
 	goto label_0;	// return
 label_6:
 	i0 = 28;
-	i1 = 3956;
+	i1 = 3740;
 	i2 = 41;
 	i3 = 0;
 label_7:
@@ -10644,13 +10510,13 @@ label_9:
 	sp += 24;
 	goto label_0;	// return
 label_10:
-	mDataMemory.WriteInt32(34316, i1);
+	mDataMemory.WriteInt32(34100, i1);
 	r14 = mDataMemory.ReadInt32(i1+3196);
 	r14 &= -4;
 	goto label_5;
 label_11:
 	i0 = 28;
-	i1 = 3998;
+	i1 = 3782;
 	i2 = 56;
 	i3 = r0;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
@@ -10733,7 +10599,7 @@ label_6:
 label_7:
 	r14 = (int)((uint) r14 >> r0);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r0 += r14;
 label_8:
 	mDataMemory.WriteInt32(r5, r0);
@@ -10875,7 +10741,7 @@ label_21:
 label_22:
 	r14 = (int)((uint) r14 >> r0);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r0 += r14;
 label_23:
 	r0 += -5;
@@ -10896,7 +10762,7 @@ label_26:
 	r14 = r1;
 	r14 = (int)((uint) r14 >> r0);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r0 += r14;
 label_27:
 	r0 += -5;
@@ -10940,7 +10806,7 @@ label_30:
 label_31:
 	r0 = (int)((uint) r0 >> r14);
 	r0 = (int)( r0 << 2);
-	r1 = mDataMemory.ReadInt32(r0+2932);
+	r1 = mDataMemory.ReadInt32(r0+2716);
 	r1 += r14;
 label_32:
 	mDataMemory.WriteInt32(r4, r1);
@@ -10963,7 +10829,7 @@ label_34:
 label_35:
 	r0 = (int)((uint) r0 >> r14);
 	r0 = (int)( r0 << 2);
-	r0 = mDataMemory.ReadInt32(r0+2932);
+	r0 = mDataMemory.ReadInt32(r0+2716);
 	r14 += r0;
 label_36:
 	mDataMemory.WriteInt32(r5, r14);
@@ -10980,7 +10846,7 @@ label_37:
 	r14 = 24;
 	r0 = (int)((uint) r0 >> r14);
 	r0 = (int)( r0 << 2);
-	r1 = mDataMemory.ReadInt32(r0+2932);
+	r1 = mDataMemory.ReadInt32(r0+2716);
 	r1 += r14;
 label_38:
 	mDataMemory.WriteInt32(r4, r1);
@@ -10999,7 +10865,7 @@ label_40:
 	r0 = 24;
 	r14 = (int)((uint) r14 >> r0);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r0 += r14;
 label_41:
 	r0 += -5;
@@ -11024,7 +10890,7 @@ label_44:
 	r0 = 24;
 	r14 = (int)((uint) r14 >> r0);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r0 += r14;
 label_45:
 	mDataMemory.WriteInt32(r5, r0);
@@ -11098,7 +10964,7 @@ label_55:
 	r14 = r0;
 	r14 = (int)((uint) r14 >> r1);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r14 += r1;
 label_56:
 	r14 += -5;
@@ -11145,7 +11011,7 @@ private int _tlsf_malloc_37(int i0)
 	sp -= 8;
 	fr = sp;
 	fr += 8;
-	i1 = mDataMemory.ReadInt32(34316);
+	i1 = mDataMemory.ReadInt32(34100);
 	r14 = _malloc_ex_37(i0, i1);
 	//pop  fr,2
 	sp += 8;
@@ -11174,7 +11040,7 @@ private void _tlsf_free_37(int i0)
 	sp -= 8;
 	fr = sp;
 	fr += 8;
-	i1 = mDataMemory.ReadInt32(34316);
+	i1 = mDataMemory.ReadInt32(34100);
 	_free_ex_37(i0, i1);
 	//pop  fr,2
 	sp += 8;
@@ -11336,7 +11202,7 @@ label_12:
 	r14 = r2;
 	r14 = (int)((uint) r14 >> r0);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r14 += r0;
 label_13:
 	r14 += -5;
@@ -11573,7 +11439,7 @@ label_40:
 	r14 = r0;
 	r14 = (int)((uint) r14 >> r3);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r14 += r3;
 label_41:
 	r14 += -5;
@@ -11597,7 +11463,7 @@ label_44:
 	r14 = r0;
 	r14 = (int)((uint) r14 >> r2);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r14 += r2;
 label_45:
 	r14 += -5;
@@ -11630,7 +11496,7 @@ label_49:
 	r14 = r2;
 	r14 = (int)((uint) r14 >> r0);
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+2932);
+	r14 = mDataMemory.ReadInt32(r14+2716);
 	r14 += r0;
 label_50:
 	r14 += -5;
@@ -11767,7 +11633,7 @@ private int _tlsf_realloc_37(int i0, int i1)
 	sp -= 8;
 	fr = sp;
 	fr += 8;
-	i2 = mDataMemory.ReadInt32(34316);
+	i2 = mDataMemory.ReadInt32(34100);
 	r14 = _realloc_ex_37(i0, i1, i2);
 	//pop  fr,2
 	sp += 8;
@@ -12225,29 +12091,29 @@ label_2:
 	d0 = r14;
 	i0 = r14;
 	__ZN16ResourceCompiler21VariantResourceLookupC1Ev_44(i0);
-	mDataMemory.WriteInt32(4596, d0);
-	i0 = 4600;
+	mDataMemory.WriteInt32(4380, d0);
+	i0 = 4384;
 	r14 = mSyscallInvoker.maFindLabel(i0);
 	d0 = r14;
-	i0 = 4616;
+	i0 = 4400;
 	r14 = mSyscallInvoker.maFindLabel(i0);
 	d1 = r14;
-	i0 = mDataMemory.ReadInt32(4596);
+	i0 = mDataMemory.ReadInt32(4380);
 	__ZN16ResourceCompiler21VariantResourceLookup14countResourcesEv_44(i0);
 	r14 = -1;
 	if (d0 == r14) goto label_4;
 	if (d1 == r14) goto label_4;
-	i0 = mDataMemory.ReadInt32(4596);
+	i0 = mDataMemory.ReadInt32(4380);
 	i1 = d0;
 	i1 += 1;
 	__ZN16ResourceCompiler21VariantResourceLookup18readVariantMappingEi_44(i0, i1);
-	i0 = mDataMemory.ReadInt32(4596);
+	i0 = mDataMemory.ReadInt32(4380);
 	i1 = d1;
 	i1 += 1;
 	__ZN16ResourceCompiler21VariantResourceLookup17readResourceTypesEi_44(i0, i1);
-	i0 = mDataMemory.ReadInt32(4596);
+	i0 = mDataMemory.ReadInt32(4380);
 	__ZN16ResourceCompiler21VariantResourceLookup13pickResourcesEv_44(i0);
-	i0 = mDataMemory.ReadInt32(4596);
+	i0 = mDataMemory.ReadInt32(4380);
 	i1 = 1;
 	__ZN16ResourceCompiler21VariantResourceLookup13loadResourcesEb_44(i0, i1);
 	r14 = 0;
@@ -12256,7 +12122,7 @@ label_3:
 	sp += 16;
 	goto label_0;	// return
 label_4:
-	i0 = mDataMemory.ReadInt32(4596);
+	i0 = mDataMemory.ReadInt32(4380);
 	i1 = 0;
 	__ZN16ResourceCompiler21VariantResourceLookup13loadResourcesEb_44(i0, i1);
 	r14 = -1;
@@ -12859,7 +12725,7 @@ label_4:
 	r0 = 307199;
 	if (r14 <= r0) goto label_7;
 	i0 = d0;
-	i1 = 4626;
+	i1 = 4410;
 	r14 = _strstr_19(i0, i1);
 label_5:
 	r0 = 1;
@@ -12869,19 +12735,19 @@ label_5:
 	goto label_3;
 label_6:
 	i0 = d0;
-	i1 = 4643;
+	i1 = 4427;
 	r14 = _strstr_19(i0, i1);
 	goto label_5;
 label_7:
 	r0 = 150399;
 	if (r14 <= r0) goto label_8;
 	i0 = d0;
-	i1 = 4661;
+	i1 = 4445;
 	r14 = _strstr_19(i0, i1);
 	goto label_5;
 label_8:
 	i0 = d0;
-	i1 = 4679;
+	i1 = 4463;
 	r14 = _strstr_19(i0, i1);
 	goto label_5;
 label_0:;
@@ -13321,21 +13187,21 @@ private void crt0_startup_49(int i0, int i1, int i2)
 	int r14=0;
 
 label_1:
-	mDataMemory.WriteInt32(4696, i0);
+	mDataMemory.WriteInt32(4480, i0);
 	sp -= 16;
-	mDataMemory.WriteInt32(4700, sp);
+	mDataMemory.WriteInt32(4484, sp);
 	i0 = sp;
 	i0 -= i1;
 	i0 -= i2;
 	i1 = i2;
 	_ansi_heap_init_crt0_16(i0, i1);
 	r14 = _resource_selector_42();
-	i0 = 34080;
+	i0 = 33864;
 	_crt_tor_chain_12(i0);
 	r14 = _MAMain_3();
 label_2:
 	mDataMemory.WriteInt32(sp, r14);
-	i0 = 34116;
+	i0 = 33900;
 	_crt_tor_chain_12(i0);
 	i0 = mDataMemory.ReadInt32(sp);
 	mSyscallInvoker.maExit(i0);
@@ -13389,7 +13255,7 @@ label_2:
 	sp += 8;
 	goto label_0;	// return
 label_3:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -13445,7 +13311,7 @@ label_2:
 	sp += 8;
 	goto label_0;	// return
 label_3:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -13905,9 +13771,9 @@ label_1:
 	fr += 4;
 	r14 = i0;
 	mDataMemory.WriteInt32(i0+32, i2);
-	r0 = -536870725;
+	r0 = -536870726;
 	mDataMemory.WriteInt32(i0+36, r0);
-	r0 = -536870724;
+	r0 = -536870725;
 	mDataMemory.WriteInt32(i0+40, r0);
 	r0 = 0;
 	mDataMemory.WriteInt32(i0+44, r0);
@@ -14256,7 +14122,7 @@ label_11:
 	r0 = 0;
 	if (r14 != r0) goto label_15;
 label_12:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14296,7 +14162,7 @@ label_18:
 	if (r14 != r0) goto label_15;
 	goto label_12;
 label_19:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14308,21 +14174,21 @@ label_20:
 	d2 = d3;
 	r14 = mDataMemory.ReadInt32(d3+8);
 	if (r14 == d0) goto label_18;
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 630;
 	_bfeHandler_13(i0, i1, i2);
 label_21:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 561;
 	_bfeHandler_13(i0, i1, i2);
 label_22:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14334,7 +14200,7 @@ label_23:
 	d2 = d3;
 	r14 = mDataMemory.ReadInt32(d3+8);
 	if (r14 == d0) goto label_10;
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14557,7 +14423,7 @@ label_23:
 	_rotate_left_57(i0);
 	i0 = mDataMemory.ReadInt32(d0+4);
 	if (i0 != d2) goto label_15;
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14565,7 +14431,7 @@ label_23:
 label_24:
 	_bfeHandler_13(i0, i1, i2);
 label_25:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14573,7 +14439,7 @@ label_25:
 label_26:
 	_bfeHandler_13(i0, i1, i2);
 label_27:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14607,7 +14473,7 @@ label_31:
 	r1 = mDataMemory.ReadInt32(d2);
 	goto label_6;
 label_32:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14615,7 +14481,7 @@ label_32:
 label_33:
 	_bfeHandler_13(i0, i1, i2);
 label_34:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14623,35 +14489,35 @@ label_34:
 label_35:
 	_bfeHandler_13(i0, i1, i2);
 label_36:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 659;
 	_bfeHandler_13(i0, i1, i2);
 label_37:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 660;
 	_bfeHandler_13(i0, i1, i2);
 label_38:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 740;
 	_bfeHandler_13(i0, i1, i2);
 label_39:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 817;
 	_bfeHandler_13(i0, i1, i2);
 label_40:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14659,7 +14525,7 @@ label_40:
 label_41:
 	_bfeHandler_13(i0, i1, i2);
 label_42:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14667,14 +14533,14 @@ label_42:
 label_43:
 	_bfeHandler_13(i0, i1, i2);
 label_44:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 719;
 	_bfeHandler_13(i0, i1, i2);
 label_45:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14682,7 +14548,7 @@ label_45:
 label_46:
 	_bfeHandler_13(i0, i1, i2);
 label_47:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14690,14 +14556,14 @@ label_47:
 label_48:
 	_bfeHandler_13(i0, i1, i2);
 label_49:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 729;
 	_bfeHandler_13(i0, i1, i2);
 label_50:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14707,7 +14573,7 @@ label_51:
 	r2 = mDataMemory.ReadInt32(i0+4);
 	goto label_16;
 label_52:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14715,7 +14581,7 @@ label_52:
 label_53:
 	_bfeHandler_13(i0, i1, i2);
 label_54:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14723,7 +14589,7 @@ label_54:
 label_55:
 	_bfeHandler_13(i0, i1, i2);
 label_56:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14731,7 +14597,7 @@ label_56:
 label_57:
 	_bfeHandler_13(i0, i1, i2);
 label_58:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14739,7 +14605,7 @@ label_58:
 label_59:
 	_bfeHandler_13(i0, i1, i2);
 label_60:
-	i0 = 5614;
+	i0 = 5398;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -14873,7 +14739,7 @@ label_2:
 	r14 = (int)((uint) r14 >> 1);
 	r0 = 0;
 	if (r14 != r0) goto label_2;
-	mDataMemory.WriteInt32(52736, r15);
+	mDataMemory.WriteInt32(52520, r15);
 	//pop  fr,1
 	sp += 4;
 
@@ -15095,7 +14961,7 @@ label_4:
 	sp += 8;
 	goto label_0;	// return
 label_5:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -15105,17 +14971,17 @@ label_6:
 	if (i2 != i1) goto label_2;
 	goto label_3;
 label_7:
-	r14 = -536870722;
+	r14 = -536870723;
 	mDataMemory.WriteInt32(i0+36, r14);
 	mDataMemory.WriteInt32(i0+40, i3);
 	//pop  fr,2
 	sp += 8;
 	goto label_0;	// return
 label_8:
-	r14 = -536870723;
+	r14 = -536870724;
 	goto label_4;
 label_9:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -15211,7 +15077,7 @@ label_1:
 	r0 = mDataMemory.ReadInt32(i0+4);
 	r0 += 1;
 	r1 = mDataMemory.ReadInt32(r3+4);
-	r14 = mDataMemory.ReadInt32(52736);
+	r14 = mDataMemory.ReadInt32(52520);
 	r4 = 0;
 	if (r14 == r4) goto label_7;
 	r5 = 0;
@@ -15251,7 +15117,7 @@ label_6:
 	sp += 8;
 	goto label_0;	// return
 label_7:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -15288,7 +15154,7 @@ label_1:
 	d2 = i2;
 	d3 = i3;
 	d1 = mDataMemory.ReadInt32(fr+4);
-	r14 = mDataMemory.ReadInt32(52736);
+	r14 = mDataMemory.ReadInt32(52520);
 	r0 = 0;
 	if (r14 == r0) goto label_7;
 label_2:
@@ -15337,20 +15203,20 @@ label_7:
 	_compute_bits_58();
 	goto label_2;
 label_8:
-	r14 = -536870721;
+	r14 = -536870722;
 	goto label_4;
 label_9:
-	r14 = -536870720;
+	r14 = -536870721;
 	goto label_3;
 label_10:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 420;
 	_bfeHandler_13(i0, i1, i2);
 label_11:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -15358,7 +15224,7 @@ label_11:
 label_12:
 	_bfeHandler_13(i0, i1, i2);
 label_13:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -15366,7 +15232,7 @@ label_13:
 label_14:
 	_bfeHandler_13(i0, i1, i2);
 label_15:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -15499,7 +15365,7 @@ label_1:
 	fr += 16;
 	d0 = i0;
 	d1 = i1;
-	r14 = mDataMemory.ReadInt32(52736);
+	r14 = mDataMemory.ReadInt32(52520);
 	r0 = 0;
 	if (r14 == r0) goto label_18;
 	r14 = mDataMemory.ReadInt32(i0+8);
@@ -15617,14 +15483,14 @@ label_14:
 	r14 = _hash_verify_58(i0);
 	r1 = 0;
 	if (r14 != r1) goto label_2;
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 578;
 	_bfeHandler_13(i0, i1, i2);
 label_15:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -15632,21 +15498,21 @@ label_15:
 label_16:
 	_bfeHandler_13(i0, i1, i2);
 label_17:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 562;
 	_bfeHandler_13(i0, i1, i2);
 label_18:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 561;
 	_bfeHandler_13(i0, i1, i2);
 label_19:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -15654,7 +15520,7 @@ label_19:
 label_20:
 	_bfeHandler_13(i0, i1, i2);
 label_21:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -15707,7 +15573,7 @@ label_1:
 	sp += 24;
 	goto label_0;	// return
 label_2:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -15783,7 +15649,7 @@ label_1:
 	i1 = mDataMemory.ReadInt32(i1+4);
 	r14 = _hash_lookup_58(i0, i1);
 	if (r14 != d0) goto label_6;
-	r14 = mDataMemory.ReadInt32(52736);
+	r14 = mDataMemory.ReadInt32(52520);
 	r0 = 0;
 	if (r14 == r0) goto label_7;
 	r14 = mDataMemory.ReadInt32(d0+12);
@@ -15822,21 +15688,21 @@ label_5:
 	mDataMemory.WriteInt32(r14, r0);
 	goto label_4;
 label_6:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 698;
 	_bfeHandler_13(i0, i1, i2);
 label_7:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
 	i2 = 699;
 	_bfeHandler_13(i0, i1, i2);
 label_8:
-	i0 = 5704;
+	i0 = 5488;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -16020,7 +15886,7 @@ label_1:
 	r14 += r1;
 	r14 &= 15;
 	r14 = (int)( r14 << 2);
-	r14 = mDataMemory.ReadInt32(r14+5796);
+	r14 = mDataMemory.ReadInt32(r14+5580);
 	r1 ^= r14;
 	r0 = r1;
 	r0 = (int)( r0 << 1);
@@ -16032,7 +15898,7 @@ label_1:
 	r15 += r1;
 	r15 &= 15;
 	r15 = (int)( r15 << 2);
-	r15 = mDataMemory.ReadInt32(r15+5796);
+	r15 = mDataMemory.ReadInt32(r15+5580);
 	r1 ^= r15;
 	i0 += 1;
 	r0 = r1;
@@ -16103,8 +15969,8 @@ private void __ZN6MAUtil18ConnectionListener15connectFinishedEPNS_10ConnectionEi
 	fr = sp;
 	fr += 8;
 label_1:
-	i0 = 6732;
-	i1 = 6716;
+	i0 = 6516;
+	i1 = 6500;
 	_panicFunction_13(i0, i1);
 	return;
 } // __ZN6MAUtil18ConnectionListener15connectFinishedEPNS_10ConnectionEi
@@ -16131,8 +15997,8 @@ private void __ZN6MAUtil18ConnectionListener16connRecvFinishedEPNS_10ConnectionE
 	fr = sp;
 	fr += 8;
 label_1:
-	i0 = 6800;
-	i1 = 6783;
+	i0 = 6584;
+	i1 = 6567;
 	_panicFunction_13(i0, i1);
 	return;
 } // __ZN6MAUtil18ConnectionListener16connRecvFinishedEPNS_10ConnectionEi
@@ -16159,8 +16025,8 @@ private void __ZN6MAUtil18ConnectionListener17connWriteFinishedEPNS_10Connection
 	fr = sp;
 	fr += 8;
 label_1:
-	i0 = 6870;
-	i1 = 6852;
+	i0 = 6654;
+	i1 = 6636;
 	_panicFunction_13(i0, i1);
 	return;
 } // __ZN6MAUtil18ConnectionListener17connWriteFinishedEPNS_10ConnectionEi
@@ -16187,8 +16053,8 @@ private void __ZN6MAUtil18ConnectionListener16connReadFinishedEPNS_10ConnectionE
 	fr = sp;
 	fr += 8;
 label_1:
-	i0 = 6940;
-	i1 = 6923;
+	i0 = 6724;
+	i1 = 6707;
 	_panicFunction_13(i0, i1);
 	return;
 } // __ZN6MAUtil18ConnectionListener16connReadFinishedEPNS_10ConnectionEi
@@ -16217,7 +16083,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r14 = 6672;
+	r14 = 6456;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+8, i2);
 	mDataMemory.WriteInt32(i0+12, i1);
@@ -16241,8 +16107,8 @@ label_5:
 	sp += 12;
 	goto label_0;	// return
 label_6:
-	i0 = 7003;
-	i1 = 6992;
+	i0 = 6787;
+	i1 = 6776;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return;
@@ -16272,7 +16138,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r14 = 6672;
+	r14 = 6456;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+8, i2);
 	mDataMemory.WriteInt32(i0+12, i1);
@@ -16296,8 +16162,8 @@ label_5:
 	sp += 12;
 	goto label_0;	// return
 label_6:
-	i0 = 7003;
-	i1 = 6992;
+	i0 = 6787;
+	i1 = 6776;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return;
@@ -16348,8 +16214,8 @@ label_3:
 	sp += 12;
 	goto label_0;	// return
 label_4:
-	i0 = 7025;
-	i1 = 7017;
+	i0 = 6809;
+	i1 = 6801;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return r14;
@@ -16419,7 +16285,7 @@ private void __ZN6MAUtil10ConnectionD0Ev_63(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 6672;
+	r14 = 6456;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil10Connection5closeEv_63(i0);
 label_2:
@@ -16453,7 +16319,7 @@ private void __ZN6MAUtil10ConnectionD1Ev_63(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 6672;
+	r14 = 6456;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil10Connection5closeEv_63(i0);
 label_2:
@@ -16486,7 +16352,7 @@ label_1:
 	fr = sp;
 	fr += 8;
 label_2:
-	r14 = 6672;
+	r14 = 6456;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil10Connection5closeEv_63(i0);
 label_3:
@@ -16687,11 +16553,11 @@ label_13:
 	i2 = mDataMemory.ReadInt32(r1+8);
 	goto label_4;
 label_14:
-	i0 = 7102;
-	i1 = 7092;
+	i0 = 6886;
+	i1 = 6876;
 	_panicFunction_13(i0, i1);
 label_15:
-	i0 = 7145;
+	i0 = 6929;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -16727,7 +16593,7 @@ label_1:
 label_2:
 	i2 = 0;
 	__ZN6MAUtil10ConnectionC2EPNS_18ConnectionListenerEi_63(i0, i1, i2);
-	r14 = 6692;
+	r14 = 6476;
 	mDataMemory.WriteInt32(d0, r14);
 label_3:
 	//pop  d0,3
@@ -16762,7 +16628,7 @@ label_1:
 label_2:
 	i2 = 0;
 	__ZN6MAUtil10ConnectionC2EPNS_18ConnectionListenerEi_63(i0, i1, i2);
-	r14 = 6692;
+	r14 = 6476;
 	mDataMemory.WriteInt32(d0, r14);
 label_3:
 	//pop  d0,3
@@ -16817,8 +16683,8 @@ label_3:
 	sp += 12;
 	goto label_0;	// return
 label_4:
-	i0 = 7025;
-	i1 = 7243;
+	i0 = 6809;
+	i1 = 7027;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return r14;
@@ -16993,8 +16859,8 @@ label_4:
 	sp += 12;
 	goto label_0;	// return
 label_5:
-	i0 = 7102;
-	i1 = 7250;
+	i0 = 6886;
+	i1 = 7034;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return;
@@ -17022,7 +16888,7 @@ private void __ZN6MAUtil14HttpConnectionD1Ev_63(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 6692;
+	r14 = 6476;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil10ConnectionD2Ev_63(i0);
 label_2:
@@ -17055,7 +16921,7 @@ private void __ZN6MAUtil14HttpConnectionD0Ev_63(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 6692;
+	r14 = 6476;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil10ConnectionD2Ev_63(i0);
 label_2:
@@ -17188,8 +17054,8 @@ label_4:
 	r14 = mSyscallInvoker.maCreatePlaceholder();
 	goto label_2;
 label_5:
-	i0 = 7545;
-	i1 = 7528;
+	i0 = 7329;
+	i1 = 7312;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return r14;
@@ -17261,8 +17127,8 @@ label_11:
 	sp += 24;
 	goto label_0;	// return
 label_12:
-	i0 = 7592;
-	i1 = 7574;
+	i0 = 7376;
+	i1 = 7358;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return;
@@ -17610,8 +17476,8 @@ label_2:
 	sp += 12;
 	goto label_0;	// return
 label_3:
-	i0 = 7638;
-	i1 = 7621;
+	i0 = 7422;
+	i1 = 7405;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return;
@@ -17768,8 +17634,8 @@ label_6:
 	sp += 12;
 	goto label_0;	// return
 label_7:
-	i0 = 7638;
-	i1 = 7664;
+	i0 = 7422;
+	i1 = 7448;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return r14;
@@ -17909,7 +17775,7 @@ label_1:
 	fr = sp;
 	fr += 4;
 label_2:
-	r14 = 7492;
+	r14 = 7276;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+4, i1);
 	r14 = 0;
@@ -17948,7 +17814,7 @@ label_1:
 	d2 = i3;
 label_2:
 	__ZN6MAUtil16DownloaderReaderC2EPNS_10DownloaderE_64(i0, i1);
-	r14 = 7452;
+	r14 = 7236;
 	mDataMemory.WriteInt32(d0, r14);
 	mDataMemory.WriteInt32(d0+12, d1);
 	mDataMemory.WriteInt32(d0+8, d2);
@@ -18110,7 +17976,7 @@ label_1:
 	d1 = i0;
 label_2:
 	__ZN6MAUtil16DownloaderReaderC2EPNS_10DownloaderE_64(i0, i1);
-	r14 = 7468;
+	r14 = 7252;
 	mDataMemory.WriteInt32(d1, r14);
 label_3:
 	d0 = d1;
@@ -18177,7 +18043,7 @@ label_3:
 	i0 = d4;
 	__ZN6MAUtil11BasicStringIcEC1Ev_74(i0);
 	i0 = d2;
-	i1 = 7674;
+	i1 = 7458;
 	i2 = d4;
 	r14 = __ZN6MAUtil14HttpConnection17getResponseHeaderEPKcPNS_11BasicStringIcEE_63(i0, i1, i2);
 label_4:
@@ -18273,7 +18139,7 @@ private void __ZN6MAUtil10DownloaderD0Ev_64(int i0)
 	fr += 16;
 	d1 = i0;
 label_1:
-	r14 = 7296;
+	r14 = 7080;
 	mDataMemory.WriteInt32(i0, r14);
 	i1 = 1;
 	__ZN6MAUtil10Downloader15closeConnectionEi_64(i0, i1);
@@ -18335,7 +18201,7 @@ private void __ZN6MAUtil10DownloaderD1Ev_64(int i0)
 	fr += 16;
 	d1 = i0;
 label_1:
-	r14 = 7296;
+	r14 = 7080;
 	mDataMemory.WriteInt32(i0, r14);
 	i1 = 1;
 	__ZN6MAUtil10Downloader15closeConnectionEi_64(i0, i1);
@@ -18391,7 +18257,7 @@ label_1:
 	fr += 16;
 	d1 = i0;
 label_2:
-	r14 = 7296;
+	r14 = 7080;
 	mDataMemory.WriteInt32(i0, r14);
 	i1 = 1;
 	__ZN6MAUtil10Downloader15closeConnectionEi_64(i0, i1);
@@ -18446,7 +18312,7 @@ private void __ZN6MAUtil15ImageDownloaderD0Ev_64(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 7348;
+	r14 = 7132;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil10DownloaderD2Ev_64(i0);
 label_2:
@@ -18480,7 +18346,7 @@ private void __ZN6MAUtil15ImageDownloaderD1Ev_64(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 7348;
+	r14 = 7132;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil10DownloaderD2Ev_64(i0);
 label_2:
@@ -18514,7 +18380,7 @@ label_1:
 	fr += 16;
 	d0 = i0;
 label_2:
-	r14 = 7296;
+	r14 = 7080;
 	mDataMemory.WriteInt32(i0, r14);
 	r14 = 0;
 	mDataMemory.WriteUInt8(i0+8, (byte)r14);
@@ -18573,7 +18439,7 @@ label_1:
 	d0 = i0;
 label_2:
 	__ZN6MAUtil10DownloaderC2Ev_64(i0);
-	r14 = 7348;
+	r14 = 7132;
 	mDataMemory.WriteInt32(d0, r14);
 	r14 = 0;
 	mDataMemory.WriteUInt8(d0+32, (byte)r14);
@@ -19226,7 +19092,7 @@ private void __ZN6MAUtil31DownloaderReaderThatReadsChunksD0Ev_64(int i0)
 	fr += 24;
 	d3 = i0;
 label_1:
-	r0 = 7468;
+	r0 = 7252;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d0 = i0;
@@ -19366,7 +19232,7 @@ private void __ZN6MAUtil31DownloaderReaderThatReadsChunksD1Ev_64(int i0)
 	fr = sp;
 	fr += 20;
 label_1:
-	r0 = 7468;
+	r0 = 7252;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d0 = i0;
@@ -19719,7 +19585,7 @@ label_1:
 	fr = sp;
 	fr += 8;
 label_2:
-	r14 = mDataMemory.ReadInt32(7804);
+	r14 = mDataMemory.ReadInt32(7588);
 	r0 = 0;
 	if (r14 == r0) goto label_4;
 label_3:
@@ -19727,8 +19593,8 @@ label_3:
 	sp += 8;
 	goto label_0;	// return
 label_4:
-	i0 = 7823;
-	i1 = 7808;
+	i0 = 7607;
+	i1 = 7592;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return r14;
@@ -19856,7 +19722,7 @@ private void __ZN6MAUtil11EnvironmentD0Ev_65(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 7788;
+	r14 = 7572;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	i0 = mDataMemory.ReadInt32(i0+160);
@@ -19993,7 +19859,7 @@ private void __ZN6MAUtil11EnvironmentD1Ev_65(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 7788;
+	r14 = 7572;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	i0 = mDataMemory.ReadInt32(i0+160);
@@ -20100,7 +19966,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r14 = 7788;
+	r14 = 7572;
 	mDataMemory.WriteInt32(i0, r14);
 label_3:
 	i0 = mDataMemory.ReadInt32(i0+160);
@@ -20207,7 +20073,7 @@ label_1:
 	fr += 16;
 	d1 = i0;
 label_2:
-	r0 = 7788;
+	r0 = 7572;
 	mDataMemory.WriteInt32(i0, r0);
 label_3:
 	r14 = i0;
@@ -20378,16 +20244,16 @@ label_41:
 	r0 = 0;
 	mDataMemory.WriteInt32(d0, r0);
 label_42:
-	r14 = mDataMemory.ReadInt32(7804);
+	r14 = mDataMemory.ReadInt32(7588);
 	if (r14 != r0) goto label_44;
-	mDataMemory.WriteInt32(7804, d1);
+	mDataMemory.WriteInt32(7588, d1);
 label_43:
 	//pop  d1,4
 	sp += 16;
 	goto label_0;	// return
 label_44:
-	i0 = 7912;
-	i1 = 7900;
+	i0 = 7696;
+	i1 = 7684;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return;
@@ -22124,7 +21990,7 @@ private void __ZN6MAUtil11KeyListenerD0Ev_65(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r0 = 7752;
+	r0 = 7536;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	r14 = __ZN6MAUtil11Environment14getEnvironmentEv_65();
@@ -22178,7 +22044,7 @@ private void __ZN6MAUtil11KeyListenerD1Ev_65(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r0 = 7752;
+	r0 = 7536;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	r14 = __ZN6MAUtil11Environment14getEnvironmentEv_65();
@@ -22229,7 +22095,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r0 = 7752;
+	r0 = 7536;
 	mDataMemory.WriteInt32(i0, r0);
 label_3:
 	r14 = __ZN6MAUtil11Environment14getEnvironmentEv_65();
@@ -24153,7 +24019,7 @@ private void __ZN6MAUtil15PointerListenerD0Ev_65(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r0 = 7712;
+	r0 = 7496;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	r14 = __ZN6MAUtil11Environment14getEnvironmentEv_65();
@@ -24207,7 +24073,7 @@ private void __ZN6MAUtil15PointerListenerD1Ev_65(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r0 = 7712;
+	r0 = 7496;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	r14 = __ZN6MAUtil11Environment14getEnvironmentEv_65();
@@ -24258,7 +24124,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r0 = 7712;
+	r0 = 7496;
 	mDataMemory.WriteInt32(i0, r0);
 label_3:
 	r14 = __ZN6MAUtil11Environment14getEnvironmentEv_65();
@@ -25132,8 +24998,8 @@ label_34:
 	i0 = mDataMemory.ReadInt32(d0+8);
 	goto label_30;
 label_35:
-	i0 = 8031;
-	i1 = 8015;
+	i0 = 7815;
+	i1 = 7799;
 	_panicFunction_13(i0, i1);
 label_36:
 	i0 = mDataMemory.ReadInt32(d0+8);
@@ -27035,7 +26901,7 @@ private void __ZN6MAUtil10RefCountedD1Ev_72(int i0)
 	fr = sp;
 	fr += 4;
 label_1:
-	r14 = 9052;
+	r14 = 8836;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	//pop  fr,1
@@ -27066,7 +26932,7 @@ private void __ZN6MAUtil10RefCountedD0Ev_72(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 9052;
+	r14 = 8836;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	__ZdlPv_45(i0);
@@ -27099,7 +26965,7 @@ label_1:
 	fr = sp;
 	fr += 4;
 label_2:
-	r14 = 9052;
+	r14 = 8836;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+4, i1);
 label_3:
@@ -27234,7 +27100,7 @@ private void __ZN6MAUtil10RefCountedD1Ev_74(int i0)
 	fr = sp;
 	fr += 4;
 label_1:
-	r14 = 9232;
+	r14 = 9016;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	//pop  fr,1
@@ -27265,7 +27131,7 @@ private void __ZN6MAUtil10RefCountedD0Ev_74(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 9232;
+	r14 = 9016;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	__ZdlPv_45(i0);
@@ -27932,7 +27798,7 @@ private void __ZN6MAUtil10StringDataIcED0Ev_74(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 9232;
+	r14 = 9016;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	i0 = mDataMemory.ReadInt32(i0+16);
@@ -27978,7 +27844,7 @@ private void __ZN6MAUtil10StringDataIcED1Ev_74(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 9232;
+	r14 = 9016;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	i0 = mDataMemory.ReadInt32(i0+16);
@@ -28038,7 +27904,7 @@ label_4:
 	i0 = d2;
 	i1 = 1;
 	__ZN6MAUtil10RefCountedC2Ei_72(i0, i1);
-	r14 = 9200;
+	r14 = 8984;
 	mDataMemory.WriteInt32(d2, r14);
 	r14 = mDataMemory.ReadInt32(d3+8);
 	mDataMemory.WriteInt32(d0, r14);
@@ -28110,7 +27976,7 @@ label_5:
 	sp += 20;
 	goto label_0;	// return
 label_6:
-	i0 = 9240;
+	i0 = 9024;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -28160,7 +28026,7 @@ label_4:
 	i0 = d3;
 	i1 = 1;
 	__ZN6MAUtil10RefCountedC2Ei_72(i0, i1);
-	r1 = 9200;
+	r1 = 8984;
 	mDataMemory.WriteInt32(d3, r1);
 label_5:
 	r14 = mDataMemory.ReadInt32(d1+4);
@@ -28245,7 +28111,7 @@ label_1:
 	fr = sp;
 	fr += 20;
 label_2:
-	d1 = mDataMemory.ReadInt32(52744);
+	d1 = mDataMemory.ReadInt32(52528);
 	d2 = d1;
 	r14 = 0;
 	if (d1 != r14) goto label_3;
@@ -28256,18 +28122,18 @@ label_2:
 	i1 = d1;
 	__ZN6MAUtil10StringDataIcEC1Ei_74(i0, i1);
 	d1 = d0;
-	mDataMemory.WriteInt32(52744, d0);
+	mDataMemory.WriteInt32(52528, d0);
 	if (d0 == d2) goto label_5;
 label_3:
 	i0 = d1;
 	__ZN6MAUtil10RefCounted6addRefEv_72(i0);
 label_4:
-	r14 = mDataMemory.ReadInt32(52744);
+	r14 = mDataMemory.ReadInt32(52528);
 	//pop  d2,5
 	sp += 20;
 	goto label_0;	// return
 label_5:
-	i0 = 9240;
+	i0 = 9024;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -28344,8 +28210,8 @@ label_2:
 	d1 = r14;
 	if (r14 >= d2) goto label_4;
 label_3:
-	i0 = 9341;
-	i1 = 9595;
+	i0 = 9125;
+	i1 = 9379;
 	_panicFunction_13(i0, i1);
 label_4:
 	r14 = -1;
@@ -28359,8 +28225,8 @@ label_5:
 	r14 = __ZNK6MAUtil11BasicStringIcE6lengthEv_74(i0);
 	if (d0 <= d1) goto label_8;
 label_6:
-	i0 = 9355;
-	i1 = 9595;
+	i0 = 9139;
+	i1 = 9379;
 	_panicFunction_13(i0, i1);
 label_7:
 	i0 = d4;
@@ -28446,7 +28312,7 @@ label_4:
 	i0 = d3;
 	i1 = 1;
 	__ZN6MAUtil10RefCountedC2Ei_72(i0, i1);
-	r1 = 9200;
+	r1 = 8984;
 	mDataMemory.WriteInt32(d3, r1);
 label_5:
 	r14 = mDataMemory.ReadInt32(d1+4);
@@ -28565,7 +28431,7 @@ label_5:
 	mDataMemory.WriteInt32(d3, d0);
 	r14 = 0;
 	if (d0 != r14) goto label_4;
-	i0 = 9240;
+	i0 = 9024;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -28573,7 +28439,7 @@ label_5:
 	_bfeHandler_13(i0, i1, i2);
 label_6:
 	i0 = r0;
-	i1 = 9370;
+	i1 = 9154;
 	mSyscallInvoker.maPanic(i0, i1);
 label_0:;
 	return;
@@ -28611,7 +28477,7 @@ label_3:
 	goto label_0;	// return
 label_4:
 	i0 = i1;
-	i1 = 9437;
+	i1 = 9221;
 	mSyscallInvoker.maPanic(i0, i1);
 label_0:;
 	return;
@@ -28656,7 +28522,7 @@ label_3:
 	goto label_0;	// return
 label_4:
 	i0 = i1;
-	i1 = 9501;
+	i1 = 9285;
 	mSyscallInvoker.maPanic(i0, i1);
 label_0:;
 	return;
@@ -29329,8 +29195,8 @@ label_3:
 	d2 = r14;
 	if (r14 > d1) goto label_18;
 label_4:
-	i0 = 9563;
-	i1 = 9602;
+	i0 = 9347;
+	i1 = 9386;
 	_panicFunction_13(i0, i1);
 label_5:
 	d0 = mDataMemory.ReadInt32(d3);
@@ -29400,8 +29266,8 @@ label_18:
 	r14 = __ZNK6MAUtil11BasicStringIcE6lengthEv_74(i0);
 	if (d0 <= d2) goto label_33;
 label_19:
-	i0 = 9580;
-	i1 = 9602;
+	i0 = 9364;
+	i1 = 9386;
 	_panicFunction_13(i0, i1);
 label_20:
 	i0 = d1;
@@ -29663,7 +29529,7 @@ label_2:
 	mDataMemory.WriteInt32(sp+4, i1);
 	mDataMemory.WriteInt32(sp+8, i2);
 	i0 = d0;
-	i1 = 9609;
+	i1 = 9393;
 	r14 = _sprintf_22(i0, i1);
 	i0 = d1;
 	i1 = d0;
@@ -29764,15 +29630,15 @@ label_4:
 	if (i0 == r14) goto label_6;
 	r14 = 0;
 	if (i0 != r14) goto label_3;
-	i0 = 52748;
+	i0 = 52532;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_5:
 	//pop  fr,2
 	sp += 8;
 	goto label_0;	// return
 label_6:
-	i0 = 52748;
-	i1 = 11957;
+	i0 = 52532;
+	i1 = 11741;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_7:
 	//pop  fr,2
@@ -29876,15 +29742,15 @@ label_4:
 	if (i0 == r14) goto label_6;
 	r14 = 0;
 	if (i0 != r14) goto label_3;
-	i0 = 52752;
+	i0 = 52536;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_5:
 	//pop  fr,2
 	sp += 8;
 	goto label_0;	// return
 label_6:
-	i0 = 52752;
-	i1 = 12956;
+	i0 = 52536;
+	i1 = 12740;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_7:
 	//pop  fr,2
@@ -29988,15 +29854,15 @@ label_4:
 	if (i0 == r14) goto label_6;
 	r14 = 0;
 	if (i0 != r14) goto label_3;
-	i0 = 52756;
+	i0 = 52540;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_5:
 	//pop  fr,2
 	sp += 8;
 	goto label_0;	// return
 label_6:
-	i0 = 52756;
-	i1 = 16843;
+	i0 = 52540;
+	i1 = 16627;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_7:
 	//pop  fr,2
@@ -30366,12 +30232,12 @@ label_1:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 17092;
+	i1 = 16876;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 17063;
+	i1 = 16847;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+16);
@@ -30421,14 +30287,14 @@ label_2:
 	d1 = fr;
 	d1 += -20;
 	i0 = d1;
-	i1 = 17110;
+	i1 = 16894;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
 	__ZN8NativeUI6WidgetC2ERKN6MAUtil11BasicStringIcEE_117(i0, i1);
 	i0 = d1;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-	r14 = 16868;
+	r14 = 16652;
 	mDataMemory.WriteInt32(d0, r14);
 label_3:
 	d0 += 48;
@@ -30471,7 +30337,7 @@ private void __ZN8NativeUI6ScreenD0Ev_106(int i0)
 	fr += 20;
 	d1 = i0;
 label_1:
-	r0 = 16868;
+	r0 = 16652;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d0 = i0;
@@ -30579,7 +30445,7 @@ private void __ZN8NativeUI6ScreenD1Ev_106(int i0)
 	fr += 20;
 	d1 = i0;
 label_1:
-	r0 = 16868;
+	r0 = 16652;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d0 = i0;
@@ -31024,15 +30890,15 @@ label_4:
 	if (i0 == r14) goto label_6;
 	r14 = 0;
 	if (i0 != r14) goto label_3;
-	i0 = 52760;
+	i0 = 52544;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_5:
 	//pop  fr,2
 	sp += 8;
 	goto label_0;	// return
 label_6:
-	i0 = 52760;
-	i1 = 19111;
+	i0 = 52544;
+	i1 = 18895;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_7:
 	//pop  fr,2
@@ -31130,7 +30996,7 @@ label_1:
 	d2 = fr;
 	d2 += -28;
 	i0 = d2;
-	i1 = 19704;
+	i1 = 19488;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	r14 = __ZNK6MAUtil11BasicStringIcE5c_strEv_74(i0);
@@ -31187,7 +31053,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 19704;
+	i1 = 19488;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+48);
@@ -31237,7 +31103,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 19708;
+	i1 = 19492;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+16);
@@ -31285,7 +31151,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 19713;
+	i1 = 19497;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+16);
@@ -31333,7 +31199,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 19713;
+	i1 = 19497;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+48);
@@ -31383,7 +31249,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 19721;
+	i1 = 19505;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+16);
@@ -31431,7 +31297,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 19730;
+	i1 = 19514;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+16);
@@ -31478,12 +31344,12 @@ label_1:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 19739;
+	i1 = 19523;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 19750;
+	i1 = 19534;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+16);
@@ -31532,12 +31398,12 @@ label_1:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 19739;
+	i1 = 19523;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 19755;
+	i1 = 19539;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+16);
@@ -31586,12 +31452,12 @@ label_1:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 19761;
+	i1 = 19545;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 19770;
+	i1 = 19554;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+16);
@@ -31640,12 +31506,12 @@ label_1:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 19761;
+	i1 = 19545;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 19775;
+	i1 = 19559;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+16);
@@ -31696,7 +31562,7 @@ label_1:
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 19761;
+	i1 = 19545;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+48);
@@ -31711,7 +31577,7 @@ label_1:
 	i0 = d3;
 	r14 = __ZNK6MAUtil11BasicStringIcE5c_strEv_74(i0);
 	i0 = r14;
-	i1 = 19770;
+	i1 = 19554;
 	r14 = _strstr_19(i0, i1);
 	d0 = r14;
 	r14 = 0;
@@ -31769,7 +31635,7 @@ label_1:
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 19761;
+	i1 = 19545;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+48);
@@ -31784,7 +31650,7 @@ label_1:
 	i0 = d3;
 	r14 = __ZNK6MAUtil11BasicStringIcE5c_strEv_74(i0);
 	i0 = r14;
-	i1 = 19775;
+	i1 = 19559;
 	r14 = _strstr_19(i0, i1);
 	d0 = r14;
 	r14 = 0;
@@ -31840,12 +31706,12 @@ label_1:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 19783;
+	i1 = 19567;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 19750;
+	i1 = 19534;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+16);
@@ -31894,12 +31760,12 @@ label_1:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 19783;
+	i1 = 19567;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 19755;
+	i1 = 19539;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+16);
@@ -31952,7 +31818,7 @@ label_1:
 	d1 = fr;
 	d1 += -40;
 	i0 = d1;
-	i1 = 19783;
+	i1 = 19567;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+48);
@@ -31972,7 +31838,7 @@ label_1:
 	i0 = d4;
 	r14 = __ZNK6MAUtil11BasicStringIcE5c_strEv_74(i0);
 	i0 = r14;
-	i1 = 19750;
+	i1 = 19534;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 != r0) goto label_5;
@@ -32027,12 +31893,12 @@ label_1:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 19810;
+	i1 = 19594;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 19750;
+	i1 = 19534;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+16);
@@ -32081,12 +31947,12 @@ label_1:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 19810;
+	i1 = 19594;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 19755;
+	i1 = 19539;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+16);
@@ -32139,7 +32005,7 @@ label_1:
 	d1 = fr;
 	d1 += -40;
 	i0 = d1;
-	i1 = 19810;
+	i1 = 19594;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+48);
@@ -32159,7 +32025,7 @@ label_1:
 	i0 = d4;
 	r14 = __ZNK6MAUtil11BasicStringIcE5c_strEv_74(i0);
 	i0 = r14;
-	i1 = 19750;
+	i1 = 19534;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 != r0) goto label_5;
@@ -32215,7 +32081,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 19835;
+	i1 = 19619;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+48);
@@ -32267,8 +32133,8 @@ label_1:
 label_2:
 	i0 = 124;
 	i1 = r14;
-	i2 = 19730;
-	i3 = 19842;
+	i2 = 19514;
+	i3 = 19626;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_3:
 	//pop  d0,3
@@ -32307,8 +32173,8 @@ label_1:
 label_2:
 	i0 = 124;
 	i1 = r14;
-	i2 = 19730;
-	i3 = 19854;
+	i2 = 19514;
+	i3 = 19638;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_3:
 	//pop  d0,3
@@ -32451,14 +32317,14 @@ label_2:
 	d1 = fr;
 	d1 += -20;
 	i0 = d1;
-	i1 = 19855;
+	i1 = 19639;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
 	__ZN8NativeUI6WidgetC2ERKN6MAUtil11BasicStringIcEE_117(i0, i1);
 	i0 = d1;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-	r14 = 19444;
+	r14 = 19228;
 	mDataMemory.WriteInt32(d0, r14);
 label_3:
 	d0 += 48;
@@ -32508,7 +32374,7 @@ label_1:
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 19863;
+	i1 = 19647;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d0;
@@ -32529,7 +32395,7 @@ label_2:
 label_3:
 	i0 = 124;
 	i1 = d0;
-	i2 = 19704;
+	i2 = 19488;
 	i3 = r14;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 	d0 = r14;
@@ -32569,7 +32435,7 @@ private void __ZN8NativeUI7WebViewD0Ev_116(int i0)
 	fr += 20;
 	d1 = i0;
 label_1:
-	r0 = 19444;
+	r0 = 19228;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d0 = i0;
@@ -32677,7 +32543,7 @@ private void __ZN8NativeUI7WebViewD1Ev_116(int i0)
 	fr += 20;
 	d1 = i0;
 label_1:
-	r0 = 19444;
+	r0 = 19228;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d0 = i0;
@@ -33377,7 +33243,7 @@ label_1:
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 20044;
+	i1 = 19828;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d2 = mDataMemory.ReadInt32(r14+20);
@@ -33390,7 +33256,7 @@ label_1:
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 20049;
+	i1 = 19833;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d2 = mDataMemory.ReadInt32(r14+20);
@@ -33438,7 +33304,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 20044;
+	i1 = 19828;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+20);
@@ -33486,7 +33352,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 20049;
+	i1 = 19833;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+20);
@@ -33535,7 +33401,7 @@ label_1:
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 20053;
+	i1 = 19837;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d2 = mDataMemory.ReadInt32(r14+20);
@@ -33548,7 +33414,7 @@ label_1:
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 20059;
+	i1 = 19843;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d2 = mDataMemory.ReadInt32(r14+20);
@@ -33595,7 +33461,7 @@ label_1:
 	d0 = fr;
 	d0 += -24;
 	i0 = d0;
-	i1 = 20053;
+	i1 = 19837;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+32);
@@ -33644,7 +33510,7 @@ label_1:
 	d0 = fr;
 	d0 += -24;
 	i0 = d0;
-	i1 = 20059;
+	i1 = 19843;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+32);
@@ -33694,7 +33560,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 20053;
+	i1 = 19837;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+20);
@@ -33742,7 +33608,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 20059;
+	i1 = 19843;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+20);
@@ -33789,7 +33655,7 @@ label_1:
 	d0 = fr;
 	d0 += -24;
 	i0 = d0;
-	i1 = 20053;
+	i1 = 19837;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+20);
@@ -33836,7 +33702,7 @@ label_1:
 	d0 = fr;
 	d0 += -24;
 	i0 = d0;
-	i1 = 20059;
+	i1 = 19843;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+20);
@@ -33883,7 +33749,7 @@ label_1:
 	d0 = fr;
 	d0 += -24;
 	i0 = d0;
-	i1 = 20053;
+	i1 = 19837;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+20);
@@ -33930,7 +33796,7 @@ label_1:
 	d0 = fr;
 	d0 += -24;
 	i0 = d0;
-	i1 = 20059;
+	i1 = 19843;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+20);
@@ -33978,12 +33844,12 @@ label_1:
 	d1 += -280;
 	mDataMemory.WriteInt32(sp, i1);
 	i0 = d1;
-	i1 = 20066;
+	i1 = 19850;
 	r14 = _sprintf_22(i0, i1);
 	d2 = fr;
 	d2 += -284;
 	i0 = d2;
-	i1 = 20073;
+	i1 = 19857;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -288;
@@ -34043,12 +33909,12 @@ label_1:
 	mDataMemory.WriteInt32(sp+4, i2);
 	mDataMemory.WriteInt32(sp+8, i3);
 	i0 = d1;
-	i1 = 20089;
+	i1 = 19873;
 	r14 = _sprintf_22(i0, i1);
 	d2 = fr;
 	d2 += -284;
 	i0 = d2;
-	i1 = 20073;
+	i1 = 19857;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -288;
@@ -34107,18 +33973,18 @@ label_1:
 	d1 += -284;
 	mDataMemory.WriteInt32(sp, i1);
 	i0 = d1;
-	i1 = 20066;
+	i1 = 19850;
 	r14 = _sprintf_22(i0, i1);
 	d3 = fr;
 	d3 += -540;
 	mDataMemory.WriteInt32(sp, d0);
 	i0 = d3;
-	i1 = 20066;
+	i1 = 19850;
 	r14 = _sprintf_22(i0, i1);
 	d2 = fr;
 	d2 += -544;
 	i0 = d2;
-	i1 = 20104;
+	i1 = 19888;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -548;
@@ -34131,7 +33997,7 @@ label_1:
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 20105;
+	i1 = 19889;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d0;
@@ -34147,7 +34013,7 @@ label_1:
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 20107;
+	i1 = 19891;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d1 = mDataMemory.ReadInt32(r14+16);
@@ -34200,15 +34066,15 @@ label_1:
 	d2 = fr;
 	d2 += -28;
 	i0 = d2;
-	i1 = 20126;
+	i1 = 19910;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -32;
 	d0 &= 255;
-	i1 = 20134;
+	i1 = 19918;
 	r14 = 0;
 	if (d0 != r14) goto label_2;
-	i1 = 20139;
+	i1 = 19923;
 label_2:
 	i0 = d1;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
@@ -34263,7 +34129,7 @@ label_1:
 	d1 = fr;
 	d1 += -40;
 	i0 = d1;
-	i1 = 20126;
+	i1 = 19910;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+48);
@@ -34283,7 +34149,7 @@ label_1:
 	i0 = d4;
 	r14 = __ZNK6MAUtil11BasicStringIcE5c_strEv_74(i0);
 	i0 = r14;
-	i1 = 20134;
+	i1 = 19918;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 != r0) goto label_5;
@@ -34339,15 +34205,15 @@ label_1:
 	d2 = fr;
 	d2 += -28;
 	i0 = d2;
-	i1 = 20145;
+	i1 = 19929;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -32;
 	d0 &= 255;
-	i1 = 20134;
+	i1 = 19918;
 	r14 = 0;
 	if (d0 != r14) goto label_2;
-	i1 = 20139;
+	i1 = 19923;
 label_2:
 	i0 = d1;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
@@ -34402,7 +34268,7 @@ label_1:
 	d1 = fr;
 	d1 += -40;
 	i0 = d1;
-	i1 = 20145;
+	i1 = 19929;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d2 = mDataMemory.ReadInt32(r14+48);
@@ -34422,7 +34288,7 @@ label_1:
 	i0 = d4;
 	r14 = __ZNK6MAUtil11BasicStringIcE5c_strEv_74(i0);
 	i0 = r14;
-	i1 = 20134;
+	i1 = 19918;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 != r0) goto label_5;
@@ -34865,7 +34731,7 @@ label_1:
 	mDataMemory.WriteInt32(sp, r14);
 	mDataMemory.WriteInt32(sp+4, r15);
 	i0 = d1;
-	i1 = 20159;
+	i1 = 19943;
 	r14 = _sprintf_22(i0, i1);
 label_2:
 	d0 = mDataMemory.ReadInt32(d2+4);
@@ -34933,7 +34799,7 @@ label_1:
 	d1 += -280;
 	mDataMemory.WriteInt32(sp, i2);
 	i0 = d1;
-	i1 = 20162;
+	i1 = 19946;
 	r14 = _sprintf_22(i0, i1);
 label_2:
 	d0 = mDataMemory.ReadInt32(d2+4);
@@ -35063,7 +34929,7 @@ label_1:
 	d2 = i0;
 	d1 = i1;
 label_2:
-	r14 = 19884;
+	r14 = 19668;
 	mDataMemory.WriteInt32(i0, r14);
 	r14 = __ZN8NativeUI13WidgetManager11getInstanceEv_118();
 	mDataMemory.WriteInt32(d2+8, r14);
@@ -35127,7 +34993,7 @@ label_14:
 	d0 = fr;
 	d0 += -24;
 	i0 = d0;
-	i1 = 20165;
+	i1 = 19949;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d2;
@@ -35288,7 +35154,7 @@ label_22:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 20180;
+	i1 = 19964;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = fr;
@@ -35453,7 +35319,7 @@ label_21:
 	d0 = fr;
 	d0 += -36;
 	i0 = d0;
-	i1 = 20189;
+	i1 = 19973;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = fr;
@@ -35603,7 +35469,7 @@ label_28:
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 20201;
+	i1 = 19985;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = fr;
@@ -35682,7 +35548,7 @@ private void __ZN8NativeUI6WidgetD0Ev_117(int i0)
 	fr += 36;
 	d4 = i0;
 label_1:
-	r0 = 19884;
+	r0 = 19668;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	i0 = mDataMemory.ReadInt32(i0+8);
@@ -35853,7 +35719,7 @@ private void __ZN8NativeUI6WidgetD1Ev_117(int i0)
 	fr += 36;
 	d4 = i0;
 label_1:
-	r0 = 19884;
+	r0 = 19668;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	i0 = mDataMemory.ReadInt32(i0+8);
@@ -36011,7 +35877,7 @@ label_1:
 	fr += 36;
 	d4 = i0;
 label_2:
-	r0 = 19884;
+	r0 = 19668;
 	mDataMemory.WriteInt32(i0, r0);
 label_3:
 	i0 = mDataMemory.ReadInt32(i0+8);
@@ -36542,7 +36408,7 @@ label_3:
 	goto label_0;	// return
 label_4:
 	i0 = 0;
-	i1 = 20260;
+	i1 = 20044;
 	mSyscallInvoker.maPanic(i0, i1);
 label_0:;
 	return;
@@ -36852,7 +36718,7 @@ private void __ZN8NativeUI13WidgetManagerD0Ev_118(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 20224;
+	r14 = 20008;
 	mDataMemory.WriteInt32(i0, r14);
 	r14 = __ZN6MAUtil11Environment14getEnvironmentEv_65();
 	i0 = r14;
@@ -36894,7 +36760,7 @@ private void __ZN8NativeUI13WidgetManagerD1Ev_118(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 20224;
+	r14 = 20008;
 	mDataMemory.WriteInt32(i0, r14);
 	r14 = __ZN6MAUtil11Environment14getEnvironmentEv_65();
 	i0 = r14;
@@ -37214,11 +37080,11 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r14 = 20224;
+	r14 = 20008;
 	mDataMemory.WriteInt32(i0, r14);
 label_3:
 	i0 += 4;
-	i1 = -536870884;
+	i1 = -536870885;
 	i2 = 0;
 	__ZN6MAUtil10DictionaryIKiNS_4PairIS1_PN8NativeUI6WidgetEEEEC2EPFiRS1_S8_Ei_118(i0, i1, i2);
 label_4:
@@ -37256,7 +37122,7 @@ label_1:
 	fr = sp;
 	fr += 12;
 label_2:
-	d0 = mDataMemory.ReadInt32(20244);
+	d0 = mDataMemory.ReadInt32(20028);
 	r14 = 0;
 	if (d0 == r14) goto label_4;
 label_3:
@@ -37270,7 +37136,7 @@ label_4:
 	d0 = r14;
 	i0 = r14;
 	__ZN8NativeUI13WidgetManagerC1Ev_118(i0);
-	mDataMemory.WriteInt32(20244, d0);
+	mDataMemory.WriteInt32(20028, d0);
 label_5:
 	r14 = d0;
 	//pop  d0,3
@@ -37418,7 +37284,7 @@ label_8:
 	r14 = mDataMemory.ReadInt32(d2);
 	r14 += 4;
 	mDataMemory.WriteInt32(d2, r14);
-	r14 = mDataMemory.ReadInt32(52776);
+	r14 = mDataMemory.ReadInt32(52560);
 	if (r14 == d0) goto label_14;
 	r14 = mDataMemory.ReadInt32(d1);
 	i0 = r14;
@@ -37463,7 +37329,7 @@ label_11:
 	r14 = mDataMemory.ReadInt32(d2);
 	r14 += 4;
 	mDataMemory.WriteInt32(d2, r14);
-	r14 = mDataMemory.ReadInt32(52776);
+	r14 = mDataMemory.ReadInt32(52560);
 	r0 = 0;
 	if (r14 == r0) goto label_15;
 	r14 = mDataMemory.ReadInt32(d0);
@@ -37481,7 +37347,7 @@ label_11:
 	r1 |= r14;
 	mDataMemory.WriteInt32(d0, r1);
 label_12:
-	r14 = mDataMemory.ReadInt32(52788);
+	r14 = mDataMemory.ReadInt32(52572);
 	r1 += r14;
 	mDataMemory.WriteInt32(d0, r1);
 	d0 = d4;
@@ -37494,7 +37360,7 @@ label_12:
 	r14 = mDataMemory.ReadInt32(d2);
 	r14 += 4;
 	mDataMemory.WriteInt32(d2, r14);
-	r14 = mDataMemory.ReadInt32(52776);
+	r14 = mDataMemory.ReadInt32(52560);
 	r0 = 0;
 	if (r14 == r0) goto label_13;
 	r0 = mDataMemory.ReadInt32(d0);
@@ -37551,22 +37417,22 @@ label_1:
 	sp -= 8;
 	fr = sp;
 	fr += 8;
-	i1 = 52780;
+	i1 = 52564;
 	i2 = 0;
 	i3 = 16;
 	mSyscallInvoker.maReadData(i0, i1, i2, i3);
-	r2 = mDataMemory.ReadInt32(52780);
+	r2 = mDataMemory.ReadInt32(52564);
 	r14 = 305419896;
 	if (r2 == r14) goto label_6;
 	r14 = 573855352;
 	if (r2 == r14) goto label_6;
 	r14 = 1;
 label_2:
-	mDataMemory.WriteInt32(52776, r14);
-	r3 = mDataMemory.ReadInt32(52776);
+	mDataMemory.WriteInt32(52560, r14);
+	r3 = mDataMemory.ReadInt32(52560);
 	r14 = 0;
 	if (r3 == r14) goto label_3;
-	r0 = mDataMemory.ReadInt32(52784);
+	r0 = mDataMemory.ReadInt32(52568);
 	r1 = r0;
 	r1 = (int)( r1 << 24);
 	r14 = r0;
@@ -37579,7 +37445,7 @@ label_2:
 	r0 &= 16711680;
 	r0 = (int)( r0 >> 8);
 	r1 |= r0;
-	mDataMemory.WriteInt32(52784, r1);
+	mDataMemory.WriteInt32(52568, r1);
 	r14 = 0;
 	if (r3 != r14) goto label_5;
 label_3:
@@ -37592,7 +37458,7 @@ label_4:
 	sp += 8;
 	goto label_0;	// return
 label_5:
-	r0 = mDataMemory.ReadInt32(52788);
+	r0 = mDataMemory.ReadInt32(52572);
 	r1 = r0;
 	r1 = (int)( r1 << 24);
 	r14 = r0;
@@ -37605,7 +37471,7 @@ label_5:
 	r0 &= 16711680;
 	r0 = (int)( r0 >> 8);
 	r1 |= r0;
-	mDataMemory.WriteInt32(52788, r1);
+	mDataMemory.WriteInt32(52572, r1);
 	r14 = 0;
 	if (r3 == r14) goto label_3;
 	r0 = r2;
@@ -37622,14 +37488,14 @@ label_5:
 	r14 = (int)( r14 >> 8);
 	r2 = r0;
 	r2 |= r14;
-	mDataMemory.WriteInt32(52780, r2);
+	mDataMemory.WriteInt32(52564, r2);
 	goto label_3;
 label_6:
 	r14 = 0;
 	goto label_2;
 label_7:
 	i0 = 0;
-	i1 = 20449;
+	i1 = 20233;
 	mSyscallInvoker.maPanic(i0, i1);
 label_0:;
 	return;
@@ -37657,7 +37523,7 @@ label_1:
 	sp -= 8;
 	fr = sp;
 	fr += 8;
-	i0 = mDataMemory.ReadInt32(52768);
+	i0 = mDataMemory.ReadInt32(52552);
 	r14 = 0;
 	if (i0 != r14) goto label_2;
 	//pop  fr,2
@@ -37666,7 +37532,7 @@ label_1:
 label_2:
 	_freeVolumeEntriesRecursively_120(i0);
 	r14 = 0;
-	mDataMemory.WriteInt32(52768, r14);
+	mDataMemory.WriteInt32(52552, r14);
 	//pop  fr,2
 	sp += 8;
 
@@ -37703,19 +37569,19 @@ label_1:
 label_2:
 	i0 = d0;
 	_readHeader_120(i0);
-	r14 = mDataMemory.ReadInt32(52784);
+	r14 = mDataMemory.ReadInt32(52568);
 	mDataMemory.WriteInt32(fr+-20, r14);
 	i0 = 24;
 	r14 = _malloc_16(i0);
-	mDataMemory.WriteInt32(52768, r14);
+	mDataMemory.WriteInt32(52552, r14);
 	i0 = d0;
 	i1 = fr;
 	i1 += -20;
 	i2 = r14;
 	_readVolumeEntriesRecursively_120(i0, i1, i2);
 label_3:
-	mDataMemory.WriteInt32(52764, d0);
-	mDataMemory.WriteInt32(52772, d1);
+	mDataMemory.WriteInt32(52548, d0);
+	mDataMemory.WriteInt32(52556, d1);
 	sp += 4;
 	//pop  d1,4
 	sp += 16;
@@ -37747,7 +37613,7 @@ label_1:
 	fr += 8;
 	_readHeader_120(i0);
 	r0 = 0;
-	r14 = mDataMemory.ReadInt32(52780);
+	r14 = mDataMemory.ReadInt32(52564);
 	r1 = 573855352;
 	if (r14 == r1) goto label_2;
 	r14 = r0;
@@ -37755,7 +37621,7 @@ label_1:
 	sp += 8;
 	goto label_0;	// return
 label_2:
-	r0 = mDataMemory.ReadInt32(52792);
+	r0 = mDataMemory.ReadInt32(52576);
 	r14 = r0;
 	//pop  fr,2
 	sp += 8;
@@ -37857,7 +37723,7 @@ label_12:
 	r14 = mDataMemory.ReadInt32(d2+4);
 	mDataMemory.WriteInt32(sp+4, r14);
 	i0 = d4;
-	i1 = 20471;
+	i1 = 20255;
 	r14 = _sprintf_22(i0, i1);
 	goto label_3;
 label_13:
@@ -37870,7 +37736,7 @@ label_13:
 	r0 = mDataMemory.ReadInt32(i0+4);
 	mDataMemory.WriteInt32(sp+4, r0);
 	i0 = d4;
-	i1 = 20477;
+	i1 = 20261;
 	r14 = _sprintf_22(i0, i1);
 label_14:
 	i0 = 40;
@@ -37933,7 +37799,7 @@ label_26:
 	i0 = mDataMemory.ReadInt32(d2+20);
 	r14 = _malloc_16(i0);
 	d0 = r14;
-	i0 = mDataMemory.ReadInt32(52764);
+	i0 = mDataMemory.ReadInt32(52548);
 	i1 = r14;
 	i2 = mDataMemory.ReadInt32(d2+16);
 	i3 = mDataMemory.ReadInt32(d2+20);
@@ -38007,7 +37873,7 @@ label_1:
 	fr = sp;
 	fr += 8;
 	i1 = i0;
-	i0 = mDataMemory.ReadInt32(52768);
+	i0 = mDataMemory.ReadInt32(52552);
 	r14 = -1;
 	r0 = 0;
 	if (i0 == r0) goto label_2;
@@ -38645,15 +38511,15 @@ label_6:
 	d3 = d0;
 	d3 += 176;
 label_7:
-	r14 = 20576;
+	r14 = 20360;
 	mDataMemory.WriteInt32(d0, r14);
-	r14 = 20668;
+	r14 = 20452;
 	mDataMemory.WriteInt32(i1, r14);
-	r14 = 20704;
+	r14 = 20488;
 	mDataMemory.WriteInt32(d1, r14);
-	r14 = 20744;
+	r14 = 20528;
 	mDataMemory.WriteInt32(d2, r14);
-	r14 = 20756;
+	r14 = 20540;
 	mDataMemory.WriteInt32(d3, r14);
 	r14 = 1;
 	mDataMemory.WriteUInt8(d0+180, (byte)r14);
@@ -38699,15 +38565,15 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r14 = 20576;
+	r14 = 20360;
 	mDataMemory.WriteInt32(i0, r14);
-	r14 = 20668;
+	r14 = 20452;
 	mDataMemory.WriteInt32(i0+164, r14);
-	r14 = 20704;
+	r14 = 20488;
 	mDataMemory.WriteInt32(i0+168, r14);
-	r14 = 20744;
+	r14 = 20528;
 	mDataMemory.WriteInt32(i0+172, r14);
-	r14 = 20756;
+	r14 = 20540;
 	mDataMemory.WriteInt32(i0+176, r14);
 	i0 += 168;
 	__ZN6MAUtil15PointerListenerD2Ev_65(i0);
@@ -38804,15 +38670,15 @@ private void __ZN8Wormhole12CustomMobletD1Ev_122(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 20576;
+	r14 = 20360;
 	mDataMemory.WriteInt32(i0, r14);
-	r14 = 20668;
+	r14 = 20452;
 	mDataMemory.WriteInt32(i0+164, r14);
-	r14 = 20704;
+	r14 = 20488;
 	mDataMemory.WriteInt32(i0+168, r14);
-	r14 = 20744;
+	r14 = 20528;
 	mDataMemory.WriteInt32(i0+172, r14);
-	r14 = 20756;
+	r14 = 20540;
 	mDataMemory.WriteInt32(i0+176, r14);
 	i0 += 168;
 	__ZN6MAUtil15PointerListenerD2Ev_65(i0);
@@ -38909,15 +38775,15 @@ private void __ZN8Wormhole12CustomMobletD0Ev_122(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 20576;
+	r14 = 20360;
 	mDataMemory.WriteInt32(i0, r14);
-	r14 = 20668;
+	r14 = 20452;
 	mDataMemory.WriteInt32(i0+164, r14);
-	r14 = 20704;
+	r14 = 20488;
 	mDataMemory.WriteInt32(i0+168, r14);
-	r14 = 20744;
+	r14 = 20528;
 	mDataMemory.WriteInt32(i0+172, r14);
-	r14 = 20756;
+	r14 = 20540;
 	mDataMemory.WriteInt32(i0+176, r14);
 	i0 += 168;
 	__ZN6MAUtil15PointerListenerD2Ev_65(i0);
@@ -39934,7 +39800,7 @@ label_1:
 	d4 = i0;
 	d6 = i1;
 label_2:
-	i1 = 20936;
+	i1 = 20720;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d6;
 	r14 = _strlen_19(i0);
@@ -39998,13 +39864,13 @@ label_7:
 	r0 = 13;
 	if (r14 != r0) goto label_5;
 	i0 = d3;
-	i1 = 20938;
+	i1 = 20722;
 	goto label_9;
 label_8:
 	r0 = 10;
 	if (r14 != r0) goto label_5;
 	i0 = d3;
-	i1 = 20942;
+	i1 = 20726;
 label_9:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d1;
@@ -40022,7 +39888,7 @@ label_10:
 	if (d2 < d5) goto label_7;
 label_11:
 	i0 = d3;
-	i1 = 20936;
+	i1 = 20720;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d3;
@@ -40041,15 +39907,15 @@ label_13:
 	r0 = 92;
 	if (r14 != r0) goto label_5;
 	i0 = d3;
-	i1 = 20946;
+	i1 = 20730;
 	goto label_9;
 label_14:
 	r14 = r0;
 	r14 = (int)((uint) r14 >> 4);
-	r14 = mDataMemory.ReadInt8(r14+20951);
+	r14 = mDataMemory.ReadInt8(r14+20735);
 	mDataMemory.WriteUInt8(fr+-43, (byte)r14);
 	r0 &= 15;
-	r0 = mDataMemory.ReadInt8(r0+20951);
+	r0 = mDataMemory.ReadInt8(r0+20735);
 	mDataMemory.WriteUInt8(fr+-42, (byte)r0);
 label_15:
 	i0 = d3;
@@ -40058,23 +39924,23 @@ label_15:
 	goto label_9;
 label_16:
 	i0 = d3;
-	i1 = 20968;
+	i1 = 20752;
 	goto label_9;
 label_17:
 	i0 = d3;
-	i1 = 20972;
+	i1 = 20756;
 	goto label_9;
 label_18:
 	i0 = d3;
-	i1 = 20976;
+	i1 = 20760;
 	goto label_9;
 label_19:
 	i0 = d3;
-	i1 = 20980;
+	i1 = 20764;
 	goto label_9;
 label_20:
 	i0 = d3;
-	i1 = 20984;
+	i1 = 20768;
 	goto label_9;
 label_0:;
 	return r14;
@@ -40148,23 +40014,23 @@ label_4:
 	r14 &= 16515072;
 	r14 = (int)((uint) r14 >> 18);
 	i0 = d2;
-	i1 = mDataMemory.ReadInt8(r14+20988);
+	i1 = mDataMemory.ReadInt8(r14+20772);
 	r14 = __ZN6MAUtil11BasicStringIcEpLEc_74(i0, i1);
 	r14 = d0;
 	r14 &= 258048;
 	r14 = (int)((uint) r14 >> 12);
 	i0 = d2;
-	i1 = mDataMemory.ReadInt8(r14+20988);
+	i1 = mDataMemory.ReadInt8(r14+20772);
 	r14 = __ZN6MAUtil11BasicStringIcEpLEc_74(i0, i1);
 	r14 = d0;
 	r14 &= 4032;
 	r14 = (int)((uint) r14 >> 6);
 	i0 = d2;
-	i1 = mDataMemory.ReadInt8(r14+20988);
+	i1 = mDataMemory.ReadInt8(r14+20772);
 	r14 = __ZN6MAUtil11BasicStringIcEpLEc_74(i0, i1);
 	d0 &= 63;
 	i0 = d2;
-	i1 = mDataMemory.ReadInt8(d0+20988);
+	i1 = mDataMemory.ReadInt8(d0+20772);
 	r14 = __ZN6MAUtil11BasicStringIcEpLEc_74(i0, i1);
 	d1 += 1;
 	if (d4 > d1) goto label_4;
@@ -40186,12 +40052,12 @@ label_7:
 	r14 = d0;
 	r14 = (int)((uint) r14 >> 18);
 	i0 = d2;
-	i1 = mDataMemory.ReadInt8(r14+20988);
+	i1 = mDataMemory.ReadInt8(r14+20772);
 	r14 = __ZN6MAUtil11BasicStringIcEpLEc_74(i0, i1);
 	d0 &= 258048;
 	d0 = (int)((uint) d0 >> 12);
 	i0 = d2;
-	i1 = mDataMemory.ReadInt8(d0+20988);
+	i1 = mDataMemory.ReadInt8(d0+20772);
 	r14 = __ZN6MAUtil11BasicStringIcEpLEc_74(i0, i1);
 	i0 = d2;
 	i1 = 61;
@@ -40220,18 +40086,18 @@ label_10:
 	r14 &= 16515072;
 	r14 = (int)((uint) r14 >> 18);
 	i0 = d2;
-	i1 = mDataMemory.ReadInt8(r14+20988);
+	i1 = mDataMemory.ReadInt8(r14+20772);
 	r14 = __ZN6MAUtil11BasicStringIcEpLEc_74(i0, i1);
 	r14 = d0;
 	r14 &= 258048;
 	r14 = (int)((uint) r14 >> 12);
 	i0 = d2;
-	i1 = mDataMemory.ReadInt8(r14+20988);
+	i1 = mDataMemory.ReadInt8(r14+20772);
 	r14 = __ZN6MAUtil11BasicStringIcEpLEc_74(i0, i1);
 	d0 &= 4032;
 	d0 = (int)((uint) d0 >> 6);
 	i0 = d2;
-	i1 = mDataMemory.ReadInt8(d0+20988);
+	i1 = mDataMemory.ReadInt8(d0+20772);
 	goto label_8;
 label_0:;
 	return r14;
@@ -40259,7 +40125,7 @@ private void __ZN8Wormhole8FileUtilD1Ev_124(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 21064;
+	r14 = 20848;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 4;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -40293,7 +40159,7 @@ private void __ZN8Wormhole8FileUtilD0Ev_124(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 21064;
+	r14 = 20848;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 4;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -40334,7 +40200,7 @@ label_1:
 	d2 = sp;
 label_2:
 	i0 = 89;
-	i1 = 21124;
+	i1 = 20908;
 	i2 = sp;
 	i3 = 2048;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
@@ -40346,7 +40212,7 @@ label_3:
 	if (r0 <= r14) goto label_7;
 label_4:
 	i0 = d1;
-	i1 = 21142;
+	i1 = 20926;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_5:
 	sp = d0;
@@ -40461,7 +40327,7 @@ label_1:
 	fr += 20;
 	d0 = i0;
 label_2:
-	r14 = 21064;
+	r14 = 20848;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 4;
 	__ZN6MAUtil11BasicStringIcEC1Ev_74(i0);
@@ -41118,7 +40984,7 @@ label_3:
 	goto label_0;	// return
 label_4:
 	i0 = d3;
-	i1 = 21144;
+	i1 = 20928;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_5:
 	r14 = d3;
@@ -41344,8 +41210,8 @@ label_2:
 	d0 = (int)( d0 >> d2);
 	mDataMemory.WriteInt32(d1+20, d0);
 	i0 = d1;
-	i1 = -536870178;
-	i2 = -536870177;
+	i1 = -536870179;
+	i2 = -536870178;
 	i3 = d1;
 	_hash_set_allocator_58(i0, i1, i2, i3);
 label_3:
@@ -41444,7 +41310,7 @@ private void __ZN8Wormhole8FunTableD0Ev_125(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 21156;
+	r14 = 20940;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	i0 += 4;
@@ -41480,7 +41346,7 @@ private void __ZN8Wormhole8FunTableD1Ev_125(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 21156;
+	r14 = 20940;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	i0 += 4;
@@ -41516,15 +41382,15 @@ label_1:
 	fr = sp;
 	fr += 12;
 label_2:
-	r14 = 21156;
+	r14 = 20940;
 	mDataMemory.WriteInt32(i0, r14);
 label_3:
 	r14 = 6;
 	mDataMemory.WriteInt32(sp, r14);
 	i0 += 4;
 	i1 = 0;
-	i2 = -536870883;
-	i3 = -536870882;
+	i2 = -536870884;
+	i3 = -536870883;
 	__ZN6MAUtil8HashDictIKNS_11BasicStringIcEENS_4PairIS3_MN8Wormhole9FunObjectEFvRNS5_13MessageStreamEEEEEC2EiPFmRS3_EPFiSD_SD_Ei_125(i0, i1, i2, i3);
 label_4:
 	sp += 4;
@@ -41751,11 +41617,11 @@ label_5:
 	sp += 36;
 	goto label_0;	// return
 label_6:
-	i0 = 21164;
+	i0 = 20948;
 	r14 = _strlen_19(i0);
 label_7:
 	i0 = 28;
-	i1 = 21164;
+	i1 = 20948;
 	i2 = r14;
 	i3 = d0;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
@@ -41855,7 +41721,7 @@ private int __ZN6MAUtil8HashDictIKNS_11BasicStringIcEENS_4PairIS3_MN8Wormhole9Fu
 	fr = sp;
 	fr += 8;
 label_1:
-	i0 = 21218;
+	i0 = 21002;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -41961,9 +41827,9 @@ label_2:
 	d1 += 40;
 	i1 = d1;
 	__ZN6MAUtil14HttpConnectionC2EPNS_22HttpConnectionListenerE_63(i0, i1);
-	r14 = 21396;
+	r14 = 21180;
 	mDataMemory.WriteInt32(d0, r14);
-	r14 = 21436;
+	r14 = 21220;
 	mDataMemory.WriteInt32(d1, r14);
 	r14 = 0;
 	mDataMemory.WriteInt32(d0+44, r14);
@@ -41997,10 +41863,10 @@ label_1:
 	fr = sp;
 	fr += 8;
 label_2:
-	r0 = 21436;
+	r0 = 21220;
 	mDataMemory.WriteInt32(i0+40, r0);
 label_3:
-	r0 = 6692;
+	r0 = 6476;
 	mDataMemory.WriteInt32(i0, r0);
 	__ZN6MAUtil10ConnectionD2Ev_63(i0);
 label_4:
@@ -42032,10 +41898,10 @@ private void __ZN8Wormhole23HighLevelHttpConnectionD1Ev_127(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r0 = 21436;
+	r0 = 21220;
 	mDataMemory.WriteInt32(i0+40, r0);
 label_2:
-	r0 = 6692;
+	r0 = 6476;
 	mDataMemory.WriteInt32(i0, r0);
 	__ZN6MAUtil10ConnectionD2Ev_63(i0);
 label_3:
@@ -42068,10 +41934,10 @@ private void __ZN8Wormhole23HighLevelHttpConnectionD0Ev_127(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 21436;
+	r14 = 21220;
 	mDataMemory.WriteInt32(i0+40, r14);
 label_2:
-	r14 = 6692;
+	r14 = 6476;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil10ConnectionD2Ev_63(i0);
 label_3:
@@ -42395,7 +42261,7 @@ private void __ZN8Wormhole23HighLevelHttpConnection16connReadFinishedEPN6MAUtil1
 	fr += 8;
 label_1:
 	i0 = 1;
-	i1 = 21594;
+	i1 = 21378;
 	mSyscallInvoker.maPanic(i0, i1);
 	return;
 } // __ZN8Wormhole23HighLevelHttpConnection16connReadFinishedEPN6MAUtil10ConnectionEi
@@ -42509,7 +42375,7 @@ label_1:
 	fr = sp;
 	fr += 4;
 label_2:
-	r14 = 21464;
+	r14 = 21248;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+4, i1);
 	r14 = 0;
@@ -42544,7 +42410,7 @@ label_1:
 	fr = sp;
 	fr += 4;
 label_2:
-	r14 = 21464;
+	r14 = 21248;
 	mDataMemory.WriteInt32(i0, r14);
 label_3:
 	//pop  fr,1
@@ -42575,7 +42441,7 @@ private void __ZN8Wormhole15HighLevelReaderD1Ev_127(int i0)
 	fr = sp;
 	fr += 4;
 label_1:
-	r14 = 21464;
+	r14 = 21248;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	//pop  fr,1
@@ -42606,7 +42472,7 @@ private void __ZN8Wormhole15HighLevelReaderD0Ev_127(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 21464;
+	r14 = 21248;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	__ZdlPv_45(i0);
@@ -42641,7 +42507,7 @@ label_1:
 	d1 = i0;
 label_2:
 	__ZN8Wormhole15HighLevelReaderC2EPNS_23HighLevelHttpConnectionE_127(i0, i1);
-	r14 = 21488;
+	r14 = 21272;
 	mDataMemory.WriteInt32(d1, r14);
 label_3:
 	d0 = d1;
@@ -43233,7 +43099,7 @@ private void __ZN8Wormhole30HighLevelReaderThatReadsChunksD0Ev_127(int i0)
 	fr += 24;
 	d3 = i0;
 label_1:
-	r0 = 21488;
+	r0 = 21272;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d0 = i0;
@@ -43380,7 +43246,7 @@ private void __ZN8Wormhole30HighLevelReaderThatReadsChunksD1Ev_127(int i0)
 	fr += 24;
 	d3 = i0;
 label_1:
-	r0 = 21488;
+	r0 = 21272;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d0 = i0;
@@ -43522,7 +43388,7 @@ private void __ZN8NativeUI15WebViewListenerD1Ev_130(int i0)
 	fr = sp;
 	fr += 4;
 label_1:
-	r14 = 22132;
+	r14 = 21916;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	//pop  fr,1
@@ -43553,7 +43419,7 @@ private void __ZN8NativeUI15WebViewListenerD0Ev_130(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 22132;
+	r14 = 21916;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	__ZdlPv_45(i0);
@@ -44161,15 +44027,15 @@ label_1:
 	d0 = i0;
 label_2:
 	__ZN8Wormhole12CustomMobletC2Ev_122(i0);
-	r14 = 21824;
+	r14 = 21608;
 	mDataMemory.WriteInt32(d0, r14);
-	r14 = 22008;
+	r14 = 21792;
 	mDataMemory.WriteInt32(d0+164, r14);
-	r14 = 22044;
+	r14 = 21828;
 	mDataMemory.WriteInt32(d0+168, r14);
-	r14 = 22084;
+	r14 = 21868;
 	mDataMemory.WriteInt32(d0+172, r14);
-	r14 = 22096;
+	r14 = 21880;
 	mDataMemory.WriteInt32(d0+176, r14);
 	r14 = 0;
 	mDataMemory.WriteUInt8(d0+204, (byte)r14);
@@ -44216,7 +44082,7 @@ private void __ZN8Wormhole28HybridMoblet_WebViewListenerD1Ev_130(int i0)
 	fr = sp;
 	fr += 4;
 label_1:
-	r14 = 22132;
+	r14 = 21916;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	//pop  fr,1
@@ -44247,7 +44113,7 @@ private void __ZN8Wormhole28HybridMoblet_WebViewListenerD0Ev_130(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 22132;
+	r14 = 21916;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	__ZdlPv_45(i0);
@@ -44281,15 +44147,15 @@ label_1:
 	fr += 16;
 	d1 = i0;
 label_2:
-	r14 = 21824;
+	r14 = 21608;
 	mDataMemory.WriteInt32(i0, r14);
-	r14 = 22008;
+	r14 = 21792;
 	mDataMemory.WriteInt32(i0+164, r14);
-	r14 = 22044;
+	r14 = 21828;
 	mDataMemory.WriteInt32(i0+168, r14);
-	r14 = 22084;
+	r14 = 21868;
 	mDataMemory.WriteInt32(i0+172, r14);
-	r14 = 22096;
+	r14 = 21880;
 	mDataMemory.WriteInt32(i0+176, r14);
 	i0 = mDataMemory.ReadInt32(i0+184);
 	r14 = 0;
@@ -44436,15 +44302,15 @@ private void __ZN8Wormhole12HybridMobletD1Ev_130(int i0)
 	fr += 16;
 	d1 = i0;
 label_1:
-	r14 = 21824;
+	r14 = 21608;
 	mDataMemory.WriteInt32(i0, r14);
-	r14 = 22008;
+	r14 = 21792;
 	mDataMemory.WriteInt32(i0+164, r14);
-	r14 = 22044;
+	r14 = 21828;
 	mDataMemory.WriteInt32(i0+168, r14);
-	r14 = 22084;
+	r14 = 21868;
 	mDataMemory.WriteInt32(i0+172, r14);
-	r14 = 22096;
+	r14 = 21880;
 	mDataMemory.WriteInt32(i0+176, r14);
 	i0 = mDataMemory.ReadInt32(i0+184);
 	r14 = 0;
@@ -44591,15 +44457,15 @@ private void __ZN8Wormhole12HybridMobletD0Ev_130(int i0)
 	fr += 16;
 	d1 = i0;
 label_1:
-	r14 = 21824;
+	r14 = 21608;
 	mDataMemory.WriteInt32(i0, r14);
-	r14 = 22008;
+	r14 = 21792;
 	mDataMemory.WriteInt32(i0+164, r14);
-	r14 = 22044;
+	r14 = 21828;
 	mDataMemory.WriteInt32(i0+168, r14);
-	r14 = 22084;
+	r14 = 21868;
 	mDataMemory.WriteInt32(i0+172, r14);
-	r14 = 22096;
+	r14 = 21880;
 	mDataMemory.WriteInt32(i0+176, r14);
 	i0 = mDataMemory.ReadInt32(i0+184);
 	r14 = 0;
@@ -45286,7 +45152,7 @@ label_1:
 	mDataMemory.WriteUInt8(r14, (byte)r0);
 label_2:
 	i0 = 28;
-	i1 = 22148;
+	i1 = 21932;
 	i2 = 27;
 	i3 = 0;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
@@ -45542,7 +45408,7 @@ label_1:
 	mDataMemory.WriteInt32(sp, r14);
 	mDataMemory.WriteInt32(sp+4, r0);
 	i0 = d1;
-	i1 = 22176;
+	i1 = 21960;
 	r14 = _sprintf_22(i0, i1);
 	d0 = fr;
 	d0 += -536;
@@ -45600,7 +45466,7 @@ label_1:
 	d1 += -1044;
 	mDataMemory.WriteInt32(sp, r14);
 	i0 = d1;
-	i1 = 22228;
+	i1 = 22012;
 	r14 = _sprintf_22(i0, i1);
 	d0 = fr;
 	d0 += -1048;
@@ -45658,7 +45524,7 @@ label_3:
 	i0 = 8;
 	r14 = __Znwm_47(i0);
 label_4:
-	r0 = 22108;
+	r0 = 21892;
 	mDataMemory.WriteInt32(r14, r0);
 	mDataMemory.WriteInt32(r14+4, d1);
 label_5:
@@ -45871,7 +45737,7 @@ label_1:
 	d2 = fr;
 	d2 += -40;
 	i0 = d2;
-	i1 = 22282;
+	i1 = 22066;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d2;
@@ -46012,7 +45878,7 @@ label_1:
 	d3 = fr;
 	d3 += -40;
 	i0 = d3;
-	i1 = 22282;
+	i1 = 22066;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d3;
@@ -46035,7 +45901,7 @@ label_5:
 	d1 += -168;
 	mDataMemory.WriteInt32(sp, d5);
 	i0 = d1;
-	i1 = 22307;
+	i1 = 22091;
 	r14 = _sprintf_22(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d0 = mDataMemory.ReadInt32(r14+100);
@@ -46099,7 +45965,7 @@ label_1:
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 22310;
+	i1 = 22094;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d1;
 	i1 = d0;
@@ -46113,7 +45979,7 @@ label_2:
 label_3:
 	i0 = 124;
 	i1 = d3;
-	i2 = 22322;
+	i2 = 22106;
 	i3 = r14;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_4:
@@ -46151,7 +46017,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r14 = 22336;
+	r14 = 22120;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 16;
 	__ZN8Wormhole8FunTableC1Ev_125(i0);
@@ -46189,7 +46055,7 @@ private void __ZN8Wormhole14MessageHandlerD1Ev_131(int i0)
 	fr += 16;
 	d1 = i0;
 label_1:
-	r14 = 22336;
+	r14 = 22120;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 = mDataMemory.ReadInt32(i0+4);
 	r14 = 0;
@@ -46273,7 +46139,7 @@ private void __ZN8Wormhole14MessageHandlerD0Ev_131(int i0)
 	fr += 16;
 	d1 = i0;
 label_1:
-	r14 = 22336;
+	r14 = 22120;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 = mDataMemory.ReadInt32(i0+4);
 	r14 = 0;
@@ -47068,7 +46934,7 @@ label_2:
 	if (r14 == r0) goto label_4;
 label_3:
 	i0 = d1;
-	i1 = 22424;
+	i1 = 22208;
 	r14 = __ZN8Wormhole17MessageStreamJSON2isEPKc_134(i0, i1);
 	r14 &= 255;
 	r0 = 0;
@@ -47135,37 +47001,37 @@ label_2:
 	if (d0 == r14) goto label_9;
 label_3:
 	i0 = d0;
-	i1 = 22433;
+	i1 = 22217;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 == r0) goto label_11;
 label_4:
 	i0 = d0;
-	i1 = 22440;
+	i1 = 22224;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 == r0) goto label_12;
 label_5:
 	i0 = d0;
-	i1 = 22449;
+	i1 = 22233;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 == r0) goto label_14;
 label_6:
 	i0 = d0;
-	i1 = 22458;
+	i1 = 22242;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 == r0) goto label_15;
 label_7:
 	i0 = d0;
-	i1 = 22464;
+	i1 = 22248;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d1 = r14;
 	r14 = 0;
 	if (d1 == r14) goto label_16;
 	i0 = d0;
-	i1 = 22471;
+	i1 = 22255;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 != r0) goto label_2;
@@ -47279,18 +47145,18 @@ label_1:
 	r14 = __ZN8Wormhole13MessageStream7getNextEPi_133(i0, i1);
 	d0 = r14;
 	i0 = r14;
-	i1 = 22478;
+	i1 = 22262;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 == r0) goto label_5;
 	i0 = d0;
-	i1 = 22494;
+	i1 = 22278;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	i1 = r14;
 	r14 = 0;
 	if (i1 == r14) goto label_3;
 	i0 = d0;
-	i1 = 22511;
+	i1 = 22295;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 == r0) goto label_7;
@@ -47440,7 +47306,7 @@ label_1:
 	fr += 8;
 	r14 = i0;
 label_2:
-	r0 = 22532;
+	r0 = 22316;
 	mDataMemory.WriteInt32(i0, r0);
 	i0 = i1;
 	i1 = r14;
@@ -47477,7 +47343,7 @@ private void __ZN8Wormhole15MessageProtocolD1Ev_132(int i0)
 	fr = sp;
 	fr += 4;
 label_1:
-	r14 = 22532;
+	r14 = 22316;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	//pop  fr,1
@@ -47508,7 +47374,7 @@ private void __ZN8Wormhole15MessageProtocolD0Ev_132(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 22532;
+	r14 = 22316;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	__ZdlPv_45(i0);
@@ -47629,7 +47495,7 @@ private void __ZN8Wormhole13MessageStreamD1Ev_133(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 22548;
+	r14 = 22332;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 = mDataMemory.ReadInt32(i0+12);
 	r14 = 0;
@@ -47673,7 +47539,7 @@ private void __ZN8Wormhole13MessageStreamD0Ev_133(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 22548;
+	r14 = 22332;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 = mDataMemory.ReadInt32(i0+12);
 	r14 = 0;
@@ -47997,7 +47863,7 @@ label_1:
 	fr = sp;
 	fr += 8;
 label_2:
-	r0 = 22548;
+	r0 = 22332;
 	mDataMemory.WriteInt32(i0, r0);
 	mDataMemory.WriteInt32(i0+4, i1);
 	r0 = 0;
@@ -48035,7 +47901,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r0 = 22580;
+	r0 = 22364;
 	mDataMemory.WriteInt32(i0, r0);
 	i0 = mDataMemory.ReadInt32(i0+12);
 	r14 = 0;
@@ -48083,7 +47949,7 @@ private void __ZN8Wormhole17MessageStreamJSOND1Ev_134(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r0 = 22580;
+	r0 = 22364;
 	mDataMemory.WriteInt32(i0, r0);
 	i0 = mDataMemory.ReadInt32(i0+12);
 	r14 = 0;
@@ -48131,7 +47997,7 @@ private void __ZN8Wormhole17MessageStreamJSOND0Ev_134(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r0 = 22580;
+	r0 = 22364;
 	mDataMemory.WriteInt32(i0, r0);
 	i0 = mDataMemory.ReadInt32(i0+12);
 	r14 = 0;
@@ -48314,7 +48180,7 @@ label_1:
 	fr += 32;
 	d3 = i1;
 label_2:
-	i1 = 22588;
+	i1 = 22372;
 	r14 = __ZN8Wormhole17MessageStreamJSON12getParamNodeEPKc_134(i0, i1);
 	d2 = r14;
 	r0 = 0;
@@ -48397,7 +48263,7 @@ label_2:
 	if (r14 == r0) goto label_5;
 label_3:
 	i0 = d2;
-	i1 = 22600;
+	i1 = 22384;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_4:
 	r14 = d2;
@@ -48576,7 +48442,7 @@ label_1:
 	fr = sp;
 	fr += 8;
 label_2:
-	r0 = 22580;
+	r0 = 22364;
 	mDataMemory.WriteInt32(i0, r0);
 	mDataMemory.WriteInt32(i0+4, i1);
 	r0 = 0;
@@ -48617,7 +48483,7 @@ label_1:
 	d0 = i0;
 label_2:
 	__ZN8Wormhole17MessageStreamJSONC2Eii_134(i0, i1, i2);
-	r14 = 23076;
+	r14 = 22860;
 	mDataMemory.WriteInt32(d0, r14);
 label_3:
 	//pop  d0,3
@@ -48648,7 +48514,7 @@ private void __ZN8Wormhole11JSONMessageD1Ev_137(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 23076;
+	r14 = 22860;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN8Wormhole17MessageStreamJSOND2Ev_134(i0);
 label_2:
@@ -48681,7 +48547,7 @@ private void __ZN8Wormhole11JSONMessageD0Ev_137(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 23076;
+	r14 = 22860;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN8Wormhole17MessageStreamJSOND2Ev_134(i0);
 label_2:
@@ -48719,7 +48585,7 @@ private int __ZN8Wormhole11JSONMessage12getArgsFieldERKN6MAUtil11BasicStringIcEE
 	d0 = i2;
 label_1:
 	i0 = i1;
-	i1 = 23100;
+	i1 = 22884;
 	r14 = __ZN8Wormhole17MessageStreamJSON12getParamNodeEPKc_134(i0, i1);
 	d2 = r14;
 label_2:
@@ -48731,7 +48597,7 @@ label_2:
 	if (r14 == r0) goto label_5;
 label_3:
 	i0 = d3;
-	i1 = 23105;
+	i1 = 22889;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_4:
 	r14 = d3;
@@ -48799,7 +48665,7 @@ private int __ZN8Wormhole11JSONMessage15getArgsFieldIntERKN6MAUtil11BasicStringI
 	fr += 24;
 	d0 = i1;
 label_1:
-	i1 = 23100;
+	i1 = 22884;
 	r14 = __ZN8Wormhole17MessageStreamJSON12getParamNodeEPKc_134(i0, i1);
 	d2 = r14;
 label_2:
@@ -48879,7 +48745,7 @@ label_1:
 	r0 = 0;
 	mDataMemory.WriteUInt8(i1, (byte)r0);
 	mDataMemory.WriteUInt8(i2, (byte)r0);
-	i1 = 23100;
+	i1 = 22884;
 	r14 = __ZN8Wormhole17MessageStreamJSON12getParamNodeEPKc_134(i0, i1);
 	d1 = r14;
 	r14 = 0;
@@ -48899,7 +48765,7 @@ label_4:
 	d4 = fr;
 	d4 += -36;
 	i0 = d4;
-	i1 = 23106;
+	i1 = 22890;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+24);
@@ -48920,7 +48786,7 @@ label_5:
 	if (r14 == r0) goto label_2;
 label_6:
 	i0 = d4;
-	i1 = 23114;
+	i1 = 22898;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+24);
@@ -48938,7 +48804,7 @@ label_6:
 	if (r14 != r0) goto label_10;
 label_7:
 	i0 = d4;
-	i1 = 23121;
+	i1 = 22905;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+24);
@@ -49006,7 +48872,7 @@ private int __ZN8Wormhole11JSONMessage26getJSONParamParentFullPathERN6MAUtil11Ba
 	fr += 28;
 	d2 = i1;
 label_1:
-	i1 = 23100;
+	i1 = 22884;
 	r14 = __ZN8Wormhole17MessageStreamJSON12getParamNodeEPKc_134(i0, i1);
 	d1 = r14;
 	r0 = 0;
@@ -49026,7 +48892,7 @@ label_4:
 	d3 = fr;
 	d3 += -28;
 	i0 = d3;
-	i1 = 23131;
+	i1 = 22915;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+24);
@@ -49047,7 +48913,7 @@ label_5:
 	if (r14 != r0) goto label_2;
 label_6:
 	i0 = d3;
-	i1 = 23138;
+	i1 = 22922;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+24);
@@ -49107,7 +48973,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r14 = 23156;
+	r14 = 22940;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+4, i1);
 	r14 = 1;
@@ -49145,7 +49011,7 @@ private void __ZN8Wormhole22NativeUIMessageHandlerD1Ev_138(int i0)
 	fr = sp;
 	fr += 4;
 label_1:
-	r14 = 23156;
+	r14 = 22940;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	//pop  fr,1
@@ -49176,7 +49042,7 @@ private void __ZN8Wormhole22NativeUIMessageHandlerD0Ev_138(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 23156;
+	r14 = 22940;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	__ZdlPv_45(i0);
@@ -49278,84 +49144,84 @@ label_1:
 	r14 = __ZN8Wormhole13MessageStream7getNextEPi_133(i0, i1);
 	d0 = r14;
 label_2:
-	i0 = 23200;
+	i0 = 22984;
 	i1 = r14;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d1 = r14;
 	r0 = 0;
 	if (r14 == r0) goto label_26;
 label_3:
-	i0 = 23215;
+	i0 = 22999;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d2 = r14;
 	r14 = 0;
 	if (d2 == r14) goto label_18;
 label_4:
-	i0 = 23231;
+	i0 = 23015;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d3 = r14;
 	r0 = 0;
 	if (r14 == r0) goto label_42;
 label_5:
-	i0 = 23248;
+	i0 = 23032;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d4 = r14;
 	r14 = 0;
 	if (d4 == r14) goto label_48;
 label_6:
-	i0 = 23268;
+	i0 = 23052;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d2 = r14;
 	r0 = 0;
 	if (r14 == r0) goto label_40;
 label_7:
-	i0 = 23288;
+	i0 = 23072;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d2 = r14;
 	r14 = 0;
 	if (d2 == r14) goto label_53;
 label_8:
-	i0 = 23312;
+	i0 = 23096;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d2 = r14;
 	r0 = 0;
 	if (r14 == r0) goto label_57;
 label_9:
-	i0 = 23336;
+	i0 = 23120;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d2 = r14;
 	r14 = 0;
 	if (d2 == r14) goto label_59;
 label_10:
-	i0 = 23355;
+	i0 = 23139;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d3 = r14;
 	r0 = 0;
 	if (r14 == r0) goto label_55;
 label_11:
-	i0 = 23379;
+	i0 = 23163;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d2 = r14;
 	r14 = 0;
 	if (d2 == r14) goto label_61;
 label_12:
-	i0 = 23402;
+	i0 = 23186;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d3 = r14;
 	r0 = 0;
 	if (r14 == r0) goto label_63;
 label_13:
-	i0 = 23422;
+	i0 = 23206;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d2 = r14;
@@ -49404,7 +49270,7 @@ label_17:
 	mDataMemory.WriteInt32(sp+4, d3);
 	mDataMemory.WriteInt32(sp+8, d6);
 	i0 = d0;
-	i1 = 23442;
+	i1 = 23226;
 	r14 = _sprintf_22(i0, i1);
 	r14 = mDataMemory.ReadInt32(d7);
 	d1 = mDataMemory.ReadInt32(r14+24);
@@ -49443,7 +49309,7 @@ label_21:
 label_22:
 	mDataMemory.WriteInt32(sp+4, r0);
 	i0 = d0;
-	i1 = 23459;
+	i1 = 23243;
 	r14 = _sprintf_22(i0, i1);
 	r14 = mDataMemory.ReadInt32(d7);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -49463,7 +49329,7 @@ label_24:
 	d1 += -2092;
 	mDataMemory.WriteInt32(sp, r14);
 	i0 = d1;
-	i1 = 23468;
+	i1 = 23252;
 	r14 = _sprintf_22(i0, i1);
 	d0 = fr;
 	d0 += -1068;
@@ -49562,7 +49428,7 @@ label_36:
 	mDataMemory.WriteInt32(sp+4, r0);
 	mDataMemory.WriteInt32(sp+8, d2);
 	i0 = d0;
-	i1 = 23507;
+	i1 = 23291;
 	r14 = _sprintf_22(i0, i1);
 	i0 = d6;
 	i1 = d0;
@@ -49584,7 +49450,7 @@ label_37:
 label_38:
 	mDataMemory.WriteInt32(sp+4, r0);
 	i0 = d0;
-	i1 = 23459;
+	i1 = 23243;
 	r14 = _sprintf_22(i0, i1);
 label_39:
 	r14 = mDataMemory.ReadInt32(d7);
@@ -49980,7 +49846,7 @@ label_5:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23569;
+	i1 = 23353;
 label_6:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
@@ -49999,7 +49865,7 @@ label_7:
 	mDataMemory.WriteInt32(sp+12, d6);
 	mDataMemory.WriteInt32(sp+16, d7);
 	i0 = d0;
-	i1 = 23585;
+	i1 = 23369;
 	r14 = _sprintf_22(i0, i1);
 	i0 = d1;
 	i1 = d0;
@@ -50020,49 +49886,49 @@ label_8:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23644;
+	i1 = 23428;
 	goto label_6;
 label_9:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23663;
+	i1 = 23447;
 	goto label_6;
 label_10:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23685;
+	i1 = 23469;
 	goto label_6;
 label_11:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23699;
+	i1 = 23483;
 	goto label_6;
 label_12:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23718;
+	i1 = 23502;
 	goto label_6;
 label_13:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23739;
+	i1 = 23523;
 	goto label_6;
 label_14:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23762;
+	i1 = 23546;
 	goto label_6;
 label_15:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23780;
+	i1 = 23564;
 	goto label_6;
 label_16:
 	d1 = fr;
@@ -50072,67 +49938,67 @@ label_17:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23805;
+	i1 = 23589;
 	goto label_6;
 label_18:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23828;
+	i1 = 23612;
 	goto label_6;
 label_19:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23847;
+	i1 = 23631;
 	goto label_6;
 label_20:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23865;
+	i1 = 23649;
 	goto label_6;
 label_21:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23883;
+	i1 = 23667;
 	goto label_6;
 label_22:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23895;
+	i1 = 23679;
 	goto label_6;
 label_23:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23906;
+	i1 = 23690;
 	goto label_6;
 label_24:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23918;
+	i1 = 23702;
 	goto label_6;
 label_25:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23926;
+	i1 = 23710;
 	goto label_6;
 label_26:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23940;
+	i1 = 23724;
 	goto label_6;
 label_27:
 	d1 = fr;
 	d1 += -1072;
 	i0 = d1;
-	i1 = 23956;
+	i1 = 23740;
 	goto label_6;
 label_0:;
 	return;
@@ -50166,7 +50032,7 @@ label_1:
 	d1 += -2068;
 	mDataMemory.WriteInt32(sp, i1);
 	i0 = d1;
-	i1 = 24068;
+	i1 = 23852;
 	r14 = _sprintf_22(i0, i1);
 	d0 = fr;
 	d0 += -2072;
@@ -50218,7 +50084,7 @@ label_1:
 	d1 += -2068;
 	mDataMemory.WriteInt32(sp, i1);
 	i0 = d1;
-	i1 = 24109;
+	i1 = 23893;
 	r14 = _sprintf_22(i0, i1);
 	d0 = fr;
 	d0 += -2072;
@@ -50297,7 +50163,7 @@ label_1:
 	fr += 16;
 	d0 = i0;
 label_2:
-	r14 = 24160;
+	r14 = 23944;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+8, i1);
 	r14 = 0;
@@ -50348,7 +50214,7 @@ private void __ZN8Wormhole22ResourceMessageHandlerD1Ev_139(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 24160;
+	r14 = 23944;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 = mDataMemory.ReadInt32(i0+12);
 	r14 = 0;
@@ -50390,7 +50256,7 @@ private void __ZN8Wormhole22ResourceMessageHandlerD0Ev_139(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 24160;
+	r14 = 23944;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 = mDataMemory.ReadInt32(i0+12);
 	r14 = 0;
@@ -50472,21 +50338,21 @@ label_1:
 	r14 = __ZN8Wormhole13MessageStream7getNextEPi_133(i0, i1);
 	d0 = r14;
 label_2:
-	i0 = 24204;
+	i0 = 23988;
 	i1 = r14;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d1 = r14;
 	r14 = 0;
 	if (d1 == r14) goto label_10;
 label_3:
-	i0 = 24214;
+	i0 = 23998;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d2 = r14;
 	r14 = 0;
 	if (d2 == r14) goto label_6;
 label_4:
-	i0 = 24230;
+	i0 = 24014;
 	i1 = d0;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	d0 = r14;
@@ -50522,7 +50388,7 @@ label_6:
 	mDataMemory.WriteInt32(sp, d3);
 	mDataMemory.WriteInt32(sp+4, d2);
 	i0 = d1;
-	i1 = 24251;
+	i1 = 24035;
 label_7:
 	r14 = _sprintf_22(i0, i1);
 	d0 = fr;
@@ -50569,14 +50435,14 @@ label_11:
 	mDataMemory.WriteInt32(sp, d3);
 	mDataMemory.WriteInt32(sp+4, r14);
 	i0 = d1;
-	i1 = 24298;
+	i1 = 24082;
 	goto label_7;
 label_12:
 	d0 = fr;
 	d0 += -1568;
 	mDataMemory.WriteInt32(sp, d2);
 	i0 = d0;
-	i1 = 24336;
+	i1 = 24120;
 	r14 = _sprintf_22(i0, i1);
 label_13:
 	i0 = d0;
@@ -50669,7 +50535,7 @@ label_1:
 	mDataMemory.WriteInt32(sp, r14);
 	mDataMemory.WriteInt32(sp+4, d1);
 	i0 = d0;
-	i1 = 24396;
+	i1 = 24180;
 	r14 = _sprintf_22(i0, i1);
 label_2:
 	i0 = 40;
@@ -50841,7 +50707,7 @@ label_1:
 	d1 += -276;
 	mDataMemory.WriteInt32(sp, i2);
 	i0 = d1;
-	i1 = 24401;
+	i1 = 24185;
 	r14 = _sprintf_22(i0, i1);
 	d0 = fr;
 	d0 += -280;
@@ -50985,7 +50851,7 @@ label_1:
 	fr += 16;
 	d0 = i0;
 label_2:
-	r14 = 24452;
+	r14 = 24236;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+4, i1);
 	r14 = 0;
@@ -51041,7 +50907,7 @@ private void __ZN8Wormhole23PushNotificationManagerD1Ev_140(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 24452;
+	r14 = 24236;
 	mDataMemory.WriteInt32(i0, r14);
 	r14 = __ZN12Notification19NotificationManager11getInstanceEv_161();
 	i0 = r14;
@@ -51089,7 +50955,7 @@ private void __ZN8Wormhole23PushNotificationManagerD0Ev_140(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 24452;
+	r14 = 24236;
 	mDataMemory.WriteInt32(i0, r14);
 	r14 = __ZN12Notification19NotificationManager11getInstanceEv_161();
 	i0 = r14;
@@ -51179,12 +51045,12 @@ label_1:
 	d2 = fr;
 	d2 += -40;
 	i0 = d2;
-	i2 = 24516;
+	i2 = 24300;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -44;
 	i0 = d1;
-	i1 = 24524;
+	i1 = 24308;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -51207,11 +51073,11 @@ label_3:
 	d0 += -48;
 	i0 = d0;
 	i1 = d4;
-	i2 = 24541;
+	i2 = 24325;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 += -8;
 	i0 = d1;
-	i1 = 24548;
+	i1 = 24332;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -51230,12 +51096,12 @@ label_4:
 	d0 += -56;
 	i0 = d0;
 	i1 = d4;
-	i2 = 24541;
+	i2 = 24325;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -60;
 	i0 = d1;
-	i1 = 24554;
+	i1 = 24338;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -51252,7 +51118,7 @@ label_4:
 	d1 += -8;
 	i0 = d1;
 	i1 = d4;
-	i2 = 24564;
+	i2 = 24348;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	r14 = mDataMemory.ReadInt32(d5);
 	d2 = mDataMemory.ReadInt32(r14+36);
@@ -51294,12 +51160,12 @@ label_9:
 	d0 += -68;
 	i0 = d0;
 	i1 = d4;
-	i2 = 24541;
+	i2 = 24325;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -64;
 	i0 = d1;
-	i1 = 24569;
+	i1 = 24353;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -51317,7 +51183,7 @@ label_10:
 	d3 += -72;
 	d0 += -8;
 	i0 = d0;
-	i1 = 24580;
+	i1 = 24364;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d1 = mDataMemory.ReadInt32(r14+8);
@@ -51332,7 +51198,7 @@ label_10:
 	d1 = fr;
 	d1 += -80;
 	i0 = d1;
-	i1 = 24594;
+	i1 = 24378;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d2 = mDataMemory.ReadInt32(r14+8);
@@ -51367,12 +51233,12 @@ label_12:
 	d0 += -80;
 	i0 = d0;
 	i1 = d4;
-	i2 = 24541;
+	i2 = 24325;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -76;
 	i0 = d1;
-	i1 = 24605;
+	i1 = 24389;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -51388,7 +51254,7 @@ label_12:
 	d0 += 8;
 	i0 = d0;
 	i1 = d4;
-	i2 = 24614;
+	i2 = 24398;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	i0 = d5;
 	i0 += 12;
@@ -51408,12 +51274,12 @@ label_13:
 	d0 += -72;
 	i0 = d0;
 	i1 = d4;
-	i2 = 24541;
+	i2 = 24325;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -84;
 	i0 = d1;
-	i1 = 24633;
+	i1 = 24417;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -51429,7 +51295,7 @@ label_13:
 	d0 += -16;
 	i0 = d0;
 	i1 = d4;
-	i2 = 24614;
+	i2 = 24398;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	i0 = d5;
 	i0 += 16;
@@ -51446,12 +51312,12 @@ label_14:
 	d2 += -88;
 	i0 = d2;
 	i1 = d4;
-	i2 = 24541;
+	i2 = 24325;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -92;
 	i0 = d1;
-	i1 = 24644;
+	i1 = 24428;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -51467,7 +51333,7 @@ label_14:
 	d0 += -96;
 	i0 = d0;
 	i1 = d4;
-	i2 = 24614;
+	i2 = 24398;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	i0 = d5;
 	i0 += 20;
@@ -51543,10 +51409,10 @@ label_3:
 	mDataMemory.WriteInt32(sp+4, r14);
 	mDataMemory.WriteInt32(sp+8, d1);
 	i0 = d2;
-	i1 = 24653;
+	i1 = 24437;
 	r14 = _sprintf_22(i0, i1);
 	i0 = d3;
-	i1 = 24706;
+	i1 = 24490;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -1076;
@@ -51556,7 +51422,7 @@ label_3:
 	d0 = fr;
 	d0 += -1080;
 	i0 = d0;
-	i1 = 24708;
+	i1 = 24492;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d6+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -51670,7 +51536,7 @@ label_1:
 	d3 = fr;
 	d3 += -44;
 	i0 = d3;
-	i1 = 24706;
+	i1 = 24490;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	r14 = __ZNK6MAUtil11BasicStringIcE5c_strEv_74(i0);
@@ -51682,7 +51548,7 @@ label_1:
 	d0 = fr;
 	d0 += -52;
 	i0 = d0;
-	i1 = 24708;
+	i1 = 24492;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d4+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -51747,17 +51613,17 @@ label_1:
 	d3 = fr;
 	d3 += -32;
 	i0 = d3;
-	i1 = 24706;
+	i1 = 24490;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -36;
 	i0 = d1;
-	i1 = 24708;
+	i1 = 24492;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -40;
 	i0 = d0;
-	i1 = 24708;
+	i1 = 24492;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d4+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -51825,7 +51691,7 @@ label_2:
 	d2 = fr;
 	d2 += -36;
 	i0 = d2;
-	i1 = 24709;
+	i1 = 24493;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	r14 = __ZNK6MAUtil11BasicStringIcE5c_strEv_74(i0);
@@ -51902,10 +51768,10 @@ label_1:
 	d5 = fr;
 	d5 += -36;
 	i0 = d5;
-	i2 = 24614;
+	i2 = 24398;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	i0 = d0;
-	i1 = 24564;
+	i1 = 24348;
 	r14 = __ZN8Wormhole17MessageStreamJSON11getParamIntEPKc_134(i0, i1);
 	r0 = r14;
 	d2 = 0;
@@ -51933,17 +51799,17 @@ label_4:
 	d3 = fr;
 	d3 += -40;
 	i0 = d3;
-	i1 = 24706;
+	i1 = 24490;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -44;
 	i0 = d1;
-	i1 = 24708;
+	i1 = 24492;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -48;
 	i0 = d0;
-	i1 = 24708;
+	i1 = 24492;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d4+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -51974,12 +51840,12 @@ label_6:
 	d1 = fr;
 	d1 += -48;
 	i0 = d1;
-	i1 = 24709;
+	i1 = 24493;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -44;
 	i0 = d0;
-	i1 = 24711;
+	i1 = 24495;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d4+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -52116,35 +51982,35 @@ label_4:
 	if (i0 == r14) goto label_6;
 	r14 = 0;
 	if (i0 != r14) goto label_3;
-	i0 = 52796;
+	i0 = 52580;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-	i0 = 52800;
+	i0 = 52584;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-	i0 = 52804;
+	i0 = 52588;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-	i0 = 52808;
+	i0 = 52592;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-	i0 = 52812;
+	i0 = 52596;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_5:
 	//pop  fr,2
 	sp += 8;
 	goto label_0;	// return
 label_6:
-	i0 = 52812;
-	i1 = 24758;
+	i0 = 52596;
+	i1 = 24542;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
-	i0 = 52808;
-	i1 = 24780;
+	i0 = 52592;
+	i1 = 24564;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
-	i0 = 52804;
-	i1 = 24796;
+	i0 = 52588;
+	i1 = 24580;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
-	i0 = 52800;
-	i1 = 24818;
+	i0 = 52584;
+	i1 = 24602;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
-	i0 = 52796;
-	i1 = 24841;
+	i0 = 52580;
+	i1 = 24625;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_7:
 	//pop  fr,2
@@ -52238,7 +52104,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r14 = 24864;
+	r14 = 24648;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 4;
 	i1 = d0;
@@ -52279,7 +52145,7 @@ private void __ZN8Wormhole13TCPConnectionD1Ev_141(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 24864;
+	r14 = 24648;
 	mDataMemory.WriteInt32(i0, r14);
 	d0 += 4;
 	i0 = d0;
@@ -52316,7 +52182,7 @@ private void __ZN8Wormhole13TCPConnectionD0Ev_141(int i0)
 	fr += 16;
 	d0 = i0;
 label_1:
-	r14 = 24864;
+	r14 = 24648;
 	mDataMemory.WriteInt32(i0, r14);
 	d1 = i0;
 	d1 += 4;
@@ -52375,7 +52241,7 @@ label_3:
 	d0 += -272;
 	mDataMemory.WriteInt32(sp, r14);
 	i0 = d0;
-	i1 = 24896;
+	i1 = 24680;
 	r14 = _sprintf_22(i0, i1);
 	i0 = d1;
 	i0 += 4;
@@ -52427,7 +52293,7 @@ label_2:
 	d2 = fr;
 	d2 += -56;
 	i0 = d2;
-	i1 = 24901;
+	i1 = 24685;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d2;
@@ -52437,7 +52303,7 @@ label_2:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_3:
 	i0 = d2;
-	i1 = 24911;
+	i1 = 24695;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d4;
@@ -52557,8 +52423,8 @@ label_3:
 	mDataMemory.WriteUInt8(i0+49, (byte)r14);
 label_4:
 	i0 = 411;
-	i1 = 24913;
-	i2 = 24919;
+	i1 = 24697;
+	i2 = 24703;
 	i3 = 0;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_5:
@@ -52593,7 +52459,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r14 = 24956;
+	r14 = 24740;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+4, i1);
 	i0 += 12;
@@ -52631,7 +52497,7 @@ private void __ZN8Wormhole14PhoneGapCameraD1Ev_142(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 24956;
+	r14 = 24740;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 12;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -52665,7 +52531,7 @@ private void __ZN8Wormhole14PhoneGapCameraD0Ev_142(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 24956;
+	r14 = 24740;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 12;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -52706,12 +52572,12 @@ label_1:
 	d2 = fr;
 	d2 += -36;
 	i0 = d2;
-	i2 = 24984;
+	i2 = 24768;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -40;
 	i0 = d1;
-	i1 = 24991;
+	i1 = 24775;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -52731,7 +52597,7 @@ label_2:
 	goto label_0;	// return
 label_3:
 	i0 = 28;
-	i1 = 25002;
+	i1 = 24786;
 	i2 = 40;
 	i3 = r0;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
@@ -52740,7 +52606,7 @@ label_4:
 	d3 += -44;
 	i0 = d3;
 	i1 = d4;
-	i2 = 25043;
+	i2 = 24827;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d4 = d5;
 	d4 += 12;
@@ -52750,16 +52616,16 @@ label_4:
 	i0 = d3;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d3;
-	i1 = 25062;
+	i1 = 24846;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 += -8;
 	i0 = d1;
-	i1 = 25064;
+	i1 = 24848;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -52;
 	i0 = d0;
-	i1 = 25084;
+	i1 = 24868;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d5+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -52839,7 +52705,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r14 = 25096;
+	r14 = 24880;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+4, i1);
 	i0 += 12;
@@ -52877,7 +52743,7 @@ private void __ZN8Wormhole15PhoneGapCaptureD1Ev_143(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 25096;
+	r14 = 24880;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 12;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -52911,7 +52777,7 @@ private void __ZN8Wormhole15PhoneGapCaptureD0Ev_143(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 25096;
+	r14 = 24880;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 12;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -52952,12 +52818,12 @@ label_1:
 	d0 = fr;
 	d0 += -40;
 	i0 = d0;
-	i2 = 25124;
+	i2 = 24908;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -44;
 	i0 = d1;
-	i1 = 25131;
+	i1 = 24915;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -52975,7 +52841,7 @@ label_2:
 	d2 = fr;
 	d2 += -48;
 	i0 = d2;
-	i1 = 25144;
+	i1 = 24928;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d0 = mDataMemory.ReadInt32(r14+12);
@@ -52998,14 +52864,14 @@ label_4:
 	r14 = _itoa_25(i0, i1, i2);
 label_5:
 	i0 = 506;
-	i1 = 25153;
+	i1 = 24937;
 	i2 = r14;
 	i3 = 0;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_6:
 	i0 = d2;
 	i1 = d4;
-	i2 = 25165;
+	i2 = 24949;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d3 = d6;
 	d3 += 12;
@@ -53031,10 +52897,10 @@ label_8:
 	d0 += -68;
 label_9:
 	i0 = d0;
-	i1 = 25184;
+	i1 = 24968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
-	i1 = 25186;
+	i1 = 24970;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d6+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -53062,12 +52928,12 @@ label_12:
 	d0 += -68;
 	i0 = d0;
 	i1 = d4;
-	i2 = 25124;
+	i2 = 24908;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -48;
 	i0 = d1;
-	i1 = 25219;
+	i1 = 25003;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -53085,7 +52951,7 @@ label_13:
 	d2 += -72;
 	i0 = d2;
 	i1 = d4;
-	i2 = 25165;
+	i2 = 24949;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d3 = d6;
 	d3 += 12;
@@ -53117,12 +52983,12 @@ label_17:
 	d2 += -76;
 	i0 = d2;
 	i1 = d4;
-	i2 = 25124;
+	i2 = 24908;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -72;
 	i0 = d1;
-	i1 = 25232;
+	i1 = 25016;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -53136,12 +53002,12 @@ label_17:
 	if (d0 == d5) goto label_16;
 	d1 += -8;
 	i0 = d1;
-	i1 = 25184;
+	i1 = 24968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -84;
 	i0 = d0;
-	i1 = 25186;
+	i1 = 24970;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d6+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -53161,13 +53027,13 @@ label_17:
 	goto label_11;
 label_18:
 	i0 = d2;
-	i1 = 25184;
+	i1 = 24968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -68;
 label_19:
 	i0 = d0;
-	i1 = 25245;
+	i1 = 25029;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d6+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -53188,7 +53054,7 @@ label_20:
 	goto label_11;
 label_21:
 	i0 = d2;
-	i1 = 25184;
+	i1 = 24968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 += -8;
 	goto label_19;
@@ -53245,12 +53111,12 @@ label_5:
 	d1 = fr;
 	d1 += -2172;
 	i0 = d1;
-	i1 = 25184;
+	i1 = 24968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -2168;
 	i0 = d0;
-	i1 = 25281;
+	i1 = 25065;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d6+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -53281,24 +53147,24 @@ label_8:
 	d0 += -2164;
 label_9:
 	i0 = 89;
-	i1 = 25315;
+	i1 = 25099;
 	i2 = d0;
 	i3 = 64;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_10:
 	i0 = d0;
-	i1 = 25332;
+	i1 = 25116;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 == r0) goto label_24;
 	i0 = d0;
-	i1 = 25342;
+	i1 = 25126;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 != r0) goto label_23;
 	i0 = -2096;
 	i0 += fr;
-	i1 = 25350;
+	i1 = 25134;
 label_11:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -2100;
@@ -53334,7 +53200,7 @@ label_11:
 	mDataMemory.WriteInt32(sp+4, d1);
 	mDataMemory.WriteInt32(sp+8, r14);
 	i0 = d0;
-	i1 = 25354;
+	i1 = 25138;
 	r14 = _sprintf_22(i0, i1);
 label_12:
 	i0 = 509;
@@ -53351,14 +53217,14 @@ label_13:
 	mDataMemory.WriteInt32(sp, d0);
 	mDataMemory.WriteInt32(sp+4, r14);
 	i0 = d7;
-	i1 = 25365;
+	i1 = 25149;
 	r14 = _sprintf_22(i0, i1);
 	r14 = 0;
 	if (d2 != r14) goto label_22;
 	d3 = fr;
 	d3 += -2092;
 	i0 = d3;
-	i1 = 25409;
+	i1 = 25193;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -2168;
@@ -53367,7 +53233,7 @@ label_13:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 += -1108;
 	i0 = d0;
-	i1 = 25411;
+	i1 = 25195;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d6+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -53421,12 +53287,12 @@ label_20:
 	mDataMemory.WriteInt32(sp, d0);
 	mDataMemory.WriteInt32(sp+4, r14);
 	i0 = d2;
-	i1 = 25365;
+	i1 = 25149;
 	r14 = _sprintf_22(i0, i1);
 	d3 = fr;
 	d3 += -2092;
 	i0 = d3;
-	i1 = 25409;
+	i1 = 25193;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -2096;
@@ -53435,7 +53301,7 @@ label_20:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 += -1036;
 	i0 = d0;
-	i1 = 25411;
+	i1 = 25195;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d6+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -53467,12 +53333,12 @@ label_22:
 	d1 = fr;
 	d1 += -2172;
 	i0 = d1;
-	i1 = 25184;
+	i1 = 24968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -2168;
 	i0 = d0;
-	i1 = 25412;
+	i1 = 25196;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d6+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -53493,12 +53359,12 @@ label_22:
 label_23:
 	i0 = -2096;
 	i0 += fr;
-	i1 = 25444;
+	i1 = 25228;
 	goto label_11;
 label_24:
 	i0 = -2096;
 	i0 += fr;
-	i1 = 25450;
+	i1 = 25234;
 	goto label_11;
 label_0:;
 	return;
@@ -53566,7 +53432,7 @@ label_4:
 label_5:
 	d0 = d1;
 	d0 = (int)( d0 << 3);
-	d0 += 26104;
+	d0 += 25888;
 	i0 = d2;
 	i1 = mDataMemory.ReadInt32(d0);
 	r14 = _stricmp_19(i0, i1);
@@ -53587,7 +53453,7 @@ label_8:
 	goto label_0;	// return
 label_9:
 	i0 = d3;
-	i1 = mDataMemory.ReadInt32(26420);
+	i1 = mDataMemory.ReadInt32(26204);
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_10:
 	r14 = d3;
@@ -53597,7 +53463,7 @@ label_10:
 	goto label_0;	// return
 label_11:
 	i0 = d3;
-	i1 = mDataMemory.ReadInt32(26420);
+	i1 = mDataMemory.ReadInt32(26204);
 	goto label_6;
 label_0:;
 	return r14;
@@ -53827,7 +53693,7 @@ label_9:
 	goto label_0;	// return
 label_10:
 	i0 = d4;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_11:
 	r14 = d4;
@@ -54202,7 +54068,7 @@ label_17:
 	d4 = fr;
 	d4 += -32;
 	i0 = d4;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	goto label_4;
 label_18:
@@ -54542,7 +54408,7 @@ label_3:
 label_4:
 	i0 = 57;
 	i1 = r14;
-	i2 = 26493;
+	i2 = 26277;
 	i3 = 0;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_5:
@@ -54874,7 +54740,7 @@ label_3:
 label_4:
 	i0 = 57;
 	i1 = r14;
-	i2 = 26493;
+	i2 = 26277;
 	i3 = 0;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_5:
@@ -54998,7 +54864,7 @@ label_1:
 	fr = sp;
 	fr += 4;
 label_2:
-	r14 = 25464;
+	r14 = 25248;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+4, i1);
 label_3:
@@ -55030,7 +54896,7 @@ private void __ZN8Wormhole12PhoneGapFileD1Ev_144(int i0)
 	fr = sp;
 	fr += 4;
 label_1:
-	r14 = 25464;
+	r14 = 25248;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	//pop  fr,1
@@ -55061,7 +54927,7 @@ private void __ZN8Wormhole12PhoneGapFileD0Ev_144(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 25464;
+	r14 = 25248;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	__ZdlPv_45(i0);
@@ -55107,7 +54973,7 @@ label_2:
 	d1 = fr;
 	d1 += -52;
 	i0 = d1;
-	i1 = 26495;
+	i1 = 26279;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d1;
@@ -55117,7 +54983,7 @@ label_2:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_3:
 	i0 = d1;
-	i1 = 26505;
+	i1 = 26289;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d4;
@@ -55130,7 +54996,7 @@ label_3:
 	d0 = fr;
 	d0 += -56;
 	i0 = d0;
-	i1 = 26516;
+	i1 = 26300;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d6;
 	i1 = d2;
@@ -55192,7 +55058,7 @@ label_2:
 	d2 = fr;
 	d2 += -60;
 	i0 = d2;
-	i1 = 26518;
+	i1 = 26302;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -56;
 	i0 += fr;
@@ -55203,7 +55069,7 @@ label_2:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_3:
 	i0 = d2;
-	i1 = 26562;
+	i1 = 26346;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = -56;
@@ -55213,7 +55079,7 @@ label_3:
 	d1 = fr;
 	d1 += -64;
 	i0 = d1;
-	i1 = 26565;
+	i1 = 26349;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d5;
@@ -55226,7 +55092,7 @@ label_3:
 	d0 = fr;
 	d0 += -68;
 	i0 = d0;
-	i1 = 26578;
+	i1 = 26362;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d6;
 	i1 = d3;
@@ -55293,7 +55159,7 @@ label_2:
 	d2 = fr;
 	d2 += -60;
 	i0 = d2;
-	i1 = 26600;
+	i1 = 26384;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -56;
 	i0 += fr;
@@ -55304,7 +55170,7 @@ label_2:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_3:
 	i0 = d2;
-	i1 = 26562;
+	i1 = 26346;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = -56;
@@ -55314,7 +55180,7 @@ label_3:
 	d1 = fr;
 	d1 += -64;
 	i0 = d1;
-	i1 = 26565;
+	i1 = 26349;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d5;
@@ -55327,7 +55193,7 @@ label_3:
 	d0 = fr;
 	d0 += -68;
 	i0 = d0;
-	i1 = 26578;
+	i1 = 26362;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d6;
 	i1 = d3;
@@ -55387,7 +55253,7 @@ label_1:
 	d5 = fr;
 	d5 += -96;
 	i0 = d5;
-	i1 = 26495;
+	i1 = 26279;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -92;
 	i0 += fr;
@@ -55398,7 +55264,7 @@ label_1:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_2:
 	i0 = d5;
-	i1 = 26562;
+	i1 = 26346;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -88;
 	i0 += fr;
@@ -55408,7 +55274,7 @@ label_2:
 	r14 = __ZNK6MAUtil11BasicStringIcEplERKS1__74(i0, i1, i2);
 	i0 = -100;
 	i0 += fr;
-	i1 = 26565;
+	i1 = 26349;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -84;
 	i0 += fr;
@@ -55426,7 +55292,7 @@ label_2:
 	d7 = fr;
 	d7 += -104;
 	i0 = d7;
-	i1 = 26562;
+	i1 = 26346;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -76;
 	i0 += fr;
@@ -55437,7 +55303,7 @@ label_2:
 	d6 = fr;
 	d6 += -108;
 	i0 = d6;
-	i1 = 26644;
+	i1 = 26428;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -72;
 	i0 += fr;
@@ -55454,7 +55320,7 @@ label_2:
 	d4 = fr;
 	d4 += -112;
 	i0 = d4;
-	i1 = 26562;
+	i1 = 26346;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -64;
 	i0 += fr;
@@ -55465,7 +55331,7 @@ label_2:
 	d3 = fr;
 	d3 += -116;
 	i0 = d3;
-	i1 = 26653;
+	i1 = 26437;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -60;
 	i0 += fr;
@@ -55482,7 +55348,7 @@ label_2:
 	d2 = fr;
 	d2 += -120;
 	i0 = d2;
-	i1 = 26562;
+	i1 = 26346;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -52;
 	i0 += fr;
@@ -55493,7 +55359,7 @@ label_2:
 	d1 = fr;
 	d1 += -124;
 	i0 = d1;
-	i1 = 26674;
+	i1 = 26458;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -48;
 	i0 += fr;
@@ -55510,7 +55376,7 @@ label_2:
 	d0 = fr;
 	d0 += -128;
 	i0 = d0;
-	i1 = 26516;
+	i1 = 26300;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(fr+-132);
 	i1 = -44;
@@ -55615,7 +55481,7 @@ label_1:
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 26682;
+	i1 = 26466;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d1;
 	i1 = d0;
@@ -55625,7 +55491,7 @@ label_1:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_2:
 	i0 = d0;
-	i1 = 26704;
+	i1 = 26488;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d1;
@@ -55675,7 +55541,7 @@ label_1:
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 26707;
+	i1 = 26491;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d1+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -55728,7 +55594,7 @@ label_1:
 	d0 = fr;
 	d0 += -28;
 	i0 = d0;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d1+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -55790,7 +55656,7 @@ label_2:
 	d0 = fr;
 	d0 += -72;
 	i0 = d0;
-	i1 = 26709;
+	i1 = 26493;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -68;
 	i0 += fr;
@@ -55801,7 +55667,7 @@ label_2:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_3:
 	i0 = d0;
-	i1 = 26718;
+	i1 = 26502;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -64;
 	i0 += fr;
@@ -55817,7 +55683,7 @@ label_3:
 	d3 = fr;
 	d3 += -76;
 	i0 = d3;
-	i1 = 26730;
+	i1 = 26514;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d6;
 	i1 = d7;
@@ -55826,7 +55692,7 @@ label_3:
 	d2 = fr;
 	d2 += -80;
 	i0 = d2;
-	i1 = 26732;
+	i1 = 26516;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d6;
@@ -55839,7 +55705,7 @@ label_3:
 	d1 = fr;
 	d1 += -84;
 	i0 = d1;
-	i1 = 26704;
+	i1 = 26488;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -44;
 	i0 += fr;
@@ -55870,13 +55736,13 @@ label_3:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_4:
 	i0 = d1;
-	i1 = 26744;
+	i1 = 26528;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
-	i1 = 26767;
+	i1 = 26551;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r0 = mDataMemory.ReadInt32(fr+-88);
 	i0 = mDataMemory.ReadInt32(r0+4);
@@ -55944,7 +55810,7 @@ label_2:
 	d4 = fr;
 	d4 += -76;
 	i0 = d4;
-	i1 = 26769;
+	i1 = 26553;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -72;
 	i0 += fr;
@@ -55955,7 +55821,7 @@ label_2:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_3:
 	i0 = d4;
-	i1 = 26783;
+	i1 = 26567;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -68;
 	i0 += fr;
@@ -55966,7 +55832,7 @@ label_3:
 	d5 = fr;
 	d5 += -80;
 	i0 = d5;
-	i1 = 26785;
+	i1 = 26569;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -64;
 	i0 += fr;
@@ -55983,7 +55849,7 @@ label_3:
 	d3 = fr;
 	d3 += -84;
 	i0 = d3;
-	i1 = 26783;
+	i1 = 26567;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -56;
 	i0 += fr;
@@ -55994,7 +55860,7 @@ label_3:
 	d2 = fr;
 	d2 += -88;
 	i0 = d2;
-	i1 = 26801;
+	i1 = 26585;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -52;
 	i0 += fr;
@@ -56017,7 +55883,7 @@ label_3:
 	d1 = fr;
 	d1 += -96;
 	i0 = d1;
-	i1 = 26516;
+	i1 = 26300;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -44;
 	i0 += fr;
@@ -56058,7 +55924,7 @@ label_3:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_4:
 	i0 = d1;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d7);
 	d0 = mDataMemory.ReadInt32(r14+28);
@@ -56111,12 +55977,12 @@ label_1:
 	d5 = fr;
 	d5 += -40;
 	i0 = d5;
-	i2 = 26813;
+	i2 = 26597;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d0 = fr;
 	d0 += -44;
 	i0 = d0;
-	i1 = 26820;
+	i1 = 26604;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56148,7 +56014,7 @@ label_5:
 	d0 = fr;
 	d0 += -48;
 	i0 = d0;
-	i1 = 26838;
+	i1 = 26622;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56166,7 +56032,7 @@ label_6:
 	d0 = fr;
 	d0 += -52;
 	i0 = d0;
-	i1 = 26864;
+	i1 = 26648;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56184,7 +56050,7 @@ label_7:
 	d0 = fr;
 	d0 += -56;
 	i0 = d0;
-	i1 = 26872;
+	i1 = 26656;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56202,7 +56068,7 @@ label_8:
 	d0 = fr;
 	d0 += -60;
 	i0 = d0;
-	i1 = 26885;
+	i1 = 26669;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56220,7 +56086,7 @@ label_9:
 	d0 = fr;
 	d0 += -64;
 	i0 = d0;
-	i1 = 26901;
+	i1 = 26685;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56238,7 +56104,7 @@ label_10:
 	d0 = fr;
 	d0 += -68;
 	i0 = d0;
-	i1 = 26913;
+	i1 = 26697;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56256,7 +56122,7 @@ label_11:
 	d0 = fr;
 	d0 += -72;
 	i0 = d0;
-	i1 = 26919;
+	i1 = 26703;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56274,7 +56140,7 @@ label_12:
 	d0 = fr;
 	d0 += -76;
 	i0 = d0;
-	i1 = 26930;
+	i1 = 26714;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56292,7 +56158,7 @@ label_13:
 	d0 = fr;
 	d0 += -80;
 	i0 = d0;
-	i1 = 26944;
+	i1 = 26728;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56310,7 +56176,7 @@ label_14:
 	d0 = fr;
 	d0 += -84;
 	i0 = d0;
-	i1 = 26953;
+	i1 = 26737;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56328,7 +56194,7 @@ label_15:
 	d0 = fr;
 	d0 += -88;
 	i0 = d0;
-	i1 = 26960;
+	i1 = 26744;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56346,7 +56212,7 @@ label_16:
 	d0 = fr;
 	d0 += -92;
 	i0 = d0;
-	i1 = 26967;
+	i1 = 26751;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56364,7 +56230,7 @@ label_17:
 	d0 = fr;
 	d0 += -96;
 	i0 = d0;
-	i1 = 26974;
+	i1 = 26758;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56382,7 +56248,7 @@ label_18:
 	d0 = fr;
 	d0 += -100;
 	i0 = d0;
-	i1 = 26992;
+	i1 = 26776;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56400,7 +56266,7 @@ label_19:
 	d0 = fr;
 	d0 += -104;
 	i0 = d0;
-	i1 = 27004;
+	i1 = 26788;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56418,7 +56284,7 @@ label_20:
 	d0 = fr;
 	d0 += -108;
 	i0 = d0;
-	i1 = 27019;
+	i1 = 26803;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -56436,7 +56302,7 @@ label_21:
 	d1 = fr;
 	d1 += -112;
 	i0 = d1;
-	i1 = 27039;
+	i1 = 26823;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d1;
@@ -56481,12 +56347,12 @@ label_1:
 	d2 = fr;
 	d2 += -32;
 	i0 = d2;
-	i2 = 26813;
+	i2 = 26597;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -36;
 	i0 = d1;
-	i1 = 27056;
+	i1 = 26840;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -56551,12 +56417,12 @@ label_1:
 	d5 = fr;
 	d5 += -40;
 	i0 = d5;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d3 = fr;
 	d3 += -44;
 	i0 = d3;
-	i1 = 27082;
+	i1 = 26866;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+12);
@@ -56572,7 +56438,7 @@ label_1:
 	if (d0 == r0) goto label_4;
 label_2:
 	i0 = d3;
-	i1 = 27087;
+	i1 = 26871;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d0 = mDataMemory.ReadInt32(r14+32);
@@ -56593,7 +56459,7 @@ label_3:
 	goto label_0;	// return
 label_4:
 	i0 = d3;
-	i1 = 27089;
+	i1 = 26873;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+12);
@@ -56647,7 +56513,7 @@ label_6:
 	d0 = fr;
 	d0 += -56;
 	i0 = d0;
-	i1 = 27094;
+	i1 = 26878;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d1 = mDataMemory.ReadInt32(r14+8);
@@ -56661,7 +56527,7 @@ label_6:
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 27105;
+	i1 = 26889;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -56755,14 +56621,14 @@ label_1:
 	d6 = fr;
 	d6 += -44;
 	i0 = d6;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d7 = fr;
 	d7 += -48;
 	d4 = fr;
 	d4 += -52;
 	i0 = d4;
-	i1 = 27136;
+	i1 = 26920;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d0);
 	d1 = mDataMemory.ReadInt32(r14+8);
@@ -56778,7 +56644,7 @@ label_1:
 	r14 = __ZNK6MAUtil11BasicStringIcE5c_strEv_74(i0);
 	d0 = r14;
 	i0 = r14;
-	i1 = 27140;
+	i1 = 26924;
 	r14 = _strstr_19(i0, i1);
 	d1 = r14;
 	r14 = 0;
@@ -56786,7 +56652,7 @@ label_1:
 	if (d0 == d1) goto label_5;
 label_2:
 	i0 = d4;
-	i1 = 27148;
+	i1 = 26932;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d5);
 	d0 = mDataMemory.ReadInt32(r14+32);
@@ -56825,7 +56691,7 @@ label_5:
 	d0 = fr;
 	d0 += -56;
 	i0 = d0;
-	i1 = 26707;
+	i1 = 26491;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d5);
 	d1 = mDataMemory.ReadInt32(r14+32);
@@ -56869,7 +56735,7 @@ label_6:
 	i0 = d2;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 27150;
+	i1 = 26934;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d5);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -56916,12 +56782,12 @@ label_1:
 	d7 = fr;
 	d7 += -44;
 	i0 = d7;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d6 = fr;
 	d6 += -52;
 	i0 = d6;
-	i1 = 27184;
+	i1 = 26968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -56937,7 +56803,7 @@ label_1:
 	d4 = fr;
 	d4 += -56;
 	i0 = d4;
-	i1 = 27193;
+	i1 = 26977;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -56954,7 +56820,7 @@ label_1:
 	d2 = fr;
 	d2 += -64;
 	i0 = d2;
-	i1 = 27198;
+	i1 = 26982;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = -48;
@@ -57017,7 +56883,7 @@ label_5:
 	r15 = __dbl_high;
 
 	i0 = d5;
-	i1 = 27150;
+	i1 = 26934;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d0 = mDataMemory.ReadInt32(r14+28);
@@ -57053,7 +56919,7 @@ label_7:
 	if (r14 != d0) goto label_5;
 label_8:
 	i0 = d2;
-	i1 = 27087;
+	i1 = 26871;
 label_9:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
@@ -57083,7 +56949,7 @@ label_11:
 	goto label_0;	// return
 label_12:
 	i0 = d2;
-	i1 = 27200;
+	i1 = 26984;
 	goto label_9;
 label_0:;
 	return;
@@ -57117,12 +56983,12 @@ label_1:
 	d7 = fr;
 	d7 += -44;
 	i0 = d7;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d6 = fr;
 	d6 += -52;
 	i0 = d6;
-	i1 = 27184;
+	i1 = 26968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -57138,7 +57004,7 @@ label_1:
 	d2 = fr;
 	d2 += -56;
 	i0 = d2;
-	i1 = 27193;
+	i1 = 26977;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -57155,7 +57021,7 @@ label_1:
 	d3 = fr;
 	d3 += -64;
 	i0 = d3;
-	i1 = 27198;
+	i1 = 26982;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = -48;
@@ -57181,7 +57047,7 @@ label_1:
 	r0 = 47;
 	if (r14 == r0) goto label_2;
 	i0 = d3;
-	i1 = 27198;
+	i1 = 26982;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d3;
@@ -57247,7 +57113,7 @@ label_6:
 	i0 = d4;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d4;
-	i1 = 27150;
+	i1 = 26934;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d5);
 	d0 = mDataMemory.ReadInt32(r14+28);
@@ -57283,7 +57149,7 @@ label_8:
 	if (r14 != d0) goto label_6;
 label_9:
 	i0 = d3;
-	i1 = 27087;
+	i1 = 26871;
 label_10:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d5);
@@ -57313,7 +57179,7 @@ label_12:
 	goto label_0;	// return
 label_13:
 	i0 = d3;
-	i1 = 27200;
+	i1 = 26984;
 	goto label_10;
 label_0:;
 	return;
@@ -57346,14 +57212,14 @@ private void __ZN8Wormhole12PhoneGapFile21actionGetFileMetadataERNS_11JSONMessag
 label_1:
 	i0 = -44;
 	i0 += fr;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d5 = fr;
 	d5 += -48;
 	d7 = fr;
 	d7 += -52;
 	i0 = d7;
-	i1 = 27184;
+	i1 = 26968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d0);
 	d1 = mDataMemory.ReadInt32(r14+8);
@@ -57374,7 +57240,7 @@ label_2:
 	d2 += -116;
 	mDataMemory.WriteInt32(sp, r14);
 	i0 = d2;
-	i1 = 27203;
+	i1 = 26987;
 	r14 = _sprintf_22(i0, i1);
 	d4 = fr;
 	d4 += -120;
@@ -57417,7 +57283,7 @@ label_2:
 	i0 = d4;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 27206;
+	i1 = 26990;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d6);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -57478,14 +57344,14 @@ label_1:
 	d5 = fr;
 	d5 += -36;
 	i0 = d5;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d4 = fr;
 	d4 += -40;
 	d2 = fr;
 	d2 += -44;
 	i0 = d2;
-	i1 = 27184;
+	i1 = 26968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -57513,7 +57379,7 @@ label_1:
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 27206;
+	i1 = 26990;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -57568,14 +57434,14 @@ label_1:
 	d7 = fr;
 	d7 += -44;
 	i0 = d7;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d6 = fr;
 	d6 += -48;
 	d4 = fr;
 	d4 += -52;
 	i0 = d4;
-	i1 = 27239;
+	i1 = 27023;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -57590,7 +57456,7 @@ label_1:
 	d3 = fr;
 	d3 += -56;
 	i0 = d3;
-	i1 = 27248;
+	i1 = 27032;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -57603,7 +57469,7 @@ label_1:
 	i0 = d3;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d3;
-	i1 = 27253;
+	i1 = 27037;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+12);
@@ -57639,7 +57505,7 @@ label_6:
 	if (d0 == r14) goto label_10;
 label_7:
 	i0 = d3;
-	i1 = 27087;
+	i1 = 26871;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d5);
 	d0 = mDataMemory.ReadInt32(r14+32);
@@ -57692,14 +57558,14 @@ label_14:
 	d0 += -88;
 	mDataMemory.WriteInt32(sp, r14);
 	i0 = d0;
-	i1 = 27203;
+	i1 = 26987;
 	r14 = _sprintf_22(i0, i1);
 	i0 = d3;
 	i1 = d0;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 += -4;
 	i0 = d0;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d5);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -57745,14 +57611,14 @@ label_1:
 	d6 = fr;
 	d6 += -40;
 	i0 = d6;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d5 = fr;
 	d5 += -44;
 	d3 = fr;
 	d3 += -48;
 	i0 = d3;
-	i1 = 27239;
+	i1 = 27023;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d0);
 	d1 = mDataMemory.ReadInt32(r14+8);
@@ -57781,7 +57647,7 @@ label_1:
 	d0 = fr;
 	d0 += -56;
 	i0 = d0;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d2 = mDataMemory.ReadInt32(r14+28);
@@ -57811,7 +57677,7 @@ label_3:
 	d0 = fr;
 	d0 += -52;
 	i0 = d0;
-	i1 = 27087;
+	i1 = 26871;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d1 = mDataMemory.ReadInt32(r14+32);
@@ -57866,14 +57732,14 @@ label_1:
 	d6 = fr;
 	d6 += -40;
 	i0 = d6;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d5 = fr;
 	d5 += -44;
 	d3 = fr;
 	d3 += -48;
 	i0 = d3;
-	i1 = 27239;
+	i1 = 27023;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d0);
 	d1 = mDataMemory.ReadInt32(r14+8);
@@ -57895,7 +57761,7 @@ label_1:
 	d2 = fr;
 	d2 += -52;
 	i0 = d2;
-	i1 = 27262;
+	i1 = 27046;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -56;
@@ -57908,7 +57774,7 @@ label_1:
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 27269;
+	i1 = 27053;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d0;
@@ -57930,7 +57796,7 @@ label_1:
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 26730;
+	i1 = 26514;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d0;
@@ -57938,7 +57804,7 @@ label_1:
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -57968,7 +57834,7 @@ label_3:
 	d0 = fr;
 	d0 += -52;
 	i0 = d0;
-	i1 = 27087;
+	i1 = 26871;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d1 = mDataMemory.ReadInt32(r14+32);
@@ -58022,14 +57888,14 @@ private void __ZN8Wormhole12PhoneGapFile14actionTruncateERNS_11JSONMessageE_144(
 label_1:
 	i0 = -44;
 	i0 += fr;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d7 = fr;
 	d7 += -48;
 	d4 = fr;
 	d4 += -52;
 	i0 = d4;
-	i1 = 27239;
+	i1 = 27023;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -58042,7 +57908,7 @@ label_1:
 	i0 = d4;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d4;
-	i1 = 27089;
+	i1 = 26873;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+12);
@@ -58087,7 +57953,7 @@ label_8:
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_9:
 	i0 = d4;
-	i1 = 26707;
+	i1 = 26491;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d6);
 	d0 = mDataMemory.ReadInt32(r14+32);
@@ -58138,14 +58004,14 @@ label_16:
 	d0 += -84;
 	mDataMemory.WriteInt32(sp, i2);
 	i0 = d0;
-	i1 = 27203;
+	i1 = 26987;
 	r14 = _sprintf_22(i0, i1);
 	i0 = d4;
 	i1 = d0;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 += -4;
 	i0 = d0;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d6);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -58287,14 +58153,14 @@ label_1:
 	d6 = fr;
 	d6 += -44;
 	i0 = d6;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d5 = fr;
 	d5 += -48;
 	d4 = fr;
 	d4 += -52;
 	i0 = d4;
-	i1 = 27184;
+	i1 = 26968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -58309,7 +58175,7 @@ label_1:
 	d2 = fr;
 	d2 += -56;
 	i0 = d2;
-	i1 = 27278;
+	i1 = 27062;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -58341,7 +58207,7 @@ label_2:
 	d0 = fr;
 	d0 += -60;
 	i0 = d0;
-	i1 = 27087;
+	i1 = 26871;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d1 = mDataMemory.ReadInt32(r14+32);
@@ -58387,7 +58253,7 @@ label_5:
 label_6:
 	i0 = -68;
 	i0 += fr;
-	i1 = 27198;
+	i1 = 26982;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -64;
 	i0 += fr;
@@ -58463,7 +58329,7 @@ label_11:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = -64;
 	i0 += fr;
-	i1 = 27150;
+	i1 = 26934;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d0 = mDataMemory.ReadInt32(r14+28);
@@ -58529,7 +58395,7 @@ label_17:
 label_18:
 	i0 = -68;
 	i0 += fr;
-	i1 = 26707;
+	i1 = 26491;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d0 = mDataMemory.ReadInt32(r14+32);
@@ -58584,14 +58450,14 @@ label_1:
 	d5 = fr;
 	d5 += -36;
 	i0 = d5;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d4 = fr;
 	d4 += -40;
 	d2 = fr;
 	d2 += -44;
 	i0 = d2;
-	i1 = 27184;
+	i1 = 26968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d0);
 	d1 = mDataMemory.ReadInt32(r14+8);
@@ -58608,12 +58474,12 @@ label_1:
 	r0 = 0;
 	if (r14 < r0) goto label_3;
 	i0 = d2;
-	i1 = 27286;
+	i1 = 27070;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -48;
 	i0 = d0;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -58639,7 +58505,7 @@ label_2:
 	goto label_0;	// return
 label_3:
 	i0 = d2;
-	i1 = 26707;
+	i1 = 26491;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d0 = mDataMemory.ReadInt32(r14+32);
@@ -58692,14 +58558,14 @@ label_1:
 	d5 = fr;
 	d5 += -36;
 	i0 = d5;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d4 = fr;
 	d4 += -40;
 	d2 = fr;
 	d2 += -44;
 	i0 = d2;
-	i1 = 27184;
+	i1 = 26968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d0);
 	d1 = mDataMemory.ReadInt32(r14+8);
@@ -58716,12 +58582,12 @@ label_1:
 	r0 = 0;
 	if (r14 < r0) goto label_3;
 	i0 = d2;
-	i1 = 27286;
+	i1 = 27070;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -48;
 	i0 = d0;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -58747,7 +58613,7 @@ label_2:
 	goto label_0;	// return
 label_3:
 	i0 = d2;
-	i1 = 26707;
+	i1 = 26491;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d0 = mDataMemory.ReadInt32(r14+32);
@@ -58799,12 +58665,12 @@ private void __ZN8Wormhole12PhoneGapFile17actionReadEntriesERNS_11JSONMessageE_1
 label_1:
 	i0 = -44;
 	i0 += fr;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d7 = fr;
 	d7 += -52;
 	i0 = d7;
-	i1 = 27184;
+	i1 = 26968;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -58818,7 +58684,7 @@ label_1:
 	i0 = d7;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d7;
-	i1 = 27291;
+	i1 = 27075;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -48;
 	i0 += fr;
@@ -58830,7 +58696,7 @@ label_2:
 label_3:
 	i0 = 57;
 	i1 = r14;
-	i2 = 26493;
+	i2 = 26277;
 	i3 = 65538;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_4:
@@ -58909,7 +58775,7 @@ label_12:
 	r0 = 1;
 	if (r14 <= r0) goto label_6;
 	i0 = d4;
-	i1 = 26783;
+	i1 = 26567;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d7;
 	i1 = d4;
@@ -58961,7 +58827,7 @@ label_15:
 	d0 = fr;
 	d0 += -2104;
 	i0 = d0;
-	i1 = 26707;
+	i1 = 26491;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d5);
 	d1 = mDataMemory.ReadInt32(r14+32);
@@ -58998,7 +58864,7 @@ label_19:
 	d0 = fr;
 	d0 += -2116;
 	i0 = d0;
-	i1 = 27293;
+	i1 = 27077;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d7;
 	i1 = d0;
@@ -59006,7 +58872,7 @@ label_19:
 	i0 = d0;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d0;
-	i1 = 27295;
+	i1 = 27079;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d5);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -59065,14 +58931,14 @@ label_1:
 	d4 = fr;
 	d4 += -36;
 	i0 = d4;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d3 = fr;
 	d3 += -40;
 	d2 = fr;
 	d2 += -44;
 	i0 = d2;
-	i1 = 27239;
+	i1 = 27023;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -59085,7 +58951,7 @@ label_1:
 	i0 = d2;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d2;
-	i1 = 27331;
+	i1 = 27115;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	r14 = __ZN8Wormhole10FileExistsERKN6MAUtil11BasicStringIcEE_144(i0);
@@ -59096,7 +58962,7 @@ label_1:
 	if (r14 != r0) goto label_4;
 label_2:
 	i0 = d1;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d5);
 	d0 = mDataMemory.ReadInt32(r14+28);
@@ -59122,7 +58988,7 @@ label_3:
 	goto label_0;	// return
 label_4:
 	i0 = d1;
-	i1 = 27337;
+	i1 = 27121;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -59162,14 +59028,14 @@ label_1:
 	d4 = fr;
 	d4 += -36;
 	i0 = d4;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d3 = fr;
 	d3 += -40;
 	d2 = fr;
 	d2 += -44;
 	i0 = d2;
-	i1 = 27342;
+	i1 = 27126;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -59182,7 +59048,7 @@ label_1:
 	i0 = d2;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d2;
-	i1 = 27331;
+	i1 = 27115;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	r14 = __ZN8Wormhole10FileExistsERKN6MAUtil11BasicStringIcEE_144(i0);
@@ -59193,7 +59059,7 @@ label_1:
 	if (r14 != r0) goto label_4;
 label_2:
 	i0 = d1;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d5);
 	d0 = mDataMemory.ReadInt32(r14+28);
@@ -59219,7 +59085,7 @@ label_3:
 	goto label_0;	// return
 label_4:
 	i0 = d1;
-	i1 = 27337;
+	i1 = 27121;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -59258,17 +59124,17 @@ label_1:
 	d3 = fr;
 	d3 += -32;
 	i0 = d3;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -36;
 	i0 = d1;
-	i1 = 27350;
+	i1 = 27134;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -40;
 	i0 = d0;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d2 = mDataMemory.ReadInt32(r14+28);
@@ -59316,9 +59182,9 @@ private void __ZN8Wormhole28PhoneGapFileUploadConnectionD1Ev_144(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 26432;
+	r14 = 26216;
 	mDataMemory.WriteInt32(i0, r14);
-	r14 = 26472;
+	r14 = 26256;
 	mDataMemory.WriteInt32(i0+40, r14);
 	i0 += 60;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -59360,9 +59226,9 @@ private void __ZN8Wormhole28PhoneGapFileUploadConnectionD0Ev_144(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 26432;
+	r14 = 26216;
 	mDataMemory.WriteInt32(i0, r14);
-	r14 = 26472;
+	r14 = 26256;
 	mDataMemory.WriteInt32(i0+40, r14);
 	i0 += 60;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -59414,7 +59280,7 @@ label_2:
 	d0 = fr;
 	d0 += -36;
 	i0 = d0;
-	i1 = 27353;
+	i1 = 27137;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d5+48);
 	r0 = mDataMemory.ReadInt32(i0);
@@ -59465,7 +59331,7 @@ label_8:
 	r14 = mDataMemory.ReadInt32(i0+68);
 	mDataMemory.WriteInt32(sp, r14);
 	i0 = d2;
-	i1 = 27355;
+	i1 = 27139;
 	r14 = _sprintf_22(i0, i1);
 	d4 = fr;
 	d4 += -108;
@@ -59480,7 +59346,7 @@ label_8:
 	d1 = fr;
 	d1 += -112;
 	i0 = d1;
-	i1 = 27358;
+	i1 = 27142;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -116;
@@ -59536,7 +59402,7 @@ label_1:
 	fr += 52;
 	d2 = i1;
 label_2:
-	i1 = 27362;
+	i1 = 27146;
 	r14 = __ZN8Wormhole17MessageStreamJSON12getParamNodeEPKc_134(i0, i1);
 	d1 = r14;
 label_3:
@@ -59555,7 +59421,7 @@ label_5:
 	d7 = fr;
 	d7 += -44;
 	i0 = d7;
-	i1 = 27367;
+	i1 = 27151;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+24);
@@ -59606,16 +59472,16 @@ label_12:
 	goto label_9;
 label_13:
 	i0 = d7;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -48;
 	i0 += fr;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d5 = fr;
 	d5 += -52;
 	i0 = d5;
-	i1 = 27374;
+	i1 = 27158;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+24);
@@ -59635,7 +59501,7 @@ label_13:
 	if (r14 == r0) goto label_38;
 label_14:
 	i0 = d5;
-	i1 = 27378;
+	i1 = 27162;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d1);
 	d0 = mDataMemory.ReadInt32(r14+24);
@@ -60003,11 +59869,11 @@ private void __ZN8Wormhole12PhoneGapFile16actionUploadFileERNS_11JSONMessageE_14
 label_1:
 	i0 = -44;
 	i0 += fr;
-	i2 = 27063;
+	i2 = 26847;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	i0 = -52;
 	i0 += fr;
-	i1 = 27384;
+	i1 = 27168;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -60030,7 +59896,7 @@ label_1:
 label_2:
 	i0 = -56;
 	i0 += fr;
-	i1 = 27239;
+	i1 = 27023;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -60053,7 +59919,7 @@ label_2:
 label_3:
 	i0 = -60;
 	i0 += fr;
-	i1 = 27392;
+	i1 = 27176;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -60076,7 +59942,7 @@ label_3:
 label_4:
 	i0 = -64;
 	i0 += fr;
-	i1 = 27401;
+	i1 = 27185;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -60093,7 +59959,7 @@ label_4:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = -68;
 	i0 += fr;
-	i1 = 27408;
+	i1 = 27192;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d3);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -60110,7 +59976,7 @@ label_4:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = -68;
 	i0 += fr;
-	i1 = 27140;
+	i1 = 26924;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -64;
 	i0 += fr;
@@ -60127,7 +59993,7 @@ label_4:
 	d0 = fr;
 	d0 += -72;
 	i0 = d0;
-	i1 = 26707;
+	i1 = 26491;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r0 = mDataMemory.ReadInt32(fr+-1220);
 	r14 = mDataMemory.ReadInt32(r0);
@@ -60220,11 +60086,11 @@ label_12:
 	mDataMemory.WriteInt32(sp, r14);
 	i0 = -1108;
 	i0 += fr;
-	i1 = 27417;
+	i1 = 27201;
 	r14 = _sprintf_22(i0, i1);
 	i0 = -72;
 	i0 += fr;
-	i1 = 27446;
+	i1 = 27230;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -68;
 	i0 += fr;
@@ -60242,7 +60108,7 @@ label_12:
 label_13:
 	i0 = -68;
 	i0 += fr;
-	i1 = 27476;
+	i1 = 27260;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_14:
 	r1 = mDataMemory.ReadInt32(fr+-80);
@@ -60292,7 +60158,7 @@ label_22:
 label_23:
 	i0 = -68;
 	i0 += fr;
-	i1 = 27489;
+	i1 = 27273;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_24:
 	r1 = mDataMemory.ReadInt32(fr+-80);
@@ -60325,7 +60191,7 @@ label_29:
 label_30:
 	i0 = -68;
 	i0 += fr;
-	i1 = 27500;
+	i1 = 27284;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_31:
 	r1 = mDataMemory.ReadInt32(fr+-80);
@@ -60363,7 +60229,7 @@ label_37:
 	__ZN6MAUtil11BasicStringIcEC1Ev_74(i0);
 	i0 = -68;
 	i0 += fr;
-	i1 = 26492;
+	i1 = 26276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = -68;
@@ -60374,11 +60240,11 @@ label_37:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = -68;
 	i0 += fr;
-	i1 = 27506;
+	i1 = 27290;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -1112;
 	i0 += fr;
-	i1 = 27509;
+	i1 = 27293;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_38:
 	i0 = 20;
@@ -60444,7 +60310,7 @@ label_44:
 	i0 = d6;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d6;
-	i1 = 27512;
+	i1 = 27296;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d6;
@@ -60459,7 +60325,7 @@ label_45:
 label_46:
 	i0 = -1140;
 	i0 += fr;
-	i1 = 27551;
+	i1 = 27335;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d0;
@@ -60550,7 +60416,7 @@ label_53:
 	i0 = d2;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d6;
-	i1 = 27512;
+	i1 = 27296;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d6;
@@ -60559,7 +60425,7 @@ label_53:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = -1132;
 	i0 += fr;
-	i1 = 27554;
+	i1 = 27338;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d6;
 	i1 = -48;
@@ -60576,7 +60442,7 @@ label_53:
 	i0 += fr;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d2;
-	i1 = 26730;
+	i1 = 26514;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -1132;
 	i0 += fr;
@@ -60603,7 +60469,7 @@ label_53:
 label_54:
 	i0 = -1144;
 	i0 += fr;
-	i1 = 27568;
+	i1 = 27352;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = -1144;
@@ -60686,12 +60552,12 @@ label_56:
 	d4 += -1208;
 	mDataMemory.WriteInt32(sp, r14);
 	i0 = d4;
-	i1 = 27583;
+	i1 = 27367;
 	r14 = _sprintf_22(i0, i1);
 label_57:
 	i0 = -1144;
 	i0 += fr;
-	i1 = 27586;
+	i1 = 27370;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_58:
 	r1 = mDataMemory.ReadInt32(fr+-80);
@@ -60777,9 +60643,9 @@ label_72:
 label_73:
 	i0 = r14;
 	__ZN8Wormhole23HighLevelHttpConnectionC2Ev_127(i0);
-	r0 = 26432;
+	r0 = 26216;
 	mDataMemory.WriteInt32(d0, r0);
-	r14 = 26472;
+	r14 = 26256;
 	mDataMemory.WriteInt32(d0+40, r14);
 	d1 = d0;
 	d1 += 52;
@@ -60888,7 +60754,7 @@ label_82:
 label_83:
 	i0 = -72;
 	i0 += fr;
-	i1 = 26707;
+	i1 = 26491;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r0 = mDataMemory.ReadInt32(fr+-1220);
 	r14 = mDataMemory.ReadInt32(r0);
@@ -60912,7 +60778,7 @@ label_83:
 label_84:
 	i0 = -60;
 	i0 += fr;
-	i1 = 25648;
+	i1 = 25432;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -56;
 	i0 += fr;
@@ -60926,7 +60792,7 @@ label_84:
 label_85:
 	i0 = -56;
 	i0 += fr;
-	i1 = 27601;
+	i1 = 27385;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -52;
 	i0 += fr;
@@ -60940,7 +60806,7 @@ label_85:
 label_86:
 	i0 = -52;
 	i0 += fr;
-	i1 = 27611;
+	i1 = 27395;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -48;
 	i0 += fr;
@@ -60997,7 +60863,7 @@ label_94:
 label_95:
 	i0 = -1144;
 	i0 += fr;
-	i1 = 27353;
+	i1 = 27137;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r0 = mDataMemory.ReadInt32(fr+-1220);
 	r14 = mDataMemory.ReadInt32(r0);
@@ -61728,9 +61594,9 @@ private void __ZN8Wormhole22PhoneGapMessageHandlerD1Ev_145(int i0)
 	fr += 16;
 	d1 = i0;
 label_1:
-	r14 = 27624;
+	r14 = 27408;
 	mDataMemory.WriteInt32(i0, r14);
-	r14 = 27720;
+	r14 = 27504;
 	mDataMemory.WriteInt32(i0+4, r14);
 	i0 = mDataMemory.ReadInt32(i0+12);
 	r14 = 0;
@@ -61831,9 +61697,9 @@ private void __ZN8Wormhole22PhoneGapMessageHandlerD0Ev_145(int i0)
 	fr += 16;
 	d1 = i0;
 label_1:
-	r14 = 27624;
+	r14 = 27408;
 	mDataMemory.WriteInt32(i0, r14);
-	r14 = 27720;
+	r14 = 27504;
 	mDataMemory.WriteInt32(i0+4, r14);
 	i0 = mDataMemory.ReadInt32(i0+12);
 	r14 = 0;
@@ -62233,7 +62099,7 @@ label_1:
 	d0 = fr;
 	d0 += -24;
 	i0 = d0;
-	i1 = 27748;
+	i1 = 27532;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+80);
@@ -62340,12 +62206,12 @@ label_1:
 	d3 = fr;
 	d3 += -44;
 	i0 = d3;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d2 = fr;
 	d2 += -48;
 	i0 = d2;
-	i1 = 27818;
+	i1 = 27602;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d2;
@@ -62367,13 +62233,13 @@ label_3:
 	d0 += -60;
 	i0 = d0;
 	i1 = d4;
-	i2 = 27825;
+	i2 = 27609;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -64;
 	i0 = d1;
 	i1 = d4;
-	i2 = 27831;
+	i2 = 27615;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 label_4:
 	i0 = d0;
@@ -62406,12 +62272,12 @@ label_10:
 	d3 += -64;
 	i0 = d3;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d2 = fr;
 	d2 += -60;
 	i0 = d2;
-	i1 = 27839;
+	i1 = 27623;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d2;
@@ -62422,12 +62288,12 @@ label_10:
 	d1 += -68;
 	i0 = d1;
 	i1 = d4;
-	i2 = 27846;
+	i2 = 27630;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d0 = fr;
 	d0 += -72;
 	i0 = d0;
-	i1 = 27853;
+	i1 = 27637;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d1;
 	i1 = d0;
@@ -62458,7 +62324,7 @@ label_12:
 	d0 += -76;
 	i0 = d0;
 	i1 = d4;
-	i2 = 27857;
+	i2 = 27641;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	r14 = mDataMemory.ReadInt32(d6);
 	d1 = mDataMemory.ReadInt32(r14+60);
@@ -62476,12 +62342,12 @@ label_14:
 	d1 += -52;
 	i0 = d1;
 	i1 = d4;
-	i2 = 27846;
+	i2 = 27630;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d0 = fr;
 	d0 += -56;
 	i0 = d0;
-	i1 = 27876;
+	i1 = 27660;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d1;
 	i1 = d0;
@@ -62506,12 +62372,12 @@ label_16:
 	d3 += -76;
 	i0 = d3;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d2 = fr;
 	d2 += -80;
 	i0 = d2;
-	i1 = 27907;
+	i1 = 27691;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d2;
@@ -62522,12 +62388,12 @@ label_16:
 	d1 += -84;
 	i0 = d1;
 	i1 = d4;
-	i2 = 27846;
+	i2 = 27630;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d0 = fr;
 	d0 += -88;
 	i0 = d0;
-	i1 = 27920;
+	i1 = 27704;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d1;
 	i1 = d0;
@@ -62556,7 +62422,7 @@ label_19:
 	d0 = fr;
 	d0 += -92;
 	i0 = d0;
-	i1 = 27928;
+	i1 = 27712;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	d1 = mDataMemory.ReadInt32(r14+12);
@@ -62583,12 +62449,12 @@ label_22:
 	d3 += -92;
 	i0 = d3;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d2 = fr;
 	d2 += -96;
 	i0 = d2;
-	i1 = 27907;
+	i1 = 27691;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d2;
@@ -62599,12 +62465,12 @@ label_22:
 	d1 += -100;
 	i0 = d1;
 	i1 = d4;
-	i2 = 27846;
+	i2 = 27630;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d0 = fr;
 	d0 += -104;
 	i0 = d0;
-	i1 = 27937;
+	i1 = 27721;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d1;
 	i1 = d0;
@@ -62633,7 +62499,7 @@ label_24:
 	if (d0 == r14) goto label_29;
 label_25:
 	i0 = d4;
-	i1 = 27942;
+	i1 = 27726;
 	r14 = __ZN8Wormhole17MessageStreamJSON11getParamIntEPKc_134(i0, i1);
 	d1 = r14;
 label_26:
@@ -62657,12 +62523,12 @@ label_29:
 	d3 += -108;
 	i0 = d3;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d2 = fr;
 	d2 += -112;
 	i0 = d2;
-	i1 = 27947;
+	i1 = 27731;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d2;
@@ -62673,12 +62539,12 @@ label_29:
 	d1 += -116;
 	i0 = d1;
 	i1 = d4;
-	i2 = 27846;
+	i2 = 27630;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d0 = fr;
 	d0 += -120;
 	i0 = d0;
-	i1 = 27958;
+	i1 = 27742;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d1;
 	i1 = d0;
@@ -62707,7 +62573,7 @@ label_31:
 	d0 += -124;
 	i0 = d0;
 	i1 = d4;
-	i2 = 27857;
+	i2 = 27641;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	r14 = mDataMemory.ReadInt32(d6);
 	d1 = mDataMemory.ReadInt32(r14+52);
@@ -62726,12 +62592,12 @@ label_34:
 	d3 += -124;
 	i0 = d3;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d2 = fr;
 	d2 += -128;
 	i0 = d2;
-	i1 = 27976;
+	i1 = 27760;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	mDataMemory.WriteInt32(fr+-192, d0);
 	d7 = d0;
@@ -62790,12 +62656,12 @@ label_43:
 	d0 += -148;
 	i0 = d0;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -152;
 	i0 = d1;
-	i1 = 27990;
+	i1 = 27774;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -62832,14 +62698,14 @@ label_47:
 	d1 += -132;
 	i0 = d1;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	r0 = 1;
 	mDataMemory.WriteInt32(fr+-192, r0);
 	d0 = fr;
 	d0 += -136;
 	i0 = d0;
-	i1 = 28004;
+	i1 = 27788;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d7 = 1;
 	i0 = d1;
@@ -62852,12 +62718,12 @@ label_47:
 	d1 += -8;
 	i0 = d1;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	mDataMemory.WriteInt32(fr+-200, d7);
 	d0 += -8;
 	i0 = d0;
-	i1 = 28016;
+	i1 = 27800;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d5 = d7;
 	i0 = d1;
@@ -62872,12 +62738,12 @@ label_48:
 	d0 += -156;
 	i0 = d0;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -160;
 	i0 = d1;
-	i1 = 28024;
+	i1 = 27808;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -62903,12 +62769,12 @@ label_49:
 	d0 += -164;
 	i0 = d0;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -168;
 	i0 = d1;
-	i1 = 28029;
+	i1 = 27813;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -62934,12 +62800,12 @@ label_50:
 	d0 += -172;
 	i0 = d0;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -176;
 	i0 = d1;
-	i1 = 28042;
+	i1 = 27826;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -62965,12 +62831,12 @@ label_51:
 	d2 += -180;
 	i0 = d2;
 	i1 = d4;
-	i2 = 27810;
+	i2 = 27594;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -184;
 	i0 = d1;
-	i1 = 28059;
+	i1 = 27843;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -63030,7 +62896,7 @@ label_3:
 	d0 = fr;
 	d0 += -24;
 	i0 = d0;
-	i1 = 28067;
+	i1 = 27851;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	d1 = mDataMemory.ReadInt32(r14+80);
@@ -63079,7 +62945,7 @@ label_1:
 	d1 += -1312;
 label_2:
 	i0 = 89;
-	i1 = 28118;
+	i1 = 27902;
 	i2 = d1;
 	i3 = 256;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
@@ -63088,7 +62954,7 @@ label_3:
 	r14 = 255;
 	if ((uint)r0 > (uint)r14) goto label_6;
 	i0 = d1;
-	i1 = 28138;
+	i1 = 27922;
 	r14 = mSyscallInvoker.strcmp(i0, i1);
 	r0 = 0;
 	if (r14 != r0) goto label_4;
@@ -63100,12 +62966,12 @@ label_4:
 	d0 += -1056;
 	mDataMemory.WriteInt32(sp, d1);
 	i0 = d0;
-	i1 = 28145;
+	i1 = 27929;
 	r14 = _sprintf_22(i0, i1);
 	d3 = fr;
 	d3 += -1316;
 	i0 = d3;
-	i1 = 28152;
+	i1 = 27936;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -1320;
@@ -63114,7 +62980,7 @@ label_4:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 += -268;
 	i0 = d0;
-	i1 = 28154;
+	i1 = 27938;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	r0 = 0;
@@ -63141,7 +63007,7 @@ label_5:
 	goto label_0;	// return
 label_6:
 	i0 = d1;
-	i1 = 28155;
+	i1 = 27939;
 	i2 = 8;
 	r14 = mSyscallInvoker.memcpy(i0, i1, i2);
 	goto label_4;
@@ -63175,7 +63041,7 @@ private void __ZN8Wormhole22PhoneGapMessageHandler20sendDevicePropertiesEN6MAUti
 	mDataMemory.WriteInt32(fr+-2104, i1);
 label_1:
 	i0 = 89;
-	i1 = 28163;
+	i1 = 27947;
 	i2 = -296;
 	i2 += fr;
 	i3 = 256;
@@ -63186,7 +63052,7 @@ label_2:
 	d3 += -552;
 label_3:
 	i0 = 89;
-	i1 = 28182;
+	i1 = 27966;
 	i2 = d3;
 	i3 = 256;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
@@ -63196,7 +63062,7 @@ label_4:
 	d7 += -808;
 label_5:
 	i0 = 89;
-	i1 = 28201;
+	i1 = 27985;
 	i2 = d7;
 	i3 = 256;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
@@ -63206,7 +63072,7 @@ label_6:
 	d6 += -1064;
 label_7:
 	i0 = 89;
-	i1 = 28218;
+	i1 = 28002;
 	i2 = d6;
 	i3 = 256;
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
@@ -63228,12 +63094,12 @@ label_9:
 	mDataMemory.WriteInt32(sp+8, d3);
 	mDataMemory.WriteInt32(sp+12, d6);
 	i0 = d0;
-	i1 = 28243;
+	i1 = 28027;
 	r14 = _sprintf_22(i0, i1);
 	d3 = fr;
 	d3 += -2096;
 	i0 = d3;
-	i1 = 28152;
+	i1 = 27936;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -2092;
@@ -63242,7 +63108,7 @@ label_9:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 += -12;
 	i0 = d0;
-	i1 = 28154;
+	i1 = 27938;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	r0 = 0;
@@ -63271,12 +63137,12 @@ label_11:
 	d1 = fr;
 	d1 += -2092;
 	i0 = d1;
-	i1 = 28323;
+	i1 = 28107;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -2096;
 	i0 = d0;
-	i1 = 28325;
+	i1 = 28109;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4);
 	r0 = 0;
@@ -63300,7 +63166,7 @@ label_12:
 	goto label_0;	// return
 label_13:
 	i0 = d3;
-	i1 = 28366;
+	i1 = 28150;
 	i2 = 15;
 	r14 = mSyscallInvoker.memcpy(i0, i1, i2);
 	goto label_9;
@@ -63371,9 +63237,9 @@ label_1:
 	fr += 16;
 	d1 = i0;
 label_2:
-	r1 = 27624;
+	r1 = 27408;
 	mDataMemory.WriteInt32(i0, r1);
-	r14 = 27720;
+	r14 = 27504;
 	mDataMemory.WriteInt32(i0+4, r14);
 	mDataMemory.WriteInt32(i0+8, i1);
 	r1 = 0;
@@ -63530,7 +63396,7 @@ label_5:
 	d0 = fr;
 	d0 += -24;
 	i0 = d0;
-	i1 = 28381;
+	i1 = 28165;
 label_6:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
@@ -63551,7 +63417,7 @@ label_8:
 	d0 = fr;
 	d0 += -24;
 	i0 = d0;
-	i1 = 28427;
+	i1 = 28211;
 	goto label_6;
 label_0:;
 	return;
@@ -63664,7 +63530,7 @@ label_1:
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 28474;
+	i1 = 28258;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	mDataMemory.WriteInt32(sp, d1);
@@ -63738,7 +63604,7 @@ label_3:
 	d0 = fr;
 	d0 += -64;
 	i0 = d0;
-	i1 = 28499;
+	i1 = 28283;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d0;
@@ -63748,7 +63614,7 @@ label_3:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_4:
 	i0 = d0;
-	i1 = 28508;
+	i1 = 28292;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d3;
@@ -63761,7 +63627,7 @@ label_4:
 	d2 = fr;
 	d2 += -68;
 	i0 = d2;
-	i1 = 28521;
+	i1 = 28305;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d6;
 	i1 = d1;
@@ -63779,13 +63645,13 @@ label_4:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_5:
 	i0 = d2;
-	i1 = 28524;
+	i1 = 28308;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
-	i1 = 28323;
+	i1 = 28107;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
-	i1 = 28154;
+	i1 = 27938;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d7);
 	mDataMemory.WriteInt32(sp, d6);
@@ -63817,7 +63683,7 @@ label_6:
 	goto label_0;	// return
 label_7:
 	i0 = d6;
-	i1 = 28547;
+	i1 = 28331;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d6;
@@ -63862,7 +63728,7 @@ label_1:
 	d4 = fr;
 	d4 += -48;
 	i0 = d4;
-	i1 = 28553;
+	i1 = 28337;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -63876,7 +63742,7 @@ label_2:
 	d0 = fr;
 	d0 += -56;
 	i0 = d0;
-	i1 = 28555;
+	i1 = 28339;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d0;
@@ -63886,7 +63752,7 @@ label_2:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_3:
 	i0 = d0;
-	i1 = 28555;
+	i1 = 28339;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d3;
@@ -63903,7 +63769,7 @@ label_3:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_4:
 	i0 = d0;
-	i1 = 28557;
+	i1 = 28341;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -63912,7 +63778,7 @@ label_4:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_5:
 	i0 = d3;
-	i1 = 28561;
+	i1 = 28345;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d3;
@@ -63928,7 +63794,7 @@ label_6:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_7:
 	i0 = d3;
-	i1 = 28571;
+	i1 = 28355;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d3;
@@ -63949,7 +63815,7 @@ label_9:
 	if (r14 != r0) goto label_15;
 label_10:
 	i0 = d0;
-	i1 = 28583;
+	i1 = 28367;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -63962,7 +63828,7 @@ label_10:
 	if (r14 <= r0) goto label_13;
 label_11:
 	i0 = d4;
-	i1 = 28586;
+	i1 = 28370;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d4;
@@ -63972,7 +63838,7 @@ label_11:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_12:
 	i0 = d4;
-	i1 = 28555;
+	i1 = 28339;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d3;
@@ -63989,7 +63855,7 @@ label_12:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_13:
 	i0 = d0;
-	i1 = 28589;
+	i1 = 28373;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -64012,7 +63878,7 @@ label_14:
 	goto label_0;	// return
 label_15:
 	i0 = d0;
-	i1 = 28591;
+	i1 = 28375;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d0;
@@ -64114,7 +63980,7 @@ label_1:
 	fr += 12;
 	d0 = i0;
 label_2:
-	r14 = 28620;
+	r14 = 28404;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+4, i1);
 	i0 += 16;
@@ -64157,7 +64023,7 @@ private void __ZN8Wormhole15PhoneGapSensorsD1Ev_146(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 28620;
+	r14 = 28404;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 28;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -64197,7 +64063,7 @@ private void __ZN8Wormhole15PhoneGapSensorsD0Ev_146(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 28620;
+	r14 = 28404;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 28;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -64244,12 +64110,12 @@ label_1:
 	d0 = fr;
 	d0 += -40;
 	i0 = d0;
-	i2 = 28664;
+	i2 = 28448;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -44;
 	i0 = d1;
-	i1 = 28672;
+	i1 = 28456;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -64266,11 +64132,11 @@ label_1:
 	d0 += -8;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28686;
+	i2 = 28470;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 += -8;
 	i0 = d1;
-	i1 = 28693;
+	i1 = 28477;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -64287,7 +64153,7 @@ label_1:
 	d0 += -8;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28709;
+	i2 = 28493;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	r14 = mDataMemory.ReadInt32(d6);
 	d1 = mDataMemory.ReadInt32(r14+24);
@@ -64311,12 +64177,12 @@ label_5:
 	d0 += -68;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28664;
+	i2 = 28448;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -64;
 	i0 = d1;
-	i1 = 28728;
+	i1 = 28512;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -64332,11 +64198,11 @@ label_5:
 	d0 += 8;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28686;
+	i2 = 28470;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 += 8;
 	i0 = d1;
-	i1 = 28740;
+	i1 = 28524;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -64354,12 +64220,12 @@ label_5:
 	d0 += -52;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28686;
+	i2 = 28470;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -48;
 	i0 = d1;
-	i1 = 28754;
+	i1 = 28538;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -64375,7 +64241,7 @@ label_5:
 	d0 += -20;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28709;
+	i2 = 28493;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	r14 = mDataMemory.ReadInt32(d6);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -64385,12 +64251,12 @@ label_6:
 	d0 += -56;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28686;
+	i2 = 28470;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -60;
 	i0 = d1;
-	i1 = 28773;
+	i1 = 28557;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -64406,7 +64272,7 @@ label_6:
 	d0 += -8;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28709;
+	i2 = 28493;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	r14 = mDataMemory.ReadInt32(d6);
 	d1 = mDataMemory.ReadInt32(r14+24);
@@ -64419,7 +64285,7 @@ label_8:
 	d0 += 8;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28709;
+	i2 = 28493;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	r14 = mDataMemory.ReadInt32(d6);
 	d1 = mDataMemory.ReadInt32(r14+28);
@@ -64429,12 +64295,12 @@ label_9:
 	d2 += -76;
 	i0 = d2;
 	i1 = d4;
-	i2 = 28664;
+	i2 = 28448;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -72;
 	i0 = d1;
-	i1 = 28784;
+	i1 = 28568;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -64450,11 +64316,11 @@ label_9:
 	d0 += -60;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28686;
+	i2 = 28470;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 += 16;
 	i0 = d1;
-	i1 = 28792;
+	i1 = 28576;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -64470,7 +64336,7 @@ label_9:
 	d0 += 8;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28709;
+	i2 = 28493;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	r14 = mDataMemory.ReadInt32(d6);
 	d1 = mDataMemory.ReadInt32(r14+32);
@@ -64483,12 +64349,12 @@ label_10:
 	d2 += -64;
 	i0 = d2;
 	i1 = d4;
-	i2 = 28686;
+	i2 = 28470;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -68;
 	i0 = d1;
-	i1 = 28803;
+	i1 = 28587;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -64515,12 +64381,12 @@ label_14:
 	d2 += -72;
 	i0 = d2;
 	i1 = d4;
-	i2 = 28686;
+	i2 = 28470;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -76;
 	i0 = d1;
-	i1 = 28813;
+	i1 = 28597;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -64546,12 +64412,12 @@ label_17:
 	d0 += -52;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28686;
+	i2 = 28470;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -48;
 	i0 = d1;
-	i1 = 28773;
+	i1 = 28557;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -64567,7 +64433,7 @@ label_17:
 	d0 += -28;
 	i0 = d0;
 	i1 = d4;
-	i2 = 28709;
+	i2 = 28493;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	r14 = mDataMemory.ReadInt32(d6);
 	d1 = mDataMemory.ReadInt32(r14+32);
@@ -64577,12 +64443,12 @@ label_18:
 	d2 += -80;
 	i0 = d2;
 	i1 = d4;
-	i2 = 28686;
+	i2 = 28470;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d1 = fr;
 	d1 += -84;
 	i0 = d1;
-	i1 = 28803;
+	i1 = 28587;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
 	i1 = d1;
@@ -64663,12 +64529,12 @@ label_2:
 	mDataMemory.WriteInt32(sp+48, r14);
 	mDataMemory.WriteInt32(sp+52, r15);
 	i0 = d0;
-	i1 = 28824;
+	i1 = 28608;
 	r14 = _sprintf_22(i0, i1);
 	d3 = fr;
 	d3 += -1056;
 	i0 = d3;
-	i1 = 28924;
+	i1 = 28708;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -1060;
@@ -64677,7 +64543,7 @@ label_2:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 += -12;
 	i0 = d0;
-	i1 = 28926;
+	i1 = 28710;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d4+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -64938,12 +64804,12 @@ label_2:
 	mDataMemory.WriteInt32(sp+16, r14);
 	mDataMemory.WriteInt32(sp+20, r15);
 	i0 = d0;
-	i1 = 28927;
+	i1 = 28711;
 	r14 = _sprintf_22(i0, i1);
 	d3 = fr;
 	d3 += -1060;
 	i0 = d3;
-	i1 = 28924;
+	i1 = 28708;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -1064;
@@ -64952,7 +64818,7 @@ label_2:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 += -12;
 	i0 = d0;
-	i1 = 28926;
+	i1 = 28710;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d2+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -65019,12 +64885,12 @@ label_2:
 	mDataMemory.WriteInt32(sp, r14);
 	mDataMemory.WriteInt32(sp+4, r15);
 	i0 = d0;
-	i1 = 28957;
+	i1 = 28741;
 	r14 = _sprintf_22(i0, i1);
 	d3 = fr;
 	d3 += -1060;
 	i0 = d3;
-	i1 = 28924;
+	i1 = 28708;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = fr;
 	d1 += -1064;
@@ -65033,7 +64899,7 @@ label_2:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 += -12;
 	i0 = d0;
-	i1 = 28926;
+	i1 = 28710;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d2+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -65109,12 +64975,12 @@ label_4:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 28985;
+	i1 = 28769;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 28987;
+	i1 = 28771;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d2+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -65189,12 +65055,12 @@ label_4:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 28985;
+	i1 = 28769;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 29025;
+	i1 = 28809;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d2+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -65269,12 +65135,12 @@ label_4:
 	d1 = fr;
 	d1 += -28;
 	i0 = d1;
-	i1 = 28985;
+	i1 = 28769;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d0 = fr;
 	d0 += -32;
 	i0 = d0;
-	i1 = 29065;
+	i1 = 28849;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d2+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -65324,7 +65190,7 @@ label_1:
 	fr += 20;
 	d2 = i0;
 label_2:
-	r1 = 29108;
+	r1 = 28892;
 	mDataMemory.WriteInt32(i0, r1);
 	mDataMemory.WriteInt32(i0+4, i1);
 	d0 = i0;
@@ -65376,7 +65242,7 @@ private void __ZN8Wormhole13SensorManagerD1Ev_147(int i0)
 	fr = sp;
 	fr += 16;
 label_1:
-	r14 = 29108;
+	r14 = 28892;
 	mDataMemory.WriteInt32(i0, r14);
 	r14 = -12;
 	if (i0 == r14) goto label_3;
@@ -65420,7 +65286,7 @@ private void __ZN8Wormhole13SensorManagerD0Ev_147(int i0)
 	fr += 20;
 	d2 = i0;
 label_1:
-	r14 = 29108;
+	r14 = 28892;
 	mDataMemory.WriteInt32(i0, r14);
 	r14 = -12;
 	if (i0 == r14) goto label_3;
@@ -65470,13 +65336,13 @@ private void __ZN8Wormhole13SensorManager13handleMessageERNS_11JSONMessageE_147(
 label_1:
 	i0 = -44;
 	i0 += fr;
-	i2 = 29128;
+	i2 = 28912;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 label_2:
 	d0 = fr;
 	d0 += -48;
 	i0 = d0;
-	i1 = 29135;
+	i1 = 28919;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -44;
 	i0 += fr;
@@ -65509,7 +65375,7 @@ label_5:
 	d3 = fr;
 	d3 += -52;
 	i0 = d3;
-	i1 = 29147;
+	i1 = 28931;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d4 = d1;
 	i0 = -44;
@@ -65540,7 +65406,7 @@ label_9:
 	d1 = fr;
 	d1 += -64;
 	i0 = d1;
-	i1 = 29159;
+	i1 = 28943;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d7);
 	d0 = mDataMemory.ReadInt32(r14+8);
@@ -65553,7 +65419,7 @@ label_9:
 	i0 = d1;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d1;
-	i1 = 29164;
+	i1 = 28948;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d1;
@@ -65569,7 +65435,7 @@ label_10:
 	d0 = fr;
 	d0 += -80;
 	i0 = d0;
-	i1 = 29147;
+	i1 = 28931;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = -44;
 	i0 += fr;
@@ -65585,7 +65451,7 @@ label_11:
 	d4 = fr;
 	d4 += -76;
 	i0 = d4;
-	i1 = 29178;
+	i1 = 28962;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r14 = mDataMemory.ReadInt32(d7);
 	d0 = mDataMemory.ReadInt32(r14+12);
@@ -65626,7 +65492,7 @@ label_14:
 	d3 = fr;
 	d3 += -72;
 	i0 = d3;
-	i1 = 29187;
+	i1 = 28971;
 label_15:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
@@ -65639,7 +65505,7 @@ label_16:
 	d0 = fr;
 	d0 += -56;
 	i0 = d0;
-	i1 = 29234;
+	i1 = 29018;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d4 = 1;
 	i0 = -44;
@@ -65681,12 +65547,12 @@ label_20:
 label_21:
 	i0 = d3;
 	i1 = d7;
-	i2 = 29245;
+	i2 = 29029;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d0 = fr;
 	d0 += -68;
 	i0 = d0;
-	i1 = 29264;
+	i1 = 29048;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d6+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -65728,7 +65594,7 @@ label_25:
 
 	i0 = d4;
 	i1 = d7;
-	i2 = 29245;
+	i2 = 29029;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	d3 = (int)( d3 << 2);
 	d3 += d6;
@@ -65743,7 +65609,7 @@ label_26:
 label_27:
 	d1 += -4;
 	i0 = d1;
-	i1 = 29266;
+	i1 = 29050;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d1;
@@ -65758,7 +65624,7 @@ label_27:
 	d3 = fr;
 	d3 += -72;
 	i0 = d3;
-	i1 = 29280;
+	i1 = 29064;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d3;
@@ -65772,7 +65638,7 @@ label_27:
 	if (d0 != r14) goto label_10;
 	d1 += -8;
 	i0 = d1;
-	i1 = 29292;
+	i1 = 29076;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d1;
@@ -65786,7 +65652,7 @@ label_27:
 	if (d0 != r0) goto label_10;
 	d1 += -4;
 	i0 = d1;
-	i1 = 29302;
+	i1 = 29086;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d1;
@@ -65812,23 +65678,23 @@ label_30:
 	r14 = -1;
 	if (d1 != r14) goto label_21;
 	i0 = d3;
-	i1 = 29312;
+	i1 = 29096;
 	goto label_15;
 label_31:
 	d3 = fr;
 	d3 += -72;
 	i0 = d3;
-	i1 = 29357;
+	i1 = 29141;
 	goto label_15;
 label_32:
 	d3 = fr;
 	d3 += -72;
 	i0 = d3;
-	i1 = 29398;
+	i1 = 29182;
 	goto label_15;
 label_33:
 	i0 = d3;
-	i1 = 29439;
+	i1 = 29223;
 	goto label_15;
 label_0:;
 	return;
@@ -65864,7 +65730,7 @@ label_1:
 	d5 = fr;
 	d5 += -48;
 	i0 = d5;
-	i1 = 29159;
+	i1 = 28943;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r0 = mDataMemory.ReadInt32(fr+-68);
 	r14 = mDataMemory.ReadInt32(r0);
@@ -65878,13 +65744,13 @@ label_1:
 	i0 = d5;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d5;
-	i1 = 29482;
+	i1 = 29266;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d3 = 0;
 	d2 = fr;
 	d2 += -52;
 	i0 = d2;
-	i1 = 29492;
+	i1 = 29276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = 0;
 	i0 = d4;
@@ -65910,7 +65776,7 @@ label_2:
 label_3:
 	d3 = 0;
 	i0 = d6;
-	i1 = 29492;
+	i1 = 29276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = 0;
 	i0 = d4;
@@ -65932,7 +65798,7 @@ label_4:
 label_5:
 	d3 = 0;
 	i0 = d6;
-	i1 = 29492;
+	i1 = 29276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = 0;
 	i0 = d4;
@@ -65954,7 +65820,7 @@ label_6:
 label_7:
 	d3 = 0;
 	i0 = d6;
-	i1 = 29492;
+	i1 = 29276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = 0;
 	i0 = d4;
@@ -65976,7 +65842,7 @@ label_8:
 label_9:
 	d3 = 0;
 	i0 = d6;
-	i1 = 29492;
+	i1 = 29276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = 0;
 	i0 = d4;
@@ -65997,7 +65863,7 @@ label_10:
 	if (r14 != r0) goto label_15;
 label_11:
 	i0 = d6;
-	i1 = 29493;
+	i1 = 29277;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d6;
@@ -66006,13 +65872,13 @@ label_11:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	i0 = d6;
 	i1 = mDataMemory.ReadInt32(fr+-68);
-	i2 = 29245;
+	i2 = 29029;
 	r14 = __ZN8Wormhole17MessageStreamJSON8getParamEPKc_134(i0, i1, i2);
 	i0 = d7;
-	i1 = 29496;
+	i1 = 29280;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d2;
-	i1 = 29492;
+	i1 = 29276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	r0 = mDataMemory.ReadInt32(fr+-64);
 	i0 = mDataMemory.ReadInt32(r0+4);
@@ -66044,7 +65910,7 @@ label_12:
 	goto label_0;	// return
 label_13:
 	i0 = d7;
-	i1 = 29302;
+	i1 = 29086;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = 1;
 	i0 = d4;
@@ -66081,7 +65947,7 @@ label_17:
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_18:
 	i0 = d2;
-	i1 = 29498;
+	i1 = 29282;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d2;
@@ -66091,7 +65957,7 @@ label_18:
 	goto label_11;
 label_19:
 	i0 = d7;
-	i1 = 29292;
+	i1 = 29076;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = 1;
 	i0 = d4;
@@ -66128,7 +65994,7 @@ label_23:
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_24:
 	i0 = d2;
-	i1 = 29539;
+	i1 = 29323;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d2;
@@ -66138,7 +66004,7 @@ label_24:
 	goto label_9;
 label_25:
 	i0 = d7;
-	i1 = 29280;
+	i1 = 29064;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = 1;
 	i0 = d4;
@@ -66175,7 +66041,7 @@ label_29:
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_30:
 	i0 = d2;
-	i1 = 29580;
+	i1 = 29364;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d2;
@@ -66185,7 +66051,7 @@ label_30:
 	goto label_7;
 label_31:
 	i0 = d7;
-	i1 = 29266;
+	i1 = 29050;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = 1;
 	i0 = d4;
@@ -66222,7 +66088,7 @@ label_35:
 	r14 = mSyscallInvoker.maIOCtl(i0, i1, i2, i3);
 label_36:
 	i0 = d2;
-	i1 = 29625;
+	i1 = 29409;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d2;
@@ -66232,7 +66098,7 @@ label_36:
 	goto label_5;
 label_37:
 	i0 = d7;
-	i1 = 29164;
+	i1 = 28948;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d1 = 1;
 	i0 = d4;
@@ -66273,7 +66139,7 @@ label_42:
 	d6 = fr;
 	d6 += -60;
 	i0 = d6;
-	i1 = 29674;
+	i1 = 29458;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d5;
 	i1 = d6;
@@ -66330,7 +66196,7 @@ label_1:
 	mDataMemory.WriteInt32(sp+20, r15);
 	mDataMemory.WriteInt32(sp+24, d0);
 	i0 = d4;
-	i1 = 29723;
+	i1 = 29507;
 	r14 = _sprintf_22(i0, i1);
 	d5 = 1;
 	i1 = mDataMemory.ReadInt32(fr);
@@ -66345,7 +66211,7 @@ label_2:
 	d3 = fr;
 	d3 += -292;
 	i0 = d3;
-	i1 = 29496;
+	i1 = 29280;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d2 = fr;
 	d2 += -296;
@@ -66355,7 +66221,7 @@ label_2:
 	d0 = fr;
 	d0 += -300;
 	i0 = d0;
-	i1 = 29492;
+	i1 = 29276;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = mDataMemory.ReadInt32(d1+4);
 	r14 = mDataMemory.ReadInt32(i0);
@@ -66620,7 +66486,7 @@ label_1:
 	sp -= 8;
 	fr = sp;
 	fr += 8;
-	i1 = 29908;
+	i1 = 29692;
 	i2 = 1;
 	r14 = _yajl_parse_149(i0, i1, i2);
 	//pop  fr,2
@@ -66805,11 +66671,11 @@ label_1:
 	sp -= 4;
 	fr = sp;
 	fr += 4;
-	r14 = -536870859;
+	r14 = -536870860;
 	mDataMemory.WriteInt32(i0, r14);
-	r14 = -536870858;
+	r14 = -536870859;
 	mDataMemory.WriteInt32(i0+8, r14);
-	r14 = -536870857;
+	r14 = -536870858;
 	mDataMemory.WriteInt32(i0+4, r14);
 	r14 = 0;
 	mDataMemory.WriteInt32(i0+12, r14);
@@ -66886,7 +66752,7 @@ label_1:
 	i0 = -i0;
 	i0 |= d1;
 	i0 = (int)((uint) i0 >> 31);
-	i1 = 29910;
+	i1 = 29694;
 	__assert_157(i0, i1);
 	i1 = mDataMemory.ReadInt32(d1+8);
 	r14 = 0;
@@ -66950,7 +66816,7 @@ label_1:
 	i0 = -i0;
 	i0 |= d2;
 	i0 = (int)((uint) i0 >> 31);
-	i1 = 29910;
+	i1 = 29694;
 	__assert_157(i0, i1);
 	d1 = mDataMemory.ReadInt32(d2+8);
 	r0 = 0;
@@ -66983,7 +66849,7 @@ label_5:
 	i0 = -d4;
 	i0 |= d4;
 	i0 = (int)((uint) i0 >> 31);
-	i1 = 29922;
+	i1 = 29706;
 	__assert_157(i0, i1);
 	i0 = mDataMemory.ReadInt32(d2+4);
 	r14 = mDataMemory.ReadInt32(d2+8);
@@ -67171,10 +67037,10 @@ label_3:
 label_4:
 	r14 = r0;
 	r14 = (int)((uint) r14 >> 4);
-	r14 = mDataMemory.ReadInt8(r14+29952);
+	r14 = mDataMemory.ReadInt8(r14+29736);
 	mDataMemory.WriteUInt8(fr+-36, (byte)r14);
 	r0 &= 15;
-	r0 = mDataMemory.ReadInt8(r0+29952);
+	r0 = mDataMemory.ReadInt8(r0+29736);
 	mDataMemory.WriteUInt8(fr+-35, (byte)r0);
 label_5:
 	d0 = fr;
@@ -67221,7 +67087,7 @@ label_9:
 	if (r0 > r2) goto label_13;
 	r2 = 13;
 	if (r0 != r2) goto label_3;
-	d0 = 29969;
+	d0 = 29753;
 	goto label_6;
 label_10:
 	d1 += 1;
@@ -67231,24 +67097,24 @@ label_11:
 label_12:
 	r2 = 10;
 	if (r0 != r2) goto label_3;
-	d0 = 29972;
+	d0 = 29756;
 	goto label_6;
 label_13:
 	r2 = 92;
 	if (r0 != r2) goto label_3;
-	d0 = 29975;
+	d0 = 29759;
 	goto label_6;
 label_14:
-	d0 = 29978;
+	d0 = 29762;
 	goto label_6;
 label_15:
-	d0 = 29981;
+	d0 = 29765;
 	goto label_6;
 label_16:
-	d0 = 29984;
+	d0 = 29768;
 	goto label_6;
 label_17:
-	d0 = 29987;
+	d0 = 29771;
 	goto label_6;
 label_0:;
 	return;
@@ -67301,7 +67167,7 @@ label_3:
 	if (r14 != i0) goto label_4;
 	i0 = 1;
 label_4:
-	i1 = 29990;
+	i1 = 29774;
 	__assert_157(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2);
 	r14 = (int)( r14 << 4);
@@ -67368,7 +67234,7 @@ label_4:
 	sp += 28;
 	goto label_0;	// return
 label_5:
-	d2 = 30002;
+	d2 = 29786;
 	i0 = d4;
 	i1 = d1;
 	i1 += r0;
@@ -67505,7 +67371,7 @@ label_9:
 	d2 = i0;
 	goto label_11;
 label_10:
-	d2 = 30004;
+	d2 = 29788;
 label_11:
 	i0 = d2;
 	r14 = _strlen_19(i0);
@@ -67518,29 +67384,29 @@ label_11:
 	goto label_2;
 label_12:
 	i0 = 0;
-	i1 = 30006;
+	i1 = 29790;
 	__assert_157(i0, i1);
 	goto label_11;
 label_13:
-	d2 = 30041;
+	d2 = 29825;
 	goto label_11;
 label_14:
-	d2 = 30043;
+	d2 = 29827;
 	goto label_11;
 label_15:
-	d2 = 30045;
+	d2 = 29829;
 	goto label_11;
 label_16:
-	d2 = 30047;
+	d2 = 29831;
 	goto label_11;
 label_17:
-	d2 = 30049;
+	d2 = 29833;
 	goto label_11;
 label_18:
-	d2 = 30051;
+	d2 = 29835;
 	goto label_11;
 label_19:
-	d2 = 30053;
+	d2 = 29837;
 	goto label_11;
 label_20:
 	mDataMemory.WriteUInt8(i0, (byte)r0);
@@ -67558,7 +67424,7 @@ label_22:
 	r0 = 92;
 	if (r14 == r0) goto label_24;
 label_23:
-	d2 = 30002;
+	d2 = 29786;
 	goto label_11;
 label_24:
 	r14 = mDataMemory.ReadInt8(i1+1);
@@ -67702,7 +67568,7 @@ label_2:
 	mDataMemory.WriteInt32(d1+4, r0);
 	i1 = mDataMemory.ReadInt32(d2+4);
 	if (i1 != r14) goto label_3;
-	i1 = 30404;
+	i1 = 30188;
 label_3:
 	mDataMemory.WriteInt32(d1+8, i1);
 label_4:
@@ -67732,7 +67598,7 @@ label_7:
 	d1 = mDataMemory.ReadInt32(d0);
 	goto label_2;
 label_8:
-	r0 = -536870856;
+	r0 = -536870857;
 	mDataMemory.WriteInt32(d1+524, r0);
 	i0 = d3;
 	r14 = _yajl_buf_alloc_151(i0);
@@ -67801,7 +67667,7 @@ label_1:
 	fr += 16;
 	d1 = i0;
 	r14 = mDataMemory.ReadInt32(i0+524);
-	r0 = -536870856;
+	r0 = -536870857;
 	if (r14 == r0) goto label_2;
 	d0 = mDataMemory.ReadInt32(d1+540);
 	i0 = mDataMemory.ReadInt32(d1+544);
@@ -67938,7 +67804,7 @@ label_7:
 	if (r14 != r0) goto label_8;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -67973,7 +67839,7 @@ label_12:
 label_13:
 	d0 = mDataMemory.ReadInt32(i0+524);
 	i0 = mDataMemory.ReadInt32(i0+528);
-	i1 = 30413;
+	i1 = 30197;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -67983,7 +67849,7 @@ label_13:
 	if (r14 == r0) goto label_5;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30415;
+	i1 = 30199;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -67992,7 +67858,7 @@ label_13:
 label_14:
 	d0 = mDataMemory.ReadInt32(i0+524);
 	i0 = mDataMemory.ReadInt32(i0+528);
-	i1 = 30417;
+	i1 = 30201;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68002,7 +67868,7 @@ label_14:
 	if (r14 == r0) goto label_5;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68070,7 +67936,7 @@ label_3:
 label_4:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30520;
+	i1 = 30304;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68082,7 +67948,7 @@ label_4:
 	_yajl_string_encode2_152(i0, i1, i2, i3);
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30520;
+	i1 = 30304;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68119,7 +67985,7 @@ label_6:
 	if (r14 != r0) goto label_7;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68133,7 +67999,7 @@ label_8:
 label_9:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30417;
+	i1 = 30201;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68143,7 +68009,7 @@ label_9:
 	if (r14 == r0) goto label_4;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68201,7 +68067,7 @@ label_13:
 label_14:
 	d0 = mDataMemory.ReadInt32(i0+524);
 	i0 = mDataMemory.ReadInt32(i0+528);
-	i1 = 30413;
+	i1 = 30197;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68211,7 +68077,7 @@ label_14:
 	if (r14 == r0) goto label_4;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30415;
+	i1 = 30199;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68292,7 +68158,7 @@ label_4:
 label_5:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30556;
+	i1 = 30340;
 	i2 = 4;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68329,7 +68195,7 @@ label_7:
 	if (r14 != r0) goto label_8;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68364,7 +68230,7 @@ label_12:
 label_13:
 	d0 = mDataMemory.ReadInt32(i0+524);
 	i0 = mDataMemory.ReadInt32(i0+528);
-	i1 = 30413;
+	i1 = 30197;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68374,7 +68240,7 @@ label_13:
 	if (r14 == r0) goto label_5;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30415;
+	i1 = 30199;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68383,7 +68249,7 @@ label_13:
 label_14:
 	d0 = mDataMemory.ReadInt32(i0+524);
 	i0 = mDataMemory.ReadInt32(i0+528);
-	i1 = 30417;
+	i1 = 30201;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68393,7 +68259,7 @@ label_14:
 	if (r14 == r0) goto label_5;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68426,10 +68292,10 @@ label_1:
 	fr = sp;
 	fr += 28;
 	d2 = i0;
-	d4 = 30596;
+	d4 = 30380;
 	r0 = 0;
 	if (i1 != r0) goto label_2;
-	d4 = 30601;
+	d4 = 30385;
 label_2:
 	r14 = mDataMemory.ReadInt32(d2);
 	r14 = (int)( r14 << 2);
@@ -68518,7 +68384,7 @@ label_8:
 	if (r14 != r0) goto label_9;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68553,7 +68419,7 @@ label_13:
 label_14:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30413;
+	i1 = 30197;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68563,7 +68429,7 @@ label_14:
 	if (r14 == r0) goto label_6;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30415;
+	i1 = 30199;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68572,7 +68438,7 @@ label_14:
 label_15:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30417;
+	i1 = 30201;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68582,7 +68448,7 @@ label_15:
 	if (r14 == r0) goto label_6;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68673,7 +68539,7 @@ label_5:
 	mDataMemory.WriteInt32(r14+12, r0);
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30640;
+	i1 = 30424;
 	i2 = r0;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68691,7 +68557,7 @@ label_7:
 label_8:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68707,7 +68573,7 @@ label_8:
 	if (r14 != r0) goto label_6;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68716,7 +68582,7 @@ label_8:
 label_9:
 	d0 = mDataMemory.ReadInt32(i0+524);
 	i0 = mDataMemory.ReadInt32(i0+528);
-	i1 = 30413;
+	i1 = 30197;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68730,7 +68596,7 @@ label_10:
 label_11:
 	d0 = mDataMemory.ReadInt32(i0+524);
 	i0 = mDataMemory.ReadInt32(i0+528);
-	i1 = 30417;
+	i1 = 30201;
 	i2 = r1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68740,7 +68606,7 @@ label_11:
 	if (r14 == r0) goto label_10;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 label_12:
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
@@ -68751,7 +68617,7 @@ label_12:
 label_13:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30415;
+	i1 = 30199;
 	goto label_12;
 label_0:;
 	return r14;
@@ -68833,7 +68699,7 @@ label_5:
 label_6:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30642;
+	i1 = 30426;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68856,7 +68722,7 @@ label_8:
 label_9:
 	d0 = mDataMemory.ReadInt32(i0+524);
 	i0 = mDataMemory.ReadInt32(i0+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -68916,7 +68782,7 @@ label_13:
 label_14:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -69008,7 +68874,7 @@ label_5:
 	mDataMemory.WriteInt32(r14+12, r0);
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30676;
+	i1 = 30460;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -69026,7 +68892,7 @@ label_7:
 label_8:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -69042,7 +68908,7 @@ label_8:
 	if (r14 != r0) goto label_6;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -69051,7 +68917,7 @@ label_8:
 label_9:
 	d0 = mDataMemory.ReadInt32(i0+524);
 	i0 = mDataMemory.ReadInt32(i0+528);
-	i1 = 30413;
+	i1 = 30197;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -69065,7 +68931,7 @@ label_10:
 label_11:
 	d0 = mDataMemory.ReadInt32(i0+524);
 	i0 = mDataMemory.ReadInt32(i0+528);
-	i1 = 30417;
+	i1 = 30201;
 	i2 = r1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -69075,7 +68941,7 @@ label_11:
 	if (r14 == r0) goto label_10;
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 label_12:
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
@@ -69086,7 +68952,7 @@ label_12:
 label_13:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30415;
+	i1 = 30199;
 	goto label_12;
 label_0:;
 	return r14;
@@ -69168,7 +69034,7 @@ label_5:
 label_6:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30678;
+	i1 = 30462;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -69191,7 +69057,7 @@ label_8:
 label_9:
 	d0 = mDataMemory.ReadInt32(i0+524);
 	i0 = mDataMemory.ReadInt32(i0+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -69251,7 +69117,7 @@ label_13:
 label_14:
 	d0 = mDataMemory.ReadInt32(d2+524);
 	i0 = mDataMemory.ReadInt32(d2+528);
-	i1 = 30411;
+	i1 = 30195;
 	i2 = 1;
 	r14 = CallReg(d0, i0, i1, i2, i3);
 	r15 = __dbl_high;
@@ -69394,7 +69260,7 @@ label_2:
 	if ((uint)r1 > (uint)d3) goto label_3;
 	i0 = 1;
 label_3:
-	i1 = 30968;
+	i1 = 30752;
 	__assert_157(i0, i1);
 	r1 = mDataMemory.ReadInt32(d0);
 	if ((uint)r1 >= (uint)d3) goto label_99;
@@ -69583,7 +69449,7 @@ label_14:
 	if (r0 == r1) goto label_184;
 	r14 = 92;
 	if (r0 == r14) goto label_76;
-	r1 = mDataMemory.ReadInt8(r0+30712);
+	r1 = mDataMemory.ReadInt8(r0+30496);
 	r1 &= 2;
 	r14 = 0;
 	if (r1 != r14) goto label_188;
@@ -69721,7 +69587,7 @@ label_32:
 	if ((uint)r14 <= (uint)r2) goto label_33;
 	i0 = r2;
 label_33:
-	i1 = 30991;
+	i1 = 30775;
 	__assert_157(i0, i1);
 	r14 = mDataMemory.ReadInt32(d7);
 	r14 += 1;
@@ -69856,7 +69722,7 @@ label_56:
 	d2 = 8;
 	goto label_30;
 label_57:
-	d2 = 31004;
+	d2 = 30788;
 label_58:
 	r1 = mDataMemory.ReadInt32(d0);
 	if ((uint)r1 >= (uint)d3) goto label_99;
@@ -69882,7 +69748,7 @@ label_60:
 	d2 = r1;
 	goto label_30;
 label_61:
-	d2 = 31009;
+	d2 = 30793;
 label_62:
 	r1 = mDataMemory.ReadInt32(d0);
 	if ((uint)r1 >= (uint)d3) goto label_99;
@@ -69908,7 +69774,7 @@ label_64:
 	d2 = 7;
 	goto label_30;
 label_65:
-	d2 = 31013;
+	d2 = 30797;
 label_66:
 	r1 = mDataMemory.ReadInt32(d0);
 	if ((uint)r1 >= (uint)d3) goto label_99;
@@ -69986,7 +69852,7 @@ label_78:
 	r14 &= 255;
 	r2 = 117;
 	if (r14 == r2) goto label_84;
-	r14 = mDataMemory.ReadInt8(r14+30712);
+	r14 = mDataMemory.ReadInt8(r14+30496);
 	r14 &= 1;
 	r2 = 0;
 	if (r14 != r2) goto label_12;
@@ -70039,7 +69905,7 @@ label_86:
 label_87:
 	r14 = r2;
 	r14 &= 255;
-	r14 = mDataMemory.ReadInt8(r14+30712);
+	r14 = mDataMemory.ReadInt8(r14+30496);
 	r14 &= 4;
 	r2 = 0;
 	if (r14 == r2) goto label_173;
@@ -70995,62 +70861,62 @@ label_1:
 	}
 
 label_2:
-	r14 = 31500;
+	r14 = 31284;
 	//pop  fr,1
 	sp += 4;
 	goto label_0;	// return
 label_3:
-	r14 = 31564;
+	r14 = 31348;
 	//pop  fr,1
 	sp += 4;
 	goto label_0;	// return
 label_4:
-	r14 = 31583;
+	r14 = 31367;
 	//pop  fr,1
 	sp += 4;
 	goto label_0;	// return
 label_5:
-	r14 = 31596;
+	r14 = 31380;
 	//pop  fr,1
 	sp += 4;
 	goto label_0;	// return
 label_6:
-	r14 = 31626;
+	r14 = 31410;
 	//pop  fr,1
 	sp += 4;
 	goto label_0;	// return
 label_7:
-	r14 = 31691;
+	r14 = 31475;
 	//pop  fr,1
 	sp += 4;
 	goto label_0;	// return
 label_8:
-	r14 = 31724;
+	r14 = 31508;
 	//pop  fr,1
 	sp += 4;
 	goto label_0;	// return
 label_9:
-	r14 = 31785;
+	r14 = 31569;
 	//pop  fr,1
 	sp += 4;
 	goto label_0;	// return
 label_10:
-	r14 = 31812;
+	r14 = 31596;
 	//pop  fr,1
 	sp += 4;
 	goto label_0;	// return
 label_11:
-	r14 = 31841;
+	r14 = 31625;
 	//pop  fr,1
 	sp += 4;
 	goto label_0;	// return
 label_12:
-	r14 = 31904;
+	r14 = 31688;
 	//pop  fr,1
 	sp += 4;
 	goto label_0;	// return
 label_13:
-	r14 = 31962;
+	r14 = 31746;
 	//pop  fr,1
 	sp += 4;
 
@@ -71125,7 +70991,7 @@ label_1:
 	if (r14 == d5) goto label_2;
 	i0 = 1;
 label_2:
-	i1 = 32080;
+	i1 = 31864;
 	__assert_157(i0, i1);
 	r0 = mDataMemory.ReadInt32(d4+32);
 	r14 = mDataMemory.ReadInt32(d4+24);
@@ -71137,14 +71003,14 @@ label_2:
 	i0 = -r0;
 	i0 |= r0;
 	i0 = (int)((uint) i0 >> 31);
-	i1 = 32080;
+	i1 = 31864;
 	__assert_157(i0, i1);
 	r14 = mDataMemory.ReadInt32(d4+24);
 	r3 = mDataMemory.ReadInt32(d4+32);
 	r14 += r3;
 	r14 = mDataMemory.ReadInt8(r14+-1);
 	r14 &= 255;
-	d2 = 32108;
+	d2 = 31892;
 	r0 = 3;
 	if (r14 == r0) goto label_22;
 label_3:
@@ -71266,7 +71132,7 @@ label_15:
 	if ((uint)d0 > (uint)r1) goto label_16;
 	i0 = 1;
 label_16:
-	i1 = 32116;
+	i1 = 31900;
 	__assert_157(i0, i1);
 	r14 = -40;
 	r14 += fr;
@@ -71287,7 +71153,7 @@ label_17:
 	i0 = d2;
 	r14 = _strlen_19(i0);
 	d0 += r14;
-	i0 = 32124;
+	i0 = 31908;
 	r14 = _strlen_19(i0);
 	d0 += r14;
 	d1 = mDataMemory.ReadInt32(d4+40);
@@ -71307,7 +71173,7 @@ label_17:
 	i1 = d2;
 	r14 = _strcat_19(i0, i1);
 	i0 = d0;
-	i1 = 32124;
+	i1 = 31908;
 	r14 = _strcat_19(i0, i1);
 	d1 = mDataMemory.ReadInt32(d4+48);
 	i0 = mDataMemory.ReadInt32(d4+52);
@@ -71333,11 +71199,11 @@ label_20:
 	r0 = 32;
 	goto label_14;
 label_21:
-	d2 = 32167;
+	d2 = 31951;
 	d5 = mDataMemory.ReadInt32(d4+12);
 	goto label_3;
 label_22:
-	d2 = 32173;
+	d2 = 31957;
 	i0 = mDataMemory.ReadInt32(d4+8);
 	r14 = _yajl_lex_get_error_154(i0);
 	i0 = r14;
@@ -71385,7 +71251,7 @@ label_4:
 	i0 = -r0;
 	i0 |= r0;
 	i0 = (int)((uint) i0 >> 31);
-	i1 = 32080;
+	i1 = 31864;
 	__assert_157(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2+24);
 	r1 = mDataMemory.ReadInt32(d2+32);
@@ -71536,7 +71402,7 @@ label_10:
 	r14 += r2;
 	r0 = 2;
 	mDataMemory.WriteUInt8(r14+-1, (byte)r0);
-	r1 = 32181;
+	r1 = 31965;
 	mDataMemory.WriteInt32(d2+12, r1);
 	goto label_3;
 label_11:
@@ -71594,7 +71460,7 @@ label_21:
 	r14 += r1;
 	r2 = 2;
 	mDataMemory.WriteUInt8(r14+-1, (byte)r2);
-	r14 = 32237;
+	r14 = 32021;
 label_22:
 	mDataMemory.WriteInt32(d2+12, r14);
 	r14 = mDataMemory.ReadInt32(d3);
@@ -71631,7 +71497,7 @@ label_28:
 	r14 += r0;
 	r1 = 2;
 	mDataMemory.WriteUInt8(r14+-1, (byte)r1);
-	r2 = 32290;
+	r2 = 32074;
 	mDataMemory.WriteInt32(d2+12, r2);
 label_29:
 	r14 = 1;
@@ -71642,7 +71508,7 @@ label_30:
 	r14 += r1;
 	r2 = 2;
 	mDataMemory.WriteUInt8(r14+-1, (byte)r2);
-	r14 = 32339;
+	r14 = 32123;
 	mDataMemory.WriteInt32(d2+12, r14);
 	goto label_3;
 label_31:
@@ -71697,7 +71563,7 @@ label_37:
 	if (r14 == i0) goto label_38;
 	i0 = 1;
 label_38:
-	i1 = 32080;
+	i1 = 31864;
 	__assert_157(i0, i1);
 	r1 = mDataMemory.ReadInt32(d2+24);
 	r0 = mDataMemory.ReadInt32(d2+32);
@@ -71711,7 +71577,7 @@ label_39:
 	r0 += r1;
 	r14 = 2;
 	mDataMemory.WriteUInt8(r0+-1, (byte)r14);
-	r0 = 32380;
+	r0 = 32164;
 	mDataMemory.WriteInt32(d2+12, r0);
 	goto label_3;
 label_40:
@@ -71725,7 +71591,7 @@ label_42:
 	r0 += r1;
 	r14 = 2;
 	mDataMemory.WriteUInt8(r0+-1, (byte)r14);
-	r0 = 32418;
+	r0 = 32202;
 label_43:
 	mDataMemory.WriteInt32(d2+12, r0);
 	goto label_3;
@@ -71773,7 +71639,7 @@ label_49:
 	r14 += r2;
 	r0 = 2;
 	mDataMemory.WriteUInt8(r14+-1, (byte)r0);
-	r1 = 32290;
+	r1 = 32074;
 	mDataMemory.WriteInt32(d2+12, r1);
 	goto label_29;
 label_50:
@@ -71808,7 +71674,7 @@ label_51:
 	r0 = 0;
 	if (r14 <= r0) goto label_88;
 label_52:
-	r14 = mDataMemory.ReadInt32(52816);
+	r14 = mDataMemory.ReadInt32(52600);
 	r2 = 1;
 	if (r14 == r2) goto label_89;
 label_53:
@@ -71835,7 +71701,7 @@ label_55:
 	if (r14 == i0) goto label_56;
 	i0 = 1;
 label_56:
-	i1 = 32080;
+	i1 = 31864;
 	__assert_157(i0, i1);
 	r14 = mDataMemory.ReadInt32(d2+24);
 	r0 = mDataMemory.ReadInt32(d2+32);
@@ -71905,7 +71771,7 @@ label_65:
 	if (r14 == i0) goto label_66;
 	i0 = 1;
 label_66:
-	i1 = 32080;
+	i1 = 31864;
 	__assert_157(i0, i1);
 	r1 = mDataMemory.ReadInt32(d2+24);
 	r0 = mDataMemory.ReadInt32(d2+32);
@@ -71931,7 +71797,7 @@ label_69:
 	r14 += r1;
 	r2 = 2;
 	mDataMemory.WriteUInt8(r14+-1, (byte)r2);
-	r14 = 32461;
+	r14 = 32245;
 label_70:
 	mDataMemory.WriteInt32(d2+12, r14);
 	goto label_3;
@@ -71993,7 +71859,7 @@ label_75:
 	r14 += r1;
 	r2 = 2;
 	mDataMemory.WriteUInt8(r14+-1, (byte)r2);
-	r14 = 32290;
+	r14 = 32074;
 	mDataMemory.WriteInt32(d2+12, r14);
 	goto label_29;
 label_76:
@@ -72079,7 +71945,7 @@ label_86:
 	if (r14 != r0) goto label_55;
 	goto label_75;
 label_87:
-	r14 = mDataMemory.ReadInt32(52816);
+	r14 = mDataMemory.ReadInt32(52600);
 	r0 = 1;
 	if (r14 != r0) goto label_46;
 	r14 = mDataMemory.ReadInt32(d2+24);
@@ -72087,7 +71953,7 @@ label_87:
 	r14 += r1;
 	r2 = 2;
 	mDataMemory.WriteUInt8(r14+-1, (byte)r2);
-	r14 = 32491;
+	r14 = 32275;
 	goto label_22;
 label_88:
 	i0 = mDataMemory.ReadInt32(fr+-52);
@@ -72104,7 +71970,7 @@ label_89:
 	r14 += r0;
 	r1 = 2;
 	mDataMemory.WriteUInt8(r14+-1, (byte)r1);
-	r2 = 32508;
+	r2 = 32292;
 	mDataMemory.WriteInt32(d2+12, r2);
 	r14 = mDataMemory.ReadInt32(d3);
 	r0 = mDataMemory.ReadInt32(fr+-44);
@@ -72145,7 +72011,7 @@ label_1:
 	goto label_0;	// return
 label_2:
 	i0 = i1;
-	i1 = 32812;
+	i1 = 32596;
 	_panicFunction_13(i0, i1);
 label_0:;
 	return;
@@ -72174,7 +72040,7 @@ label_1:
 	fr = sp;
 	fr += 8;
 	i0 = 0;
-	i1 = 32820;
+	i1 = 32604;
 	mSyscallInvoker.maPanic(i0, i1);
 	return;
 } // _abort
@@ -72202,7 +72068,7 @@ label_1:
 	fr = sp;
 	fr += 4;
 label_2:
-	r14 = 32836;
+	r14 = 32620;
 	mDataMemory.WriteInt32(i0, r14);
 	mDataMemory.WriteInt32(i0+4, i1);
 label_3:
@@ -72235,7 +72101,7 @@ label_1:
 	fr = sp;
 	fr += 4;
 label_2:
-	r14 = 32836;
+	r14 = 32620;
 	mDataMemory.WriteInt32(i0, r14);
 label_3:
 	//pop  fr,1
@@ -72270,7 +72136,7 @@ label_1:
 label_2:
 	i1 = 0;
 	__ZN6MAUtil7YAJLDom5ValueC2ENS1_4TypeE_158(i0, i1);
-	r14 = 32888;
+	r14 = 32672;
 	mDataMemory.WriteInt32(d0, r14);
 label_3:
 	//pop  d0,3
@@ -72301,7 +72167,7 @@ private void __ZN6MAUtil7YAJLDom5ValueD1Ev_158(int i0)
 	fr = sp;
 	fr += 4;
 label_1:
-	r14 = 32836;
+	r14 = 32620;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	//pop  fr,1
@@ -72332,7 +72198,7 @@ private void __ZN6MAUtil7YAJLDom5ValueD0Ev_158(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 32836;
+	r14 = 32620;
 	mDataMemory.WriteInt32(i0, r14);
 label_2:
 	__ZdlPv_45(i0);
@@ -72406,7 +72272,7 @@ label_1:
 	d1 = fr;
 	d1 += -32;
 	i0 = d1;
-	i1 = 33264;
+	i1 = 33048;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d1;
@@ -72430,7 +72296,7 @@ label_4:
 	goto label_0;	// return
 label_5:
 	i0 = d1;
-	i1 = 33269;
+	i1 = 33053;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d3;
 	i1 = d1;
@@ -72452,7 +72318,7 @@ label_8:
 	goto label_0;	// return
 label_9:
 	i0 = 1;
-	i1 = 33275;
+	i1 = 33059;
 	mSyscallInvoker.maPanic(i0, i1);
 label_0:;
 	return r14;
@@ -72578,7 +72444,7 @@ private int __ZN6MAUtil7YAJLDom5Value14getValueForKeyERKNS_11BasicStringIcEE_158
 	sp -= 4;
 	fr = sp;
 	fr += 4;
-	r14 = 52820;
+	r14 = 52604;
 	//pop  fr,1
 	sp += 4;
 
@@ -72606,7 +72472,7 @@ private int __ZN6MAUtil7YAJLDom5Value15getValueByIndexEi_158(int i0, int i1)
 	sp -= 4;
 	fr = sp;
 	fr += 4;
-	r14 = 52820;
+	r14 = 52604;
 	//pop  fr,1
 	sp += 4;
 
@@ -72634,7 +72500,7 @@ private int __ZNK6MAUtil7YAJLDom5Value14getValueForKeyERKNS_11BasicStringIcEE_15
 	sp -= 4;
 	fr = sp;
 	fr += 4;
-	r14 = 52820;
+	r14 = 52604;
 	//pop  fr,1
 	sp += 4;
 
@@ -72662,7 +72528,7 @@ private int __ZNK6MAUtil7YAJLDom5Value15getValueByIndexEi_158(int i0, int i1)
 	sp -= 4;
 	fr = sp;
 	fr += 4;
-	r14 = 52820;
+	r14 = 52604;
 	//pop  fr,1
 	sp += 4;
 
@@ -72720,7 +72586,7 @@ private int __ZNK6MAUtil7YAJLDom9NullValue8toStringEv_158(int i0, int i1)
 	fr += 12;
 	d0 = i0;
 label_1:
-	i1 = 33296;
+	i1 = 33080;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_2:
 	r14 = d0;
@@ -72757,7 +72623,7 @@ label_1:
 label_2:
 	i1 = 1;
 	__ZN6MAUtil7YAJLDom5ValueC2ENS1_4TypeE_158(i0, i1);
-	r14 = 32940;
+	r14 = 32724;
 	mDataMemory.WriteInt32(d0, r14);
 	mDataMemory.WriteUInt8(d0+8, (byte)d1);
 label_3:
@@ -72793,9 +72659,9 @@ label_1:
 	r14 = mDataMemory.ReadInt8(i1+8);
 	r14 &= 255;
 	r0 = 1;
-	i1 = 33264;
+	i1 = 33048;
 	if (r14 == r0) goto label_2;
-	i1 = 33269;
+	i1 = 33053;
 label_2:
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_3:
@@ -72863,7 +72729,7 @@ label_1:
 label_2:
 	i1 = 2;
 	__ZN6MAUtil7YAJLDom5ValueC2ENS1_4TypeE_158(i0, i1);
-	r14 = 32992;
+	r14 = 32776;
 	mDataMemory.WriteInt32(d2, r14);
 	mDataMemory.WriteInt32(d2+8, d0);
 	mDataMemory.WriteInt32(d2+12, d1);
@@ -72998,7 +72864,7 @@ label_1:
 label_2:
 	i1 = 5;
 	__ZN6MAUtil7YAJLDom5ValueC2ENS1_4TypeE_158(i0, i1);
-	r14 = 33044;
+	r14 = 32828;
 	mDataMemory.WriteInt32(d0, r14);
 	i0 = d0;
 	i0 += 8;
@@ -73203,7 +73069,7 @@ private int __ZNK6MAUtil7YAJLDom10ArrayValue8toStringEv_158(int i0, int i1)
 	d6 = i0;
 	d3 = i1;
 label_1:
-	i1 = 33297;
+	i1 = 33081;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_2:
 	d5 = 0;
@@ -73251,7 +73117,7 @@ label_11:
 	if (r14 == d5) goto label_13;
 label_12:
 	i0 = d2;
-	i1 = 33299;
+	i1 = 33083;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d6;
 	i1 = d2;
@@ -73265,7 +73131,7 @@ label_14:
 	if (r0 > d5) goto label_6;
 label_15:
 	i0 = d2;
-	i1 = 33302;
+	i1 = 33086;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d6;
 	i1 = d2;
@@ -73280,7 +73146,7 @@ label_16:
 	goto label_0;	// return
 label_17:
 	i0 = d2;
-	i1 = 33304;
+	i1 = 33088;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d6;
 	i1 = d2;
@@ -73291,7 +73157,7 @@ label_17:
 label_18:
 	d4 = 1;
 	i0 = d2;
-	i1 = 33304;
+	i1 = 33088;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d6;
 	i1 = d2;
@@ -73334,7 +73200,7 @@ label_3:
 label_4:
 	if (r14 > i1) goto label_7;
 label_5:
-	r14 = 52820;
+	r14 = 52604;
 label_6:
 	//pop  fr,1
 	sp += 4;
@@ -73384,7 +73250,7 @@ label_3:
 label_4:
 	if (r14 > i1) goto label_7;
 label_5:
-	r14 = 52820;
+	r14 = 52604;
 label_6:
 	//pop  fr,1
 	sp += 4;
@@ -73437,7 +73303,7 @@ label_3:
 	goto label_0;	// return
 label_4:
 	i0 = 1;
-	i1 = 33306;
+	i1 = 33090;
 	mSyscallInvoker.maPanic(i0, i1);
 label_0:;
 	return r14;
@@ -73507,7 +73373,7 @@ label_1:
 label_2:
 	r0 = 0;
 	if (i0 == r0) goto label_3;
-	r0 = 52820;
+	r0 = 52604;
 	if (i0 == r0) goto label_3;
 	r0 = 0;
 	if (i0 == r0) goto label_3;
@@ -73747,7 +73613,7 @@ label_3:
 	sp += 8;
 	goto label_0;	// return
 label_4:
-	i0 = 33413;
+	i0 = 33197;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -73790,7 +73656,7 @@ label_3:
 	sp += 8;
 	goto label_0;	// return
 label_4:
-	i0 = 33413;
+	i0 = 33197;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -73887,7 +73753,7 @@ label_1:
 	i1 = d1;
 	r14 = __ZNK6MAUtil10DictionaryIKNS_11BasicStringIcEENS_4PairIS3_PNS_7YAJLDom5ValueEEEE13ConstIteratorneERKSA__158(i0, i1);
 	r14 &= 255;
-	r0 = 52820;
+	r0 = 52604;
 	r1 = 0;
 	if (r14 != r1) goto label_3;
 label_2:
@@ -74128,7 +73994,7 @@ label_1:
 	i1 = d0;
 	r14 = __ZNK6MAUtil10DictionaryIKNS_11BasicStringIcEENS_4PairIS3_PNS_7YAJLDom5ValueEEEE13ConstIteratorneERKSA__158(i0, i1);
 	r14 &= 255;
-	r0 = 52820;
+	r0 = 52604;
 	r1 = 0;
 	if (r14 != r1) goto label_3;
 label_2:
@@ -74174,7 +74040,7 @@ private void __ZN6MAUtil7YAJLDom10ArrayValueD0Ev_158(int i0)
 	fr += 28;
 	d4 = i0;
 label_1:
-	r0 = 33148;
+	r0 = 32932;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d3 = 0;
@@ -74266,7 +74132,7 @@ private void __ZN6MAUtil7YAJLDom10ArrayValueD1Ev_158(int i0)
 	fr += 28;
 	d4 = i0;
 label_1:
-	r0 = 33148;
+	r0 = 32932;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d3 = 0;
@@ -74357,7 +74223,7 @@ label_1:
 label_2:
 	i1 = 3;
 	__ZN6MAUtil7YAJLDom5ValueC2ENS1_4TypeE_158(i0, i1);
-	r14 = 33148;
+	r14 = 32932;
 	mDataMemory.WriteInt32(d0, r14);
 label_3:
 	d0 += 8;
@@ -74542,19 +74408,19 @@ label_1:
 	fr = sp;
 	fr += 20;
 label_2:
-	r1 = mDataMemory.ReadInt32(33204);
+	r1 = mDataMemory.ReadInt32(32988);
 label_3:
 	d0 = r1;
 	d0 += -1;
 label_4:
-	d2 = 33204;
+	d2 = 32988;
 label_5:
-	r14 = mDataMemory.ReadInt32(33208);
+	r14 = mDataMemory.ReadInt32(32992);
 	if (r14 < d0) goto label_10;
 label_6:
 	r0 = d0;
 	if (r1 <= d0) goto label_8;
-	i0 = mDataMemory.ReadInt32(33212);
+	i0 = mDataMemory.ReadInt32(32996);
 label_7:
 	r14 = r0;
 	r14 = (int)( r14 << 2);
@@ -74564,7 +74430,7 @@ label_7:
 	r0 += 1;
 	if (r1 > r0) goto label_7;
 label_8:
-	mDataMemory.WriteInt32(33204, d0);
+	mDataMemory.WriteInt32(32988, d0);
 label_9:
 	//pop  d2,5
 	sp += 20;
@@ -74576,9 +74442,9 @@ label_10:
 	d1 = r14;
 label_11:
 	r2 = 0;
-	r1 = mDataMemory.ReadInt32(33204);
+	r1 = mDataMemory.ReadInt32(32988);
 	if (r1 <= r2) goto label_15;
-	i0 = mDataMemory.ReadInt32(33212);
+	i0 = mDataMemory.ReadInt32(32996);
 label_12:
 	r14 = r2;
 	r14 = (int)( r14 << 2);
@@ -74597,11 +74463,11 @@ label_13:
 	goto label_6;
 label_14:
 	__ZdaPv_46(i0);
-	r1 = mDataMemory.ReadInt32(33204);
+	r1 = mDataMemory.ReadInt32(32988);
 	mDataMemory.WriteInt32(d2+8, d1);
 	goto label_6;
 label_15:
-	i0 = mDataMemory.ReadInt32(33212);
+	i0 = mDataMemory.ReadInt32(32996);
 	goto label_13;
 label_0:;
 	return;
@@ -74769,7 +74635,7 @@ label_3:
 	sp += 12;
 	goto label_0;	// return
 label_4:
-	i0 = 33413;
+	i0 = 33197;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -74840,7 +74706,7 @@ private int __ZNK6MAUtil7YAJLDom8MapValue8toStringEv_158(int i0, int i1)
 	d4 = i0;
 	d6 = i1;
 label_1:
-	i1 = 33518;
+	i1 = 33302;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	d5 = fr;
 	d5 += -48;
@@ -74873,7 +74739,7 @@ label_5:
 	d1 = fr;
 	d1 += -64;
 	i0 = d3;
-	i1 = 33304;
+	i1 = 33088;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d1;
 	i1 = d3;
@@ -74883,7 +74749,7 @@ label_5:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_6:
 	i0 = d3;
-	i1 = 33520;
+	i1 = 33304;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d0;
 	i1 = d1;
@@ -74913,7 +74779,7 @@ label_8:
 	r0 = 0;
 	if (r14 != r0) goto label_13;
 	i0 = d3;
-	i1 = 33524;
+	i1 = 33308;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d3;
@@ -74939,7 +74805,7 @@ label_9:
 	r0 = 0;
 	if (r14 == r0) goto label_2;
 	i0 = d3;
-	i1 = 33299;
+	i1 = 33083;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d3;
@@ -74958,7 +74824,7 @@ label_10:
 	if (r14 != r0) goto label_3;
 label_11:
 	i0 = d3;
-	i1 = 33529;
+	i1 = 33313;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d3;
@@ -74988,7 +74854,7 @@ label_13:
 	if (d2 == r14) goto label_9;
 label_14:
 	i0 = d3;
-	i1 = 33304;
+	i1 = 33088;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d3;
@@ -74999,7 +74865,7 @@ label_14:
 label_15:
 	d2 = 1;
 	i0 = d3;
-	i1 = 33304;
+	i1 = 33088;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 	i0 = d4;
 	i1 = d3;
@@ -75047,7 +74913,7 @@ label_3:
 	sp += 12;
 	goto label_0;	// return
 label_4:
-	i0 = 33413;
+	i0 = 33197;
 	r14 = _FileNameFromPath_13(i0);
 	i0 = 6;
 	i1 = r14;
@@ -75117,7 +74983,7 @@ private void __ZN6MAUtil7YAJLDom8MapValueD0Ev_158(int i0)
 	fr += 52;
 	d4 = i0;
 label_1:
-	r0 = 33096;
+	r0 = 32880;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d1 = fr;
@@ -75207,7 +75073,7 @@ private void __ZN6MAUtil7YAJLDom8MapValueD1Ev_158(int i0)
 	fr += 52;
 	d4 = i0;
 label_1:
-	r0 = 33096;
+	r0 = 32880;
 	mDataMemory.WriteInt32(i0, r0);
 label_2:
 	d1 = fr;
@@ -75437,32 +75303,32 @@ label_2:
 	r0 = 3;
 	if (d0 == r0) goto label_9;
 label_3:
-	i0 = mDataMemory.ReadInt32(33204);
+	i0 = mDataMemory.ReadInt32(32988);
 label_4:
 	r14 = 0;
 	if (i0 != r14) goto label_12;
 label_5:
-	d2 = mDataMemory.ReadInt32(33216);
+	d2 = mDataMemory.ReadInt32(33000);
 	if (d2 != i0) goto label_53;
-	mDataMemory.WriteInt32(33216, d1);
+	mDataMemory.WriteInt32(33000, d1);
 	r14 = d3;
 	r14 &= 255;
 	r0 = 0;
 	if (r14 == r0) goto label_8;
 label_6:
-	d0 = mDataMemory.ReadInt32(33208);
+	d0 = mDataMemory.ReadInt32(32992);
 	r14 = d0;
 	r14 += -1;
 	if (r14 <= r0) goto label_25;
 label_7:
 	r14 = i0;
 	r14 = (int)( r14 << 2);
-	r0 = mDataMemory.ReadInt32(33212);
+	r0 = mDataMemory.ReadInt32(32996);
 	r14 += r0;
 	r0 = mDataMemory.ReadInt32(fr+-32);
 	mDataMemory.WriteInt32(r14, r0);
 	i0 += 1;
-	mDataMemory.WriteInt32(33204, i0);
+	mDataMemory.WriteInt32(32988, i0);
 label_8:
 	sp += 8;
 	//pop  d3,6
@@ -75471,7 +75337,7 @@ label_8:
 label_9:
 	d3 = 1;
 label_10:
-	i0 = mDataMemory.ReadInt32(33204);
+	i0 = mDataMemory.ReadInt32(32988);
 label_11:
 	r14 = 0;
 	if (i0 == r14) goto label_5;
@@ -75479,7 +75345,7 @@ label_12:
 	i0 += -1;
 label_13:
 	i0 = (int)( i0 << 2);
-	r14 = mDataMemory.ReadInt32(33212);
+	r14 = mDataMemory.ReadInt32(32996);
 	i0 += r14;
 label_14:
 	d0 = mDataMemory.ReadInt32(i0);
@@ -75495,25 +75361,25 @@ label_16:
 	r0 = 4;
 	if (i1 == r0) goto label_32;
 label_17:
-	r14 = mDataMemory.ReadInt32(33216);
+	r14 = mDataMemory.ReadInt32(33000);
 	r0 = 0;
 	if (r14 != r0) goto label_56;
 	r14 = mDataMemory.ReadInt32(fr+-32);
-	mDataMemory.WriteInt32(33216, r14);
+	mDataMemory.WriteInt32(33000, r14);
 label_18:
 	r14 = d3;
 	r14 &= 255;
 	r0 = 0;
 	if (r14 == r0) goto label_8;
 label_19:
-	d0 = mDataMemory.ReadInt32(33208);
+	d0 = mDataMemory.ReadInt32(32992);
 	r14 = d0;
 	r14 += -1;
-	i0 = mDataMemory.ReadInt32(33204);
+	i0 = mDataMemory.ReadInt32(32988);
 	if (i0 < r14) goto label_7;
 	if (d0 == r0) goto label_44;
 label_20:
-	d2 = 33204;
+	d2 = 32988;
 	d1 = d0;
 	d1 += d0;
 label_21:
@@ -75524,9 +75390,9 @@ label_21:
 	d0 = r14;
 label_22:
 	r1 = 0;
-	i0 = mDataMemory.ReadInt32(33204);
+	i0 = mDataMemory.ReadInt32(32988);
 	if (i0 <= r1) goto label_57;
-	r2 = mDataMemory.ReadInt32(33212);
+	r2 = mDataMemory.ReadInt32(32996);
 label_23:
 	r14 = r1;
 	r14 = (int)( r14 << 2);
@@ -75546,7 +75412,7 @@ label_24:
 label_25:
 	if (d0 == r0) goto label_36;
 label_26:
-	d3 = 33204;
+	d3 = 32988;
 	d1 = d0;
 	d1 += d0;
 label_27:
@@ -75557,9 +75423,9 @@ label_27:
 	d0 = r14;
 label_28:
 	r1 = 0;
-	i0 = mDataMemory.ReadInt32(33204);
+	i0 = mDataMemory.ReadInt32(32988);
 	if (i0 <= d2) goto label_55;
-	r2 = mDataMemory.ReadInt32(33212);
+	r2 = mDataMemory.ReadInt32(32996);
 label_29:
 	r14 = r1;
 	r14 = (int)( r14 << 2);
@@ -75588,11 +75454,11 @@ label_32:
 	r14 = __ZN6MAUtil7YAJLDom13validateValueEPNS0_5ValueENS1_4TypeE_158(i0, i1);
 	d0 = r14;
 label_33:
-	r14 = mDataMemory.ReadInt32(33192);
+	r14 = mDataMemory.ReadInt32(32976);
 	r14 += -1;
 label_34:
 	r14 = (int)( r14 << 3);
-	r0 = mDataMemory.ReadInt32(33200);
+	r0 = mDataMemory.ReadInt32(32984);
 	r14 += r0;
 label_35:
 	d1 = fr;
@@ -75609,16 +75475,16 @@ label_35:
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 	goto label_18;
 label_36:
-	d2 = 33204;
+	d2 = 32988;
 label_37:
 	i0 = 16;
 	r14 = __Znam_48(i0);
 	d1 = r14;
 label_38:
 	r1 = d0;
-	i0 = mDataMemory.ReadInt32(33204);
+	i0 = mDataMemory.ReadInt32(32988);
 	if (i0 <= d0) goto label_48;
-	r2 = mDataMemory.ReadInt32(33212);
+	r2 = mDataMemory.ReadInt32(32996);
 label_39:
 	r14 = r1;
 	r14 = (int)( r14 << 2);
@@ -75639,32 +75505,32 @@ label_40:
 label_41:
 	i0 = r2;
 	__ZdaPv_46(i0);
-	i0 = mDataMemory.ReadInt32(33204);
+	i0 = mDataMemory.ReadInt32(32988);
 	mDataMemory.WriteInt32(d2+8, d1);
 	goto label_7;
 label_42:
 	i0 = r2;
 	__ZdaPv_46(i0);
-	i0 = mDataMemory.ReadInt32(33204);
+	i0 = mDataMemory.ReadInt32(32988);
 	mDataMemory.WriteInt32(d2+8, d0);
 	goto label_7;
 label_43:
 	i0 = r2;
 	__ZdaPv_46(i0);
-	i0 = mDataMemory.ReadInt32(33204);
+	i0 = mDataMemory.ReadInt32(32988);
 	mDataMemory.WriteInt32(d3+8, d0);
 	goto label_7;
 label_44:
-	d2 = 33204;
+	d2 = 32988;
 label_45:
 	i0 = 16;
 	r14 = __Znam_48(i0);
 	d1 = r14;
 label_46:
 	r1 = d0;
-	i0 = mDataMemory.ReadInt32(33204);
+	i0 = mDataMemory.ReadInt32(32988);
 	if (i0 <= d0) goto label_48;
-	r2 = mDataMemory.ReadInt32(33212);
+	r2 = mDataMemory.ReadInt32(32996);
 label_47:
 	r14 = r1;
 	r14 = (int)( r14 << 2);
@@ -75677,32 +75543,32 @@ label_47:
 	if (i0 > r1) goto label_47;
 	goto label_40;
 label_48:
-	r2 = mDataMemory.ReadInt32(33212);
+	r2 = mDataMemory.ReadInt32(32996);
 	goto label_40;
 label_49:
 	i0 = 1;
-	i1 = 33531;
+	i1 = 33315;
 label_50:
 	mSyscallInvoker.maPanic(i0, i1);
 label_51:
 	i0 = 1;
-	i1 = 33566;
+	i1 = 33350;
 label_52:
 	mSyscallInvoker.maPanic(i0, i1);
 label_53:
 	i0 = 1;
-	i1 = 33602;
+	i1 = 33386;
 label_54:
 	mSyscallInvoker.maPanic(i0, i1);
 label_55:
-	r2 = mDataMemory.ReadInt32(33212);
+	r2 = mDataMemory.ReadInt32(32996);
 	goto label_30;
 label_56:
 	i0 = 1;
-	i1 = 33647;
+	i1 = 33431;
 	mSyscallInvoker.maPanic(i0, i1);
 label_57:
-	r2 = mDataMemory.ReadInt32(33212);
+	r2 = mDataMemory.ReadInt32(32996);
 	goto label_24;
 label_0:;
 	return;
@@ -75967,15 +75833,15 @@ label_3:
 	mDataMemory.WriteInt32(fr+-32, d0);
 	mDataMemory.WriteInt32(fr+-28, d1);
 label_4:
-	r1 = mDataMemory.ReadInt32(33196);
+	r1 = mDataMemory.ReadInt32(32980);
 	r14 = r1;
 	r14 += -1;
-	r0 = mDataMemory.ReadInt32(33192);
+	r0 = mDataMemory.ReadInt32(32976);
 	if (r0 < r14) goto label_7;
 	r2 = 0;
 	if (r1 == r2) goto label_9;
 label_5:
-	d3 = 33192;
+	d3 = 32976;
 	d0 = r1;
 	d0 += r1;
 label_6:
@@ -75983,14 +75849,14 @@ label_6:
 label_7:
 	r14 = r0;
 	r14 = (int)( r14 << 3);
-	r2 = mDataMemory.ReadInt32(33200);
+	r2 = mDataMemory.ReadInt32(32984);
 	r14 += r2;
 	r1 = mDataMemory.ReadInt32(d2);
 	mDataMemory.WriteInt32(r14, r1);
 	d2 = mDataMemory.ReadInt32(d2+4);
 	mDataMemory.WriteInt32(r14+4, d2);
 	r0 += 1;
-	mDataMemory.WriteInt32(33192, r0);
+	mDataMemory.WriteInt32(32976, r0);
 label_8:
 	r14 = 1;
 	sp += 8;
@@ -75998,7 +75864,7 @@ label_8:
 	sp += 24;
 	goto label_0;	// return
 label_9:
-	d1 = 33192;
+	d1 = 32976;
 label_10:
 	i0 = 32;
 	r14 = __Znam_48(i0);
@@ -76012,9 +75878,9 @@ label_11:
 	if (r14 != r0) goto label_11;
 label_12:
 	r1 = 0;
-	r0 = mDataMemory.ReadInt32(33192);
+	r0 = mDataMemory.ReadInt32(32976);
 	if (r0 <= r1) goto label_26;
-	i0 = mDataMemory.ReadInt32(33200);
+	i0 = mDataMemory.ReadInt32(32984);
 label_13:
 	r14 = r1;
 	r14 = (int)( r14 << 3);
@@ -76026,7 +75892,7 @@ label_13:
 	r14 = mDataMemory.ReadInt32(r14+4);
 	mDataMemory.WriteInt32(r0+4, r14);
 	r1 += 1;
-	r0 = mDataMemory.ReadInt32(33192);
+	r0 = mDataMemory.ReadInt32(32976);
 	if (r0 > r1) goto label_13;
 label_14:
 	r14 = 4;
@@ -76037,14 +75903,14 @@ label_14:
 label_15:
 	r14 = r0;
 	r14 = (int)( r14 << 3);
-	r2 = mDataMemory.ReadInt32(33200);
+	r2 = mDataMemory.ReadInt32(32984);
 	r14 += r2;
 	r1 = mDataMemory.ReadInt32(d2);
 	mDataMemory.WriteInt32(r14, r1);
 	d2 = mDataMemory.ReadInt32(d2+4);
 	mDataMemory.WriteInt32(r14+4, d2);
 	r0 += 1;
-	mDataMemory.WriteInt32(33192, r0);
+	mDataMemory.WriteInt32(32976, r0);
 label_16:
 	r14 = 1;
 	sp += 8;
@@ -76066,9 +75932,9 @@ label_18:
 	if (r14 != r0) goto label_18;
 label_19:
 	r1 = 0;
-	r0 = mDataMemory.ReadInt32(33192);
+	r0 = mDataMemory.ReadInt32(32976);
 	if (r0 <= r1) goto label_27;
-	i0 = mDataMemory.ReadInt32(33200);
+	i0 = mDataMemory.ReadInt32(32984);
 label_20:
 	r14 = r1;
 	r14 = (int)( r14 << 3);
@@ -76080,7 +75946,7 @@ label_20:
 	r14 = mDataMemory.ReadInt32(r14+4);
 	mDataMemory.WriteInt32(r0+4, r14);
 	r1 += 1;
-	r0 = mDataMemory.ReadInt32(33192);
+	r0 = mDataMemory.ReadInt32(32976);
 	if (r0 > r1) goto label_20;
 label_21:
 	mDataMemory.WriteInt32(d3+4, d0);
@@ -76090,14 +75956,14 @@ label_21:
 label_22:
 	r14 = r0;
 	r14 = (int)( r14 << 3);
-	r2 = mDataMemory.ReadInt32(33200);
+	r2 = mDataMemory.ReadInt32(32984);
 	r14 += r2;
 	r1 = mDataMemory.ReadInt32(d2);
 	mDataMemory.WriteInt32(r14, r1);
 	d2 = mDataMemory.ReadInt32(d2+4);
 	mDataMemory.WriteInt32(r14+4, d2);
 	r0 += 1;
-	mDataMemory.WriteInt32(33192, r0);
+	mDataMemory.WriteInt32(32976, r0);
 label_23:
 	r14 = 1;
 	sp += 8;
@@ -76106,19 +75972,19 @@ label_23:
 	goto label_0;	// return
 label_24:
 	__ZdaPv_46(i0);
-	r0 = mDataMemory.ReadInt32(33192);
+	r0 = mDataMemory.ReadInt32(32976);
 	mDataMemory.WriteInt32(d1+8, d0);
 	goto label_15;
 label_25:
 	__ZdaPv_46(i0);
-	r0 = mDataMemory.ReadInt32(33192);
+	r0 = mDataMemory.ReadInt32(32976);
 	mDataMemory.WriteInt32(d3+8, d1);
 	goto label_22;
 label_26:
-	i0 = mDataMemory.ReadInt32(33200);
+	i0 = mDataMemory.ReadInt32(32984);
 	goto label_14;
 label_27:
-	i0 = mDataMemory.ReadInt32(33200);
+	i0 = mDataMemory.ReadInt32(32984);
 	goto label_21;
 label_0:;
 	return r14;
@@ -76150,11 +76016,11 @@ label_1:
 	d3 = i0;
 	d4 = i1;
 label_2:
-	r0 = mDataMemory.ReadInt32(33668);
+	r0 = mDataMemory.ReadInt32(33452);
 	mDataMemory.WriteInt32(fr+-40, r0);
-	r1 = mDataMemory.ReadInt32(33672);
+	r1 = mDataMemory.ReadInt32(33456);
 	mDataMemory.WriteInt32(fr+-36, r1);
-	r2 = mDataMemory.ReadInt32(33676);
+	r2 = mDataMemory.ReadInt32(33460);
 	mDataMemory.WriteInt32(fr+-48, r2);
 	r14 = 1;
 	mDataMemory.WriteInt32(fr+-44, r14);
@@ -76163,7 +76029,7 @@ label_2:
 	i1 = 0;
 	r14 = _yajl_gen_alloc_153(i0, i1);
 	d2 = r14;
-	i0 = 33220;
+	i0 = 33004;
 	i1 = fr;
 	i1 += -48;
 	i2 = 0;
@@ -76171,16 +76037,16 @@ label_2:
 	r14 = _yajl_alloc_149(i0, i1, i2, i3);
 	d1 = r14;
 label_3:
-	d5 = 33204;
+	d5 = 32988;
 label_4:
-	r14 = mDataMemory.ReadInt32(33208);
+	r14 = mDataMemory.ReadInt32(32992);
 	r0 = 0;
 	if (r14 < r0) goto label_24;
-	r1 = mDataMemory.ReadInt32(33204);
+	r1 = mDataMemory.ReadInt32(32988);
 label_5:
 	r0 = 0;
 	if (r1 <= r0) goto label_7;
-	i0 = mDataMemory.ReadInt32(33212);
+	i0 = mDataMemory.ReadInt32(32996);
 label_6:
 	r14 = r0;
 	r14 = (int)( r14 << 2);
@@ -76191,18 +76057,18 @@ label_6:
 	if (r1 > r0) goto label_6;
 label_7:
 	r14 = 0;
-	mDataMemory.WriteInt32(33204, r14);
+	mDataMemory.WriteInt32(32988, r14);
 label_8:
-	d5 = 33192;
+	d5 = 32976;
 label_9:
-	r14 = mDataMemory.ReadInt32(33196);
+	r14 = mDataMemory.ReadInt32(32980);
 	r0 = 0;
 	if (r14 < r0) goto label_19;
-	r14 = mDataMemory.ReadInt32(33192);
+	r14 = mDataMemory.ReadInt32(32976);
 label_10:
 	r0 = 0;
 	if (r14 <= r0) goto label_14;
-	i0 = mDataMemory.ReadInt32(33200);
+	i0 = mDataMemory.ReadInt32(32984);
 	r1 = fr;
 	r1 += -56;
 label_11:
@@ -76216,13 +76082,13 @@ label_12:
 	mDataMemory.WriteInt32(r14+4, r2);
 label_13:
 	r0 += 1;
-	r14 = mDataMemory.ReadInt32(33192);
+	r14 = mDataMemory.ReadInt32(32976);
 	if (r14 > r0) goto label_11;
 label_14:
 	r14 = 0;
-	mDataMemory.WriteInt32(33192, r14);
+	mDataMemory.WriteInt32(32976, r14);
 label_15:
-	mDataMemory.WriteInt32(33216, r14);
+	mDataMemory.WriteInt32(33000, r14);
 	i0 = d1;
 	i1 = d3;
 	i2 = d4;
@@ -76245,7 +76111,7 @@ label_16:
 label_17:
 	i0 = d1;
 	_yajl_free_149(i0);
-	r14 = mDataMemory.ReadInt32(33216);
+	r14 = mDataMemory.ReadInt32(33000);
 label_18:
 	sp += 24;
 	//pop  d5,8
@@ -76261,9 +76127,9 @@ label_20:
 	if (r14 != r1) goto label_36;
 label_21:
 	r1 = 0;
-	r14 = mDataMemory.ReadInt32(33192);
+	r14 = mDataMemory.ReadInt32(32976);
 	if (r14 <= r1) goto label_35;
-	i0 = mDataMemory.ReadInt32(33200);
+	i0 = mDataMemory.ReadInt32(32984);
 label_22:
 	r14 = r1;
 	r14 = (int)( r14 << 3);
@@ -76275,7 +76141,7 @@ label_22:
 	r14 = mDataMemory.ReadInt32(r14+4);
 	mDataMemory.WriteInt32(r0+4, r14);
 	r1 += 1;
-	r14 = mDataMemory.ReadInt32(33192);
+	r14 = mDataMemory.ReadInt32(32976);
 	if (r14 > r1) goto label_22;
 label_23:
 	r0 = 0;
@@ -76289,9 +76155,9 @@ label_24:
 	d0 = r14;
 label_25:
 	r2 = 0;
-	r1 = mDataMemory.ReadInt32(33204);
+	r1 = mDataMemory.ReadInt32(32988);
 	if (r1 <= r2) goto label_34;
-	i0 = mDataMemory.ReadInt32(33212);
+	i0 = mDataMemory.ReadInt32(32996);
 label_26:
 	r14 = r2;
 	r14 = (int)( r14 << 2);
@@ -76334,19 +76200,19 @@ label_31:
 	goto label_29;
 label_32:
 	__ZdaPv_46(i0);
-	r1 = mDataMemory.ReadInt32(33204);
+	r1 = mDataMemory.ReadInt32(32988);
 	mDataMemory.WriteInt32(d5+8, d0);
 	goto label_5;
 label_33:
 	__ZdaPv_46(i0);
-	r14 = mDataMemory.ReadInt32(33192);
+	r14 = mDataMemory.ReadInt32(32976);
 	mDataMemory.WriteInt32(d5+8, d0);
 	goto label_10;
 label_34:
-	i0 = mDataMemory.ReadInt32(33212);
+	i0 = mDataMemory.ReadInt32(32996);
 	goto label_27;
 label_35:
-	i0 = mDataMemory.ReadInt32(33200);
+	i0 = mDataMemory.ReadInt32(32984);
 	goto label_23;
 label_36:
 	r14 += r1;
@@ -76446,12 +76312,12 @@ label_1:
 label_2:
 	i1 = 4;
 	__ZN6MAUtil7YAJLDom5ValueC2ENS1_4TypeE_158(i0, i1);
-	r14 = 33096;
+	r14 = 32880;
 	mDataMemory.WriteInt32(d0, r14);
 label_3:
 	i0 = d0;
 	i0 += 8;
-	i1 = -536870855;
+	i1 = -536870856;
 	i2 = 0;
 	__ZN6MAUtil10DictionaryIKNS_11BasicStringIcEENS_4PairIS3_PNS_7YAJLDom5ValueEEEEC2EPFiRS3_SA_Ei_158(i0, i1, i2);
 label_4:
@@ -76521,7 +76387,7 @@ private void __ZN6MAUtil7YAJLDom9NullValueD1Ev_158(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 32888;
+	r14 = 32672;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil7YAJLDom5ValueD2Ev_158(i0);
 label_2:
@@ -76554,7 +76420,7 @@ private void __ZN6MAUtil7YAJLDom9NullValueD0Ev_158(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 32888;
+	r14 = 32672;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil7YAJLDom5ValueD2Ev_158(i0);
 label_2:
@@ -76588,7 +76454,7 @@ private void __ZN6MAUtil7YAJLDom12BooleanValueD1Ev_158(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 32940;
+	r14 = 32724;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil7YAJLDom5ValueD2Ev_158(i0);
 label_2:
@@ -76621,7 +76487,7 @@ private void __ZN6MAUtil7YAJLDom12BooleanValueD0Ev_158(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 32940;
+	r14 = 32724;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil7YAJLDom5ValueD2Ev_158(i0);
 label_2:
@@ -76655,7 +76521,7 @@ private void __ZN6MAUtil7YAJLDom11NumberValueD1Ev_158(int i0)
 	fr = sp;
 	fr += 8;
 label_1:
-	r14 = 32992;
+	r14 = 32776;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil7YAJLDom5ValueD2Ev_158(i0);
 label_2:
@@ -76688,7 +76554,7 @@ private void __ZN6MAUtil7YAJLDom11NumberValueD0Ev_158(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 32992;
+	r14 = 32776;
 	mDataMemory.WriteInt32(i0, r14);
 	__ZN6MAUtil7YAJLDom5ValueD2Ev_158(i0);
 label_2:
@@ -76723,7 +76589,7 @@ private void __ZN6MAUtil7YAJLDom11StringValueD1Ev_158(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 33044;
+	r14 = 32828;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 8;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -76759,7 +76625,7 @@ private void __ZN6MAUtil7YAJLDom11StringValueD0Ev_158(int i0)
 	fr += 12;
 	d0 = i0;
 label_1:
-	r14 = 33044;
+	r14 = 32828;
 	mDataMemory.WriteInt32(i0, r14);
 	i0 += 8;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
@@ -76811,27 +76677,27 @@ label_5:
 	r14 = 0;
 	if (i0 != r14) goto label_3;
 label_6:
-	i0 = mDataMemory.ReadInt32(33200);
+	i0 = mDataMemory.ReadInt32(32984);
 	if (i0 == d0) goto label_7;
 	__ZdaPv_46(i0);
 label_7:
-	i0 = mDataMemory.ReadInt32(33212);
+	i0 = mDataMemory.ReadInt32(32996);
 	if (i0 == d0) goto label_8;
 	__ZdaPv_46(i0);
 label_8:
-	r1 = 32888;
-	mDataMemory.WriteInt32(52820, r1);
-	i0 = 52820;
+	r1 = 32672;
+	mDataMemory.WriteInt32(52604, r1);
+	i0 = 52604;
 	__ZN6MAUtil7YAJLDom5ValueD2Ev_158(i0);
 label_9:
 	//pop  d0,3
 	sp += 12;
 	goto label_0;	// return
 label_10:
-	i0 = 52820;
+	i0 = 52604;
 	__ZN6MAUtil7YAJLDom9NullValueC1Ev_158(i0);
 label_11:
-	d0 = 33204;
+	d0 = 32988;
 label_12:
 	i0 = 16;
 	r14 = __Znam_48(i0);
@@ -76839,9 +76705,9 @@ label_12:
 	r1 = 4;
 	mDataMemory.WriteInt32(d0+4, r1);
 	r14 = 0;
-	mDataMemory.WriteInt32(33204, r14);
+	mDataMemory.WriteInt32(32988, r14);
 label_13:
-	d0 = 33192;
+	d0 = 32976;
 label_14:
 	i0 = 32;
 	r14 = __Znam_48(i0);
@@ -76854,7 +76720,7 @@ label_15:
 	r14 = 4;
 	mDataMemory.WriteInt32(d0+4, r14);
 	r1 = 0;
-	mDataMemory.WriteInt32(33192, r1);
+	mDataMemory.WriteInt32(32976, r1);
 label_16:
 	//pop  d0,3
 	sp += 12;
@@ -77085,7 +76951,7 @@ label_4:
 	r14 = 0;
 	if (d1 == r14) goto label_6;
 	mDataMemory.WriteInt32(sp, d1);
-	i0 = 33921;
+	i0 = 33705;
 	r14 = _printf_5(i0);
 label_5:
 	sp += 544;
@@ -77581,7 +77447,7 @@ private void __ZN12Notification19NotificationManagerD0Ev_161(int i0)
 	fr += 16;
 	d0 = i0;
 label_1:
-	r14 = 33892;
+	r14 = 33676;
 	mDataMemory.WriteInt32(i0, r14);
 	d1 = mDataMemory.ReadInt32(i0+4);
 	r14 = 0;
@@ -77684,7 +77550,7 @@ private void __ZN12Notification19NotificationManagerD1Ev_161(int i0)
 	fr += 16;
 	d1 = i0;
 label_1:
-	r14 = 33892;
+	r14 = 33676;
 	mDataMemory.WriteInt32(i0, r14);
 	d0 = mDataMemory.ReadInt32(i0+4);
 	r14 = 0;
@@ -78320,14 +78186,14 @@ label_1:
 	fr += 24;
 	d1 = i0;
 label_2:
-	r14 = 33892;
+	r14 = 33676;
 	mDataMemory.WriteInt32(i0, r14);
 	r14 = 0;
 	mDataMemory.WriteInt32(i0+4, r14);
 	mDataMemory.WriteInt32(i0+8, r14);
 label_3:
 	i0 += 12;
-	i1 = -536870854;
+	i1 = -536870855;
 	i2 = r14;
 	__ZN6MAUtil10DictionaryIKiNS_4PairIS1_PN12Notification17LocalNotificationEEEEC2EPFiRS1_S8_Ei_161(i0, i1, i2);
 label_4:
@@ -78386,7 +78252,7 @@ label_1:
 	fr = sp;
 	fr += 12;
 label_2:
-	d0 = mDataMemory.ReadInt32(33904);
+	d0 = mDataMemory.ReadInt32(33688);
 	r14 = 0;
 	if (d0 == r14) goto label_4;
 label_3:
@@ -78400,7 +78266,7 @@ label_4:
 	d0 = r14;
 	i0 = r14;
 	__ZN12Notification19NotificationManagerC1Ev_161(i0);
-	mDataMemory.WriteInt32(33904, d0);
+	mDataMemory.WriteInt32(33688, d0);
 label_5:
 	r14 = d0;
 	//pop  d0,3
@@ -78444,35 +78310,35 @@ label_4:
 	if (i0 == r14) goto label_6;
 	r14 = 0;
 	if (i0 != r14) goto label_3;
-	i0 = 52828;
+	i0 = 52612;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-	i0 = 52832;
+	i0 = 52616;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-	i0 = 52836;
+	i0 = 52620;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-	i0 = 52840;
+	i0 = 52624;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
-	i0 = 52844;
+	i0 = 52628;
 	__ZN6MAUtil11BasicStringIcED1Ev_74(i0);
 label_5:
 	//pop  fr,2
 	sp += 8;
 	goto label_0;	// return
 label_6:
-	i0 = 52844;
-	i1 = 33965;
+	i0 = 52628;
+	i1 = 33749;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
-	i0 = 52840;
-	i1 = 33987;
+	i0 = 52624;
+	i1 = 33771;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
-	i0 = 52836;
-	i1 = 34003;
+	i0 = 52620;
+	i1 = 33787;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
-	i0 = 52832;
-	i1 = 34025;
+	i0 = 52616;
+	i1 = 33809;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
-	i0 = 52828;
-	i1 = 34048;
+	i0 = 52612;
+	i1 = 33832;
 	__ZN6MAUtil11BasicStringIcEC1EPKc_74(i0, i1);
 label_7:
 	//pop  fr,2
@@ -78565,7 +78431,7 @@ label_1:
 	fr = sp;
 	fr += 4;
 label_2:
-	r14 = 34072;
+	r14 = 33856;
 	mDataMemory.WriteInt32(i0, r14);
 	r14 = 0;
 	mDataMemory.WriteInt32(i0+4, r14);
@@ -78602,7 +78468,7 @@ private void __ZN12Notification16PushNotificationD1Ev_162(int i0)
 	fr += 16;
 	d1 = i0;
 label_1:
-	r14 = 34072;
+	r14 = 33856;
 	mDataMemory.WriteInt32(i0, r14);
 	d0 = mDataMemory.ReadInt32(i0+4);
 	r14 = 0;
@@ -78665,7 +78531,7 @@ private void __ZN12Notification16PushNotificationD0Ev_162(int i0)
 	fr += 16;
 	d1 = i0;
 label_1:
-	r14 = 34072;
+	r14 = 33856;
 	mDataMemory.WriteInt32(i0, r14);
 	d0 = mDataMemory.ReadInt32(i0+4);
 	r14 = 0;
@@ -79062,1159 +78928,1159 @@ private int CallReg(int s, int i0, int i1, int i2, int i3)
 	switch(s & 0xffffff)
 	{
 		case 0x0:
-			__ZN8MyMoblet5startERN8Wormhole13MessageStreamE_3(i0, i1);
-		return 0;
-
-		case 0x1:
 			__ZN8MyMoblet5orentERN8Wormhole13MessageStreamE_3(i0, i1);
 		return 0;
 
-		case 0x2:
+		case 0x1:
 			__ZN8MyMoblet7vibrateERN8Wormhole13MessageStreamE_3(i0, i1);
 		return 0;
 
-		case 0x5:
+		case 0x4:
 			___cxa_pure_virtual_40();
 		return 0;
 
-		case 0x8:
+		case 0x7:
 			__ZN6MAUtil18ConnectionListener15connectFinishedEPNS_10ConnectionEi_63(i0, i1, i2);
 		return 0;
 
-		case 0x9:
+		case 0x8:
 			__ZN6MAUtil18ConnectionListener17connWriteFinishedEPNS_10ConnectionEi_63(i0, i1, i2);
 		return 0;
 
-		case 0xa:
+		case 0x9:
 			__ZN6MAUtil18ConnectionListener16connReadFinishedEPNS_10ConnectionEi_63(i0, i1, i2);
 		return 0;
 
-		case 0xb:
+		case 0xa:
 			__ZN6MAUtil18ConnectionListener16connRecvFinishedEPNS_10ConnectionEi_63(i0, i1, i2);
 		return 0;
 
-		case 0xc:
+		case 0xb:
 			__ZN6MAUtil11Environment15addIdleListenerEPNS_12IdleListenerE_65(i0, i1);
 		return 0;
 
-		case 0xd:
+		case 0xc:
 			__ZN6MAUtil11Environment18removeIdleListenerEPNS_12IdleListenerE_65(i0, i1);
 		return 0;
 
-		case 0xe:
+		case 0xd:
 			__ZN6MAUtil11KeyListener9charEventEj_65(i0, i1);
 		return 0;
 
-		case 0x16:
+		case 0x15:
 			__ZN8NativeUI6Screen4showEv_106(i0);
 		return 0;
 
-		case 0x17:
+		case 0x16:
 			__ZN8NativeUI6Screen21orientationWillChangeEv_106(i0);
 		return 0;
 
-		case 0x18:
+		case 0x17:
 			__ZN8NativeUI6Screen20orientationDidChangeEv_106(i0);
 		return 0;
 
-		case 0x19:
+		case 0x18:
 			__ZN8NativeUI6Screen17removeOptionsMenuEv_106(i0);
 		return 0;
 
-		case 0x1a:
+		case 0x19:
 			__ZN8NativeUI6Screen17addScreenListenerEPNS_14ScreenListenerE_106(i0, i1);
 		return 0;
 
-		case 0x1b:
+		case 0x1a:
 			__ZN8NativeUI6Screen20removeScreenListenerEPNS_14ScreenListenerE_106(i0, i1);
 		return 0;
 
-		case 0x1c:
+		case 0x1b:
 			r14 = __ZN6MAUtil7CompareIKiEEiRKT_S4__118(i0, i1);
 		return r14;
 
-		case 0x1d:
+		case 0x1c:
 			r14 = __ZN6MAUtil13THashFunctionINS_11BasicStringIcEEEEmRKT__69(i0);
 		return r14;
 
-		case 0x1e:
+		case 0x1d:
 			r14 = __ZN6MAUtil7CompareINS_11BasicStringIcEEEEiRKT_S5__125(i0, i1);
 		return r14;
 
-		case 0x1f:
+		case 0x1e:
 			__ZN6MAUtil14HttpConnection9connEventERK15MAConnEventData_63(i0, i1);
 		return 0;
 
-		case 0x20:
+		case 0x1f:
 			__ZN8Wormhole23HighLevelHttpConnection12httpFinishedEPN6MAUtil14HttpConnectionEi_127(i0, i1, i2);
 		return 0;
 
-		case 0x21:
+		case 0x20:
 			__ZN8Wormhole23HighLevelHttpConnection17connWriteFinishedEPN6MAUtil10ConnectionEi_127(i0, i1, i2);
 		return 0;
 
-		case 0x22:
+		case 0x21:
 			__ZN8Wormhole23HighLevelHttpConnection16connRecvFinishedEPN6MAUtil10ConnectionEi_127(i0, i1, i2);
 		return 0;
 
-		case 0x23:
+		case 0x22:
 			__ZN8Wormhole23HighLevelHttpConnection16connReadFinishedEPN6MAUtil10ConnectionEi_127(i0, i1, i2);
 		return 0;
 
-		case 0x24:
+		case 0x23:
 			__ZThn40_N8Wormhole23HighLevelHttpConnection16connRecvFinishedEPN6MAUtil10ConnectionEi_127(i0, i1, i2);
 		return 0;
 
-		case 0x25:
+		case 0x24:
 			__ZThn40_N8Wormhole23HighLevelHttpConnection17connWriteFinishedEPN6MAUtil10ConnectionEi_127(i0, i1, i2);
 		return 0;
 
-		case 0x26:
+		case 0x25:
 			__ZThn40_N8Wormhole23HighLevelHttpConnection16connReadFinishedEPN6MAUtil10ConnectionEi_127(i0, i1, i2);
 		return 0;
 
-		case 0x27:
+		case 0x26:
 			__ZThn40_N8Wormhole23HighLevelHttpConnection12httpFinishedEPN6MAUtil14HttpConnectionEi_127(i0, i1, i2);
 		return 0;
 
-		case 0x28:
+		case 0x27:
 			__ZN8Wormhole12CustomMoblet10closeEventEv_122(i0);
 		return 0;
 
-		case 0x29:
+		case 0x28:
 			__ZN8Wormhole12CustomMoblet12processEventERK7MAEvent_122(i0, i1);
 		return 0;
 
-		case 0x2a:
+		case 0x29:
 			__ZN8Wormhole12CustomMoblet14enterEventLoopEv_122(i0);
 		return 0;
 
-		case 0x2b:
+		case 0x2a:
 			__ZN8Wormhole12CustomMoblet13exitEventLoopEv_122(i0);
 		return 0;
 
-		case 0x2c:
+		case 0x2b:
 			__ZN8Wormhole12CustomMoblet4exitEv_122(i0);
 		return 0;
 
-		case 0x2d:
+		case 0x2c:
 			__ZN8Wormhole12CustomMoblet16runPendingTimersEv_122(i0);
 		return 0;
 
-		case 0x2e:
+		case 0x2d:
 			r14 = __ZN8Wormhole12CustomMoblet15timeToNextTimerEv_122(i0);
 		return r14;
 
-		case 0x2f:
+		case 0x2e:
 			__ZThn172_N8Wormhole12CustomMoblet10closeEventEv_122(i0);
 		return 0;
 
-		case 0x33:
+		case 0x32:
 			__ZN6MAUtil16DownloadListener14notifyProgressEPNS_10DownloaderEii_64(i0, i1, i2, i3);
 		return 0;
 
-		case 0x34:
+		case 0x33:
 			r14 = __ZN6MAUtil16DownloadListener11outOfMemoryEPNS_10DownloaderE_64(i0, i1);
 		return r14;
 
-		case 0x35:
+		case 0x34:
 			r14 = _yajl_internal_malloc_150(i0, i1);
 		return r14;
 
-		case 0x36:
+		case 0x35:
 			_yajl_internal_free_150(i0, i1);
 		return 0;
 
-		case 0x37:
+		case 0x36:
 			r14 = _yajl_internal_realloc_150(i0, i1, i2);
 		return r14;
 
-		case 0x38:
+		case 0x37:
 			_yajl_buf_append_151(i0, i1, i2);
 		return 0;
 
-		case 0x39:
+		case 0x38:
 			r14 = __ZN6MAUtil7CompareIKNS_11BasicStringIcEEEEiRKT_S6__158(i0, i1);
 		return r14;
 
-		case 0x3a:
+		case 0x39:
 			r14 = __ZN6MAUtil7CompareIKiEEiRKT_S4__161(i0, i1);
 		return r14;
 
-		case 0x3b:
+		case 0x3a:
 			__ZN8MyMobletD1Ev_3(i0);
 		return 0;
 
-		case 0x3c:
+		case 0x3b:
 			__ZN8MyMobletD0Ev_3(i0);
 		return 0;
 
-		case 0x3d:
-			__ZN8Wormhole12HybridMoblet13keyPressEventEii_130(i0, i1, i2);
+		case 0x3c:
+			__ZN8MyMoblet13keyPressEventEii_3(i0, i1, i2);
 		return 0;
 
-		case 0x3e:
+		case 0x3d:
 			__ZN8Wormhole12CustomMoblet15keyReleaseEventEii_3(i0, i1, i2);
 		return 0;
 
-		case 0x3f:
+		case 0x3e:
 			__ZN8Wormhole12CustomMoblet17pointerPressEventE9MAPoint2d_3(i0, i1, i2);
 		return 0;
 
-		case 0x40:
+		case 0x3f:
 			__ZN8Wormhole12CustomMoblet16pointerMoveEventE9MAPoint2d_3(i0, i1, i2);
 		return 0;
 
-		case 0x41:
+		case 0x40:
 			__ZN8Wormhole12CustomMoblet19pointerReleaseEventE9MAPoint2d_3(i0, i1, i2);
 		return 0;
 
-		case 0x42:
+		case 0x41:
 			__ZN8Wormhole12CustomMoblet20multitouchPressEventE9MAPoint2di_3(i0, i1, i2, i3);
 		return 0;
 
-		case 0x43:
+		case 0x42:
 			__ZN8Wormhole12CustomMoblet19multitouchMoveEventE9MAPoint2di_3(i0, i1, i2, i3);
 		return 0;
 
-		case 0x44:
+		case 0x43:
 			__ZN8Wormhole12CustomMoblet22multitouchReleaseEventE9MAPoint2di_3(i0, i1, i2, i3);
 		return 0;
 
-		case 0x45:
-			__ZN8MyMoblet11customEventERK7MAEvent_3(i0, i1);
+		case 0x44:
+			__ZN8Wormhole12HybridMoblet11customEventERK7MAEvent_130(i0, i1);
 		return 0;
 
-		case 0x46:
+		case 0x45:
 			r14 = __ZN8Wormhole12CustomMoblet11handleEventERK7MAEvent_3(i0, i1);
 		return r14;
 
-		case 0x47:
+		case 0x46:
 			__ZN8Wormhole12HybridMoblet10initializeEv_130(i0);
 		return 0;
 
-		case 0x48:
+		case 0x47:
 			__ZN8Wormhole12HybridMoblet12openWormholeEi_130(i0, i1);
 		return 0;
 
-		case 0x49:
+		case 0x48:
 			__ZN8Wormhole12HybridMoblet8createUIEv_130(i0);
 		return 0;
 
-		case 0x4a:
+		case 0x49:
 			r14 = __ZN8Wormhole12HybridMoblet10getWebViewEv_130(i0);
 		return r14;
 
-		case 0x4b:
+		case 0x4a:
 			r14 = __ZN8Wormhole12HybridMoblet11getFileUtilEv_130(i0);
 		return r14;
 
-		case 0x4c:
+		case 0x4b:
 			__ZN8Wormhole12HybridMoblet8showPageERKN6MAUtil11BasicStringIcEE_130(i0, i1);
 		return 0;
 
-		case 0x4d:
+		case 0x4c:
 			__ZN8Wormhole12HybridMoblet12showNativeUIERKN6MAUtil11BasicStringIcEE_130(i0, i1);
 		return 0;
 
-		case 0x4e:
+		case 0x4d:
 			__ZN8Wormhole12HybridMoblet11showWebViewEv_130(i0);
 		return 0;
 
-		case 0x4f:
+		case 0x4e:
 			__ZN8Wormhole12HybridMoblet12setBeepSoundEi_130(i0, i1);
 		return 0;
 
-		case 0x50:
+		case 0x4f:
 			r14 = __ZN8Wormhole12HybridMoblet17getMessageHandlerEv_130(i0);
 		return r14;
 
-		case 0x51:
+		case 0x50:
 			__ZN8Wormhole12HybridMoblet17setMessageHandlerEPNS_14MessageHandlerE_130(i0, i1);
 		return 0;
 
-		case 0x52:
+		case 0x51:
 			__ZN8Wormhole12HybridMoblet13addMessageFunEPKcMNS_9FunObjectEFvRNS_13MessageStreamEE_130(i0, i1, i2, i3);
 		return 0;
 
-		case 0x53:
+		case 0x52:
 			__ZN8Wormhole12HybridMoblet20handleWebViewMessageEii_130(i0, i1, i2);
 		return 0;
 
-		case 0x54:
+		case 0x53:
 			__ZN8Wormhole12HybridMoblet19printWebViewMessageEi_130(i0, i1);
 		return 0;
 
-		case 0x55:
+		case 0x54:
 			__ZN8Wormhole12HybridMoblet6callJSERKN6MAUtil11BasicStringIcEE_130(i0, i1);
 		return 0;
 
-		case 0x56:
+		case 0x55:
 			__ZN8Wormhole12HybridMoblet6callJSEiRKN6MAUtil11BasicStringIcEE_130(i0, i1, i2);
 		return 0;
 
-		case 0x57:
+		case 0x56:
 			__ZN8Wormhole12HybridMoblet32sendDeviceScreenSizeToJavaScriptEv_130(i0);
 		return 0;
 
-		case 0x58:
+		case 0x57:
 			__ZN8Wormhole12HybridMoblet29sendWebViewHandleToJavaScriptEv_130(i0);
 		return 0;
 
-		case 0x59:
+		case 0x58:
 			__ZN8Wormhole12HybridMoblet21enableWebViewMessagesEv_130(i0);
 		return 0;
 
-		case 0x5a:
+		case 0x59:
 			__ZN8Wormhole12HybridMoblet22disableWebViewMessagesEv_130(i0);
 		return 0;
 
-		case 0x5b:
+		case 0x5a:
 			__ZN8Wormhole12HybridMoblet17extractFileSystemEv_130(i0);
 		return 0;
 
-		case 0x5c:
+		case 0x5b:
 			r14 = __ZN8Wormhole12HybridMoblet18checksumHasChangedEv_130(i0);
 		return r14;
 
-		case 0x5d:
+		case 0x5c:
 			__ZN8Wormhole12HybridMoblet13writeChecksumEv_130(i0);
 		return 0;
 
-		case 0x5e:
+		case 0x5d:
 			__ZThn164_N8MyMobletD1Ev_3(i0);
 		return 0;
 
-		case 0x5f:
+		case 0x5e:
 			__ZThn164_N8MyMobletD0Ev_3(i0);
 		return 0;
 
-		case 0x60:
-			__ZThn164_N8Wormhole12HybridMoblet13keyPressEventEii_130(i0, i1, i2);
+		case 0x5f:
+			__ZThn164_N8MyMoblet13keyPressEventEii_3(i0, i1, i2);
 		return 0;
 
-		case 0x61:
+		case 0x60:
 			__ZThn164_N8Wormhole12CustomMoblet15keyReleaseEventEii_3(i0, i1, i2);
 		return 0;
 
-		case 0x62:
+		case 0x61:
 			__ZN6MAUtil11KeyListener13keyPressEventEi_3(i0, i1);
 		return 0;
 
-		case 0x63:
+		case 0x62:
 			__ZN6MAUtil11KeyListener15keyReleaseEventEi_3(i0, i1);
 		return 0;
 
-		case 0x64:
+		case 0x63:
 			__ZThn168_N8MyMobletD1Ev_3(i0);
 		return 0;
 
-		case 0x65:
+		case 0x64:
 			__ZThn168_N8MyMobletD0Ev_3(i0);
 		return 0;
 
-		case 0x66:
+		case 0x65:
 			__ZThn168_N8Wormhole12CustomMoblet17pointerPressEventE9MAPoint2d_3(i0, i1, i2);
 		return 0;
 
-		case 0x67:
+		case 0x66:
 			__ZThn168_N8Wormhole12CustomMoblet16pointerMoveEventE9MAPoint2d_3(i0, i1, i2);
 		return 0;
 
-		case 0x68:
+		case 0x67:
 			__ZThn168_N8Wormhole12CustomMoblet19pointerReleaseEventE9MAPoint2d_3(i0, i1, i2);
 		return 0;
 
-		case 0x69:
+		case 0x68:
 			__ZThn168_N8Wormhole12CustomMoblet20multitouchPressEventE9MAPoint2di_3(i0, i1, i2, i3);
 		return 0;
 
-		case 0x6a:
+		case 0x69:
 			__ZThn168_N8Wormhole12CustomMoblet19multitouchMoveEventE9MAPoint2di_3(i0, i1, i2, i3);
 		return 0;
 
-		case 0x6b:
+		case 0x6a:
 			__ZThn168_N8Wormhole12CustomMoblet22multitouchReleaseEventE9MAPoint2di_3(i0, i1, i2, i3);
 		return 0;
 
-		case 0x6c:
-			__ZThn176_N8MyMoblet11customEventERK7MAEvent_3(i0, i1);
+		case 0x6b:
+			__ZThn176_N8Wormhole12HybridMoblet11customEventERK7MAEvent_130(i0, i1);
 		return 0;
 
-		case 0x6d:
+		case 0x6c:
 			_default_malloc_handler_16(i0);
 		return 0;
 
-		case 0x6e:
+		case 0x6d:
 			r14 = _tlsf_malloc_37(i0);
 		return r14;
 
-		case 0x6f:
+		case 0x6e:
 			_tlsf_free_37(i0);
 		return 0;
 
-		case 0x70:
+		case 0x6f:
 			r14 = _tlsf_realloc_37(i0, i1);
 		return r14;
 
-		case 0x71:
+		case 0x70:
 			r14 = _tlsf_block_size_37(i0);
 		return r14;
 
-		case 0xbb:
+		case 0xba:
 			r14 = _dnode_alloc_57(i0);
 		return r14;
 
-		case 0xbc:
+		case 0xbb:
 			_dnode_free_57(i0, i1);
 		return 0;
 
-		case 0xbd:
+		case 0xbc:
 			r14 = _hnode_alloc_58(i0);
 		return r14;
 
-		case 0xbe:
+		case 0xbd:
 			_hnode_free_58(i0, i1);
 		return 0;
 
-		case 0xbf:
+		case 0xbe:
 			r14 = _hash_fun_default_58(i0);
 		return r14;
 
-		case 0xc0:
+		case 0xbf:
 			r14 = _hash_comp_default_58(i0, i1);
 		return r14;
 
-		case 0xc1:
+		case 0xc0:
 			__ZN6MAUtil10Connection9connEventERK15MAConnEventData_63(i0, i1);
 		return 0;
 
-		case 0xdc:
+		case 0xdb:
 			__ZN6MAUtil10ConnectionD1Ev_63(i0);
 		return 0;
 
-		case 0xdd:
+		case 0xdc:
 			__ZN6MAUtil10ConnectionD0Ev_63(i0);
 		return 0;
 
-		case 0xde:
+		case 0xdd:
 			__ZN6MAUtil14HttpConnectionD1Ev_63(i0);
 		return 0;
 
-		case 0xdf:
+		case 0xde:
 			__ZN6MAUtil14HttpConnectionD0Ev_63(i0);
 		return 0;
 
-		case 0xe2:
+		case 0xe1:
 			__ZN6MAUtil10Downloader16connRecvFinishedEPNS_10ConnectionEi_64(i0, i1, i2);
 		return 0;
 
-		case 0xe3:
+		case 0xe2:
 			__ZN6MAUtil10Downloader12httpFinishedEPNS_14HttpConnectionEi_64(i0, i1, i2);
 		return 0;
 
-		case 0xe4:
+		case 0xe3:
 			__ZN6MAUtil10DownloaderD1Ev_64(i0);
 		return 0;
 
-		case 0xe5:
+		case 0xe4:
 			__ZN6MAUtil10DownloaderD0Ev_64(i0);
 		return 0;
 
-		case 0xe6:
+		case 0xe5:
 			r14 = __ZN6MAUtil10Downloader16beginDownloadingEPKci_64(i0, i1, i2);
 		return r14;
 
-		case 0xe7:
+		case 0xe6:
 			__ZN6MAUtil10Downloader17cancelDownloadingEv_64(i0);
 		return 0;
 
-		case 0xe8:
+		case 0xe7:
 			r14 = __ZN6MAUtil10Downloader9getHandleEv_64(i0);
 		return r14;
 
-		case 0xe9:
+		case 0xe8:
 			__ZN6MAUtil10Downloader15closeConnectionEi_64(i0, i1);
 		return 0;
 
-		case 0xea:
+		case 0xe9:
 			__ZN6MAUtil15ImageDownloaderD1Ev_64(i0);
 		return 0;
 
-		case 0xeb:
+		case 0xea:
 			__ZN6MAUtil15ImageDownloaderD0Ev_64(i0);
 		return 0;
 
-		case 0xec:
+		case 0xeb:
 			r14 = __ZN6MAUtil15ImageDownloader16beginDownloadingEPKci_64(i0, i1, i2);
 		return r14;
 
-		case 0xed:
+		case 0xec:
 			r14 = __ZN6MAUtil15ImageDownloader9getHandleEv_64(i0);
 		return r14;
 
-		case 0xee:
+		case 0xed:
 			__ZN6MAUtil15ImageDownloader15closeConnectionEi_64(i0, i1);
 		return 0;
 
-		case 0xf3:
+		case 0xf2:
 			__ZN6MAUtil38DownloaderReaderWithKnownContentLength15startRecvToDataEPNS_10ConnectionE_64(i0, i1);
 		return 0;
 
-		case 0xf4:
+		case 0xf3:
 			__ZN6MAUtil38DownloaderReaderWithKnownContentLength16connRecvFinishedEPNS_10ConnectionEi_64(i0, i1, i2);
 		return 0;
 
-		case 0xf5:
+		case 0xf4:
 			__ZN6MAUtil31DownloaderReaderThatReadsChunks15startRecvToDataEPNS_10ConnectionE_64(i0, i1);
 		return 0;
 
-		case 0xf6:
+		case 0xf5:
 			__ZN6MAUtil31DownloaderReaderThatReadsChunks16connRecvFinishedEPNS_10ConnectionEi_64(i0, i1, i2);
 		return 0;
 
-		case 0xf7:
+		case 0xf6:
 			__ZN6MAUtil31DownloaderReaderThatReadsChunksD1Ev_64(i0);
 		return 0;
 
-		case 0xf8:
+		case 0xf7:
 			__ZN6MAUtil31DownloaderReaderThatReadsChunksD0Ev_64(i0);
 		return 0;
 
-		case 0xf9:
+		case 0xf8:
 			__ZN6MAUtil15PointerListenerD1Ev_65(i0);
 		return 0;
 
-		case 0xfa:
+		case 0xf9:
 			__ZN6MAUtil15PointerListenerD0Ev_65(i0);
 		return 0;
 
-		case 0xfb:
+		case 0xfa:
 			__ZN6MAUtil15PointerListener20multitouchPressEventE9MAPoint2di_65(i0, i1, i2, i3);
 		return 0;
 
-		case 0xfc:
+		case 0xfb:
 			__ZN6MAUtil15PointerListener19multitouchMoveEventE9MAPoint2di_65(i0, i1, i2, i3);
 		return 0;
 
-		case 0xfd:
+		case 0xfc:
 			__ZN6MAUtil15PointerListener22multitouchReleaseEventE9MAPoint2di_65(i0, i1, i2, i3);
 		return 0;
 
-		case 0xfe:
+		case 0xfd:
 			__ZN6MAUtil11KeyListenerD1Ev_65(i0);
 		return 0;
 
-		case 0xff:
+		case 0xfe:
 			__ZN6MAUtil11KeyListenerD0Ev_65(i0);
 		return 0;
 
-		case 0x100:
+		case 0xff:
 			__ZN6MAUtil11KeyListener13keyPressEventEii_65(i0, i1, i2);
 		return 0;
 
-		case 0x101:
+		case 0x100:
 			__ZN6MAUtil11KeyListener15keyReleaseEventEii_65(i0, i1, i2);
 		return 0;
 
-		case 0x102:
+		case 0x101:
 			__ZN6MAUtil11KeyListener13keyPressEventEi_65(i0, i1);
 		return 0;
 
-		case 0x103:
+		case 0x102:
 			__ZN6MAUtil11KeyListener15keyReleaseEventEi_65(i0, i1);
 		return 0;
 
-		case 0x104:
+		case 0x103:
 			__ZN6MAUtil11EnvironmentD1Ev_65(i0);
 		return 0;
 
-		case 0x105:
+		case 0x104:
 			__ZN6MAUtil11EnvironmentD0Ev_65(i0);
 		return 0;
 
-		case 0x144:
+		case 0x143:
 			__ZN6MAUtil10RefCountedD1Ev_72(i0);
 		return 0;
 
-		case 0x145:
+		case 0x144:
 			__ZN6MAUtil10RefCountedD0Ev_72(i0);
 		return 0;
 
-		case 0x14a:
+		case 0x149:
 			__ZN6MAUtil10StringDataIcED1Ev_74(i0);
 		return 0;
 
-		case 0x14b:
+		case 0x14a:
 			__ZN6MAUtil10StringDataIcED0Ev_74(i0);
 		return 0;
 
-		case 0x14e:
+		case 0x14d:
 			__ZN6MAUtil10RefCountedD1Ev_74(i0);
 		return 0;
 
-		case 0x14f:
+		case 0x14e:
 			__ZN6MAUtil10RefCountedD0Ev_74(i0);
 		return 0;
 
-		case 0x152:
+		case 0x151:
 			__ZN8NativeUI6Widget25markWidgetHandleAsDeletedEv_117(i0);
 		return 0;
 
-		case 0x153:
+		case 0x152:
 			r14 = __ZNK8NativeUI6Widget15getWidgetHandleEv_117(i0);
 		return r14;
 
-		case 0x154:
+		case 0x153:
 			r14 = __ZN8NativeUI6Widget11setPropertyERKN6MAUtil11BasicStringIcEES5__117(i0, i1, i2);
 		return r14;
 
-		case 0x155:
+		case 0x154:
 			r14 = __ZN8NativeUI6Widget14setPropertyIntERKN6MAUtil11BasicStringIcEEi_117(i0, i1, i2);
 		return r14;
 
-		case 0x156:
+		case 0x155:
 			r14 = __ZN8NativeUI6Widget16setPropertyFloatERKN6MAUtil11BasicStringIcEEf_117(i0, i1, i2);
 		return r14;
 
-		case 0x157:
+		case 0x156:
 			r14 = __ZN8NativeUI6Widget14getPropertyIntERKN6MAUtil11BasicStringIcEERi_117(i0, i1, i2);
 		return r14;
 
-		case 0x158:
+		case 0x157:
 			r14 = __ZN8NativeUI6Widget14getPropertyIntERKN6MAUtil11BasicStringIcEE_117(i0, i1);
 		return r14;
 
-		case 0x159:
+		case 0x158:
 			r14 = __ZN8NativeUI6Widget16getPropertyFloatERKN6MAUtil11BasicStringIcEERi_117(i0, i1, i2);
 		return r14;
 
-		case 0x15a:
+		case 0x159:
 			r14 = __ZN8NativeUI6Widget16getPropertyFloatERKN6MAUtil11BasicStringIcEE_117(i0, i1);
 		return r14;
 
-		case 0x15b:
+		case 0x15a:
 			r14 = __ZN8NativeUI6Widget17getPropertyStringERKN6MAUtil11BasicStringIcEERi_117(i0, i1, i2, i3);
 		return r14;
 
-		case 0x15c:
+		case 0x15b:
 			r14 = __ZN8NativeUI6Widget17getPropertyStringERKN6MAUtil11BasicStringIcEE_117(i0, i1, i2);
 		return r14;
 
-		case 0x15d:
+		case 0x15c:
 			r14 = __ZN8NativeUI6Widget8addChildEPS0__117(i0, i1);
 		return r14;
 
-		case 0x15e:
+		case 0x15d:
 			r14 = __ZN8NativeUI6Widget11insertChildEPS0_i_117(i0, i1, i2);
 		return r14;
 
-		case 0x15f:
+		case 0x15e:
 			r14 = __ZN8NativeUI6Widget11removeChildEPS0__117(i0, i1);
 		return r14;
 
-		case 0x160:
+		case 0x15f:
 			r14 = __ZNK8NativeUI6Widget8getChildEi_117(i0, i1);
 		return r14;
 
-		case 0x161:
+		case 0x160:
 			r14 = __ZNK8NativeUI6Widget17countChildWidgetsEv_117(i0);
 		return r14;
 
-		case 0x162:
+		case 0x161:
 			__ZN8NativeUI6Widget11setPositionEii_117(i0, i1, i2);
 		return 0;
 
-		case 0x163:
+		case 0x162:
 			__ZN8NativeUI6Widget15setLeftPositionEi_117(i0, i1);
 		return 0;
 
-		case 0x164:
+		case 0x163:
 			__ZN8NativeUI6Widget14setTopPositionEi_117(i0, i1);
 		return 0;
 
-		case 0x165:
+		case 0x164:
 			__ZN8NativeUI6Widget7setSizeEii_117(i0, i1, i2);
 		return 0;
 
-		case 0x166:
+		case 0x165:
 			r14 = __ZN8NativeUI6Widget8getWidthEv_117(i0);
 		return r14;
 
-		case 0x167:
+		case 0x166:
 			r14 = __ZN8NativeUI6Widget9getHeightEv_117(i0);
 		return r14;
 
-		case 0x168:
+		case 0x167:
 			__ZN8NativeUI6Widget8setWidthEi_117(i0, i1);
 		return 0;
 
-		case 0x169:
+		case 0x168:
 			__ZN8NativeUI6Widget9setHeightEi_117(i0, i1);
 		return 0;
 
-		case 0x16a:
+		case 0x169:
 			__ZN8NativeUI6Widget21fillSpaceHorizontallyEv_117(i0);
 		return 0;
 
-		case 0x16b:
+		case 0x16a:
 			__ZN8NativeUI6Widget19fillSpaceVerticallyEv_117(i0);
 		return 0;
 
-		case 0x16c:
+		case 0x16b:
 			__ZN8NativeUI6Widget23wrapContentHorizontallyEv_117(i0);
 		return 0;
 
-		case 0x16d:
+		case 0x16c:
 			__ZN8NativeUI6Widget21wrapContentVerticallyEv_117(i0);
 		return 0;
 
-		case 0x16e:
+		case 0x16d:
 			r14 = __ZN8NativeUI6Widget18setBackgroundColorEi_117(i0, i1);
 		return r14;
 
-		case 0x16f:
+		case 0x16e:
 			r14 = __ZN8NativeUI6Widget18setBackgroundColorEiii_117(i0, i1, i2, i3);
 		return r14;
 
-		case 0x170:
+		case 0x16f:
 			r14 = __ZN8NativeUI6Widget21setBackgroundGradientEii_117(i0, i1, i2);
 		return r14;
 
-		case 0x171:
+		case 0x170:
 			__ZN8NativeUI6Widget10setVisibleEb_117(i0, i1);
 		return 0;
 
-		case 0x172:
+		case 0x171:
 			r14 = __ZN8NativeUI6Widget9isVisibleEv_117(i0);
 		return r14;
 
-		case 0x173:
+		case 0x172:
 			__ZN8NativeUI6Widget10setEnabledEb_117(i0, i1);
 		return 0;
 
-		case 0x174:
+		case 0x173:
 			r14 = __ZN8NativeUI6Widget9isEnabledEv_117(i0);
 		return r14;
 
-		case 0x175:
+		case 0x174:
 			__ZN8NativeUI6Widget16addEventListenerEPNS_19WidgetEventListenerE_117(i0, i1);
 		return 0;
 
-		case 0x176:
+		case 0x175:
 			__ZN8NativeUI6Widget19removeEventListenerEPNS_19WidgetEventListenerE_117(i0, i1);
 		return 0;
 
-		case 0x177:
+		case 0x176:
 			__ZN8NativeUI6Widget17handleWidgetEventEP17MAWidgetEventData_117(i0, i1);
 		return 0;
 
-		case 0x1c2:
+		case 0x1c1:
 			__GLOBAL__I__ZN8NativeUI16HorizontalLayoutC2Ev_85();
 		return 0;
 
-		case 0x1c3:
+		case 0x1c2:
 			__GLOBAL__D__ZN8NativeUI16HorizontalLayoutC2Ev_85();
 		return 0;
 
-		case 0x1dc:
+		case 0x1db:
 			__GLOBAL__I__ZN8NativeUI6LayoutC2ERKN6MAUtil11BasicStringIcEE_89();
 		return 0;
 
-		case 0x1dd:
+		case 0x1dc:
 			__GLOBAL__D__ZN8NativeUI6LayoutC2ERKN6MAUtil11BasicStringIcEE_89();
 		return 0;
 
-		case 0x217:
+		case 0x216:
 			__ZN8NativeUI6Screen17handleWidgetEventEP17MAWidgetEventData_106(i0, i1);
 		return 0;
 
-		case 0x23d:
+		case 0x23c:
 			__GLOBAL__I__ZN8NativeUI14RelativeLayoutC2Ev_105();
 		return 0;
 
-		case 0x23e:
+		case 0x23d:
 			__GLOBAL__D__ZN8NativeUI14RelativeLayoutC2Ev_105();
 		return 0;
 
-		case 0x241:
+		case 0x240:
 			__ZN8NativeUI6ScreenD1Ev_106(i0);
 		return 0;
 
-		case 0x242:
+		case 0x241:
 			__ZN8NativeUI6ScreenD0Ev_106(i0);
 		return 0;
 
-		case 0x27b:
+		case 0x27a:
 			__GLOBAL__I__ZN8NativeUI14VerticalLayoutC2Ev_114();
 		return 0;
 
-		case 0x27c:
+		case 0x27b:
 			__GLOBAL__D__ZN8NativeUI14VerticalLayoutC2Ev_114();
 		return 0;
 
-		case 0x28f:
+		case 0x28e:
 			__ZN8NativeUI7WebViewD1Ev_116(i0);
 		return 0;
 
-		case 0x290:
+		case 0x28f:
 			__ZN8NativeUI7WebViewD0Ev_116(i0);
 		return 0;
 
-		case 0x291:
+		case 0x290:
 			__ZN8NativeUI7WebView17handleWidgetEventEP17MAWidgetEventData_116(i0, i1);
 		return 0;
 
-		case 0x292:
+		case 0x291:
 			__ZN8NativeUI7WebView7openURLERKN6MAUtil11BasicStringIcEE_116(i0, i1);
 		return 0;
 
-		case 0x293:
+		case 0x292:
 			r14 = __ZN8NativeUI7WebView6getURLEv_116(i0, i1);
 		return r14;
 
-		case 0x294:
+		case 0x293:
 			__ZN8NativeUI7WebView7setHtmlERKN6MAUtil11BasicStringIcEE_116(i0, i1);
 		return 0;
 
-		case 0x295:
+		case 0x294:
 			__ZN8NativeUI7WebView10setBaseUrlERKN6MAUtil11BasicStringIcEE_116(i0, i1);
 		return 0;
 
-		case 0x296:
+		case 0x295:
 			r14 = __ZN8NativeUI7WebView10getBaseUrlEv_116(i0, i1);
 		return r14;
 
-		case 0x297:
+		case 0x296:
 			__ZN8NativeUI7WebView11setSoftHookERKN6MAUtil11BasicStringIcEE_116(i0, i1);
 		return 0;
 
-		case 0x298:
+		case 0x297:
 			__ZN8NativeUI7WebView11setHardHookERKN6MAUtil11BasicStringIcEE_116(i0, i1);
 		return 0;
 
-		case 0x299:
+		case 0x298:
 			__ZN8NativeUI7WebView10enableZoomEv_116(i0);
 		return 0;
 
-		case 0x29a:
+		case 0x299:
 			__ZN8NativeUI7WebView11disableZoomEv_116(i0);
 		return 0;
 
-		case 0x29b:
+		case 0x29a:
 			__ZN8NativeUI7WebView12navigateBackEv_116(i0);
 		return 0;
 
-		case 0x29c:
+		case 0x29b:
 			__ZN8NativeUI7WebView15navigateForwardEv_116(i0);
 		return 0;
 
-		case 0x29d:
+		case 0x29c:
 			r14 = __ZN8NativeUI7WebView15canNavigateBackEv_116(i0);
 		return r14;
 
-		case 0x29e:
+		case 0x29d:
 			r14 = __ZN8NativeUI7WebView18canNavigateForwardEv_116(i0);
 		return r14;
 
-		case 0x29f:
+		case 0x29e:
 			__ZN8NativeUI7WebView25enableHorizontalScrollBarEv_116(i0);
 		return 0;
 
-		case 0x2a0:
+		case 0x29f:
 			__ZN8NativeUI7WebView26disableHorizontalScrollbarEv_116(i0);
 		return 0;
 
-		case 0x2a1:
+		case 0x2a0:
 			r14 = __ZN8NativeUI7WebView28isHorizontalScrollbarEnabledEv_116(i0);
 		return r14;
 
-		case 0x2a2:
+		case 0x2a1:
 			__ZN8NativeUI7WebView23enableVerticalScrollBarEv_116(i0);
 		return 0;
 
-		case 0x2a3:
+		case 0x2a2:
 			__ZN8NativeUI7WebView24disableVerticalScrollbarEv_116(i0);
 		return 0;
 
-		case 0x2a4:
+		case 0x2a3:
 			r14 = __ZN8NativeUI7WebView26isVerticalScrollBarEnabledEv_116(i0);
 		return r14;
 
-		case 0x2a5:
+		case 0x2a4:
 			r14 = __ZN8NativeUI7WebView9getNewURLEv_116(i0, i1);
 		return r14;
 
-		case 0x2a6:
+		case 0x2a5:
 			__ZN8NativeUI7WebView18addWebViewListenerEPNS_15WebViewListenerE_116(i0, i1);
 		return 0;
 
-		case 0x2a7:
+		case 0x2a6:
 			__ZN8NativeUI7WebView21removeWebViewListenerEPNS_15WebViewListenerE_116(i0, i1);
 		return 0;
 
-		case 0x2a8:
+		case 0x2a7:
 			__ZN8NativeUI7WebView21enableWebViewMessagesEv_116(i0);
 		return 0;
 
-		case 0x2a9:
+		case 0x2a8:
 			__ZN8NativeUI7WebView22disableWebViewMessagesEv_116(i0);
 		return 0;
 
-		case 0x2aa:
+		case 0x2a9:
 			r14 = __ZN8NativeUI7WebView6callJSERKN6MAUtil11BasicStringIcEE_116(i0, i1);
 		return r14;
 
-		case 0x2ab:
+		case 0x2aa:
 			__ZN8NativeUI6WidgetD1Ev_117(i0);
 		return 0;
 
-		case 0x2ac:
+		case 0x2ab:
 			__ZN8NativeUI6WidgetD0Ev_117(i0);
 		return 0;
 
-		case 0x2ad:
+		case 0x2ac:
 			__ZN8NativeUI13WidgetManager11customEventERK7MAEvent_118(i0, i1);
 		return 0;
 
-		case 0x2ae:
+		case 0x2ad:
 			__ZN8NativeUI13WidgetManagerD1Ev_118(i0);
 		return 0;
 
-		case 0x2af:
+		case 0x2ae:
 			__ZN8NativeUI13WidgetManagerD0Ev_118(i0);
 		return 0;
 
-		case 0x2b0:
+		case 0x2af:
 			__ZN8NativeUI13WidgetManager14registerWidgetEiPNS_6WidgetE_118(i0, i1, i2);
 		return 0;
 
-		case 0x2b1:
+		case 0x2b0:
 			__ZN8NativeUI13WidgetManager16unregisterWidgetEi_118(i0, i1);
 		return 0;
 
-		case 0x2b2:
+		case 0x2b1:
 			__ZN8Wormhole12CustomMobletD1Ev_122(i0);
 		return 0;
 
-		case 0x2b3:
+		case 0x2b2:
 			__ZN8Wormhole12CustomMobletD0Ev_122(i0);
 		return 0;
 
-		case 0x2b4:
+		case 0x2b3:
 			__ZN8Wormhole12CustomMoblet13keyPressEventEii_122(i0, i1, i2);
 		return 0;
 
-		case 0x2b5:
+		case 0x2b4:
 			__ZN8Wormhole12CustomMoblet15keyReleaseEventEii_122(i0, i1, i2);
 		return 0;
 
-		case 0x2b6:
+		case 0x2b5:
 			__ZN8Wormhole12CustomMoblet17pointerPressEventE9MAPoint2d_122(i0, i1, i2);
 		return 0;
 
-		case 0x2b7:
+		case 0x2b6:
 			__ZN8Wormhole12CustomMoblet16pointerMoveEventE9MAPoint2d_122(i0, i1, i2);
 		return 0;
 
-		case 0x2b8:
+		case 0x2b7:
 			__ZN8Wormhole12CustomMoblet19pointerReleaseEventE9MAPoint2d_122(i0, i1, i2);
 		return 0;
 
-		case 0x2b9:
+		case 0x2b8:
 			__ZN8Wormhole12CustomMoblet20multitouchPressEventE9MAPoint2di_122(i0, i1, i2, i3);
 		return 0;
 
-		case 0x2ba:
+		case 0x2b9:
 			__ZN8Wormhole12CustomMoblet19multitouchMoveEventE9MAPoint2di_122(i0, i1, i2, i3);
 		return 0;
 
-		case 0x2bb:
+		case 0x2ba:
 			__ZN8Wormhole12CustomMoblet22multitouchReleaseEventE9MAPoint2di_122(i0, i1, i2, i3);
 		return 0;
 
-		case 0x2bc:
+		case 0x2bb:
 			__ZN8Wormhole12CustomMoblet11customEventERK7MAEvent_122(i0, i1);
 		return 0;
 
-		case 0x2bd:
+		case 0x2bc:
 			r14 = __ZN8Wormhole12CustomMoblet11handleEventERK7MAEvent_122(i0, i1);
 		return r14;
 
-		case 0x2be:
+		case 0x2bd:
 			__ZThn164_N8Wormhole12CustomMobletD1Ev_122(i0);
 		return 0;
 
-		case 0x2bf:
+		case 0x2be:
 			__ZThn164_N8Wormhole12CustomMobletD0Ev_122(i0);
 		return 0;
 
-		case 0x2c0:
+		case 0x2bf:
 			__ZThn164_N8Wormhole12CustomMoblet13keyPressEventEii_122(i0, i1, i2);
 		return 0;
 
-		case 0x2c1:
+		case 0x2c0:
 			__ZThn164_N8Wormhole12CustomMoblet15keyReleaseEventEii_122(i0, i1, i2);
 		return 0;
 
-		case 0x2c2:
+		case 0x2c1:
 			__ZN6MAUtil11KeyListener13keyPressEventEi_122(i0, i1);
 		return 0;
 
-		case 0x2c3:
+		case 0x2c2:
 			__ZN6MAUtil11KeyListener15keyReleaseEventEi_122(i0, i1);
 		return 0;
 
-		case 0x2c4:
+		case 0x2c3:
 			__ZThn168_N8Wormhole12CustomMobletD1Ev_122(i0);
 		return 0;
 
-		case 0x2c5:
+		case 0x2c4:
 			__ZThn168_N8Wormhole12CustomMobletD0Ev_122(i0);
 		return 0;
 
-		case 0x2c6:
+		case 0x2c5:
 			__ZThn168_N8Wormhole12CustomMoblet17pointerPressEventE9MAPoint2d_122(i0, i1, i2);
 		return 0;
 
-		case 0x2c7:
+		case 0x2c6:
 			__ZThn168_N8Wormhole12CustomMoblet16pointerMoveEventE9MAPoint2d_122(i0, i1, i2);
 		return 0;
 
-		case 0x2c8:
+		case 0x2c7:
 			__ZThn168_N8Wormhole12CustomMoblet19pointerReleaseEventE9MAPoint2d_122(i0, i1, i2);
 		return 0;
 
-		case 0x2c9:
+		case 0x2c8:
 			__ZThn168_N8Wormhole12CustomMoblet20multitouchPressEventE9MAPoint2di_122(i0, i1, i2, i3);
 		return 0;
 
-		case 0x2ca:
+		case 0x2c9:
 			__ZThn168_N8Wormhole12CustomMoblet19multitouchMoveEventE9MAPoint2di_122(i0, i1, i2, i3);
 		return 0;
 
-		case 0x2cb:
+		case 0x2ca:
 			__ZThn168_N8Wormhole12CustomMoblet22multitouchReleaseEventE9MAPoint2di_122(i0, i1, i2, i3);
 		return 0;
 
-		case 0x2cc:
+		case 0x2cb:
 			__ZThn176_N8Wormhole12CustomMoblet11customEventERK7MAEvent_122(i0, i1);
 		return 0;
 
-		case 0x2cd:
+		case 0x2cc:
 			__ZN8Wormhole8FileUtilD1Ev_124(i0);
 		return 0;
 
-		case 0x2ce:
+		case 0x2cd:
 			__ZN8Wormhole8FileUtilD0Ev_124(i0);
 		return 0;
 
-		case 0x2cf:
+		case 0x2ce:
 			r14 = __ZN8Wormhole8FileUtil12getLocalPathEv_124(i0, i1);
 		return r14;
 
-		case 0x2d0:
+		case 0x2cf:
 			r14 = __ZN8Wormhole8FileUtil10getAppPathEv_124(i0, i1);
 		return r14;
 
-		case 0x2d1:
+		case 0x2d0:
 			__ZN8Wormhole8FileUtil10setAppPathERKN6MAUtil11BasicStringIcEE_124(i0, i1);
 		return 0;
 
-		case 0x2d2:
+		case 0x2d1:
 			r14 = __ZN8Wormhole8FileUtil17extractFileSystemEiRKN6MAUtil11BasicStringIcEE_124(i0, i1, i2);
 		return r14;
 
-		case 0x2d3:
+		case 0x2d2:
 			r14 = __ZN8Wormhole8FileUtil17extractLocalFilesEv_124(i0);
 		return r14;
 
-		case 0x2d4:
+		case 0x2d3:
 			r14 = __ZN8Wormhole8FileUtil21getFileSystemChecksumEi_124(i0, i1);
 		return r14;
 
-		case 0x2d5:
+		case 0x2d4:
 			r14 = __ZN8Wormhole8FileUtil18openFileForWritingERKN6MAUtil11BasicStringIcEE_124(i0, i1);
 		return r14;
 
-		case 0x2d6:
+		case 0x2d5:
 			r14 = __ZN8Wormhole8FileUtil18openFileForReadingERKN6MAUtil11BasicStringIcEE_124(i0, i1);
 		return r14;
 
-		case 0x2d7:
+		case 0x2d6:
 			r14 = __ZN8Wormhole8FileUtil15writeDataToFileERKN6MAUtil11BasicStringIcEEi_124(i0, i1, i2);
 		return r14;
 
-		case 0x2d8:
+		case 0x2d7:
 			r14 = __ZN8Wormhole8FileUtil15writeTextToFileERKN6MAUtil11BasicStringIcEES5__124(i0, i1, i2);
 		return r14;
 
-		case 0x2d9:
+		case 0x2d8:
 			r14 = __ZN8Wormhole8FileUtil16readDataFromFileERKN6MAUtil11BasicStringIcEEi_124(i0, i1, i2);
 		return r14;
 
-		case 0x2da:
+		case 0x2d9:
 			r14 = __ZN8Wormhole8FileUtil16readTextFromFileERKN6MAUtil11BasicStringIcEERS3__124(i0, i1, i2);
 		return r14;
 
-		case 0x2db:
+		case 0x2da:
 			r14 = __ZN8Wormhole8FileUtil20createTextFromHandleEi_124(i0, i1, i2);
 		return r14;
 
-		case 0x2dc:
+		case 0x2db:
 			__ZN8Wormhole8FunTableD1Ev_125(i0);
 		return 0;
 
-		case 0x2dd:
+		case 0x2dc:
 			__ZN8Wormhole8FunTableD0Ev_125(i0);
 		return 0;
 
-		case 0x2de:
+		case 0x2dd:
 			r14 = __ZN6MAUtil8HashDictIKNS_11BasicStringIcEENS_4PairIS3_MN8Wormhole9FunObjectEFvRNS5_13MessageStreamEEEEE5allocEPv_125(i0);
 		return r14;
 
-		case 0x2df:
+		case 0x2de:
 			__ZN6MAUtil8HashDictIKNS_11BasicStringIcEENS_4PairIS3_MN8Wormhole9FunObjectEFvRNS5_13MessageStreamEEEEE4freeEP7hnode_tPv_125(i0, i1);
 		return 0;
 
-		case 0x2e3:
+		case 0x2e2:
 			__ZN8Wormhole23HighLevelHttpConnectionD1Ev_127(i0);
 		return 0;
 
-		case 0x2e4:
+		case 0x2e3:
 			__ZN8Wormhole23HighLevelHttpConnectionD0Ev_127(i0);
 		return 0;
 
-		case 0x2e5:
+		case 0x2e4:
 			__ZN8Wormhole15HighLevelReaderD1Ev_127(i0);
 		return 0;
 
-		case 0x2e6:
+		case 0x2e5:
 			__ZN8Wormhole15HighLevelReaderD0Ev_127(i0);
 		return 0;
 
-		case 0x2e7:
+		case 0x2e6:
 			__ZN8Wormhole30HighLevelReaderThatReadsChunksD1Ev_127(i0);
 		return 0;
 
-		case 0x2e8:
+		case 0x2e7:
 			__ZN8Wormhole30HighLevelReaderThatReadsChunksD0Ev_127(i0);
 		return 0;
 
-		case 0x2e9:
+		case 0x2e8:
 			__ZN8Wormhole30HighLevelReaderThatReadsChunks15startRecvToDataEv_127(i0);
 		return 0;
 
-		case 0x2ea:
+		case 0x2e9:
 			__ZN8Wormhole30HighLevelReaderThatReadsChunks16connRecvFinishedEi_127(i0, i1);
 		return 0;
 
-		case 0x2f1:
+		case 0x2f0:
 			__ZN8Wormhole12HybridMobletD1Ev_130(i0);
 		return 0;
 
-		case 0x2f2:
+		case 0x2f1:
 			__ZN8Wormhole12HybridMobletD0Ev_130(i0);
+		return 0;
+
+		case 0x2f2:
+			__ZN8Wormhole12HybridMoblet13keyPressEventEii_130(i0, i1, i2);
 		return 0;
 
 		case 0x2f3:
@@ -80246,19 +80112,19 @@ private int CallReg(int s, int i0, int i1, int i2, int i3)
 		return 0;
 
 		case 0x2fa:
-			__ZN8Wormhole12HybridMoblet11customEventERK7MAEvent_130(i0, i1);
-		return 0;
-
-		case 0x2fb:
 			r14 = __ZN8Wormhole12CustomMoblet11handleEventERK7MAEvent_130(i0, i1);
 		return r14;
 
-		case 0x2fc:
+		case 0x2fb:
 			__ZThn164_N8Wormhole12HybridMobletD1Ev_130(i0);
 		return 0;
 
-		case 0x2fd:
+		case 0x2fc:
 			__ZThn164_N8Wormhole12HybridMobletD0Ev_130(i0);
+		return 0;
+
+		case 0x2fd:
+			__ZThn164_N8Wormhole12HybridMoblet13keyPressEventEii_130(i0, i1, i2);
 		return 0;
 
 		case 0x2fe:
@@ -80306,858 +80172,854 @@ private int CallReg(int s, int i0, int i1, int i2, int i3)
 		return 0;
 
 		case 0x309:
-			__ZThn176_N8Wormhole12HybridMoblet11customEventERK7MAEvent_130(i0, i1);
-		return 0;
-
-		case 0x30a:
 			__ZN8Wormhole28HybridMoblet_WebViewListenerD1Ev_130(i0);
 		return 0;
 
-		case 0x30b:
+		case 0x30a:
 			__ZN8Wormhole28HybridMoblet_WebViewListenerD0Ev_130(i0);
 		return 0;
 
-		case 0x30c:
+		case 0x30b:
 			__ZN8Wormhole28HybridMoblet_WebViewListener18webViewHookInvokedEPN8NativeUI7WebViewEii_130(i0, i1, i2, i3);
 		return 0;
 
-		case 0x30d:
+		case 0x30c:
 			__ZN8NativeUI15WebViewListener21webViewContentLoadingEPNS_7WebViewEi_130(i0, i1, i2);
 		return 0;
 
-		case 0x30e:
+		case 0x30d:
 			__ZN8NativeUI15WebViewListenerD1Ev_130(i0);
 		return 0;
 
-		case 0x30f:
+		case 0x30e:
 			__ZN8NativeUI15WebViewListenerD0Ev_130(i0);
 		return 0;
 
-		case 0x310:
+		case 0x30f:
 			__ZN8NativeUI15WebViewListener18webViewHookInvokedEPNS_7WebViewEii_130(i0, i1, i2, i3);
 		return 0;
 
-		case 0x311:
+		case 0x310:
 			__ZN8Wormhole14MessageHandlerD1Ev_131(i0);
 		return 0;
 
-		case 0x312:
+		case 0x311:
 			__ZN8Wormhole14MessageHandlerD0Ev_131(i0);
 		return 0;
 
-		case 0x313:
+		case 0x312:
 			__ZN8Wormhole14MessageHandler10initializeEPNS_12HybridMobletE_131(i0, i1);
 		return 0;
 
-		case 0x314:
+		case 0x313:
 			r14 = __ZN8Wormhole14MessageHandler25getPhoneGapMessageHandlerEv_131(i0);
 		return r14;
 
-		case 0x315:
+		case 0x314:
 			__ZN8Wormhole14MessageHandler25setPhoneGapMessageHandlerEPNS_22PhoneGapMessageHandlerE_131(i0, i1);
 		return 0;
 
-		case 0x316:
+		case 0x315:
 			r14 = __ZN8Wormhole14MessageHandler25getNativeUIMessageHandlerEv_131(i0);
 		return r14;
 
-		case 0x317:
+		case 0x316:
 			__ZN8Wormhole14MessageHandler25setNativeUIMessageHandlerEPNS_22NativeUIMessageHandlerE_131(i0, i1);
 		return 0;
 
-		case 0x318:
+		case 0x317:
 			r14 = __ZN8Wormhole14MessageHandler25getResourceMessageHandlerEv_131(i0);
 		return r14;
 
-		case 0x319:
+		case 0x318:
 			__ZN8Wormhole14MessageHandler25setResourceMessageHandlerEPNS_22ResourceMessageHandlerE_131(i0, i1);
 		return 0;
 
-		case 0x31a:
+		case 0x319:
 			__ZN8Wormhole14MessageHandler21setLogMessageListenerEPNS_18LogMessageListenerE_131(i0, i1);
 		return 0;
 
-		case 0x31b:
+		case 0x31a:
 			__ZN8Wormhole14MessageHandler12openWormholeEiPNS_12HybridMobletE_131(i0, i1, i2);
 		return 0;
 
-		case 0x31c:
+		case 0x31b:
 			__ZN8Wormhole14MessageHandler12setBeepSoundEi_131(i0, i1);
 		return 0;
 
-		case 0x31d:
+		case 0x31c:
 			__ZN8Wormhole14MessageHandler16nativeUIEventsOnEv_131(i0);
 		return 0;
 
-		case 0x31e:
+		case 0x31d:
 			__ZN8Wormhole14MessageHandler17nativeUIEventsOffEv_131(i0);
 		return 0;
 
-		case 0x31f:
+		case 0x31e:
 			__ZN8Wormhole14MessageHandler13addMessageFunEPKcMNS_9FunObjectEFvRNS_13MessageStreamEE_131(i0, i1, i2, i3);
 		return 0;
 
-		case 0x320:
+		case 0x31f:
 			__ZN8Wormhole14MessageHandler14callMessageFunEPKcRNS_13MessageStreamEPNS_12HybridMobletE_131(i0, i1, i2, i3);
 		return 0;
 
-		case 0x321:
+		case 0x320:
 			__ZN8Wormhole14MessageHandler13keyPressEventEii_131(i0, i1, i2);
 		return 0;
 
-		case 0x322:
+		case 0x321:
 			__ZN8Wormhole14MessageHandler20handleWebViewMessageEiiPNS_12HybridMobletE_131(i0, i1, i2, i3);
 		return 0;
 
-		case 0x323:
+		case 0x322:
 			__ZN8Wormhole14MessageHandler23handleMessageStreamJSONEii_131(i0, i1, i2);
 		return 0;
 
-		case 0x324:
+		case 0x323:
 			__ZN8Wormhole14MessageHandler19handleMessageStreamEiiPNS_12HybridMobletE_131(i0, i1, i2, i3);
 		return 0;
 
-		case 0x325:
+		case 0x324:
 			__ZN8Wormhole14MessageHandler19handleMoSyncMessageERNS_13MessageStreamEiPNS_12HybridMobletE_131(i0, i1, i2, i3);
 		return 0;
 
-		case 0x326:
+		case 0x325:
 			__ZN8Wormhole14MessageHandler19handleCallJSMessageERNS_13MessageStreamEPNS_12HybridMobletE_131(i0, i1, i2);
 		return 0;
 
-		case 0x327:
+		case 0x326:
 			__ZN8Wormhole15MessageProtocolD1Ev_132(i0);
 		return 0;
 
-		case 0x328:
+		case 0x327:
 			__ZN8Wormhole15MessageProtocolD0Ev_132(i0);
 		return 0;
 
-		case 0x329:
+		case 0x328:
 			__ZN8Wormhole13MessageStreamD1Ev_133(i0);
 		return 0;
 
-		case 0x32a:
+		case 0x329:
 			__ZN8Wormhole13MessageStreamD0Ev_133(i0);
 		return 0;
 
-		case 0x32b:
+		case 0x32a:
 			__ZN8Wormhole17MessageStreamJSOND1Ev_134(i0);
 		return 0;
 
-		case 0x32c:
+		case 0x32b:
 			__ZN8Wormhole17MessageStreamJSOND0Ev_134(i0);
 		return 0;
 
-		case 0x363:
+		case 0x362:
 			__ZN8Wormhole11JSONMessageD1Ev_137(i0);
 		return 0;
 
-		case 0x364:
+		case 0x363:
 			__ZN8Wormhole11JSONMessageD0Ev_137(i0);
 		return 0;
 
-		case 0x365:
+		case 0x364:
 			r14 = __ZN8Wormhole11JSONMessage12getArgsFieldERKN6MAUtil11BasicStringIcEE_137(i0, i1, i2);
 		return r14;
 
-		case 0x366:
+		case 0x365:
 			r14 = __ZN8Wormhole11JSONMessage15getArgsFieldIntERKN6MAUtil11BasicStringIcEE_137(i0, i1);
 		return r14;
 
-		case 0x367:
+		case 0x366:
 			r14 = __ZN8Wormhole11JSONMessage35getJSONParamsOptionsCreateExclusiveERbS1__137(i0, i1, i2);
 		return r14;
 
-		case 0x368:
+		case 0x367:
 			r14 = __ZN8Wormhole11JSONMessage26getJSONParamParentFullPathERN6MAUtil11BasicStringIcEE_137(i0, i1);
 		return r14;
 
-		case 0x369:
+		case 0x368:
 			__ZN8Wormhole22NativeUIMessageHandler11customEventERK7MAEvent_138(i0, i1);
 		return 0;
 
-		case 0x36a:
+		case 0x369:
 			__ZN8Wormhole22NativeUIMessageHandlerD1Ev_138(i0);
 		return 0;
 
-		case 0x36b:
+		case 0x36a:
 			__ZN8Wormhole22NativeUIMessageHandlerD0Ev_138(i0);
 		return 0;
 
-		case 0x36c:
+		case 0x36b:
 			__ZN8Wormhole22NativeUIMessageHandler16nativeUIEventsOnEv_138(i0);
 		return 0;
 
-		case 0x36d:
+		case 0x36c:
 			__ZN8Wormhole22NativeUIMessageHandler17nativeUIEventsOffEv_138(i0);
 		return 0;
 
-		case 0x36e:
+		case 0x36d:
 			r14 = __ZN8Wormhole22NativeUIMessageHandler13handleMessageERNS_13MessageStreamE_138(i0, i1);
 		return r14;
 
-		case 0x36f:
+		case 0x36e:
 			__ZN8Wormhole22NativeUIMessageHandler19sendNativeUISuccessEPKc_138(i0, i1);
 		return 0;
 
-		case 0x370:
+		case 0x36f:
 			__ZN8Wormhole22NativeUIMessageHandler17sendNativeUIErrorEPKc_138(i0, i1);
 		return 0;
 
-		case 0x371:
+		case 0x370:
 			__ZN8Wormhole22ResourceMessageHandler19finishedDownloadingEPN6MAUtil10DownloaderEi_139(i0, i1, i2);
 		return 0;
 
-		case 0x372:
+		case 0x371:
 			__ZN8Wormhole22ResourceMessageHandler17downloadCancelledEPN6MAUtil10DownloaderE_139(i0, i1);
 		return 0;
 
-		case 0x373:
+		case 0x372:
 			__ZN8Wormhole22ResourceMessageHandler5errorEPN6MAUtil10DownloaderEi_139(i0, i1, i2);
 		return 0;
 
-		case 0x374:
+		case 0x373:
 			__ZN8Wormhole22ResourceMessageHandlerD1Ev_139(i0);
 		return 0;
 
-		case 0x375:
+		case 0x374:
 			__ZN8Wormhole22ResourceMessageHandlerD0Ev_139(i0);
 		return 0;
 
-		case 0x376:
+		case 0x375:
 			r14 = __ZN8Wormhole22ResourceMessageHandler13handleMessageERNS_13MessageStreamE_139(i0, i1);
 		return r14;
 
-		case 0x377:
+		case 0x376:
 			__ZN8Wormhole22ResourceMessageHandler21setLogMessageListenerEPNS_18LogMessageListenerE_139(i0, i1);
 		return 0;
 
-		case 0x378:
+		case 0x377:
 			__ZN8Wormhole22ResourceMessageHandler20sendRemoteLogMessageERKN6MAUtil11BasicStringIcEES5__139(i0, i1, i2);
 		return 0;
 
-		case 0x379:
+		case 0x378:
 			r14 = __ZN8Wormhole22ResourceMessageHandler17loadImageResourceEPKc_139(i0, i1);
 		return r14;
 
-		case 0x37a:
+		case 0x379:
 			__GLOBAL__I__ZN8Wormhole23PushNotificationManagerC2EPNS_22PhoneGapMessageHandlerE_140();
 		return 0;
 
-		case 0x37b:
+		case 0x37a:
 			__GLOBAL__D__ZN8Wormhole23PushNotificationManagerC2EPNS_22PhoneGapMessageHandlerE_140();
 		return 0;
 
-		case 0x37c:
+		case 0x37b:
 			__ZN8Wormhole23PushNotificationManager26didReceivePushNotificationERN12Notification16PushNotificationE_140(i0, i1);
 		return 0;
 
-		case 0x37d:
+		case 0x37c:
 			__ZN8Wormhole23PushNotificationManager24didApplicationRegisteredERN6MAUtil11BasicStringIcEE_140(i0, i1);
 		return 0;
 
-		case 0x37e:
+		case 0x37d:
 			__ZN8Wormhole23PushNotificationManager24didApplicationUnregisterEv_140(i0);
 		return 0;
 
-		case 0x37f:
+		case 0x37e:
 			__ZN8Wormhole23PushNotificationManager19didFailedToRegisterERN6MAUtil11BasicStringIcEE_140(i0, i1);
 		return 0;
 
-		case 0x380:
+		case 0x37f:
 			__ZN8Wormhole23PushNotificationManagerD1Ev_140(i0);
 		return 0;
 
-		case 0x381:
+		case 0x380:
 			__ZN8Wormhole23PushNotificationManagerD0Ev_140(i0);
 		return 0;
 
-		case 0x382:
+		case 0x381:
 			__ZN8Wormhole23PushNotificationManager13handleMessageERNS_11JSONMessageE_140(i0, i1);
 		return 0;
 
-		case 0x383:
+		case 0x382:
 			__ZN8Wormhole23PushNotificationManager24setPushNotificationTypesERNS_11JSONMessageE_140(i0, i1);
 		return 0;
 
-		case 0x384:
+		case 0x383:
 			__ZN8Wormhole23PushNotificationManager15connectToServerERN6MAUtil11BasicStringIcEEi_140(i0, i1, i2);
 		return 0;
 
-		case 0x385:
+		case 0x384:
 			r14 = __ZN8Wormhole23PushNotificationManager13parseJSStringERKN6MAUtil11BasicStringIcEE_140(i0, i1, i2);
 		return r14;
 
-		case 0x389:
+		case 0x388:
 			__ZN8Wormhole13TCPConnection15connectFinishedEPN6MAUtil10ConnectionEi_141(i0, i1, i2);
 		return 0;
 
-		case 0x38a:
+		case 0x389:
 			__ZN8Wormhole13TCPConnection17connWriteFinishedEPN6MAUtil10ConnectionEi_141(i0, i1, i2);
 		return 0;
 
-		case 0x38b:
+		case 0x38a:
 			__ZN8Wormhole13TCPConnectionD1Ev_141(i0);
 		return 0;
 
-		case 0x38c:
+		case 0x38b:
 			__ZN8Wormhole13TCPConnectionD0Ev_141(i0);
 		return 0;
 
-		case 0x38d:
+		case 0x38c:
 			__ZN8Wormhole13TCPConnection8sendDataERKN6MAUtil11BasicStringIcEE_141(i0, i1);
 		return 0;
 
-		case 0x38e:
+		case 0x38d:
 			r14 = __ZN8Wormhole13TCPConnection7connectERKN6MAUtil11BasicStringIcEEi_141(i0, i1, i2);
 		return r14;
 
-		case 0x38f:
+		case 0x38e:
 			__ZN8Wormhole14PhoneGapCamera11customEventERK7MAEvent_142(i0, i1);
 		return 0;
 
-		case 0x390:
+		case 0x38f:
 			__ZN8Wormhole14PhoneGapCameraD1Ev_142(i0);
 		return 0;
 
-		case 0x391:
+		case 0x390:
 			__ZN8Wormhole14PhoneGapCameraD0Ev_142(i0);
 		return 0;
 
-		case 0x392:
+		case 0x391:
 			__ZN8Wormhole14PhoneGapCamera13handleMessageERNS_11JSONMessageE_142(i0, i1);
 		return 0;
 
-		case 0x393:
+		case 0x392:
 			__ZN8Wormhole15PhoneGapCapture11customEventERK7MAEvent_143(i0, i1);
 		return 0;
 
-		case 0x394:
+		case 0x393:
 			__ZN8Wormhole15PhoneGapCaptureD1Ev_143(i0);
 		return 0;
 
-		case 0x395:
+		case 0x394:
 			__ZN8Wormhole15PhoneGapCaptureD0Ev_143(i0);
 		return 0;
 
-		case 0x396:
+		case 0x395:
 			__ZN8Wormhole15PhoneGapCapture13handleMessageERNS_11JSONMessageE_143(i0, i1);
 		return 0;
 
-		case 0x397:
+		case 0x396:
 			__ZN8Wormhole12PhoneGapFileD1Ev_144(i0);
 		return 0;
 
-		case 0x398:
+		case 0x397:
 			__ZN8Wormhole12PhoneGapFileD0Ev_144(i0);
 		return 0;
 
-		case 0x399:
+		case 0x398:
 			r14 = __ZN8Wormhole12PhoneGapFile18emitFileSystemInfoERKN6MAUtil11BasicStringIcEES5__144(i0, i1, i2, i3);
 		return r14;
 
-		case 0x39a:
+		case 0x399:
 			r14 = __ZN8Wormhole12PhoneGapFile18emitDirectoryEntryERKN6MAUtil11BasicStringIcEES5__144(i0, i1, i2, i3);
 		return r14;
 
-		case 0x39b:
+		case 0x39a:
 			r14 = __ZN8Wormhole12PhoneGapFile13emitFileEntryERKN6MAUtil11BasicStringIcEES5__144(i0, i1, i2, i3);
 		return r14;
 
-		case 0x39c:
+		case 0x39b:
 			r14 = __ZN8Wormhole12PhoneGapFile8emitFileERKN6MAUtil11BasicStringIcEES5_S5_S5_S5__144(i0, i1, i2, i3);
 		return r14;
 
-		case 0x39d:
+		case 0x39c:
 			r14 = __ZN8Wormhole12PhoneGapFile12emitMetadataERKN6MAUtil11BasicStringIcEE_144(i0, i1, i2);
 		return r14;
 
-		case 0x39e:
+		case 0x39d:
 			__ZN8Wormhole12PhoneGapFile11callSuccessERKN6MAUtil11BasicStringIcEES5_S5__144(i0, i1, i2, i3);
 		return 0;
 
-		case 0x39f:
+		case 0x39e:
 			__ZN8Wormhole12PhoneGapFile13callFileErrorERKN6MAUtil11BasicStringIcEES5__144(i0, i1, i2);
 		return 0;
 
-		case 0x3a0:
+		case 0x39f:
 			__ZN8Wormhole12PhoneGapFile21callFileTransferErrorERKN6MAUtil11BasicStringIcEES5_S5_S5__144(i0, i1, i2, i3);
 		return 0;
 
-		case 0x3a1:
+		case 0x3a0:
 			__ZN8Wormhole12PhoneGapFile20callFileUploadResultERKN6MAUtil11BasicStringIcEES5_S5_S5__144(i0, i1, i2, i3);
 		return 0;
 
-		case 0x3a2:
+		case 0x3a1:
 			__ZN8Wormhole12PhoneGapFile17handleFileMessageERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3a3:
+		case 0x3a2:
 			__ZN8Wormhole12PhoneGapFile25handleFileTransferMessageERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3a4:
+		case 0x3a3:
 			__ZN8Wormhole12PhoneGapFile23actionRequestFileSystemERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3a5:
+		case 0x3a4:
 			__ZN8Wormhole12PhoneGapFile31actionResolveLocalFileSystemURIERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3a6:
+		case 0x3a5:
 			__ZN8Wormhole12PhoneGapFile13actionGetFileERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3a7:
+		case 0x3a6:
 			__ZN8Wormhole12PhoneGapFile18actionGetDirectoryERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3a8:
+		case 0x3a7:
 			__ZN8Wormhole12PhoneGapFile21actionGetFileMetadataERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3a9:
+		case 0x3a8:
 			__ZN8Wormhole12PhoneGapFile17actionGetMetadataERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3aa:
+		case 0x3a9:
 			__ZN8Wormhole12PhoneGapFile11actionWriteERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3ab:
+		case 0x3aa:
 			__ZN8Wormhole12PhoneGapFile16actionReadAsTextERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3ac:
+		case 0x3ab:
 			__ZN8Wormhole12PhoneGapFile19actionReadAsDataURLERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3ad:
+		case 0x3ac:
 			__ZN8Wormhole12PhoneGapFile14actionTruncateERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3ae:
+		case 0x3ad:
 			__ZN8Wormhole12PhoneGapFile12actionCopyToERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3af:
+		case 0x3ae:
 			__ZN8Wormhole12PhoneGapFile12actionMoveToERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3b0:
+		case 0x3af:
 			__ZN8Wormhole12PhoneGapFile20actionCopyMoveHelperERNS_11JSONMessageEb_144(i0, i1, i2);
 		return 0;
 
-		case 0x3b1:
+		case 0x3b0:
 			__ZN8Wormhole12PhoneGapFile12actionRemoveERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3b2:
+		case 0x3b1:
 			__ZN8Wormhole12PhoneGapFile23actionRemoveRecursivelyERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3b3:
+		case 0x3b2:
 			__ZN8Wormhole12PhoneGapFile17actionReadEntriesERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3b4:
+		case 0x3b3:
 			__ZN8Wormhole12PhoneGapFile20actionTestFileExistsERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3b5:
+		case 0x3b4:
 			__ZN8Wormhole12PhoneGapFile25actionTestDirectoryExistsERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3b6:
+		case 0x3b5:
 			__ZN8Wormhole12PhoneGapFile22actionGetFreeDiskSpaceERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3b7:
+		case 0x3b6:
 			__ZN8Wormhole12PhoneGapFile16actionUploadFileERNS_11JSONMessageE_144(i0, i1);
 		return 0;
 
-		case 0x3b8:
+		case 0x3b7:
 			__ZN8Wormhole28PhoneGapFileUploadConnectionD1Ev_144(i0);
 		return 0;
 
-		case 0x3b9:
+		case 0x3b8:
 			__ZN8Wormhole28PhoneGapFileUploadConnectionD0Ev_144(i0);
 		return 0;
 
-		case 0x3ba:
+		case 0x3b9:
 			__ZN8Wormhole28PhoneGapFileUploadConnection14dataDownloadedEii_144(i0, i1, i2);
 		return 0;
 
-		case 0x3bb:
+		case 0x3ba:
 			__ZN8Wormhole22PhoneGapMessageHandler11sensorEventE8MASensor_145(i0, i1, i2, i3);
 		return 0;
 
-		case 0x3bc:
+		case 0x3bb:
 			__ZN8Wormhole22PhoneGapMessageHandlerD1Ev_145(i0);
 		return 0;
 
-		case 0x3bd:
+		case 0x3bc:
 			__ZN8Wormhole22PhoneGapMessageHandlerD0Ev_145(i0);
 		return 0;
 
-		case 0x3be:
+		case 0x3bd:
 			__ZN8Wormhole22PhoneGapMessageHandler17setSensorsHandlerEPNS_15PhoneGapSensorsE_145(i0, i1);
 		return 0;
 
-		case 0x3bf:
+		case 0x3be:
 			__ZN8Wormhole22PhoneGapMessageHandler23setSensorManagerHandlerEPNS_13SensorManagerE_145(i0, i1);
 		return 0;
 
-		case 0x3c0:
+		case 0x3bf:
 			__ZN8Wormhole22PhoneGapMessageHandler14setFileHandlerEPNS_12PhoneGapFileE_145(i0, i1);
 		return 0;
 
-		case 0x3c1:
+		case 0x3c0:
 			__ZN8Wormhole22PhoneGapMessageHandler17setCaptureHandlerEPNS_15PhoneGapCaptureE_145(i0, i1);
 		return 0;
 
-		case 0x3c2:
+		case 0x3c1:
 			__ZN8Wormhole22PhoneGapMessageHandler16setCameraHandlerEPNS_14PhoneGapCameraE_145(i0, i1);
 		return 0;
 
-		case 0x3c3:
+		case 0x3c2:
 			__ZN8Wormhole22PhoneGapMessageHandler33setPushNotificationManagerHandlerEPNS_23PushNotificationManagerE_145(i0, i1);
 		return 0;
 
-		case 0x3c4:
+		case 0x3c3:
 			r14 = __ZN8Wormhole22PhoneGapMessageHandler21handlePhoneGapMessageERNS_11JSONMessageE_145(i0, i1);
 		return r14;
 
-		case 0x3c5:
+		case 0x3c4:
 			__ZN8Wormhole22PhoneGapMessageHandler18initializePhoneGapEv_145(i0);
 		return 0;
 
-		case 0x3c6:
+		case 0x3c5:
 			__ZN8Wormhole22PhoneGapMessageHandler12setBeepSoundEi_145(i0, i1);
 		return 0;
 
-		case 0x3c7:
+		case 0x3c6:
 			__ZN8Wormhole22PhoneGapMessageHandler11customEventERK7MAEvent_145(i0, i1);
 		return 0;
 
-		case 0x3c8:
+		case 0x3c7:
 			__ZN8Wormhole22PhoneGapMessageHandler18sendConnectionTypeEN6MAUtil11BasicStringIcEE_145(i0, i1);
 		return 0;
 
-		case 0x3c9:
+		case 0x3c8:
 			__ZN8Wormhole22PhoneGapMessageHandler14enableHardwareEv_145(i0);
 		return 0;
 
-		case 0x3ca:
+		case 0x3c9:
 			__ZN8Wormhole22PhoneGapMessageHandler20sendDevicePropertiesEN6MAUtil11BasicStringIcEE_145(i0, i1);
 		return 0;
 
-		case 0x3cb:
+		case 0x3ca:
 			__ZN8Wormhole22PhoneGapMessageHandler15processKeyEventEii_145(i0, i1, i2);
 		return 0;
 
-		case 0x3cc:
+		case 0x3cb:
 			__ZN8Wormhole22PhoneGapMessageHandler11callSuccessERKN6MAUtil11BasicStringIcEES5_S5_bS5__145(i0, i1, i2, i3);
 		return 0;
 
-		case 0x3cd:
+		case 0x3cc:
 			__ZN8Wormhole22PhoneGapMessageHandler9callErrorERKN6MAUtil11BasicStringIcEES5_S5_b_145(i0, i1, i2, i3);
 		return 0;
 
-		case 0x3ce:
+		case 0x3cd:
 			__ZN8Wormhole22PhoneGapMessageHandler12callCallbackERKN6MAUtil11BasicStringIcEES5_S5_S5_bS5__145(i0, i1, i2, i3);
 		return 0;
 
-		case 0x3cf:
+		case 0x3ce:
 			__ZN8Wormhole22PhoneGapMessageHandler6callJSERKN6MAUtil11BasicStringIcEE_145(i0, i1);
 		return 0;
 
-		case 0x3d0:
+		case 0x3cf:
 			__ZN8Wormhole22PhoneGapMessageHandler20setSensorEventTargetEib_145(i0, i1, i2);
 		return 0;
 
-		case 0x3d1:
+		case 0x3d0:
 			__ZThn4_N8Wormhole22PhoneGapMessageHandler11customEventERK7MAEvent_145(i0, i1);
 		return 0;
 
-		case 0x3d2:
+		case 0x3d1:
 			__ZN8Wormhole15PhoneGapSensorsD1Ev_146(i0);
 		return 0;
 
-		case 0x3d3:
+		case 0x3d2:
 			__ZN8Wormhole15PhoneGapSensorsD0Ev_146(i0);
 		return 0;
 
-		case 0x3d4:
+		case 0x3d3:
 			__ZN8Wormhole15PhoneGapSensors13handleMessageERNS_11JSONMessageE_146(i0, i1);
 		return 0;
 
-		case 0x3d5:
+		case 0x3d4:
 			__ZN8Wormhole15PhoneGapSensors21sendAccelerometerDataE8MASensor_146(i0, i1, i2, i3);
 		return 0;
 
-		case 0x3d6:
+		case 0x3d5:
 			__ZN8Wormhole15PhoneGapSensors15sendCompassDataE8MASensor_146(i0, i1, i2, i3);
 		return 0;
 
-		case 0x3d7:
+		case 0x3d6:
 			__ZN8Wormhole15PhoneGapSensors16sendLocationDataERK7MAEvent_146(i0, i1);
 		return 0;
 
-		case 0x3d8:
+		case 0x3d7:
 			__ZN8Wormhole15PhoneGapSensors26processAcelerometerRequestEN6MAUtil11BasicStringIcEEb_146(i0, i1, i2);
 		return 0;
 
-		case 0x3d9:
+		case 0x3d8:
 			__ZN8Wormhole15PhoneGapSensors22processLocationRequestEN6MAUtil11BasicStringIcEEb_146(i0, i1, i2);
 		return 0;
 
-		case 0x3da:
+		case 0x3d9:
 			__ZN8Wormhole15PhoneGapSensors21processCompassRequestEN6MAUtil11BasicStringIcEEb_146(i0, i1, i2);
 		return 0;
 
-		case 0x3db:
+		case 0x3da:
 			__ZN8Wormhole15PhoneGapSensors21sendAccelerometerDataEN6MAUtil11BasicStringIcEE8MASensor_146(i0, i1, i2, i3);
 		return 0;
 
-		case 0x3dc:
+		case 0x3db:
 			__ZN8Wormhole15PhoneGapSensors15sendCompassDataEN6MAUtil11BasicStringIcEE8MASensor_146(i0, i1, i2, i3);
 		return 0;
 
-		case 0x3dd:
+		case 0x3dc:
 			__ZN8Wormhole13SensorManagerD1Ev_147(i0);
 		return 0;
 
-		case 0x3de:
+		case 0x3dd:
 			__ZN8Wormhole13SensorManagerD0Ev_147(i0);
 		return 0;
 
-		case 0x3df:
+		case 0x3de:
 			__ZN8Wormhole13SensorManager13handleMessageERNS_11JSONMessageE_147(i0, i1);
 		return 0;
 
-		case 0x3e0:
+		case 0x3df:
 			__ZN8Wormhole13SensorManager14sendSensorDataE8MASensor_147(i0, i1, i2, i3);
 		return 0;
 
-		case 0x3e1:
+		case 0x3e0:
 			__ZN8Wormhole13SensorManager11findSensorsERNS_11JSONMessageE_147(i0, i1);
 		return 0;
 
-		case 0x3e2:
+		case 0x3e1:
 			__GLOBAL__I__ZN6MAUtil7YAJLDom5ValueC2ENS1_4TypeE_158();
 		return 0;
 
-		case 0x3e3:
+		case 0x3e2:
 			__GLOBAL__D__ZN6MAUtil7YAJLDom5ValueC2ENS1_4TypeE_158();
 		return 0;
 
-		case 0x3e4:
+		case 0x3e3:
 			__ZN6MAUtil7YAJLDom5ValueD1Ev_158(i0);
 		return 0;
 
-		case 0x3e5:
+		case 0x3e4:
 			__ZN6MAUtil7YAJLDom5ValueD0Ev_158(i0);
 		return 0;
 
-		case 0x3e6:
+		case 0x3e5:
 			r14 = __ZNK6MAUtil7YAJLDom5Value9toBooleanEv_158(i0);
 		return r14;
 
-		case 0x3e7:
+		case 0x3e6:
 			r14 = __ZNK6MAUtil7YAJLDom5Value5toIntEv_158(i0);
 		return r14;
 
-		case 0x3e8:
+		case 0x3e7:
 			r14 = __ZNK6MAUtil7YAJLDom5Value8toDoubleEv_158(i0);
 		return r14;
 
-		case 0x3e9:
+		case 0x3e8:
 			r14 = __ZN6MAUtil7YAJLDom5Value14getValueForKeyERKNS_11BasicStringIcEE_158(i0, i1);
 		return r14;
 
-		case 0x3ea:
+		case 0x3e9:
 			r14 = __ZN6MAUtil7YAJLDom5Value15getValueByIndexEi_158(i0, i1);
 		return r14;
 
-		case 0x3eb:
+		case 0x3ea:
 			r14 = __ZNK6MAUtil7YAJLDom5Value14getValueForKeyERKNS_11BasicStringIcEE_158(i0, i1);
 		return r14;
 
-		case 0x3ec:
+		case 0x3eb:
 			r14 = __ZNK6MAUtil7YAJLDom5Value15getValueByIndexEi_158(i0, i1);
 		return r14;
 
-		case 0x3ed:
+		case 0x3ec:
 			r14 = __ZNK6MAUtil7YAJLDom5Value17getNumChildValuesEv_158(i0);
 		return r14;
 
-		case 0x3ee:
+		case 0x3ed:
 			__ZN6MAUtil7YAJLDom9NullValueD1Ev_158(i0);
 		return 0;
 
-		case 0x3ef:
+		case 0x3ee:
 			__ZN6MAUtil7YAJLDom9NullValueD0Ev_158(i0);
 		return 0;
 
-		case 0x3f0:
+		case 0x3ef:
 			r14 = __ZNK6MAUtil7YAJLDom9NullValue8toStringEv_158(i0, i1);
 		return r14;
 
-		case 0x3f1:
+		case 0x3f0:
 			__ZN6MAUtil7YAJLDom12BooleanValueD1Ev_158(i0);
 		return 0;
 
-		case 0x3f2:
+		case 0x3f1:
 			__ZN6MAUtil7YAJLDom12BooleanValueD0Ev_158(i0);
 		return 0;
 
-		case 0x3f3:
+		case 0x3f2:
 			r14 = __ZNK6MAUtil7YAJLDom12BooleanValue8toStringEv_158(i0, i1);
 		return r14;
 
-		case 0x3f4:
+		case 0x3f3:
 			r14 = __ZNK6MAUtil7YAJLDom12BooleanValue9toBooleanEv_158(i0);
 		return r14;
 
-		case 0x3f5:
+		case 0x3f4:
 			__ZN6MAUtil7YAJLDom11NumberValueD1Ev_158(i0);
 		return 0;
 
-		case 0x3f6:
+		case 0x3f5:
 			__ZN6MAUtil7YAJLDom11NumberValueD0Ev_158(i0);
 		return 0;
 
-		case 0x3f7:
+		case 0x3f6:
 			r14 = __ZNK6MAUtil7YAJLDom11NumberValue8toStringEv_158(i0, i1);
 		return r14;
 
-		case 0x3f8:
+		case 0x3f7:
 			r14 = __ZNK6MAUtil7YAJLDom11NumberValue5toIntEv_158(i0);
 		return r14;
 
-		case 0x3f9:
+		case 0x3f8:
 			r14 = __ZNK6MAUtil7YAJLDom11NumberValue8toDoubleEv_158(i0);
 		return r14;
 
-		case 0x3fa:
+		case 0x3f9:
 			__ZN6MAUtil7YAJLDom11StringValueD1Ev_158(i0);
 		return 0;
 
-		case 0x3fb:
+		case 0x3fa:
 			__ZN6MAUtil7YAJLDom11StringValueD0Ev_158(i0);
 		return 0;
 
-		case 0x3fc:
+		case 0x3fb:
 			r14 = __ZNK6MAUtil7YAJLDom11StringValue8toStringEv_158(i0, i1);
 		return r14;
 
-		case 0x3fd:
+		case 0x3fc:
 			__ZN6MAUtil7YAJLDom8MapValueD1Ev_158(i0);
 		return 0;
 
-		case 0x3fe:
+		case 0x3fd:
 			__ZN6MAUtil7YAJLDom8MapValueD0Ev_158(i0);
 		return 0;
 
-		case 0x3ff:
+		case 0x3fe:
 			r14 = __ZNK6MAUtil7YAJLDom8MapValue8toStringEv_158(i0, i1);
 		return r14;
 
-		case 0x400:
+		case 0x3ff:
 			r14 = __ZN6MAUtil7YAJLDom8MapValue14getValueForKeyERKNS_11BasicStringIcEE_158(i0, i1);
 		return r14;
 
-		case 0x401:
+		case 0x400:
 			r14 = __ZNK6MAUtil7YAJLDom8MapValue14getValueForKeyERKNS_11BasicStringIcEE_158(i0, i1);
 		return r14;
 
-		case 0x402:
+		case 0x401:
 			__ZN6MAUtil7YAJLDom10ArrayValueD1Ev_158(i0);
 		return 0;
 
-		case 0x403:
+		case 0x402:
 			__ZN6MAUtil7YAJLDom10ArrayValueD0Ev_158(i0);
 		return 0;
 
-		case 0x404:
+		case 0x403:
 			r14 = __ZNK6MAUtil7YAJLDom10ArrayValue8toStringEv_158(i0, i1);
 		return r14;
 
-		case 0x405:
+		case 0x404:
 			r14 = __ZN6MAUtil7YAJLDom10ArrayValue15getValueByIndexEi_158(i0, i1);
 		return r14;
 
-		case 0x406:
+		case 0x405:
 			r14 = __ZNK6MAUtil7YAJLDom10ArrayValue15getValueByIndexEi_158(i0, i1);
 		return r14;
 
-		case 0x407:
+		case 0x406:
 			r14 = __ZNK6MAUtil7YAJLDom10ArrayValue17getNumChildValuesEv_158(i0);
 		return r14;
 
-		case 0x408:
+		case 0x407:
 			r14 = __ZN6MAUtil7YAJLDom10parse_nullEPv_158(i0);
 		return r14;
 
-		case 0x409:
+		case 0x408:
 			r14 = __ZN6MAUtil7YAJLDom13parse_booleanEPvi_158(i0, i1);
 		return r14;
 
-		case 0x40a:
+		case 0x409:
 			r14 = __ZN6MAUtil7YAJLDom12parse_numberEPvPKcj_158(i0, i1, i2);
 		return r14;
 
-		case 0x40b:
+		case 0x40a:
 			r14 = __ZN6MAUtil7YAJLDom12parse_stringEPvPKhj_158(i0, i1, i2);
 		return r14;
 
-		case 0x40c:
+		case 0x40b:
 			r14 = __ZN6MAUtil7YAJLDom15parse_start_mapEPv_158(i0);
 		return r14;
 
-		case 0x40d:
+		case 0x40c:
 			r14 = __ZN6MAUtil7YAJLDom13parse_map_keyEPvPKhj_158(i0, i1, i2);
 		return r14;
 
-		case 0x40e:
+		case 0x40d:
 			r14 = __ZN6MAUtil7YAJLDom13parse_end_mapEPv_158(i0);
 		return r14;
 
-		case 0x40f:
+		case 0x40e:
 			r14 = __ZN6MAUtil7YAJLDom17parse_start_arrayEPv_158(i0);
 		return r14;
 
-		case 0x410:
+		case 0x40f:
 			r14 = __ZN6MAUtil7YAJLDom15parse_end_arrayEPv_158(i0);
 		return r14;
 
-		case 0x413:
+		case 0x412:
 			__GLOBAL__I__ZN12Notification19NotificationManager9sInstanceE_161();
 		return 0;
 
-		case 0x414:
+		case 0x413:
 			__GLOBAL__D__ZN12Notification19NotificationManager9sInstanceE_161();
 		return 0;
 
-		case 0x415:
+		case 0x414:
 			__ZN12Notification19NotificationManager11customEventERK7MAEvent_161(i0, i1);
 		return 0;
 
-		case 0x416:
+		case 0x415:
 			__ZN12Notification19NotificationManagerD1Ev_161(i0);
 		return 0;
 
-		case 0x417:
+		case 0x416:
 			__ZN12Notification19NotificationManagerD0Ev_161(i0);
 		return 0;
 
-		case 0x418:
+		case 0x417:
 			__ZN12Notification16PushNotificationD1Ev_162(i0);
 		return 0;
 
-		case 0x419:
+		case 0x418:
 			__ZN12Notification16PushNotificationD0Ev_162(i0);
 		return 0;
 

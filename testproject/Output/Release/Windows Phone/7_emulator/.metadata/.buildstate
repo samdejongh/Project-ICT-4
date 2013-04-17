@@ -1,41 +1,49 @@
 rebuild-needed = false
 variant = Windows\\ Phone/7 Release emulator\\\\\\ emulator
 success = true
-timestamp = 1363254946166
-output-main = C:\\\\MoSync\\\\workspace\\\\testproject\\\\Output\\\\Release\\\\Windows\\ Phone\\\\7_emulator\\\\package\\\\project\\\\bin\\\\rebuild_release\\\\testproject.xap
+timestamp = 1366188527253
+output-main = C:\\\\Users\\\\senne\\\\Documents\\\\Git\\\\testproject\\\\Output\\\\Release\\\\Windows\\ Phone\\\\7_emulator\\\\package\\\\project\\\\bin\\\\rebuild_release\\\\testproject.xap
 
 [files]
+LocalFiles/js/Database.js = 1364500878314
 LocalFiles/settings_icon_hit.png = 1362150303000
 LocalFiles/settings_icon.png = 1362150309000
 LocalFiles/logo.png = 1362153666000
-LocalFiles/index.html = 1363194457428
+LocalFiles/index.html = 1366188287104
 .project = 1362598139000
-LocalFiles/style.css = 1362595275000
-LocalFiles/traininghistory.html = 1362156299000
-.mosyncproject.local = 1363195236978
-.mosyncproject = 1363195236977
-LocalFiles/js/wormhole.js = 1362598139000
-LocalFiles.bin = 1363196400825
+LocalFiles/_notes/index1.html.mno = 1364216380359
+LocalFiles/style.css = 1366188503950
+.mosyncproject.local = 1366185180442
+LocalFiles/traininghistory.html = 1363257662687
+.mosyncproject = 1366185180440
+LocalFiles/js/wormhole.js = 1360854032000
 LocalFiles/runnerguide_icon_hit.png = 1362150316000
+LocalFiles.bin = 1364218486374
 .cproject = 1362598139000
 LocalFiles/orienteeringtrainer_icon.png = 1362150270000
-LocalFiles/js/Maps.js = 1363174742572
+LocalFiles/js/Maps.js = 1366183078230
+LocalFiles/CSS/maps.css = 1364285182610
 LocalFiles/orienteeringtrainer_icon_hit.png = 1362150282000
 .settings/org.eclipse.wst.jsdt.ui.superType.container = 1362598139000
 LocalFiles/traininghistory_icon_hit.png = 1362150290000
 LocalFiles/traininghistory_icon.png = 1362150297000
-main.cpp = 1363194539210
+main.cpp = 1363959428058
+LocalFiles/js/Main.js = 1364494486418
 .build = 1362598139000
 LocalFiles/runnerguide_icon.png = 1362150322000
 Resources/Resources.lst = 1362598139000
-LocalFiles/orienteeringtrainer.html = 1362612048000
-LocalFiles/routegenerator.html = 1362599896000
+LocalFiles/orienteeringtrainer.html = 1363435666647
+LocalFiles/routegenerator.html = 1363435655687
+LocalFiles/_notes/style.css.mno = 1366184483761
 .settings/org.eclipse.core.resources.prefs = 1362598139000
-LocalFiles/settings.html = 1363195760148
+LocalFiles/settings.html = 1364494862706
+LocalFiles/CSS/Level1_Arial.css = 1364157801864
 Resources/beep.wav = 1362598139000
-LocalFiles/index1.html = 1363177038619
+LocalFiles/database.html = 1364486256888
+LocalFiles/index1.html = 1366182939730
+.settings/org.eclipse.ltk.core.refactoring.prefs = 1364467535192
 .settings/org.eclipse.wst.jsdt.ui.superType.name = 1362598139000
-Resources/LocalFiles.bin = 1363254946296
+Resources/LocalFiles.bin = 1366188527291
 
 [dependencies]
 /testproject/Output/Release/Windows Phone/7_emulator/resources = /testproject/Resources/LocalFiles.bin, /testproject/Resources/beep.wav
@@ -43,7 +51,7 @@ Resources/LocalFiles.bin = 1363254946296
 /testproject/Resources/Resources.lst = /testproject/Output/Release/Windows Phone/7_emulator/resources
 /testproject/main.cpp = /testproject/Output/Release/Windows Phone/7_emulator/main.s
 /testproject/Output/Release/Windows Phone/7_emulator/MAHeaders.h = /testproject/Resources/Resources.lst
-/testproject/Output/Release/Windows Phone/7_emulator/main.s = /testproject/MoSync/include/Wormhole/Libs/JSONMessage.h, /testproject/MoSync/include/Notification/PushNotificationListener.h, /testproject/MoSync/include/mastring.h, /testproject/MoSync/include/Wormhole/FileUtil.h, /testproject/MoSync/include/MAUtil/HashDict_impl.h, /testproject/MoSync/include/Wormhole/Libs/Notification/PushNotificationManager.h, /testproject/MoSync/include/Wormhole/MessageHandler.h, /testproject/MoSync/include/maapi.h, /testproject/MoSync/include/maheap.h, /testproject/MoSync/include/Wormhole/Libs/PhoneGap/PhoneGapCapture.h, /testproject/MoSync/include/MAUtil/ListenerSet.h, /testproject/MoSync/include/Wormhole/Libs/PhoneGap/PhoneGapCamera.h, /testproject/MoSync/include/Wormhole/MessageProtocol.h, /testproject/MoSync/include/NativeUI/Widget.h, /testproject/MoSync/include/kazlib/dict.h, /testproject/MoSync/include/Wormhole/Libs/PhoneGap/PhoneGapFile.h, /testproject/MoSync/include/yajl/YAJLDom.h, /testproject/MoSync/include/Wormhole/Encoder.h, /testproject/MoSync/include/Wormhole/Libs/Notification/TCPConnection.h, /testproject/MoSync/include/IX_WIDGET.h, /testproject/MoSync/include/MAUtil/util.h, /testproject/MoSync/include/MAUtil/Downloader.h, /testproject/MoSync/include/NativeUI/WidgetUtil.h, /testproject/MoSync/include/MAUtil/Moblet.h, /testproject/MoSync/include/MAUtil/String.h, /testproject/MoSync/include/NativeUI/Screen.h, /testproject/MoSync/include/Wormhole/Libs/PhoneGap/PhoneGapSensors.h, /testproject/MoSync/include/Wormhole/Libs/PhoneGap/PhoneGapMessageHandler.h, /testproject/MoSync/include/mavsprintf.h, /testproject/MoSync/include/MAUtil/HashMap_impl.h, /testproject/MoSync/include/MAUtil/Dictionary_impl.h, /testproject/MoSync/include/Wormhole/Libs/JSNativeUI/ResourceMessageHandler.h, /testproject/MoSync/include/MAUtil/collection_common.h, /testproject/MoSync/include/MAUtil/Map.h, /testproject/MoSync/include/maapi_defs.h, /testproject/MoSync/include/MAUtil/RefCounted.h, /testproject/MoSync/include/maassert.h, /testproject/MoSync/include/limits.h, /testproject/MoSync/include/Wormhole/WebAppMoblet.h, /testproject/MoSync/include/kazlib/hash.h, /testproject/MoSync/include/Wormhole/WebViewMessage.h, /testproject/MoSync/include/MAUtil/HashMap.h, /testproject/MoSync/include/NativeUI/WebView.h, /testproject/main.cpp, /testproject/MoSync/include/MAUtil/Dictionary.h, /testproject/MoSync/include/Wormhole/MessageStreamJSON.h, /testproject/MoSync/include/Wormhole/HybridMoblet.h, /testproject/MoSync/include/MAUtil/Environment.h, /testproject/MoSync/include/MAUtil/Connection.h, /testproject/MoSync/include/Wormhole/Libs/W3C/SensorManager.h, /testproject/MoSync/include/MAUtil/Vector.h, /testproject/MoSync/include/MAUtil/HashDict.h, /testproject/MoSync/include/ma.h, /testproject/MoSync/include/maarg.h, /testproject/MoSync/include/mactype.h, /testproject/MoSync/include/Wormhole/CustomMoblet.h, /testproject/MoSync/include/Wormhole/FunTable.h, /testproject/MoSync/include/Wormhole/MessageStream.h, /testproject/MoSync/include/Wormhole/Libs/JSNativeUI/NativeUIMessageHandler.h, /testproject/MoSync/include/conprint.h
+/testproject/Output/Release/Windows Phone/7_emulator/main.s = /testproject/main.cpp
 
 [build-properties]
 com.mobilesorcery.sdk.html5.support = true
@@ -58,6 +66,6 @@ winmobilecs:guid = 16ebac70-6e30-1030-8044-f3a93e832592
 build.prefs:memory.data/Debug = 4096
 build.prefs:memory.stack/Debug = 512
 profile.mgr.type = 0
-build.prefs:app.permissions = File\\ Storage Internet\\ Access Location Location/Coarse Location/Fine Vibration
+build.prefs:app.permissions = File\\ Storage Internet\\ Access Location Location/Coarse Location/Fine Power\\ Management Vibration
 build.prefs:memory.data/Release = 4096
 
