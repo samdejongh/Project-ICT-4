@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="1.5">
-<active.build.cfg active="Release"/>
+<active.build.cfg active="Debug"/>
 <target-profile device="Android" vendor="Android"/>
 <properties>
 <property key="privileged.access.token" value="F3B905D039A19C2DC4D97F944ADFF8B8"/>

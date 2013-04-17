@@ -1,0 +1,42 @@
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\resources
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\ApplicationIcon.png
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\Background.png
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\testproject.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\testproject.pdb
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\AppManifest.xaml
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\testproject.xap
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\mosyncRuntime.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\WP7Contrib.View.Controls.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\Microsoft.Advertising.Mobile.UI.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\WriteableBitmapExWinPhone.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\System.Windows.Interactivity.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\Microsoft.Advertising.Mobile.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\mosyncRuntime.pdb
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\Microsoft.Phone.Controls.Toolkit.pdb
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\Microsoft.Phone.Controls.Toolkit.xml
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\Microsoft.Advertising.Mobile.UI.xml
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\WriteableBitmapExWinPhone.pdb
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\WriteableBitmapExWinPhone.xml
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\System.Windows.Interactivity.xml
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\obj\Any CPU\Debug\mosync.csprojResolveAssemblyReference.cache
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\obj\Any CPU\Debug\App.g.cs
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\obj\Any CPU\Debug\GamePage.g.cs
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\obj\Any CPU\Debug\MainPage.g.cs
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\obj\Any CPU\Debug\testproject.g.resources
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\obj\Any CPU\Debug\testproject.dll
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\obj\Any CPU\Debug\testproject.pdb
+C:\Users\senne\Documents\Git\testproject\Output\Debug\Windows Phone\7_emulator\package\project\obj\Any CPU\Debug\XapCacheFile.xml

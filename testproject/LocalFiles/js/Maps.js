@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 var Current_lat = 65.012482;
 var Current_lng = 25.472181;
 var map;
 var marker;
 var speed;
 var PointsArray = [];
+=======
+
+
+var lati = 65.012482;
+var longi = 25.472181;
+var map;
+var marker;
+var speed;
+
+>>>>>>> refs/remotes/origin/master
 function initialize() {//laad de map layout en roep de functie startGPS aan
     startGPS();
     var mapOptions = {
@@ -37,6 +48,7 @@ function startGPS() {
 
 }
 function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
+<<<<<<< HEAD
     var element = document.getElementById('geolocation');
 
     Current_lat = position.coords.Current_lattude
@@ -46,6 +58,17 @@ function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
     //	element.innerHTML = 'Current_lattude: ' + position.coords.Current_lattude + '</br> '
     //	+ 'Current_lngtude: ' + position.coords.Current_lngtude ;//weergeven van de positie op de pagina
     MapUpdate();//roep de functie mapUpdate aan
+=======
+	var element = document.getElementById('geolocation');
+	
+	lati = position.coords.latitude;
+	longi =position.coords.longitude;
+	speed =((Math.round((position.coords.speed*3.6) * 10) / 10).toFixed(1));
+	document.getElementById("speed").innerHTML='Speed: '+speed+' km/s'//weergeven van de snelheid
+//	element.innerHTML = 'Latitude: ' + position.coords.latitude + '</br> '
+//	+ 'Longitude: ' + position.coords.longitude ;//weergeven van de positie op de pagina
+	MapUpdate();//roep de functie mapUpdate aan
+>>>>>>> refs/remotes/origin/master
 
 }
 
@@ -96,6 +119,7 @@ function Fysics() {
     });
     // Add 10 markers to the map at random locations
 }
+<<<<<<< HEAD
 
 function UserToPointDistance()
 {
@@ -104,3 +128,10 @@ function UserToPointDistance()
 	var distance = google.maps.geometry.spherical.computeDistanceBetween(PointsArray[1],PointsArray[0]);
 	alert("distance = "+ distance);
 	}
+=======
+function data()
+{
+	alert("data");
+	sendtodb("1",lati,longi,"200");
+}
+>>>>>>> refs/remotes/origin/master

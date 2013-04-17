@@ -1,11 +1,12 @@
-C:\MoSync\workspace\testproject\Output\Release\Windows\ Phone\7\main.s:  \
- C:\MoSync\workspace\testproject\main.cpp c:/MoSync/include/conprint.h \
-  c:/MoSync/include/ma.h c:/MoSync/include/maapi.h \
-  c:/MoSync/include/maapi_defs.h c:/MoSync/include/maarg.h \
-  c:/MoSync/include/mastring.h c:/MoSync/include/mactype.h \
-  c:/MoSync/include/mavsprintf.h c:/MoSync/include/maassert.h \
-  c:/MoSync/include/MAUtil/Moblet.h c:/MoSync/include/ma.h \
-  c:/MoSync/include/MAUtil/Environment.h \
+ \
+ C:\Users\senne\Documents\Git\testproject\Output\Release\Windows\ Phone\7\main.s:  \
+ C:\Users\senne\Documents\Git\testproject\main.cpp \
+  c:/MoSync/include/conprint.h c:/MoSync/include/ma.h \
+  c:/MoSync/include/maapi.h c:/MoSync/include/maapi_defs.h \
+  c:/MoSync/include/maarg.h c:/MoSync/include/mastring.h \
+  c:/MoSync/include/mactype.h c:/MoSync/include/mavsprintf.h \
+  c:/MoSync/include/maassert.h c:/MoSync/include/MAUtil/Moblet.h \
+  c:/MoSync/include/ma.h c:/MoSync/include/MAUtil/Environment.h \
   c:/MoSync/include/MAUtil/Vector.h \
   c:/MoSync/include/MAUtil/ListenerSet.h \
   c:/MoSync/include/Wormhole/HybridMoblet.h \
