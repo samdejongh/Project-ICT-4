@@ -1,0 +1,40 @@
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\resources
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\ApplicationIcon.png
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\Background.png
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\testproject.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\AppManifest.xaml
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\testproject.xap
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\Microsoft.Phone.Controls.Toolkit.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\mosyncRuntime.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\WP7Contrib.View.Controls.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\Microsoft.Advertising.Mobile.UI.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\Microsoft.Phone.Controls.Maps.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\Microsoft.Phone.Controls.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\WriteableBitmapExWinPhone.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\System.Windows.Interactivity.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\Microsoft.Advertising.Mobile.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\mosyncRuntime.pdb
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\Microsoft.Phone.Controls.Toolkit.pdb
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\Microsoft.Phone.Controls.Toolkit.xml
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\Microsoft.Advertising.Mobile.UI.xml
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\Microsoft.Phone.Controls.Maps.xml
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\Microsoft.Phone.Controls.xml
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\WriteableBitmapExWinPhone.pdb
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\WriteableBitmapExWinPhone.xml
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\System.Windows.Interactivity.xml
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\de\System.Windows.Interactivity.resources.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\en\System.Windows.Interactivity.resources.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\es\System.Windows.Interactivity.resources.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\fr\System.Windows.Interactivity.resources.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\it\System.Windows.Interactivity.resources.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\ja\System.Windows.Interactivity.resources.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\ko\System.Windows.Interactivity.resources.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\Bin\rebuild_release\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\obj\Any CPU\rebuild_release\mosync.csprojResolveAssemblyReference.cache
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\obj\Any CPU\rebuild_release\App.g.cs
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\obj\Any CPU\rebuild_release\GamePage.g.cs
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\obj\Any CPU\rebuild_release\MainPage.g.cs
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\obj\Any CPU\rebuild_release\testproject.g.resources
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\obj\Any CPU\rebuild_release\testproject.dll
+C:\MoSync\workspace\testproject\Output\Release\Windows Phone\7_emulator\package\project\obj\Any CPU\rebuild_release\XapCacheFile.xml

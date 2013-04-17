@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Device Properties Example</title>
+
+<script type="text/javascript" charset="utf-8" src="js/wormhole.js"></script>
+<script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true&v=3&libraries=geometry">
+	
+</script>
+<script type="text/javascript" charset="utf-8" src="js/Maps.js">
+</script>
+<link href="CSS/maps.css" rel="stylesheet" type="text/css">
+</head>
+<body onLoad="initialize()"><!--roep de functie initalize op in de file map.js-->
+	<div  id="map_canvas" style="width: 100%; height: 100%">
+    </div>
+    <div id="info_speed" class="info" align="left"  >
+    <a id="speed">Speed</a>
+    </div>
+    <!--<div id="info_loc" class="info">
+    <a id="geolocation">Finding geolocation...</a>
+    </div>-->
+    <div>
+    <form>
+    <button onClick="Fysics()">DrawPoints</button>
+    <button onClick="UserToPointDistance()">UserToPointDistance</button>
+    </form>
+    </div>
+</body>
+</html>

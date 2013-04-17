@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.info{
+	position:absolute;
+	top:1%;
+	z-index:+1;
+	color:white;
+	font-size:20px;
+	font-weight:bold
+	border:1px;
+	background-color:black;
+	border-radius:10px;
+	opacity:0.6;
+	text-align:center;
+	line-height:30px;
+}
+	
+#info_speed{
+		left:40%;
+		margin:10px;
+		min-width:20%;
+}
+/*#info_loc{
+		left:40%;
+		width:50%;
+}*/
+
