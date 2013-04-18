@@ -48,9 +48,7 @@ function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
     var element = document.getElementById('geolocation');
 
     Current_lat = position.coords.latitude;
-    Current_lng = position.coords.longitude;
-    alert(Current_lat);
-    alert(Current_lng);
+    Current_lng = position.coords.longitude
     speed = ((Math.round((position.coords.speed * 3.6) * 10) / 10).toFixed(1));
     document.getElementById("speed").innerHTML = 'Speed: ' + speed + ' km/s'//weergeven van de snelheid
     //	element.innerHTML = 'Current_lattude: ' + position.coords.Current_lattude + '</br> '
@@ -67,7 +65,7 @@ function MapUpdate() {//de kaart centreren naar de nieuwe locatie
          southWest = bounds.getSouthWest(); //Returns the point at the south-west corner of the rectangle in the visible rectangle region of the map view in geographical coordinates
          northEast = bounds.getNorthEast(); //Returns the point at the north-east corner of the rectangle in the visible rectangle region of the map view in geographical coordinates
     });
-        var myLatlng = new google.maps.LatLng(Current_lat, Current_lng);
+    var myLatlng = new google.maps.LatLng(Current_lat, Current_lng);
     map.setCenter(myLatlng);//de locatie waar de map zich moet centreren
     map.setZoom(16);
     marker = new google.maps.Marker({

@@ -16,13 +16,12 @@ body
 {
 	position:relative;
 	float:left;
-	margin-left:1%;
+	left:1%;
 	width:48.5%;
 	margin-top:1%;
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-image:url('runnerguide_icon.png');
-	background-size:auto;
 }
 
 a.fill-div {
@@ -42,7 +41,6 @@ a.fill-div {
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-image:url('orienteeringtrainer_icon.png');
-	background-size:auto;
 }
 
 #btn_Settings
