@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="1.5">
 <active.build.cfg active="Release"/>
-<target-profile device="7" vendor="Windows Phone"/>
+<target-profile/>
 <properties>
-<property key="privileged.access.token" value="F3B905D039A19C2DC4D97F944ADFF8B8"/>
+<property key="privileged.access.token" value="E619742C66EC4B57C7F526E218D31B18"/>
 </properties>
 </project>

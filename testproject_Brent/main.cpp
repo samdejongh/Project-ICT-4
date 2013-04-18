@@ -29,6 +29,7 @@
 #include <Wormhole/HybridMoblet.h>
 #include <ma.h>
 #include <maapi.h>
+#include <MAHeaders.h>
 using namespace MAUtil;
 using namespace NativeUI;
 using namespace Wormhole;
@@ -38,10 +39,20 @@ public:
 	MyMoblet() {
 
 		showPage("index.html");
+		setBeepSound(BEEP);
 		addMessageFun("Change", (FunTable::MessageHandlerFun) &MyMoblet::orent);
 		addMessageFun("Vibrate", (FunTable::MessageHandlerFun) &MyMoblet::vibrate);
-	}
+		addMessageFun(
+					"Beep",
+					(FunTable::MessageHandlerFun)&MyMoblet::beep);
 
+	}
+void beep(Wormhole::MessageStream& message)
+	{
+		// This is how to play a sound using MoSync API.
+	callJS("alert('beep')");
+		maSoundPlay(BEEP, 0, maGetDataSize(BEEP));
+	}
 	void orent(Wormhole::MessageStream& message) {
 		MAUtil::String (url) = MAUtil::String(message.getNext());
 		showPage(url);

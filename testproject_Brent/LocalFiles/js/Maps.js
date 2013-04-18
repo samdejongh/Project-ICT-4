@@ -13,7 +13,15 @@ var northEast;
 var southWest;
 var bounds;
 
-var myVar=setInterval(function(){UpdateLocation()},5000);
+function vibrate()
+{
+	mosync.bridge.send(["Custom", "Vibrate", "500"]);
+}
+function sound()
+{
+	alert("beep1");
+	mosync.bridge.send(["Custom", "Beep"]);
+}
 
 function initialize() {//laad de map layout en roep de functie startGPS aan
     startGPS();
@@ -48,7 +56,7 @@ function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
     var element = document.getElementById('geolocation');
 
     Current_lat = position.coords.latitude;
-    Current_lng = position.coords.longitude
+    Current_lng = position.coords.longitude;
     speed = ((Math.round((position.coords.speed * 3.6) * 10) / 10).toFixed(1));
     document.getElementById("speed").innerHTML = 'Speed: ' + speed + ' km/s'//weergeven van de snelheid
     //	element.innerHTML = 'Current_lattude: ' + position.coords.Current_lattude + '</br> '
@@ -65,10 +73,11 @@ function MapUpdate() {//de kaart centreren naar de nieuwe locatie
          southWest = bounds.getSouthWest(); //Returns the point at the south-west corner of the rectangle in the visible rectangle region of the map view in geographical coordinates
          northEast = bounds.getNorthEast(); //Returns the point at the north-east corner of the rectangle in the visible rectangle region of the map view in geographical coordinates
     });
-    var myLatlng = new google.maps.LatLng(Current_lat, Current_lng);
+        var myLatlng = new google.maps.LatLng(Current_lat, Current_lng);
     map.setCenter(myLatlng);//de locatie waar de map zich moet centreren
     map.setZoom(16);
     marker = new google.maps.Marker({
+    	Icon : 'start.png',
         position: myLatlng,
         map: map,
         title: "You"
@@ -89,14 +98,14 @@ function Fysics() {
         var latSpan = northEast.lat() - southWest.lat(); // gives the span of the Current_lattude (north-south position)
 
         for (var i = 0; i < 10; i++) {
-
+        	
             var point = new google.maps.LatLng(southWest.lat() + latSpan * Math.random(),
                       southWest.lng() + lngSpan * Math.random());
 
             PointsArray.push(point);
 
 
-            new google.maps.Marker({
+            markersArray[i] = new google.maps.Marker({
                 position: PointsArray[i],
                 map: map,
                 title: 'Your GPS Location'
@@ -113,32 +122,33 @@ function UserToPointDistance()
 
     for (var i = 0; i < 10; i++) {
 	var distance = google.maps.geometry.spherical.computeDistanceBetween(currentlanglong,PointsArray[i]);
-	//alert("point "+ i + " distance = " + Math.round(distance)+" meters");
+	alert("point "+ i + " distance = " + Math.round(distance)+" meters");
 	
-	CheckPointDistanceClose(distance);
+	CheckPointDistanceClose(distance, i);
 	}
 
 }
-	
 function deleteOverlays() {
-  if (markersArray) 
-  {
     	for (i in markersArray) 
 		{
      		 markersArray[i].setMap(null);
+     		 PointsArray[i].setMap(null);
    	    }
 		
     markersArray.length = 0;
 	PointsArray = [];
 	markserArray = [];
   }
-}
 
-function CheckPointDistanceClose(distance)
+function CheckPointDistanceClose(distance, point)
 {
-	if(distance < 10)
+	if(distance < 20) //point found
 	{
+		//play sound
 		alert('Punt Gevonden');
+		markersArray[point].setMap(null); //delete the marker
+		vibrate();
+		sound();
 	}
 	
 	else
@@ -147,7 +157,4 @@ function CheckPointDistanceClose(distance)
 	}
 }
 
-UpdateLocation()
-{
-    
-}
+
