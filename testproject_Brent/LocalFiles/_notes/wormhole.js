@@ -1,6 +1,6 @@
 //===============================================
 //This wormhole.js is compatible with
-// MoSync 3.2
+// MoSync 3.2.1
 //===============================================
 
 // =============================================================
@@ -8,7 +8,7 @@
 // File: mosync-bridge.js
 
 /*
-Copyright (C) 2011 MoSync AB
+Copyright (C) 2011-2013 MoSync AB
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License,
@@ -24,7 +24,6 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 MA 02110-1301, USA.
 */
-
 
 /*
  * @file mosync-bridge.js
@@ -58,6 +57,17 @@ var mosync = (function()
 	mosync.isWindowsPhone =
 		navigator.userAgent.indexOf("Windows Phone OS") != -1;
 
+	// Logging support.
+
+	/**
+	 * Write log output using maWriteLog in the MoSync C++ API.
+	 * @param s Log message string.
+	 */
+	mosync.log = function(s)
+	{
+		mosync.bridge.send(["MoSync", "SysLog", s]);
+	};
+
 	// Application functions.
 
 	mosync.app = {};
@@ -69,7 +79,7 @@ var mosync = (function()
 	mosync.app.exit = function()
 	{
 		mosync.bridge.send(["MoSync", "ExitApplication"]);
-	}
+	};
 
 	/**
 	 * Send application to background.
@@ -77,7 +87,55 @@ var mosync = (function()
 	mosync.app.sendToBackground = function()
 	{
 		mosync.bridge.send(["MoSync", "SendToBackground"]);
-	}
+	};
+
+	/**
+	 * Screen orientation constants.
+	 */
+	mosync.SCREEN_ORIENTATION_DYNAMIC = "dynamic";
+	mosync.SCREEN_ORIENTATION_PORTRAIT = "portrait";
+	mosync.SCREEN_ORIENTATION_LANDSCAPE = "landscape";
+
+	/**
+	 * Set the screen orientation of the device.
+	 *
+	 * @param orientation The desired screen orientation.
+	 * Can be one of the constants:
+	 *   mosync.SCREEN_ORIENTATION_DYNAMIC
+	 *   mosync.SCREEN_ORIENTATION_PORTRAIT
+	 *   mosync.SCREEN_ORIENTATION_LANDSCAPE
+	 *
+	 * Example:
+	 *   mosync.app.screenSetOrientation(mosync.SCREEN_ORIENTATION_DYNAMIC);
+	 */
+	mosync.app.screenSetOrientation = function(orientation)
+	{
+		mosync.bridge.send(["MoSync", "ScreenSetOrientation", orientation]);
+	};
+
+	/**
+	 * Opens a url in an external browser. Supported url
+	 * schemas are are "http:" to open a web page and
+	 * "tel:" to dial a number. See examples below.
+	 *
+	 * @param url The url to be opened.
+	 *
+	 * Example of opening a web page in an external browser:
+	 *   mosync.app.openExternalURL("http://maps.google.com/");
+	 *
+	 * Example of dialing a number:
+	 *   mosync.app.openExternalURL("tel:046850510300");
+	 *
+	 * Note that your app needs phone permissions to be set for
+	 * dialing a phone number. This is set in the MoSync SDK.
+	 * Note that MoSync Reload does not have phone permissions set.
+	 *
+	 * This function calls the MoSync syscall maPlatformRequest.
+	 */
+	mosync.app.openExternalURL = function(url)
+	{
+		mosync.bridge.send(["MoSync", "OpenExternalURL", url]);
+	};
 
 	// Alerts and logging.
 
@@ -170,14 +228,19 @@ var mosync = (function()
 	};
 
 	// console.log does not work on WP7.
+	// Define console if undefined.
 	if (typeof console === "undefined")
 	{
 		console = {}
 	}
+
+	// Define console.log if undefined.
 	if (typeof console.log === "undefined")
 	{
-		// TODO: Send console output somewhere.
-		console.log = function(s) {};
+		console.log = function(s)
+		{
+			mosync.log(s);
+		};
 	}
 
 	// alert does not work on WP7, replace with
@@ -318,20 +381,30 @@ var mosync = (function()
 		 * See this page for a tutorial: http://www.mosync.com/documentation/manualpages/how-communicate-between-javascript-and-c-mosync
 		 *
 		 * The project template "HTML5/JS/C++ Hybrid Project" is a
-		 * good startihng point for leaning how to add cusom C++ code
-		 * to your JavaScript application. Example the files index.html
+		 * good starting point for leaning how to add custom C++ code
+		 * to your JavaScript application. Look at the files index.html
 		 * and main.cpp in the project generated from the template.
 		 *
 		 * This method queues messages and can be called multiple
-		 * times in sqeuential JS code. When execution of sequential
-		 * code is done, a timer will get activated and send all messages
+		 * times in sequential JS code. When the sequential code executes,
+		 * a timer will be activated and wil send all messages
 		 * in the queue in one chunk. This enhances performance of
 		 * message sending.
+		 *
+		 * Note: the "close" message is deprecated. To close the application, use "mosync.app.exit" instead.
+		 * \code
+		 *    //Deprecated method:
+		 *    mosync.bridge.send(["close"]);
+		 *
+		 *    //Preferred method:
+		 *    mosync.app.exit();
+		 *
+		 * \endcode
 		 *
 		 * @param message An array of message strings.
 		 *
 		 * @param callbackFun An optional function to receive the
-		 * result of the message asynchronosly. The id of the
+		 * result of the message asynchronosly. The ID of the
 		 * callback function is added after the strings in the
 		 * messageStrings array.
 		 */
@@ -384,13 +457,13 @@ var mosync = (function()
 		 * back to JavaScript from C++.
 		 *
 		 * This method queues a message and can be called multiple
-		 * times in sqeuential JS code. When execution of sequential
-		 * code is done, a timer will get activated and send all messages
+		 * times in sequential JS code. When execution of sequential
+		 * code is done, a timer will is activated and sends all messages
 		 * in the queue in one chunk. This enhances performance of
 		 * message sending.
 		 *
 		 * @param message A dictionary with the message parameters.
-		 * The parameter "messageName" specifyes the name of the
+		 * The parameter "messageName" specifies the name of the
 		 * message selector (the "command name") and must always be
 		 * included.
 		 *
@@ -511,14 +584,14 @@ var mosync = (function()
 		 * JavaScript. The function takes a variable number of parameters.
 		 *
 		 * For example, to return the value 'Hello World' to the callback
-		 * with id 82, you can use this code in a WebAppMoblet:
+		 * with ID 82, you can use this code in a WebAppMoblet:
 		 *
 		 *   callJS("mosync.bridge.reply(82, 'Hello World')");
 		 *
 		 * You can obtain the callbackId from the C++ WebViewMessage
 		 * object, if you use that class to parse the message.
 		 *
-		 * @param callBackId The first parameter is the id of the
+		 * @param callBackId The first parameter is the ID of the
 		 * callback function. Remaning parameters are applied to the
 		 * function refered to by the callbackId.
 		 */
@@ -850,7 +923,7 @@ PhoneGap.CallbackSuccess = function(callbackId, args, cast)
                 }
             }
             catch (e) {
-                console.log("Error in success callback: "+callbackId+" = " + e.message);
+                console.log("Error in success callback with id: "+callbackId+": " + e.message);
             }
         }
 
@@ -1214,15 +1287,10 @@ PhoneGap.onDeviceReady = new PhoneGap.Channel('onDeviceReady');
 // bug that caused onDeviceReady to fire too early.
 PhoneGap.deviceReadyChannelsArray = [
 	PhoneGap.onPhoneGapReady,
-	//PhoneGap.onPhoneGapInfoReady,
+	PhoneGap.onPhoneGapInfoReady,
 	PhoneGap.onPhoneGapConnectionReady,
 	PhoneGap.onNativeReady];
 
-// This is hack to overcome the problems with iOs6 devices, should be removed when that is fixed
-if(!mosync.isIOS)
-{
-  PhoneGap.deviceReadyChannelsArray.push(PhoneGap.onPhoneGapInfoReady);  
-}
 // Hashtable of user defined channels that must also fire before "deviceready" is fired
 PhoneGap.deviceReadyChannelsMap = {};
 
@@ -2520,8 +2588,11 @@ var Device = function() {
     var me = this;
     this.getInfo(
         function (res) {
-            var info = JSON.parse(res);
-            console.log("GotDeviceInfo :: " + info.version);
+            // MOSYNC: We send in device info as an object,
+            // it is already parsed.
+            //var info = JSON.parse(res); // Line kept for reference.
+            var info = res;
+            console.log("GotDeviceInfo: " + info.version);
             me.available = true;
             me.platform = info.platform;
             me.version = info.version;
@@ -8513,13 +8584,13 @@ mosync.MAW_EVENT_DIALOG_DISMISSED = 22;
 
 /**
 * Send by current screen just before it begins rotating.
-* Platform: iOS and Windows Phone 7.1
+* Platform: iOS.
 */
 mosync.MAW_EVENT_SCREEN_ORIENTATION_WILL_CHANGE = 23;
 
 /**
 * Send by current screen after it finishes rotating.
-* Platform: iOS and Windows Phone 7.1
+* Platform: iOS, Android and Windows Phone 7.1
 */
 mosync.MAW_EVENT_SCREEN_ORIENTATION_DID_CHANGE = 24;
 
@@ -8965,7 +9036,7 @@ mosync.MAW_TIME_PICKER = "TimePicker";
 
 /**
  * @brief A Number Picker is a widget that enables the user to select a number from a predefined range.
- * Note: for the moment it is available only on iOS.
+ * Available on iOS, WindowsPhone and Android.
  * See \ref WidgetNumberPickerProperties "Number Picker properties" for the properties available.
  */
 mosync.MAW_NUMBER_PICKER = "NumberPicker";
@@ -9064,7 +9135,7 @@ mosync.MAW_LIST_VIEW_SECTION = "ListViewSection";
 // File: mosync-resource.js
 
 /*
-Copyright (C) 2012 MoSync AB
+Copyright (C) 2012-2013 MoSync AB
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License,
@@ -9085,7 +9156,7 @@ MA 02110-1301, USA.
  * @file mosync.resource.js
  * @author Ali Sarrafi
  *
- * The library for loading Image resources into Mosync program from Javascript.
+ * Library for loading image resources into Mosync program from Javascript.
  * This library only supports image resources and used  together with the
  * NativeUI library.
  */
@@ -9140,7 +9211,7 @@ mosync.resource.loadImage = function(imagePath, imageID, successCallback)
  * A function that is called by C++ to pass the loaded image information.
  *
  * @param imageID JavaScript ID of the image
- * @param imageHandle C++ handle of the imge which can be used for refering to the loaded image
+ * @param imageHandle C++ handle of the imge which can be used for referring to the loaded image
  * @private
  */
 mosync.resource.imageLoaded = function(imageID, imageHandle)
@@ -9159,7 +9230,7 @@ mosync.resource.imageLoaded = function(imageID, imageHandle)
  * Loads images into image handles from a remote URL for use in MoSync UI systems.
  *
  *  @param imageURL URL to the image file.
- *  @param imageID a custom ID used for refering to the image in JavaScript
+ *  @param imageID a custom ID used for referring to the image in JavaScript
  *  @param callBackFunction a function that will be called when the image is ready.
  *
  *  Example
@@ -9271,7 +9342,7 @@ mosync.rlog = mosync.resource.sendRemoteLogMessage;
 // File: mosync-nativeui.js
 
 /*
-Copyright (C) 2012 MoSync AB
+Copyright (C) 2012-2013 MoSync AB
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License,
@@ -9292,7 +9363,7 @@ MA 02110-1301, USA.
  * @file mosync.nativeui.js
  * @author Ali Sarrafi
  *
- * The library for supporting Native widgets in Javascript and Web applications.
+ * Library for supporting Native widgets in Javascript and Web applications.
  * Provides support for designing UI both programatically and declaratively.
  * Should be used together with mosync-resource.js
  */
@@ -9322,16 +9393,16 @@ mosync.nativeui.eventCallBackTable = {};
 mosync.nativeui.widgetCounter = 0;
 
 /**
- * A unique string id for the main webview widget.
+ * A unique string ID for the main webview widget.
  */
 mosync.nativeui.mainWebViewId = "mosync.nativeui.mainWebViewId";
 
 /**
- * Creates a mosync.nativeui Widget and registers it callback for return of the
- * handle, Used internally use mosync.nativeui.create in your code.
+ * Creates a mosync.nativeui widget and registers its callback for return of the
+ * handle. Used internally: use mosync.nativeui.create in your code.
  *
  * @param widgetType
- *            A string that includes type of the widget defined in MoSync Api
+ *            A string that includes type of the widget defined in MoSync API
  *            reference
  * @param widgetID
  *            An ID set by the user for high level access to the widget
@@ -9384,9 +9455,9 @@ mosync.nativeui.maWidgetCreate = function(
  * Destroys a widget
  *
  * @param widgetID
- *            ID for the widget in Question
+ *            ID for the widget in question
  * @param processedCallback
- *            optional call back for knowing that the message is processed See
+ *            optional call back for knowing that the message is processed. See
  *            mosync.nativeui.getElementById for getting handles
  * @private
  */
@@ -9509,7 +9580,7 @@ mosync.nativeui.maWidgetScreenShow = function(screenID, successCallback,
  * Shows a modalDialog.
  *
  * @param childID
- *            Id of the screen that should be shown
+ *            ID of the screen that should be shown
  * @param processedCallback
  *            optional call back for knowing that the message is processed
  *
@@ -9531,9 +9602,9 @@ mosync.nativeui.maWidgetModalDialogShow = function(dialogID, successCallback,
  * Hides a modalDialog.
  *
  * @param childID
- *            Id of the screen that should be shown
+ *            ID of the screen that should be shown
  * @param processedCallback
- *            optional call back for knowing that the message is processed
+ *            optional callback for knowing that the message is processed
  *
  * @private
  */
@@ -9551,7 +9622,8 @@ mosync.nativeui.maWidgetModalDialogHide = function(dialogID, successCallback,
 
 /**
  * Pushes a screen to the given screen stack, hides the current screen and shows
- * the pushed screen it. Pushing it to the stack will make it automatically go
+ * the pushed screen. Pushing it to the stack will make it automatically go
+ 
  * back to the previous screen when popped.
  *
  * @param stackScreenID
@@ -9580,13 +9652,13 @@ mosync.nativeui.maWidgetStackScreenPush = function(stackScreenID, screenID,
 
 /**
  * Pops a screen from a screen stack, hides the current screen and shows the
- * popped screen before the If there is no previous screen in the screen stack,
+ * popped screen. If there is no previous screen in the screen stack,
  * an empty screen will be shown.
  *
  * @param stackScreenID
  *            JavaScript ID of the StackScreen
  * @param processedCallback
- *            optional call back for knowing that the message is processed
+ *            optional callback for knowing that the message is processed
  *
  * @private
  */
@@ -9615,7 +9687,7 @@ mosync.nativeui.widgetPropertyIndexNo = 0;
  * @param value
  *            value of the property
  * @param processedCallback
- *            optional call back for knowing that the message is processed
+ *            optional callback for knowing that the message is processed
  *
  * @private
  */
@@ -9640,11 +9712,11 @@ mosync.nativeui.maWidgetSetProperty = function(widgetID, property, value,
  * @param widgetID
  *            JavaScript ID of the widget
  * @param property
- *            name of the property that should be retrived
+ *            name of the property that should be retrieved
  * @param callBackFunction
- *            the function that will be called when the property is retrived
+ *            the function that will be called when the property is retrieved
  * @param processedCallback
- *            optional call back for knowing that the message is processed
+ *            optional callback for knowing that the message is processed
  *
  * @private
  */
@@ -9666,7 +9738,7 @@ mosync.nativeui.maWidgetGetProperty = function(widgetID, property,
  * callback is registered it will be called
  *
  * @param callbackID
- *            Javascript Id of the widget
+ *            Javascript ID of the widget
  *
  * @private
  */
@@ -9687,7 +9759,7 @@ mosync.nativeui.createCallback = function(callbackID, widgetID, handle) {
  */
 mosync.nativeui.setWebViewHandle = function(handle)
 {
-	// Bind the string id of the main webview to the native widget handle.
+	// Bind the string ID of the main webview to the native widget handle.
 	mosync.nativeui.widgetIDList[mosync.nativeui.mainWebViewId] = handle;
 
 	// Create a JS widget object for the main webview.
@@ -9703,7 +9775,7 @@ mosync.nativeui.success = function(callbackID) {
 
 	if (callBack.success) {
 		var args = Array.prototype.slice.call(arguments);
-		// remove the callbakID from the argument list
+		// remove the callback ID from the argument list
 		args.shift();
 		callBack.success.apply(null, args);
 	}
@@ -9739,7 +9811,7 @@ mosync.nativeui.error = function(callbackID) {
  * @param widgetHandle
  *            C++ ID (MoSync Handle) of the widget that has triggered the event
  * @param eventType
- *            Type of the event (maybe followed by at most 3 event data
+ *            Type of the event (possibly followed by at most 3 event data
  *            variables)
  *
  * @private
@@ -9748,7 +9820,7 @@ mosync.nativeui.event = function(widgetHandle, eventType) {
 
 	var callbackID = widgetHandle + eventType;
 	var callbackFunctions = mosync.nativeui.eventCallBackTable[callbackID];
-	// if we have a listener registered for this combination call it
+	// if we have a listener registered for this combination, call it
 	if (callbackFunctions != undefined) {
 		// extract the function arguments
 		var args = Array.prototype.slice.call(arguments);
@@ -9769,7 +9841,7 @@ mosync.nativeui.NativeElementsTable = {};
  * @param widgetID
  *            JavaScript ID of the widget.
  * @param eventType
- *            Type of the events the users wants to listen to.
+ *            Type of the events the users want to listen to.
  * @param callBackFunction
  *            function that will be called when the widget sends an event.
  * @private
@@ -9787,13 +9859,13 @@ mosync.nativeui.registerEventListener = function(widgetID, eventType,
 
 /**
  * A widget object that user can interact with instead of using the low level
- * functions. This class is not used directly see  mosync.nativeui.create  for usage.
+ * functions. This class is not used directly: see mosync.nativeui.create for usage.
  *
  *
  * @param widgetType
  *            Type of the widget that has been created
  * @param widgetID
- *            ID of the widget used for identifying the widget(can be ignored by
+ *            ID of the widget used for identifying the widget (can be ignored by
  *            the user)
  * @param params A dictionary that includes a list of properties to be set on the widget
  * @param successCallback
@@ -9895,9 +9967,9 @@ mosync.nativeui.NativeWidgetElement = function(widgetType, widgetID, params,
 	};
 
 	// Send a message to the native layer to create the widget.
-	// Note that if we get the id of the main webviwe, we don't
+	// Note that if we get the id of the main webview, we don't
 	// create a new widget, it already exists.
-	// This allows us to create widget tree where the main
+	// This allows us to create a widget tree where the main
 	// webveiw can be inserted.
 	if (self.id !== mosync.nativeui.mainWebViewId)
 	{
@@ -9950,7 +10022,7 @@ mosync.nativeui.NativeWidgetElement = function(widgetType, widgetID, params,
 	};
 
 	/**
-	 * Retirves a property and call the respective callback.
+	 * Retrieves a property and call the respective callback.
 	 *
 	 * @param property
 	 *            name of the property
@@ -10246,7 +10318,7 @@ mosync.nativeui.NativeWidgetElement = function(widgetType, widgetID, params,
 	/**
 	 * Clones the current Widget.
 	 *
-	 * @param newID The id for the newly created widget.
+	 * @param newID The ID for the newly created widget.
 	 *
 	 * Example
 	 * -------
@@ -10381,7 +10453,7 @@ mosync.nativeui.NativeWidgetElement = function(widgetType, widgetID, params,
 
 		/**
 		 *
-		 * Pops a screen from the current stackscreen, Uuse only for StackScreen
+		 * Pops a screen from the current stackscreen, Use only for StackScreen
 		 * widgets.
 		 *
 		 * @param successCallback
@@ -10519,7 +10591,7 @@ mosync.nativeui.getMainWebViewId = function()
 };
 
 /**
- * creates a widget and returns a mosync.nativeui.NativeWidgetElement object.
+ * Creates a widget and returns a mosync.nativeui.NativeWidgetElement object.
  * The object then can be used for modifying the respective NativeElement.
  *
  *
@@ -10553,7 +10625,7 @@ mosync.nativeui.create = function(widgetType, widgetID, params,
 };
 
 /**
- * Destrys all of the created widgets and cleans up the memory.
+ * Destroys all of the created widgets and cleans up the memory.
  * @private
  */
 mosync.nativeui.destroyAll = function()
@@ -10581,7 +10653,7 @@ mosync.nativeui.numWidgetsRequested = 0;
 mosync.nativeui.numWidgetsCreated = 0;
 
 /**
- * The interval for checking the availability of all widgets Used when parsing
+ * The interval for checking the availability of all widgets. Used when parsing
  * the XML based input
  * @private
  */
@@ -10594,14 +10666,7 @@ mosync.nativeui.showInterval;
 mosync.nativeui.widgetIDList = {};
 
 /**
- * TODO: Micke says: The comment "It is accessible though document object as well."
- * seems misleading, because that returns a DOM object, not a widget handle.
- * Is this the case? Then we should update the comment. And why is this private?
- * This is useful to have in applications. And should we rename the function,
- * to not confuse it with document.getElementsById ? Why not call it
- * "getWidgetHandleById" ??
- *
- * Provides access to C++ handles through IDs. It is accessible though document object as well.
+ * Provides access to C++ handles through IDs.
  *
  * @param elementID
  *            ID of the widget in question
@@ -10610,11 +10675,7 @@ mosync.nativeui.widgetIDList = {};
  * Example
  * -------
  * \code
- * TODO: Micke says: Is this code example relevant for this function?
- * The example shows something else. And should "getElementsById"
- * not be "getElementById"?
- *
- *   var myButton = document.getElementsById("MyButton");
+ *   var myButton = mosync.nativeui.getElementById("MyButton");
  *   myButton.addTo("myLayout");
  * \endcode
  * @private
@@ -10629,7 +10690,7 @@ mosync.nativeui.getElementById = function(elementID)
  * element with the given ID.
  *
  * @param elementId A string id that identifies the widget (this
- * is the id of the DOM element that holds the widget info).
+ * is the ID of the DOM element that holds the widget info).
  */
 mosync.nativeui.getNativeHandleById = function(elementId)
 {
@@ -10661,7 +10722,7 @@ mosync.nativeui.callJS = function(webViewHandle, script)
 };
 
 /**
- * An internal function that returns the correct property name Used to overcome
+ * An internal function that returns the correct property name. Used to overcome
  * case sensitivity problems in browsers.
  *
  * @param attributeName
@@ -10915,7 +10976,7 @@ mosync.nativeui.createWidget = function(widget, parent) {
 mosync.nativeui.UIReady = function()
 {
 	// This is the low level way of showing the default screen
-	// If you want to override this fucntion,
+	// If you want to override this function,
 	// use document.getNativeElementById instead
 	mosync.nativeui.maWidgetScreenShow("mainScreen");
 };
@@ -10994,7 +11055,7 @@ mosync.nativeui.showScreen = function(screenID) {
  *  <body onload="mosync.nativeui.initUI()">
  * \endcode
  *  After finalizing the widgets, the UI system will call the UIReady function.
- *  In order to add your operation you can override the UIReady function as below:
+ *  To add your operation you can override the UIReady function as below:
  *
  * \code
  *  mosync.nativeui.UIReady = function()
@@ -11393,7 +11454,7 @@ function SensorConnection(options)
 // File: mosync-pushnotifications.js
 
 /*
-Copyright (C) 2012 MoSync AB
+Copyright (C) 2012-2013 MoSync AB
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License,
@@ -11516,7 +11577,7 @@ PushNotificationManager.prototype.initialize = function(serverAddress, serverPor
  * Example
  * -------
  * \code
- * // The application has successfuly registered for receiving push notifications.
+ * // The application did successfuly register for receiving push notifications.
  * function push_notification_did_registered(token) {};
  *
  * // The application did not registered for receiving push notifications.

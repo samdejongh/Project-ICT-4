@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 <head>
 <meta name="viewport" width=device-width>
@@ -13,9 +15,6 @@
 <script
 	src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
 </script>
-<script type="text/javascript"
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true">
-</script>
 <script type="text/javascript">
 
 	/* document.addEventListener("backbutton", function() {
@@ -30,16 +29,20 @@
 		mosync.bridge.send([ "Custom", "Change", page ]);
 		alert("succes");
 	}
+	function alerte()
+	{
+		alert("test");
+	}
 </script>
 </head>
 <body>
-	<div id="home" data-role="page">
+	<!-- <div id="home" data-role="page">
 		<div data-role="header">
 			<h1>mainpage</h1>
 		</div>
-
-		<div data-role="content">
-			<div id="btn_RouteGuide">
+ -->
+<!-- 		<div data-role="content">
+ -->			<div id="btn_RouteGuide">
 				<a href="#ChooseLenght" data-rel="popup" data-position-to="window"
 					data-transition="pop"> <img id="img_RouterGuide"
 					src="runnerguide_icon.png" width="100%" style="left: 50%" alt="" /></a>
@@ -58,9 +61,12 @@
 
 			<div id="btn_TrainingHistory">
 				<img id="img_TrainingHistory" src="traininghistory_icon.png"
-					width="100%" alt="" onclick="changePage('traininghistory.html')"/>
+					width="100%" alt="" onclick="alerte()"/>
 			</div>
-
+			<div id="iets">
+				<img id="img_iets" src="traininghistory_icon.png"
+					width="100%" alt="" onclick="alerte()"/>
+			</div>
 			<div>
 				<div data-role="popup" id="popupMenu" data-theme="a">
 					<div data-role="popup" id="ChooseLenght" data-theme="a"
@@ -92,8 +98,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+<!-- 		</div>
+	</div> -->
 
 </body>
 </html>
