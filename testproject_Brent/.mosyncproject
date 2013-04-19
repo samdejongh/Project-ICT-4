@@ -3,22 +3,35 @@
 <build.cfg id="Debug" types="Debug"/>
 <build.cfg id="Release" types="Release"/>
 <criteria>
-<filter mgr="0" profiles="" require="0" type="com.mobilesorcery.mosync.filters.profile" vendors="Android,BlackBerry,JavaME,Moblin,Symbian,Windows Mobile,Windows Phone"/>
+<filter mgr="0" profiles="" require="0" type="com.mobilesorcery.mosync.filters.profile" vendors="Android,BlackBerry,JavaME,Moblin,Symbian,Windows Mobile,Windows Phone,iOS"/>
 <filter type="com.mobilesorcery.sdk.capabilities.devices.elementfactory">
 <capabilities optional="" required="HTML5"/>
 </filter>
 </criteria>
 <properties>
+<property key="android:install.location" value="auto"/>
+<property key="android:package.name" value="com.mosync.app_RoGe"/>
+<property key="build.prefs:additional.include.paths/Release" value=""/>
 <property key="build.prefs:additional.libraries" value="MAUtil.lib, NativeUI.lib, MAFS.lib, Wormhole.lib, yajl.lib, Notification.lib"/>
 <property key="build.prefs:additional.libraries/Debug" value="MAUtilD.lib, NativeUID.lib, MAFSD.lib, WormholeD.lib, yajlD.lib, NotificationD.lib"/>
+<property key="build.prefs:additional.library.paths/Release" value=""/>
+<property key="build.prefs:app.name/Release" value="RoGe"/>
 <property key="build.prefs:app.permissions" value="File\ Storage Internet\ Access Location Location/Coarse Location/Fine Vibration"/>
+<property key="build.prefs:extra.link.sw/Release" value=""/>
+<property key="build.prefs:extra.res.sw/Release" value=""/>
+<property key="build.prefs:gcc.warnings/Release" value="0"/>
 <property key="build.prefs:memory.data/Debug" value="4096"/>
 <property key="build.prefs:memory.data/Release" value="4096"/>
 <property key="build.prefs:memory.heap/Debug" value="3072"/>
 <property key="build.prefs:memory.heap/Release" value="3072"/>
 <property key="build.prefs:memory.stack/Debug" value="512"/>
 <property key="build.prefs:memory.stack/Release" value="512"/>
+<property key="build.prefs:project.type" value=""/>
 <property key="com.mobilesorcery.sdk.html5.support" value="true"/>
+<property key="dependency.strategy" value="0"/>
+<property key="excludes/Release" value=""/>
+<property key="iphone:bundle.id" value="com.%app-vendor%.RoGe"/>
+<property key="odd.support" value="true"/>
 <property key="profile.mgr.type" value="0"/>
 <property key="template.id" value="project.html5.hybrid"/>
 <property key="winmobilecs:guid" value="16ebac70-6e30-1030-8044-f3a93e832592"/>

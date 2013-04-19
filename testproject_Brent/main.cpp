@@ -23,15 +23,14 @@
  * Implementation details are likely to change in the future.
  */
 
-#include <conprint.h>
-#include <maassert.h>
+//#include <conprint.h>
+//#include <maassert.h>
 #include <MAUtil/Moblet.h>
 #include <Wormhole/HybridMoblet.h>
-#include <ma.h>
-#include <maapi.h>
+//#include <ma.h>
+//#include <maapi.h>
 #include <MAHeaders.h>
 using namespace MAUtil;
-using namespace NativeUI;
 using namespace Wormhole;
 
 class MyMoblet: public HybridMoblet {

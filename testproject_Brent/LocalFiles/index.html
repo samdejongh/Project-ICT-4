@@ -5,7 +5,7 @@
 <meta name="viewport" width=device-width>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <title></title>
-<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+<link rel="stylesheet" href="CSS/style.css" type="text/css" media="screen"
 	title="no title" charset="utf-8">
 <script type="text/javascript" charset="utf-8" src="js/wormhole.js"></script>
 <link rel="stylesheet"
@@ -16,11 +16,6 @@
 	src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
 </script>
 <script type="text/javascript">
-
-	/* document.addEventListener("backbutton", function() {
-		mosync.app.exit();
-	}, false); */
-
 	$('#select-native-1').live('change', function(e) {
 		x = $(this).val();
 		window.location = "orienteeringtrainer.html#" + x;
@@ -36,13 +31,7 @@
 </script>
 </head>
 <body>
-	<!-- <div id="home" data-role="page">
-		<div data-role="header">
-			<h1>mainpage</h1>
-		</div>
- -->
-<!-- 		<div data-role="content">
- -->			<div id="btn_RouteGuide">
+			<div id="btn_RouteGuide">
 				<a href="#ChooseLenght" data-rel="popup" data-position-to="window"
 					data-transition="pop"> <img id="img_RouterGuide"
 					src="runnerguide_icon.png" width="100%" style="left: 50%" alt="" /></a>
@@ -61,10 +50,6 @@
 
 			<div id="btn_TrainingHistory">
 				<img id="img_TrainingHistory" src="traininghistory_icon.png"
-					width="100%" alt="" onclick="alerte()"/>
-			</div>
-			<div id="iets">
-				<img id="img_iets" src="traininghistory_icon.png"
 					width="100%" alt="" onclick="alerte()"/>
 			</div>
 			<div>
@@ -98,8 +83,5 @@
 					</div>
 				</div>
 			</div>
-<!-- 		</div>
-	</div> -->
-
 </body>
 </html>

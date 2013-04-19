@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.mobilesorcery.profiling.launchconfigurationtype">
+<booleanAttribute key="auto.change.config.2" value="false"/>
+<stringAttribute key="build.config" value=""/>
+<stringAttribute key="file.filter" value=""/>
+<booleanAttribute key="filter.reg.exp" value="false"/>
+<stringAttribute key="func.filter" value=""/>
+<stringAttribute key="launch.delegate" value="default"/>
+<stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.cdt.debug.ui.DefaultSourceLocator"/>
+<stringAttribute key="project" value=""/>
+</launchConfiguration>

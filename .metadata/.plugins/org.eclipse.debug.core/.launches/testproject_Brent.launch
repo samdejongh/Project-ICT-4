@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.mobilesorcery.launchconfigurationtype">
+<booleanAttribute key="auto.change.config.2" value="false"/>
+<booleanAttribute key="auto.change.config.2.debug.2" value="false"/>
+<booleanAttribute key="avd.auto.select" value="true"/>
+<stringAttribute key="build.config" value=""/>
+<stringAttribute key="build.config.debug" value="Debug"/>
+<stringAttribute key="launch.delegate" value="auto"/>
+<stringAttribute key="process_factory_id" value="com.mobilesorcery.sdk.builder.nonterminableprocessfactory"/>
+<stringAttribute key="project" value="testproject_Brent"/>
+<stringAttribute key="screen.height" value="480"/>
+<booleanAttribute key="screen.use.target" value="true"/>
+<stringAttribute key="screen.width" value="320"/>
+</launchConfiguration>
