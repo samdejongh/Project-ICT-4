@@ -1,11 +1,9 @@
 function trail()
 {
-	alert("tracking started");
 	nIntervId = setInterval(DBconnect, 1000);
 }
 function stoptrail()
 {
-	alert("tracking stoped")
 	clearInterval(nIntervId);
 }
 function DBconnect()

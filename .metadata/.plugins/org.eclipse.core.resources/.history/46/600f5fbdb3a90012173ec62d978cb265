@@ -13,6 +13,3 @@ var pointamount = 10;
 var northEast;
 var southWest;
 var bounds;
-
-//Variables for database
-var nIntervId;

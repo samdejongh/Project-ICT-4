@@ -31,6 +31,7 @@
     <input type="button" id="UserToPoint" value="Points" onClick="UserToPointDistance()">
     <input type="button" id="track" value="Start Tracking" onClick="trail()">
     <input type="button" id="trackStop" value="Stop Tracking" onClick="stoptrail()">
+    <input type="text" id="textin">
     </form>
     </div>
     <!--<div id="info_loc" class="info">

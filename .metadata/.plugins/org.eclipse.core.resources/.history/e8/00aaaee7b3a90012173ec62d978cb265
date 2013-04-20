@@ -29,8 +29,8 @@
     <input type="button" id="fysics" value="Set CheckPoints" onClick="Fysics()">
     <input type="button" id="reload" value="reload" onClick="deleteOverlays();">
     <input type="button" id="UserToPoint" value="Points" onClick="UserToPointDistance()">
-    <input type="button" id="track" value="Start Tracking" onClick="trail()">
-    <input type="button" id="trackStop" value="Stop Tracking" onClick="stoptrail()">
+    <input type="button" id="database" value="Send to DB" onClick="DBconnect()">
+    <input type="text" id="textin">
     </form>
     </div>
     <!--<div id="info_loc" class="info">
