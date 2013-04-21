@@ -1,7 +1,7 @@
 function trail()
 {
 	alert("tracking started");
-	nIntervId = setInterval(DBconnect, 5000);
+	nIntervId = setInterval(DBconnect, 1000);
 }
 function stoptrail()
 {
@@ -22,7 +22,7 @@ $.ajax({
 					data: { nr : nr,lat : lati,lon:longi,dis:dist },//php file kan 4 variabelen ontvangen de trip nummer de lati en longi en de totale afstand die gelopen is
 					success: function(data,status)//als het gelukt is dit uitvoeren
 					{
-						//alert(status);
+						alert(status);
 //						var jsArr = JSON.parse(data);
 //						for(var i=0;i<jsArr.length;i++)
 //						{
