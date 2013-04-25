@@ -16,4 +16,3 @@ var bounds;
 
 //Variables for database
 var nIntervId;
-var idnumber;

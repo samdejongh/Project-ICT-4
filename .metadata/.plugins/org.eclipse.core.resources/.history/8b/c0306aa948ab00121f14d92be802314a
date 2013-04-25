@@ -1,14 +1,12 @@
     var checkpointlon = new Array();
     var checkpointlat = new Array();
     var checkpoints = 5;
-    var distance;
-    var routelenght=1;
+    var distance=2;
 function points()
 {
 	var angle=80
     var LonInit =Current_lng;//start lat lon
     var LatInit =Current_lat;//start lat lon
-    distance = routelenght/(2*Math.PI); 
 	if(angle<90)
     {
         var anglerad=angle*(Math.PI/180);    
@@ -95,10 +93,10 @@ function points()
 
         var checkpointarealon = LonInit + (xcomponent * 0.00899); //longitude in circle arc
         var checkpointarealat = LatInit + (ycomponent * 0.02050949); //latitude in circle arc
-        alert("test");
+
         var checkpointorientation = 0 + 360 * Math.random(); // random 
         var checkpointdistance = routelenght / 10 * Math.random();
-        alert(checkpointorientation);
+
         if (checkpointorientation < 90)
         {
         	alert("checkpointorientation < 90");

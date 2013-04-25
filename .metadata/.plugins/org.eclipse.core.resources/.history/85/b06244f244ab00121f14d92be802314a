@@ -26,8 +26,8 @@
     </div>
     <div>
     <form>
-    <input type="button" id="fysics" value="Set CheckPoints" onClick="points()">
-    <input type="button" id="reload" value="reload" onClick="deleteOverlays()">
+    <input type="button" id="fysics" value="Set CheckPoints" onClick="Fysics()">
+    <input type="button" id="reload" value="reload" onClick="deleteOverlays();">
     <input type="button" id="UserToPoint" value="Points" onClick="UserToPointDistance()">
     <input type="button" id="track" value="Start Tracking" onClick="trail()">
     <input type="button" id="trackStop" value="Stop Tracking" onClick="stoptrail()">

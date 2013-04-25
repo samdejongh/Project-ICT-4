@@ -2,7 +2,7 @@
     var checkpointlat = new Array();
     var checkpoints = 5;
     var distance;
-    var routelenght=1;
+    var routelenght=0.5;
 function points()
 {
 	var angle=80

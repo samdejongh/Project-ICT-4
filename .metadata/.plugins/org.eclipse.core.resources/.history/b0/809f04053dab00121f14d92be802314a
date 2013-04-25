@@ -47,10 +47,9 @@ function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
     document.getElementById("speed").innerHTML = 'Speed: ' + speed + ' km/s';//weergeven van de snelheid
     //	element.innerHTML = 'Current_lattude: ' + position.coords.Current_lattude + '</br> '
     //	+ 'Current_lngtude: ' + position.coords.Current_lngtude ;//weergeven van de positie op de pagina
-    if(accuracy <= '30')
-    	{
-    		MapUpdate();//roep de functie mapUpdate aan
-    	}
+    element.innerHTML = 'Accuracy: ' + accuracy + '<br />';
+    if()
+    MapUpdate();//roep de functie mapUpdate aan
 }
 
 function MapUpdate() {//de kaart centreren naar de nieuwe locatie

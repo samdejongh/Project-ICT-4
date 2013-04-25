@@ -1,46 +1,12 @@
     var checkpointlon = new Array();
     var checkpointlat = new Array();
     var checkpoints = 5;
-    var distance;
-    var routelenght=1;
+    var distance=2;
 function points()
 {
-	var angle=80
-    var LonInit =Current_lng;//start lat lon
-    var LatInit =Current_lat;//start lat lon
-    distance = routelenght/(2*Math.PI); 
-	if(angle<90)
-    {
-        var anglerad=angle*(Math.PI/180);    
-        var xcomponent = -(distance * Math.sin(anglerad));
-        var ycomponent = Math.cos(anglerad) * distance;
-    }
 
-    if(angle>90 && angle<180)
-    {
-        var anglerad=(angle-90)*(Math.PI/180);      
-        var xcomponent = -(distance * Math.cos(anglerad));
-        var ycomponent=-(Math.sin(anglerad)*distance);
-    }
-
-    if(angle>180 && angle<270)
-    {
-        var anglerad=(angle-180)*(Math.PI/180);
-        var xcomponent= Math.sin(anglerad)*distance;
-        var ycomponent = -(Math.cos(anglerad) * distance);
-    }
-
-    if(angle>270 && angle<360)
-    {  
-        var anglerad=(angle-270)*(Math.PI/180);
-        var xcomponent = Math.cos(anglerad) * distance;
-        var ycomponent=Math.sin(anglerad)*distance;
-    }
-
-    //so here we change metric components (x and y) to coordinate changes and
-    //add them to original coordinates
-    var LonCenter = LonInit + (xcomponent * 0.00899); //longitude of centerpoint
-    var LatCenter = LatInit + (ycomponent * 0.02050949);//latitude of centerpoint
+	var LonCenter = Current_lng; //longitude of centerpoint
+    var LatCenter = Current_lat;//latitude of centerpoint
     var done=1; // just to help moving to next sector in for loop
     //for loop to generete actual checkpoint
     //same tecnic ass in previos but in two stages, first coordinate in cirles
@@ -95,10 +61,10 @@ function points()
 
         var checkpointarealon = LonInit + (xcomponent * 0.00899); //longitude in circle arc
         var checkpointarealat = LatInit + (ycomponent * 0.02050949); //latitude in circle arc
-        alert("test");
+
         var checkpointorientation = 0 + 360 * Math.random(); // random 
         var checkpointdistance = routelenght / 10 * Math.random();
-        alert(checkpointorientation);
+
         if (checkpointorientation < 90)
         {
         	alert("checkpointorientation < 90");

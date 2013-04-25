@@ -1,14 +1,13 @@
     var checkpointlon = new Array();
     var checkpointlat = new Array();
     var checkpoints = 5;
-    var distance;
-    var routelenght=1;
+    var distance=0.5;
+    var routelenght=0.5;
 function points()
 {
 	var angle=80
     var LonInit =Current_lng;//start lat lon
     var LatInit =Current_lat;//start lat lon
-    distance = routelenght/(2*Math.PI); 
 	if(angle<90)
     {
         var anglerad=angle*(Math.PI/180);    

@@ -42,15 +42,11 @@ function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
 
     Current_lat = position.coords.latitude;
     Current_lng = position.coords.longitude;
-    var accuracy = position.coords.accuracy;
     speed = ((Math.round((position.coords.speed * 3.6) * 10) / 10).toFixed(1));
-    document.getElementById("speed").innerHTML = 'Speed: ' + speed + ' km/s';//weergeven van de snelheid
+    document.getElementById("speed").innerHTML = 'Speed: ' + speed + ' km/s'//weergeven van de snelheid
     //	element.innerHTML = 'Current_lattude: ' + position.coords.Current_lattude + '</br> '
     //	+ 'Current_lngtude: ' + position.coords.Current_lngtude ;//weergeven van de positie op de pagina
-    if(accuracy <= '30')
-    	{
-    		MapUpdate();//roep de functie mapUpdate aan
-    	}
+    MapUpdate();//roep de functie mapUpdate aan
 }
 
 function MapUpdate() {//de kaart centreren naar de nieuwe locatie
