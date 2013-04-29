@@ -21,7 +21,6 @@ function initialize() {//laad de map layout en roep de functie startGPS aan
         streetViewControl: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP//welk type van map je laat zien
     };
-    geocoder = new google.maps.Geocoder();
     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 }
 

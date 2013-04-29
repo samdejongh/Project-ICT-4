@@ -59,8 +59,10 @@ function points()
 		var checkpointarea= tempvar +(-10+20*Math.random())+(done*tempvar);
 
 
+		alert(checkpointarea);
         if (checkpointarea < 90)
         {
+        	alert("checkpointarea <90");
             var checkpointrad = checkpointarea * (Math.PI / 180);
             var xcomponent = -(distance * Math.sin(checkpointrad));
             var ycomponent = Math.cos(checkpointrad) * distance;
@@ -69,6 +71,7 @@ function points()
 
         if (checkpointarea > 90 && checkpointarea < 180)
         {
+        	alert("checkpointarea > 90 && checkpointarea < 180");
             var checkpointrad = (checkpointarea - 90) * (Math.PI / 180);
             var xcomponent = -(distance * Math.cos(checkpointrad));
             var ycomponent = -(Math.sin(checkpointrad) * distance);
@@ -77,6 +80,7 @@ function points()
 
         if (checkpointarea > 180 && checkpointarea < 270)
         {
+        	alert("checkpointarea > 180 && checkpointarea < 270");
             var checkpointrad = (checkpointarea - 180) * (Math.PI / 180);
             var xcomponent = Math.sin(checkpointrad) * distance;
             var ycomponent = -(Math.cos(checkpointrad) * distance);
@@ -84,6 +88,7 @@ function points()
 
         if (checkpointarea > 270 && checkpointarea < 360)
         {
+        	alert("checkpointarea > 270 && checkpointarea < 360");
             var checkpointrad = (checkpointarea - 270) * (Math.PI / 180);
             var xcomponent = Math.cos(checkpointrad) * distance;
             var ycomponent = Math.sin(checkpointrad) * distance;
@@ -91,10 +96,13 @@ function points()
 
         var checkpointarealon = LonInit + (xcomponent * 0.00899); //longitude in circle arc
         var checkpointarealat = LatInit + (ycomponent * 0.02050949); //latitude in circle arc
+        alert("test");
         var checkpointorientation = 0 + 360 * Math.random(); // random 
         var checkpointdistance = routelenght / 10 * Math.random();
+        alert("test2");
         if (checkpointorientation < 90)
         {
+        	alert("checkpointorientation < 90");
             var checkpointorientationrad = checkpointorientation * (Math.PI / 180);
             var xcomponent = -(checkpointdistance * Math.sin(checkpointorientationrad));
             var ycomponent = Math.cos(checkpointorientationrad) * checkpointdistance;
@@ -103,6 +111,7 @@ function points()
 
         if (checkpointorientation > 90 && checkpointorientation < 180)
         {
+        	alert("checkpointorientation > 90 && checkpointorientation < 180");
             var checkpointorientationrad = (checkpointorientation - 90) * (Math.PI / 180);
             var xcomponent = -(checkpointdistance * Math.cos(checkpointorientationrad));
             var ycomponent = -(Math.sin(checkpointorientationrad) * checkpointdistance);
@@ -110,6 +119,7 @@ function points()
 
         if (checkpointorientation > 180 && checkpointorientation < 270)
         {
+        	alert("checkpointorientation > 180 && checkpointorientation < 270");
             var checkpointorientationrad = (checkpointorientation - 180) * (Math.PI / 180);
             var xcomponent = Math.sin(checkpointorientationrad) * checkpointdistance;
             var ycomponent = -(Math.cos(checkpointorientationrad) * checkpointdistance);
@@ -117,6 +127,7 @@ function points()
 
         if (checkpointorientation > 270 && checkpointorientation < 360)
         {
+        	alert("checkpointorientation > 270 && checkpointorientation < 360");
             var checkpointorientationrad = (checkpointorientation - 270) * (Math.PI / 180);
             var xcomponent = Math.cos(checkpointorientationrad) * checkpointdistance;
             var ycomponent = Math.sin(checkpointorientationrad) * checkpointdistance;
@@ -131,6 +142,7 @@ function points()
         // lon are in own matrix and lat in own..
 		done=done+1;
     }
+    alert("to fysics");
     Fysics();
 }
 
@@ -144,25 +156,22 @@ function Fysics() {
         var latSpan = northEast.lat() - southWest.lat(); // gives the span of the Current_lattude (north-south position)
 
         for (var i = 0; i < checkpoints; i++) {
-        	point = new google.maps.LatLng(checkpointlat[i],checkpointlon[i]);
+        	var point = new google.maps.LatLng(checkpointlat[i],checkpointlon[i]);
         	if(city==true)
         		{
-        		alert(i);
         			CheckStreet(point);
         		}
-        	else
-        	{
+        	else{
             
-        		alert("city is false");
-        		PointsArray.push(point);
 
-        		
+            PointsArray.push(point);
+
+            markersArray[i] = new google.maps.Marker({
+                position: PointsArray[i],
+                map: map,
+                title: 'Your GPS Location'
+            });
         	}
-        	markersArray[i] = new google.maps.Marker({
-    			position: PointsArray[i],
-    			map: map,
-    			title: 'Your GPS Location'
-    		});
         }
 
     // Add 10 markers to the map at random locations

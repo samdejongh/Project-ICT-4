@@ -147,7 +147,6 @@ function Fysics() {
         	point = new google.maps.LatLng(checkpointlat[i],checkpointlon[i]);
         	if(city==true)
         		{
-        		alert(i);
         			CheckStreet(point);
         		}
         	else
@@ -156,13 +155,12 @@ function Fysics() {
         		alert("city is false");
         		PointsArray.push(point);
 
-        		
+        		markersArray[i] = new google.maps.Marker({
+        			position: PointsArray[i],
+        			map: map,
+        			title: 'Your GPS Location'
+        		});
         	}
-        	markersArray[i] = new google.maps.Marker({
-    			position: PointsArray[i],
-    			map: map,
-    			title: 'Your GPS Location'
-    		});
         }
 
     // Add 10 markers to the map at random locations

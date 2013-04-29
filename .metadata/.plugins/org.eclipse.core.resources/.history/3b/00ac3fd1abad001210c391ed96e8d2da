@@ -131,6 +131,7 @@ function points()
         // lon are in own matrix and lat in own..
 		done=done+1;
     }
+    alert("to fysics");
     Fysics();
 }
 
@@ -144,10 +145,10 @@ function Fysics() {
         var latSpan = northEast.lat() - southWest.lat(); // gives the span of the Current_lattude (north-south position)
 
         for (var i = 0; i < checkpoints; i++) {
-        	point = new google.maps.LatLng(checkpointlat[i],checkpointlon[i]);
+        	var point = new google.maps.LatLng(checkpointlat[i],checkpointlon[i]);
         	if(city==true)
         		{
-        		alert(i);
+        			alert("city is true");
         			CheckStreet(point);
         		}
         	else
@@ -156,13 +157,12 @@ function Fysics() {
         		alert("city is false");
         		PointsArray.push(point);
 
-        		
+        		markersArray[i] = new google.maps.Marker({
+        			position: PointsArray[i],
+        			map: map,
+        			title: 'Your GPS Location'
+        		});
         	}
-        	markersArray[i] = new google.maps.Marker({
-    			position: PointsArray[i],
-    			map: map,
-    			title: 'Your GPS Location'
-    		});
         }
 
     // Add 10 markers to the map at random locations

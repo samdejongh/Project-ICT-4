@@ -12,9 +12,8 @@
 <script type="text/javascript" charset="utf-8" src="js/PointCalculation.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/GlobalVariables.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/Database.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/reverse.js"></script>
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script><!-- jquery is nodig voor de database connectie (maakt gebruik van ajax) -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true&libraries=geometry">
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true&v=3.exp&libraries=geometry">
 </script>
 </head>
 

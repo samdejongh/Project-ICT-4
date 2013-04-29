@@ -1,0 +1,29 @@
+var geocoder = new google.maps.Geocoder();
+
+function CheckStreet(point)
+{
+	alert(point);
+	geocoder.geocode({'latLng': point}, function(results, status) {
+		alert("in geocoder system");
+	    if (status == google.maps.GeocoderStatus.OK) {
+	    	alert("google.maps.GeocoderStatus.OK");
+	      if (results[1]) {
+	        //map.setZoom(11);
+	    	  alert("results[1]");
+	    	  PointsArray.push(results[0].geometry.location);
+	    	  alert("voorbij push")
+	            markersArray[i] = new google.maps.Marker({
+	                position: PointsArray[i],
+	                map: map,
+	                title: 'Your GPS Location'
+	            });  
+	        //infowindow.setContent(results[0].formatted_address);
+	        //infowindow.open(map, marker);
+	      } else {
+	        alert('No results found');
+	      }
+	    } else {
+	      alert('Geocoder failed due to: ' + status);
+	    }
+	  });
+}

@@ -13,8 +13,6 @@ var pointamount = 10;
 var northEast;
 var southWest;
 var bounds;
-var point;
-var geocoder
 
 //Variables for database
 var nIntervId;

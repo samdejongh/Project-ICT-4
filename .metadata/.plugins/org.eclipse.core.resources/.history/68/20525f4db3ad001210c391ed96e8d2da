@@ -147,7 +147,6 @@ function Fysics() {
         	point = new google.maps.LatLng(checkpointlat[i],checkpointlon[i]);
         	if(city==true)
         		{
-        		alert(i);
         			CheckStreet(point);
         		}
         	else
