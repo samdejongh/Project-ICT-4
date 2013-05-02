@@ -1,75 +1,51 @@
 body
 {
-	margin-left:1%;
-	margin-right:1%;
-	margin-top:1%;
-
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	margin-bottom:0;
 }
-
-#header
+[data-role=header]
 {
-	width:100%;
-	background-color:#333;
-}
-
-#btn_RouteGuide
-{
-	position:relative;
-	float:left;
-	left:1%;
-	width:48.5%;
-	margin-top:1%;
-	background-size:cover;
-	background-repeat: no-repeat;
-	background-image:url('runnerguide_icon.png');
-}
-
-a.fill-div {
-    display: block;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-}
-
-#btn_OrienteeringTrainer
-{
-	position:relative;
-	float:right;
-    width:48.5%;
-	right:1%;
-	margin-top:1%;
-	background-size:cover;
-	background-repeat: no-repeat;
-	background-image:url('orienteeringtrainer_icon.png');
-}
-
-#btn_Settings
-{
-	position:relative;
-	float:left;
-	left:1%;
-	width:48.5%;
-	margin-top:1%;
-	background-size:cover;
-	background-repeat: no-repeat;
-	background-image:url('settings_icon.png');
-}
-
-#btn_TrainingHistory
-{
-	position:relative;
-	float:right;
-    width:48.5%;
-	right:1%;
-	margin-top:1%;
-	background-size:cover;
-	background-repeat: no-repeat;
-	background-image:url('traininghistory_icon.png');
-}
-
-#test
-{
-	background-color:black;
-	width:100%;
 	
+	top:0;
+	position:relative !important;
+	bottom: auto !important; 
+	background-color:#003366; 
+	border-bottom:1px solid black;
+}
+
+
+ul
+{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+li
+{
+	list-style:none;
+	margin:0;
+	padding:0;
+	display:inline;
+}
+
+li span
+{
+	margin:0;
+	padding:0;
+}
+
+lu span
+{
+	margin-bottom:0px;
+	
+}
+
+IMG
+{
+	position:relative;
+	margin:0;
+	padding-right:0;
 }

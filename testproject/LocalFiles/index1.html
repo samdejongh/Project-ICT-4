@@ -1,39 +1,64 @@
+<!DOCTYPE html>
+
 <html>
 <head>
+<meta name="viewport" content="width=device-width, height=device-height,
+  initial-scale=1.0, maximum-scale=1.0,
+  user-scalable=no" >
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <title>Device Properties Example</title>
-
+<link href="CSS/maps.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="stylesheet" href="CSS/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="jQuery/jquery.mobile-1.3.1.min.css" />
+<script src="jQuery/jquery-1.9.1.min.js"></script>
+<script src="jQuery/jquery.mobile-1.3.1.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/wormhole.js"></script>
-<script type="text/javascript"
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true&v=3&libraries=geometry">
+<script type="text/javascript" charset="utf-8" src="js/Maps.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/PointCalculation.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/GlobalVariables.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/Database.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true&v=3&libraries=geometry">
 </script>
-<script type="text/javascript" charset="utf-8" src="js/Maps.js">
-</script>
-<script type="text/javascript" charset="utf-8" src="js/Database.js">
-</script>
-<script src="http://code.jquery.com/jquery-1.7.2.min.js">
-</script>
-<!-- <script
-	src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
-</script> -->
-<link href="CSS/maps.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" charset="utf-8" src="js/ui.js"></script>
+
+
 </head>
-<body onLoad="initialize()"><!--roep de functie initalize op in de file map.js-->
-	<div  id="map_canvas" style="width: 100%; height: 100%">
-    </div>
-    <div id="info_speed" class="info" align="left"  >
-    <a id="speed">Speed</a>
-    </div>
-    <div>
-    <input type="button" onclick="data()"/><!--gps data verzenden naar sql server-->
-    </div>
-    <!--<div id="info_loc" class="info">
-    <a id="geolocation">Finding geolocation...</a>
-    </div>-->
-    <div>
+
+
+<body onLoad="initialize()">
+<div data-role="page" id="mapPage">
+<div id="header" data-role="header">
+		<ul class="_header">
+			<span class="go_og">
+				<li><img id="og_image" style="border-bottom:5px solid white" src="images/og_icon.png"  ></li>
+			</span>
+
+			<span class="go_his" onClick="GoPage('his_page','his_image')" id="go_his">
+				<li><img id="his_image" style="border-bottom:5px solid #003366" src="images/history_icon.png" ></li>
+			</span>
+
+			<span class="go_set" onClick="GoPage('set_page','set_image')" id="go_set">
+				<li><img id="set_image" style="border-bottom:5px solid #003366" src="images/settings_icon.png" ></li>
+			</span>
+		</ul>
+</div>
+
+	<div data-role="content" id="map_content" >
+            <div id="map_content">
+                <div id="map_canvas"></div>
+			</div>
+	</div>
+   <!--<div id="info_speed" class="info" align="left" >
+    <a id="speed">Speed</a> 
     <form>
-    <button onClick="Fysics()">DrawPoints</button>
-    <button onClick="UserToPointDistance()">UserToPointDistance</button>
+    <input type="button" id="fysics" value="Set CheckPoints" onClick="points()">
+    <input type="button" id="reload" value="reload" onClick="deleteOverlays()">
+    <input type="button" id="UserToPoint" value="Points" onClick="UserToPointDistance()">
+    <input type="button" id="track" value="Start Tracking" onClick="trail()">
+    <input type="button" id="trackStop" value="Stop Tracking" onClick="stoptrail()">
+	<input type="button" id="maps" value="start maps" onClick="initialize()">
     </form>
-    </div>
+    </div>-->
+		</div>
 </body>
 </html>
