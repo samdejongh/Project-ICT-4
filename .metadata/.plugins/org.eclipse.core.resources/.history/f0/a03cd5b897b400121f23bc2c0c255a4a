@@ -145,13 +145,14 @@ function Fysics() {
 
         for (var i = 0; i < checkpoints; i++) {
         	point = new google.maps.LatLng(checkpointlat[i],checkpointlon[i]);
-        	if(city==true)//staat momenteel altijd op true moet nog een selectie worden in de ui
+        	if(city==true)
         		{
-        			
         			CheckStreet(point);
         		}
         	else
         	{
+            
+        		alert("city is false");
         		PointsArray.push(point);
         		markersArray[i] = new google.maps.Marker({
         			position: PointsArray[i],

@@ -1,18 +1,16 @@
-var j=0;
+var j;
 function CheckStreet(point)
 {
 	geocoder.geocode({'latLng': point}, function(results, status) {
+		alert("in geocoder system");
 	    if (status == google.maps.GeocoderStatus.OK) {
+	    	alert("google.maps.GeocoderStatus.OK");
 	      if (results[1]) {
 	        //map.setZoom(11);
+	    	  alert("results[1]");
 	    	  PointsArray.push(results[0].geometry.location);
+	    	  marker();
 	    	  j++;
-	    	  alert(j);
-	    	  if(j==checkpoints)
-	  		{
-	    		  alert("markertomap");
-	  			markertomap();
-	  		}
 	        //infowindow.setContent(results[0].formatted_address);
 	        //infowindow.open(map, marker);
 	      } else {
@@ -21,5 +19,6 @@ function CheckStreet(point)
 	    } else {
 	      alert('Geocoder failed due to: ' + status);
 	    }
-	  });	
+	  });
+	
 }

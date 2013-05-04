@@ -145,13 +145,14 @@ function Fysics() {
 
         for (var i = 0; i < checkpoints; i++) {
         	point = new google.maps.LatLng(checkpointlat[i],checkpointlon[i]);
-        	if(city==true)//staat momenteel altijd op true moet nog een selectie worden in de ui
+        	if(city==true)
         		{
-        			
         			CheckStreet(point);
         		}
         	else
         	{
+            
+        		alert("city is false");
         		PointsArray.push(point);
         		markersArray[i] = new google.maps.Marker({
         			position: PointsArray[i],
@@ -165,11 +166,9 @@ function Fysics() {
 
     // Add 10 markers to the map at random locations
 }
-function markertomap()
+function marker()
 {
-	alert("marker");
 	for (var i = 0; i < checkpoints; i++) {
-		alert(i);
 	markersArray[i] = new google.maps.Marker({
 		position: PointsArray[i],
 		map: map,

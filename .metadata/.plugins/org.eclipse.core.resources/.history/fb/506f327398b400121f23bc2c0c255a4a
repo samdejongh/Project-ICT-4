@@ -1,4 +1,4 @@
-var j=0;
+var j;
 function CheckStreet(point)
 {
 	geocoder.geocode({'latLng': point}, function(results, status) {
@@ -8,11 +8,6 @@ function CheckStreet(point)
 	    	  PointsArray.push(results[0].geometry.location);
 	    	  j++;
 	    	  alert(j);
-	    	  if(j==checkpoints)
-	  		{
-	    		  alert("markertomap");
-	  			markertomap();
-	  		}
 	        //infowindow.setContent(results[0].formatted_address);
 	        //infowindow.open(map, marker);
 	      } else {
@@ -21,5 +16,10 @@ function CheckStreet(point)
 	    } else {
 	      alert('Geocoder failed due to: ' + status);
 	    }
-	  });	
+	  });
+	alert(checkpoints);
+	if(j==checkpoints)
+		{
+			markertomap();
+		}
 }

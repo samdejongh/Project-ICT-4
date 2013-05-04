@@ -10,7 +10,6 @@ function CheckStreet(point)
 	    	  alert(j);
 	    	  if(j==checkpoints)
 	  		{
-	    		  alert("markertomap");
 	  			markertomap();
 	  		}
 	        //infowindow.setContent(results[0].formatted_address);

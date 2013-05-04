@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="40" version="2.0">
+<workbench progressCount="26" version="2.0">
 <workbenchAdvisor/>
 <window height="1032" maximized="true" width="960" x="960" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -26,8 +26,8 @@
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -46,21 +46,21 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" partName="index.html" path="C:/Users/senne/Documents/Git/testproject/LocalFiles/index.html" title="index.html" tooltip="testproject/LocalFiles/index.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject/LocalFiles/index.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="533" selectionTopPixel="180"/>
-</editor>
-<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="jquery.mobile-1.3.1.min.js" partName="jquery.mobile-1.3.1.min.js" path="C:/Users/senne/Documents/Git/testproject/LocalFiles/jQuery/jquery.mobile-1.3.1.min.js" title="jquery.mobile-1.3.1.min.js" tooltip="testproject/LocalFiles/jQuery/jquery.mobile-1.3.1.min.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject/LocalFiles/jQuery/jquery.mobile-1.3.1.min.js"/>
-<editorState selectionHorizontalPixel="340" selectionLength="1" selectionOffset="329" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="reverse.js" partName="reverse.js" path="C:/Users/senne/Documents/Git/testproject_Brent/LocalFiles/js/reverse.js" title="reverse.js" tooltip="testproject_Brent/LocalFiles/js/reverse.js" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="reverse.js" partName="reverse.js" path="C:/Users/senne/Documents/Git/testproject_Brent/LocalFiles/js/reverse.js" title="reverse.js" tooltip="testproject_Brent/LocalFiles/js/reverse.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject_Brent/LocalFiles/js/reverse.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="325" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="372" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.wst.css.core.csssource.source" name="maps.css" partName="maps.css" path="C:/Users/senne/Documents/Git/testproject/LocalFiles/CSS/maps.css" title="maps.css" tooltip="testproject/LocalFiles/CSS/maps.css" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject/LocalFiles/CSS/maps.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="525" selectionTopPixel="450"/>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="PointCalculation.js" partName="PointCalculation.js" path="C:/Users/senne/Documents/Git/testproject_Brent/LocalFiles/js/PointCalculation.js" title="PointCalculation.js" tooltip="testproject_Brent/LocalFiles/js/PointCalculation.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject_Brent/LocalFiles/js/PointCalculation.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="163" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="GlobalVariables.js" partName="GlobalVariables.js" path="C:/Users/senne/Documents/Git/testproject_Brent/LocalFiles/js/GlobalVariables.js" title="GlobalVariables.js" tooltip="testproject_Brent/LocalFiles/js/GlobalVariables.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject_Brent/LocalFiles/js/GlobalVariables.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" partName="Maps.js" path="C:/Users/senne/Documents/Git/testproject_Brent/LocalFiles/js/Maps.js" title="Maps.js" tooltip="testproject_Brent/LocalFiles/js/Maps.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject_Brent/LocalFiles/js/Maps.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3346" selectionTopPixel="1167"/>
 </editor>
 </editors>
 <views>
@@ -111,7 +111,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.wst.css.core.csssource.source" activePerspective="com.mobilesorcery.ui.perspective">
+<perspectives activePart="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" activePerspective="com.mobilesorcery.ui.perspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.mobilesorcery.ui.perspective.PerspectiveFactory" id="com.mobilesorcery.ui.perspective" label="MoSync"/>
 <alwaysOnActionSet id="com.mobilesorcery.sdk.help.actionset"/>
@@ -278,170 +278,167 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject/LocalFiles/js/ui.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/reverse.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/testproject/LocalFiles/index1.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/testproject/LocalFiles/CSS/maps.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject/LocalFiles/jQuery/jquery.mobile-1.3.1.min.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/PointCalculation.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/GlobalVariables.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/Maps.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/PointCalculation.js"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/reverse.js"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/PointCalculation.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/Maps.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/GlobalVariables.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/testproject_Brent/LocalFiles/index1.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/Maps.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/testproject_Brent/LocalFiles/CSS/maps.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/testproject_Brent/LocalFiles/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/testproject/LocalFiles/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject/LocalFiles/jQuery/jquery.mobile-1.3.1.min.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/reverse.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/testproject_Brent/LocalFiles/index1.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/testproject/LocalFiles/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/testproject/LocalFiles/CSS/maps.css"/>
 </editors>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="404" y="0"/>
+<item historyLabel="ui.js" index="0">
+<position info="not_deleted" x="632" y="6"/>
 </item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="130" y="0"/>
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="402" y="0"/>
 </item>
-<item historyLabel="index1.html" index="4">
-<position info="not_deleted" x="1046" y="0"/>
+<item historyLabel="index1.html" index="2">
+<position info="not_deleted" x="1848" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="63" y="5"/>
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="402" y="0"/>
 </item>
-<item historyLabel="Maps.js" index="2">
-<position info="not_deleted" x="2153" y="0"/>
+<item historyLabel="maps.css" index="3">
+<position info="not_deleted" x="525" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="130" y="53"/>
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="402" y="0"/>
 </item>
-<item historyLabel="index1.html" index="4">
-<position info="not_deleted" x="1002" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position/>
-</item>
-<item historyLabel="index1.html" index="4">
-<position info="not_deleted" x="862" y="171"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="64" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="23" y="5"/>
-</item>
-<item historyLabel="PointCalculation.js" index="1">
-<position info="not_deleted" x="6013" y="0"/>
-</item>
-<item historyLabel="GlobalVariables.js" index="3">
-<position info="not_deleted" x="308" y="0"/>
-</item>
-<item historyLabel="PointCalculation.js" index="1">
-<position info="not_deleted" x="6013" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="23" y="5"/>
-</item>
-<item historyLabel="Maps.js" index="2">
-<position info="not_deleted" x="719" y="0"/>
-</item>
-<item historyLabel="GlobalVariables.js" index="3">
-<position info="not_deleted" x="308" y="0"/>
-</item>
-<item historyLabel="Maps.js" index="2">
-<position info="not_deleted" x="719" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position/>
-</item>
-<item historyLabel="Maps.js" index="2">
-<position info="not_deleted" x="719" y="8"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="404" y="0"/>
-</item>
-<item historyLabel="PointCalculation.js" index="1">
-<position/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="34" y="0"/>
-</item>
-<item historyLabel="PointCalculation.js" index="1">
-<position info="not_deleted" x="5432" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="342" y="7"/>
-</item>
-<item historyLabel="PointCalculation.js" index="1">
-<position/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="342" y="7"/>
-</item>
-<item historyLabel="PointCalculation.js" index="1">
-<position info="not_deleted" x="6451" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position/>
-</item>
-<item historyLabel="PointCalculation.js" index="1">
-<position info="not_deleted" x="6472" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="325" y="11"/>
-</item>
-<item historyLabel="PointCalculation.js" index="1">
-<position info="not_deleted" x="6271" y="11"/>
-</item>
-<item historyLabel="GlobalVariables.js" index="3">
-<position info="not_deleted" x="308" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="89" y="6"/>
-</item>
-<item historyLabel="PointCalculation.js" index="1">
-<position info="not_deleted" x="6163" y="5"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="PointCalculation.js" index="1">
-<position info="not_deleted" x="6138" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="0">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="Maps.js" index="5">
-<position info="not_deleted" x="719" y="8"/>
-</item>
-<item historyLabel="maps.css" index="6">
-<position info="not_deleted" x="249" y="0"/>
-</item>
-<item historyLabel="Maps.js" index="5">
-<position info="not_deleted" x="843" y="0"/>
-</item>
-<item historyLabel="index.html" index="7">
-<position info="not_deleted" x="675" y="0"/>
-</item>
-<item historyLabel="index.html" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="jquery.mobile-1.3.1.min.js" index="9">
+<item historyLabel="jquery.mobile-1.3.1.min.js" index="4">
 <position info="not_deleted" x="329" y="1"/>
 </item>
-<item historyLabel="reverse.js" index="10">
-<position info="not_deleted" x="325" y="11"/>
+<item historyLabel="PointCalculation.js" index="5">
+<position info="not_deleted" x="6119" y="0"/>
 </item>
-<item historyLabel="index.html" index="8">
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="249" y="7"/>
+</item>
+<item historyLabel="PointCalculation.js" index="5">
+<position info="not_deleted" x="6643" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="388" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="5">
+<position info="not_deleted" x="6643" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="388" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="388" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="5">
+<position info="not_deleted" x="6643" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="388" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="5">
+<position info="not_deleted" x="6643" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="676" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="5">
+<position info="not_deleted" x="6611" y="11"/>
+</item>
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="676" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="696" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="5">
+<position info="not_deleted" x="6611" y="11"/>
+</item>
+<item historyLabel="PointCalculation.js" index="5">
+<position info="not_deleted" x="6588" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="5">
+<position info="not_deleted" x="6643" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="1">
+<position info="not_deleted" x="671" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="5">
+<position info="not_deleted" x="5983" y="11"/>
+</item>
+<item historyLabel="GlobalVariables.js" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="index1.html" index="11">
-<position info="not_deleted" x="214" y="0"/>
+<item historyLabel="PointCalculation.js" index="5">
+<position info="not_deleted" x="163" y="0"/>
 </item>
-<item historyLabel="index.html" index="12">
+<item historyLabel="Maps.js" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="maps.css" index="13">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Maps.js" index="7">
+<position info="not_deleted" x="2129" y="0"/>
+</item>
+<item historyLabel="Maps.js" index="7">
+<position info="not_deleted" x="2492" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="8">
+<position info="not_deleted" x="163" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="9">
+<position/>
+</item>
+<item historyLabel="PointCalculation.js" index="8">
+<position info="not_deleted" x="2073" y="0"/>
+</item>
+<item historyLabel="Maps.js" index="7">
+<position/>
+</item>
+<item historyLabel="Maps.js" index="7">
+<position info="not_deleted" x="1906" y="0"/>
+</item>
+<item historyLabel="Maps.js" index="7">
+<position info="not_deleted" x="2470" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="8">
+<position info="not_deleted" x="6299" y="12"/>
+</item>
+<item historyLabel="reverse.js" index="9">
+<position/>
+</item>
+<item historyLabel="PointCalculation.js" index="8">
+<position info="not_deleted" x="6130" y="0"/>
+</item>
+<item historyLabel="Maps.js" index="7">
+<position info="not_deleted" x="3346" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="9">
+<position/>
+</item>
+<item historyLabel="PointCalculation.js" index="8">
+<position info="not_deleted" x="6130" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="9">
+<position/>
+</item>
+<item historyLabel="PointCalculation.js" index="8">
+<position info="not_deleted" x="6130" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="9">
+<position/>
+</item>
+<item historyLabel="reverse.js" index="9">
+<position info="not_deleted" x="402" y="0"/>
+</item>
+<item historyLabel="reverse.js" index="9">
+<position info="not_deleted" x="372" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="10">
+<position info="not_deleted" x="163" y="0"/>
+</item>
+<item active="true" historyLabel="reverse.js" index="9">
+<position info="not_deleted" x="372" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -460,11 +457,26 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="maps.css" tooltip="testproject/LocalFiles/CSS/maps.css">
-<persistable path="/testproject/LocalFiles/CSS/maps.css"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" tooltip="testproject_Brent/LocalFiles/js/Maps.js">
+<persistable path="/testproject_Brent/LocalFiles/js/Maps.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="GlobalVariables.js" tooltip="testproject_Brent/LocalFiles/js/GlobalVariables.js">
+<persistable path="/testproject_Brent/LocalFiles/js/GlobalVariables.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="PointCalculation.js" tooltip="testproject_Brent/LocalFiles/js/PointCalculation.js">
+<persistable path="/testproject_Brent/LocalFiles/js/PointCalculation.js"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index1.html" tooltip="testproject_Brent/LocalFiles/index1.html">
 <persistable path="/testproject_Brent/LocalFiles/index1.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="ui.js" tooltip="testproject/LocalFiles/js/ui.js">
+<persistable path="/testproject/LocalFiles/js/ui.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index1.html" tooltip="testproject/LocalFiles/index1.html">
+<persistable path="/testproject/LocalFiles/index1.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="maps.css" tooltip="testproject/LocalFiles/CSS/maps.css">
+<persistable path="/testproject/LocalFiles/CSS/maps.css"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="reverse.js" tooltip="testproject_Brent/LocalFiles/js/reverse.js">
 <persistable path="/testproject_Brent/LocalFiles/js/reverse.js"/>
@@ -478,15 +490,6 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="maps.css" tooltip="testproject_Brent/LocalFiles/CSS/maps.css">
 <persistable path="/testproject_Brent/LocalFiles/CSS/maps.css"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="PointCalculation.js" tooltip="testproject_Brent/LocalFiles/js/PointCalculation.js">
-<persistable path="/testproject_Brent/LocalFiles/js/PointCalculation.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" tooltip="testproject_Brent/LocalFiles/js/Maps.js">
-<persistable path="/testproject_Brent/LocalFiles/js/Maps.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="GlobalVariables.js" tooltip="testproject_Brent/LocalFiles/js/GlobalVariables.js">
-<persistable path="/testproject_Brent/LocalFiles/js/GlobalVariables.js"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Database.js" tooltip="testproject_Brent/LocalFiles/js/Database.js">
 <persistable path="/testproject_Brent/LocalFiles/js/Database.js"/>
 </file>
@@ -496,14 +499,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" tooltip="testproject_Brent/LocalFiles/index.html">
 <persistable path="/testproject_Brent/LocalFiles/index.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index1.html" tooltip="testproject/LocalFiles/index1.html">
-<persistable path="/testproject/LocalFiles/index1.html"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" tooltip="testproject/LocalFiles/js/Maps.js">
 <persistable path="/testproject/LocalFiles/js/Maps.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Main.js" tooltip="testproject/LocalFiles/js/Main.js">
-<persistable path="/testproject/LocalFiles/js/Main.js"/>
 </file>
 </mruList>
 </workbench>

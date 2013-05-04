@@ -2,6 +2,7 @@
 <<<<<<<=HEAD
 >>>>>>>=e4b5f47... Geen idee
 com.mobilesorcery.sdk.core.w.s.token=EDF60E819615
+com.mobilesorcery.sdk.corepreferred.launcher.com.mobilesorcery.sdk.build.android.packager=com.mobilesorcery.sdk.builder.android.launcher
 com.mobilesorcery.sdk.corepreferred.launcher.com.mobilesorcery.sdk.build.winmobilecs.packager=com.mobilesorcery.sdk.builder.winmobilecs.launcher
 eclipse.preferences.version=1
 privileged.access\:dfsg=E619742C66EC4B57C7F526E218D31B18
