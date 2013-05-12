@@ -5,5 +5,6 @@ com.mobilesorcery.sdk.core.w.s.token=EDF60E819615
 com.mobilesorcery.sdk.corepreferred.launcher.com.mobilesorcery.sdk.build.android.packager=com.mobilesorcery.sdk.builder.android.launcher
 com.mobilesorcery.sdk.corepreferred.launcher.com.mobilesorcery.sdk.build.winmobilecs.packager=com.mobilesorcery.sdk.builder.winmobilecs.launcher
 eclipse.preferences.version=1
+privileged.access\:Orienteering_Guide=711493DA1F17427E32D6DB81E263884B
 privileged.access\:dfsg=E619742C66EC4B57C7F526E218D31B18
 privileged.access\:sdf=01FB0BF3247F37A403018B2FF70BB1C1
