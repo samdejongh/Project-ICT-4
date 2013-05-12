@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.mobilesorcery.html5.jsodd.launchconfigurationtype">
-<booleanAttribute key="default.launch.config" value="true"/>
-<booleanAttribute key="org.eclipse.debug.ui.private" value="true"/>
 <stringAttribute key="project.name" value="testproject_Brent"/>
 </launchConfiguration>

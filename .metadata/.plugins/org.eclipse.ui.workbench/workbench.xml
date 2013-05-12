@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="26" version="2.0">
 <workbenchAdvisor/>
-<window height="1032" maximized="true" width="960" x="960" y="0">
+<window height="1032" maximized="true" width="960" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -24,10 +24,11 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jst.jsp.core.jspsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -42,25 +43,45 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="reverse.js" partName="reverse.js" path="C:/Users/senne/Documents/Git/testproject_Brent/LocalFiles/js/reverse.js" title="reverse.js" tooltip="testproject_Brent/LocalFiles/js/reverse.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject_Brent/LocalFiles/js/reverse.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="372" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="import.html" partName="import.html" path="C:/Users/senne/Dropbox/Project ict 4/brent/Layout dingetje/OrienteeringGuide/LocalFiles/import.html" title="import.html" tooltip="Orienteering Guide/LocalFiles/import.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering Guide/LocalFiles/import.html"/>
+<editorState selectionHorizontalPixel="80" selectionLength="8" selectionOffset="1032" selectionTopPixel="142"/>
 </editor>
-<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="PointCalculation.js" partName="PointCalculation.js" path="C:/Users/senne/Documents/Git/testproject_Brent/LocalFiles/js/PointCalculation.js" title="PointCalculation.js" tooltip="testproject_Brent/LocalFiles/js/PointCalculation.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject_Brent/LocalFiles/js/PointCalculation.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="163" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Sliders.js" partName="Sliders.js" path="C:/Users/senne/Dropbox/Project ict 4/brent/Layout dingetje/OrienteeringGuide/LocalFiles/js/Sliders.js" title="Sliders.js" tooltip="Orienteering Guide/LocalFiles/js/Sliders.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering Guide/LocalFiles/js/Sliders.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="41" selectionOffset="211" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="GlobalVariables.js" partName="GlobalVariables.js" path="C:/Users/senne/Documents/Git/testproject_Brent/LocalFiles/js/GlobalVariables.js" title="GlobalVariables.js" tooltip="testproject_Brent/LocalFiles/js/GlobalVariables.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject_Brent/LocalFiles/js/GlobalVariables.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="reverse.js" partName="reverse.js" path="C:/Users/senne/Dropbox/Project ict 4/brent/Layout dingetje/OrienteeringGuide/LocalFiles/js/reverse.js" title="reverse.js" tooltip="Orienteering Guide/LocalFiles/js/reverse.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering Guide/LocalFiles/js/reverse.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="10" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" partName="Maps.js" path="C:/Users/senne/Documents/Git/testproject_Brent/LocalFiles/js/Maps.js" title="Maps.js" tooltip="testproject_Brent/LocalFiles/js/Maps.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testproject_Brent/LocalFiles/js/Maps.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3346" selectionTopPixel="1167"/>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" partName="Maps.js" path="C:/Users/senne/Dropbox/Project ict 4/brent/Layout dingetje/OrienteeringGuide/LocalFiles/js/Maps.js" title="Maps.js" tooltip="Orienteering Guide/LocalFiles/js/Maps.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering Guide/LocalFiles/js/Maps.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3297" selectionTopPixel="752"/>
+</editor>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="GlobalVariables.js" partName="GlobalVariables.js" path="C:/Users/senne/Dropbox/Project ict 4/brent/Layout dingetje/OrienteeringGuide/LocalFiles/js/GlobalVariables.js" title="GlobalVariables.js" tooltip="Orienteering Guide/LocalFiles/js/GlobalVariables.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering Guide/LocalFiles/js/GlobalVariables.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="314" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="PointCalculation.js" partName="PointCalculation.js" path="C:/Users/senne/Dropbox/Project ict 4/brent/Layout dingetje/OrienteeringGuide/LocalFiles/js/PointCalculation.js" title="PointCalculation.js" tooltip="Orienteering Guide/LocalFiles/js/PointCalculation.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering Guide/LocalFiles/js/PointCalculation.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7486" selectionTopPixel="1293"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index1.html" partName="index1.html" path="C:/Users/senne/Dropbox/Project ict 4/brent/Layout dingetje/OrienteeringGuide/LocalFiles/index1.html" title="index1.html" tooltip="Orienteering Guide/LocalFiles/index1.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering Guide/LocalFiles/index1.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="447"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Database.js" partName="Database.js" path="C:/Users/senne/Dropbox/Project ict 4/brent/Layout dingetje/OrienteeringGuide/LocalFiles/js/Database.js" title="Database.js" tooltip="Orienteering Guide/LocalFiles/js/Database.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering Guide/LocalFiles/js/Database.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="197" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -165,7 +186,7 @@
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.249499" ratioLeft="249" ratioRight="749" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.26960257" ratioLeft="251" ratioRight="680" relationship="2" relative="topLeft"/>
 <info folder="true" part="topRight" ratio="0.69959944" ratioLeft="524" ratioRight="225" relationship="2" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="com.mobilesorcery.sdk.profiles.ui.view" label="LabelNotFound"/>
@@ -278,167 +299,170 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject/LocalFiles/js/ui.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/reverse.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/testproject/LocalFiles/index1.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/testproject/LocalFiles/CSS/maps.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject/LocalFiles/jQuery/jquery.mobile-1.3.1.min.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/PointCalculation.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/GlobalVariables.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/Maps.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/PointCalculation.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/reverse.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/testproject_Brent/LocalFiles/js/PointCalculation.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/Orienteering Guide/LocalFiles/index1.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering Guide/LocalFiles/js/PointCalculation.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering Guide/LocalFiles/js/GlobalVariables.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering Guide/LocalFiles/js/Sliders.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering Guide/LocalFiles/js/Maps.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Orienteering Guide/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/Orienteering Guide/LocalFiles/layoutfinal.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering Guide/LocalFiles/js/Sliders.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/Orienteering Guide/LocalFiles/import.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering Guide/LocalFiles/js/Maps.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering Guide/LocalFiles/js/PointCalculation.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering Guide/LocalFiles/js/GlobalVariables.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/Orienteering Guide/LocalFiles/index1.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering Guide/LocalFiles/js/Database.js"/>
 </editors>
-<item historyLabel="ui.js" index="0">
-<position info="not_deleted" x="632" y="6"/>
+<item historyLabel="PointCalculation.js" index="1">
+<position info="not_deleted" x="5760" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="402" y="0"/>
+<item historyLabel="GlobalVariables.js" index="2">
+<position info="not_deleted" x="243" y="9"/>
 </item>
-<item historyLabel="index1.html" index="2">
-<position info="not_deleted" x="1848" y="0"/>
+<item historyLabel="PointCalculation.js" index="1">
+<position info="not_deleted" x="5760" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="402" y="0"/>
+<item historyLabel="PointCalculation.js" index="1">
+<position info="not_deleted" x="205" y="0"/>
 </item>
-<item historyLabel="maps.css" index="3">
-<position info="not_deleted" x="525" y="0"/>
+<item historyLabel="Sliders.js" index="3">
+<position info="not_deleted" x="187" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="402" y="0"/>
+<item historyLabel="Sliders.js" index="3">
+<position info="not_deleted" x="184" y="0"/>
 </item>
-<item historyLabel="jquery.mobile-1.3.1.min.js" index="4">
-<position info="not_deleted" x="329" y="1"/>
+<item historyLabel="PointCalculation.js" index="1">
+<position info="not_deleted" x="163" y="11"/>
 </item>
-<item historyLabel="PointCalculation.js" index="5">
-<position info="not_deleted" x="6119" y="0"/>
+<item historyLabel="Sliders.js" index="3">
+<position info="not_deleted" x="74" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="249" y="7"/>
+<item historyLabel="PointCalculation.js" index="1">
+<position info="not_deleted" x="329" y="11"/>
 </item>
-<item historyLabel="PointCalculation.js" index="5">
-<position info="not_deleted" x="6643" y="0"/>
+<item historyLabel="Sliders.js" index="3">
+<position info="not_deleted" x="100" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="388" y="0"/>
+<item historyLabel="PointCalculation.js" index="1">
+<position info="not_deleted" x="329" y="11"/>
 </item>
-<item historyLabel="PointCalculation.js" index="5">
-<position info="not_deleted" x="6643" y="0"/>
+<item historyLabel="index1.html" index="0">
+<position info="not_deleted" x="1265" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="388" y="0"/>
+<item historyLabel="Sliders.js" index="3">
+<position info="not_deleted" x="100" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="388" y="0"/>
+<item historyLabel="PointCalculation.js" index="1">
+<position info="not_deleted" x="167" y="0"/>
 </item>
-<item historyLabel="PointCalculation.js" index="5">
-<position info="not_deleted" x="6643" y="0"/>
+<item historyLabel="GlobalVariables.js" index="2">
+<position info="not_deleted" x="314" y="11"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="388" y="0"/>
+<item historyLabel="Sliders.js" index="3">
+<position info="not_deleted" x="92" y="0"/>
 </item>
-<item historyLabel="PointCalculation.js" index="5">
-<position info="not_deleted" x="6643" y="0"/>
+<item historyLabel="GlobalVariables.js" index="2">
+<position info="not_deleted" x="314" y="11"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="676" y="0"/>
+<item historyLabel="Sliders.js" index="3">
+<position info="not_deleted" x="89" y="11"/>
 </item>
-<item historyLabel="PointCalculation.js" index="5">
-<position info="not_deleted" x="6611" y="11"/>
+<item historyLabel="PointCalculation.js" index="1">
+<position info="not_deleted" x="125" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="676" y="0"/>
+<item historyLabel="Sliders.js" index="3">
+<position info="not_deleted" x="63" y="11"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="696" y="0"/>
+<item historyLabel="main.cpp" index="5">
+<position info="not_deleted" x="2068" y="0"/>
 </item>
-<item historyLabel="PointCalculation.js" index="5">
-<position info="not_deleted" x="6611" y="11"/>
+<item historyLabel="index1.html" index="0">
+<position info="not_deleted" x="1265" y="0"/>
 </item>
-<item historyLabel="PointCalculation.js" index="5">
-<position info="not_deleted" x="6588" y="0"/>
+<item historyLabel="PointCalculation.js" index="1">
+<position info="not_deleted" x="192" y="0"/>
 </item>
-<item historyLabel="PointCalculation.js" index="5">
-<position info="not_deleted" x="6643" y="0"/>
+<item historyLabel="Sliders.js" index="3">
+<position info="not_deleted" x="146" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="1">
-<position info="not_deleted" x="671" y="0"/>
+<item historyLabel="PointCalculation.js" index="1">
+<position info="not_deleted" x="192" y="0"/>
 </item>
-<item historyLabel="PointCalculation.js" index="5">
-<position info="not_deleted" x="5983" y="11"/>
+<item historyLabel="main.cpp" index="5">
+<position info="not_deleted" x="2004" y="0"/>
 </item>
-<item historyLabel="GlobalVariables.js" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Maps.js" index="4">
+<position info="not_deleted" x="3297" y="0"/>
 </item>
-<item historyLabel="PointCalculation.js" index="5">
-<position info="not_deleted" x="163" y="0"/>
+<item historyLabel="Sliders.js" index="3">
+<position info="not_deleted" x="63" y="11"/>
 </item>
-<item historyLabel="Maps.js" index="7">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="layoutfinal.html" index="6">
+<position info="not_deleted" x="2291" y="7"/>
 </item>
-<item historyLabel="Maps.js" index="7">
-<position info="not_deleted" x="2129" y="0"/>
+<item historyLabel="Sliders.js" index="7">
+<position info="not_deleted" x="107" y="0"/>
 </item>
-<item historyLabel="Maps.js" index="7">
-<position info="not_deleted" x="2492" y="0"/>
+<item historyLabel="layoutfinal.html" index="6">
+<position info="not_deleted" x="2264" y="49"/>
 </item>
-<item historyLabel="PointCalculation.js" index="8">
-<position info="not_deleted" x="163" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="9">
+<item historyLabel="Sliders.js" index="7">
 <position/>
 </item>
-<item historyLabel="PointCalculation.js" index="8">
-<position info="not_deleted" x="2073" y="0"/>
+<item historyLabel="layoutfinal.html" index="6">
+<position info="not_deleted" x="2561" y="2"/>
 </item>
-<item historyLabel="Maps.js" index="7">
+<item historyLabel="Sliders.js" index="7">
 <position/>
 </item>
-<item historyLabel="Maps.js" index="7">
-<position info="not_deleted" x="1906" y="0"/>
+<item historyLabel="layoutfinal.html" index="6">
+<position info="not_deleted" x="2561" y="2"/>
 </item>
-<item historyLabel="Maps.js" index="7">
-<position info="not_deleted" x="2470" y="0"/>
+<item historyLabel="import.html" index="8">
+<position info="not_deleted" x="693" y="0"/>
 </item>
-<item historyLabel="PointCalculation.js" index="8">
-<position info="not_deleted" x="6299" y="12"/>
-</item>
-<item historyLabel="reverse.js" index="9">
+<item historyLabel="Sliders.js" index="7">
 <position/>
 </item>
-<item historyLabel="PointCalculation.js" index="8">
-<position info="not_deleted" x="6130" y="0"/>
+<item historyLabel="import.html" index="8">
+<position info="not_deleted" x="1032" y="8"/>
 </item>
-<item historyLabel="Maps.js" index="7">
-<position info="not_deleted" x="3346" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="9">
+<item historyLabel="Sliders.js" index="7">
 <position/>
 </item>
-<item historyLabel="PointCalculation.js" index="8">
-<position info="not_deleted" x="6130" y="0"/>
+<item historyLabel="Sliders.js" index="7">
+<position info="not_deleted" x="209" y="0"/>
 </item>
-<item historyLabel="reverse.js" index="9">
-<position/>
-</item>
-<item historyLabel="PointCalculation.js" index="8">
-<position info="not_deleted" x="6130" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="9">
-<position/>
-</item>
-<item historyLabel="reverse.js" index="9">
-<position info="not_deleted" x="402" y="0"/>
-</item>
-<item historyLabel="reverse.js" index="9">
-<position info="not_deleted" x="372" y="0"/>
+<item historyLabel="Maps.js" index="9">
+<position info="not_deleted" x="3297" y="0"/>
 </item>
 <item historyLabel="PointCalculation.js" index="10">
-<position info="not_deleted" x="163" y="0"/>
+<position info="not_deleted" x="249" y="0"/>
 </item>
-<item active="true" historyLabel="reverse.js" index="9">
-<position info="not_deleted" x="372" y="0"/>
+<item historyLabel="Sliders.js" index="7">
+<position info="not_deleted" x="211" y="41"/>
+</item>
+<item historyLabel="PointCalculation.js" index="10">
+<position info="not_deleted" x="249" y="0"/>
+</item>
+<item historyLabel="GlobalVariables.js" index="11">
+<position info="not_deleted" x="314" y="11"/>
+</item>
+<item historyLabel="PointCalculation.js" index="10">
+<position info="not_deleted" x="249" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="10">
+<position info="not_deleted" x="6285" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="10">
+<position info="not_deleted" x="6287" y="0"/>
+</item>
+<item historyLabel="index1.html" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="Database.js" index="13">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -457,50 +481,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" tooltip="testproject_Brent/LocalFiles/js/Maps.js">
-<persistable path="/testproject_Brent/LocalFiles/js/Maps.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Database.js" tooltip="Orienteering Guide/LocalFiles/js/Database.js">
+<persistable path="/Orienteering Guide/LocalFiles/js/Database.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="GlobalVariables.js" tooltip="testproject_Brent/LocalFiles/js/GlobalVariables.js">
-<persistable path="/testproject_Brent/LocalFiles/js/GlobalVariables.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index1.html" tooltip="Orienteering Guide/LocalFiles/index1.html">
+<persistable path="/Orienteering Guide/LocalFiles/index1.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="PointCalculation.js" tooltip="testproject_Brent/LocalFiles/js/PointCalculation.js">
-<persistable path="/testproject_Brent/LocalFiles/js/PointCalculation.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="PointCalculation.js" tooltip="Orienteering Guide/LocalFiles/js/PointCalculation.js">
+<persistable path="/Orienteering Guide/LocalFiles/js/PointCalculation.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="layoutfinal.html" tooltip="Orienteering Guide/LocalFiles/layoutfinal.html">
+<persistable path="/Orienteering Guide/LocalFiles/layoutfinal.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="GlobalVariables.js" tooltip="Orienteering Guide/LocalFiles/js/GlobalVariables.js">
+<persistable path="/Orienteering Guide/LocalFiles/js/GlobalVariables.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="start.png" tooltip="Orienteering Guide/LocalFiles/images/start.png">
+<persistable path="/Orienteering Guide/LocalFiles/images/start.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="Orienteering Guide/main.cpp">
+<persistable path="/Orienteering Guide/main.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index1.html" tooltip="testproject_Brent/LocalFiles/index1.html">
 <persistable path="/testproject_Brent/LocalFiles/index1.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="ui.js" tooltip="testproject/LocalFiles/js/ui.js">
-<persistable path="/testproject/LocalFiles/js/ui.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" tooltip="Orienteering Guide/LocalFiles/js/Maps.js">
+<persistable path="/Orienteering Guide/LocalFiles/js/Maps.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index1.html" tooltip="testproject/LocalFiles/index1.html">
-<persistable path="/testproject/LocalFiles/index1.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="reverse.js" tooltip="Orienteering Guide/LocalFiles/js/reverse.js">
+<persistable path="/Orienteering Guide/LocalFiles/js/reverse.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="maps.css" tooltip="testproject/LocalFiles/CSS/maps.css">
-<persistable path="/testproject/LocalFiles/CSS/maps.css"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Sliders.js" tooltip="Orienteering Guide/LocalFiles/js/Sliders.js">
+<persistable path="/Orienteering Guide/LocalFiles/js/Sliders.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="reverse.js" tooltip="testproject_Brent/LocalFiles/js/reverse.js">
-<persistable path="/testproject_Brent/LocalFiles/js/reverse.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="orienteering.html" tooltip="Orienteering Guide/LocalFiles/orienteering.html">
+<persistable path="/Orienteering Guide/LocalFiles/orienteering.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="jquery.mobile-1.3.1.min.js" tooltip="testproject/LocalFiles/jQuery/jquery.mobile-1.3.1.min.js">
-<persistable path="/testproject/LocalFiles/jQuery/jquery.mobile-1.3.1.min.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="import.html" tooltip="Orienteering Guide/LocalFiles/import.html">
+<persistable path="/Orienteering Guide/LocalFiles/import.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" tooltip="testproject/LocalFiles/index.html">
-<persistable path="/testproject/LocalFiles/index.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="header.html" tooltip="Orienteering Guide/LocalFiles/header.html">
+<persistable path="/Orienteering Guide/LocalFiles/header.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="maps.css" tooltip="testproject_Brent/LocalFiles/CSS/maps.css">
-<persistable path="/testproject_Brent/LocalFiles/CSS/maps.css"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Database.js" tooltip="testproject_Brent/LocalFiles/js/Database.js">
-<persistable path="/testproject_Brent/LocalFiles/js/Database.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="style.css" tooltip="testproject_Brent/LocalFiles/CSS/style.css">
-<persistable path="/testproject_Brent/LocalFiles/CSS/style.css"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" tooltip="testproject_Brent/LocalFiles/index.html">
-<persistable path="/testproject_Brent/LocalFiles/index.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" tooltip="testproject/LocalFiles/js/Maps.js">
-<persistable path="/testproject/LocalFiles/js/Maps.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="origindex.html" tooltip="Orienteering Guide/LocalFiles/origindex.html">
+<persistable path="/Orienteering Guide/LocalFiles/origindex.html"/>
 </file>
 </mruList>
 </workbench>

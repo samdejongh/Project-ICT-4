@@ -1,0 +1,75 @@
+@media all
+  {
+h1
+{
+	font-family:"Segoe UI";
+	font-size:70px;
+	padding:0;
+	margin:0;
+}
+
+h2
+{
+	font-family:"Segoe UI";
+	font-size:35px;
+	padding:0;
+	margin:0;
+}
+
+h3
+{
+	font-family:"Segoe UI";
+	font-size:20px;
+	padding:0;
+	margin:0;
+}
+
+
+@font-face { font-family: SegoeUI; src: url('fonts/segoeui.ttf'); } 
+
+[data-role=header]
+{
+	
+	top:0;
+	background-color:#0873af; 
+	border-bottom:1px solid black;
+}
+
+[data-role=header] img
+{
+	padding-left:5%;
+	right:2%;
+}
+
+[data-role=content]
+{
+	font-family:"Segoe UI";
+	color:#1c3664;
+}
+
+#footer
+{
+	background-color:#1c3664;
+	color:white;
+   	width:100%;
+	height:100%;
+	bottom:0px;
+}
+
+#hiddendiv
+{
+	float: right;
+	margin-left:1px;
+	margin-right:1px;
+	padding-left:1px;
+	padding-right:1px;
+	left: 368px;
+	top: -3px;
+	visibility:hidden;
+	}
+
+.ui-controlgroup, fieldset.ui-controlgroup {
+	margin: 0 !important;
+}
+
+  }

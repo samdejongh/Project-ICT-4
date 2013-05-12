@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Import</title>
+<link href="CSS/maps.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" charset="utf-8" src="js/Maps.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/PointCalculation.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/GlobalVariables.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/Database.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true&v=3&libraries=geometry"></script>
+</head>
+
+<body>
+<div id="og" data-role="content">
+<pre>
+<h3><b>maximum distance</b></h3>
+<form><input type='range' name='slider-1' id='slider-1' min='1' max='30' value='1' data-popup-enabled='true'></form>
+<h3><b>how many points? </b></h3>
+<form><input type='range' name='slider-2' id='slider-2' min='1' max='20' value='1' data-popup-enabled='true' onchange="sliderpoints(this.value)"></form>
+
+<img src="images/start.svg" class="gotomap" />
+</pre>
+</div>
+
+<div id="his" data-role="content">
+<div data-role="fieldcontain">
+<div style="position:relative">
+  <fieldset data-role="controlgroup">
+    <label for="select-choice-Last10"><h3><b>Last 10 Runs</b></h3></label>
+    <select name="select-choice-Last10" id="select-choice-Last10">
+      <option value="uitdatabase">uit database</option>
+      <option value="uitdatabase1">uit database</option>
+      <option value="uitdatabase2">uit database</option>
+      <option value="uitdatabase3">uit database</option>
+      <option value="uitdatabase4">uit database</option>
+      <option value="uitdatabase5">uit database</option>
+      <option value="uitdatabase6">uit database</option>
+      <option value="uitdatabase7">uit database</option>
+      <option value="uitdatabase8">uit database</option>
+      <option value="uitdatabase9">uit database</option>
+      <!-- etc. -->	
+    </select>
+  </fieldset>
+</div>
+<div style="position:relative">
+<p>
+<table data-role="table" data-mode="reflow">
+<tbody>
+    <tr>
+      <th><h3><b>Best Run</b></h3></th>
+      <td><h3><b>uit db</b></h3></td>
+	</tr>
+    <tr>
+      <th><h3><b>Total Checkpoints Found</b></h3></th>
+      <td><h3><b>uit db</b></h3></td>
+	</tr>
+</tbody>
+</table>
+</p>
+</div>
+  
+</div>
+</div>
+
+<div id="go_set" data-role="content">
+<div data-role="fieldcontain">
+    <fieldset data-role="controlgroup" data-type="horizontal" id="ps_test">
+      <legend>
+		Metric      
+      </legend>
+
+      <input type="radio" class="radio_choice" name="rb" id="radio-choice-21" value="choice-1" />
+      <label for="radio-choice-21">Kilometers</label>
+
+      <input type="radio" class="radio_choice" name="rb" id="radio-choice-22" value="choice-2"  />
+      <label for="radio-choice-22">Miles</label>
+    </fieldset>
+  </div
+></body>
+</html>

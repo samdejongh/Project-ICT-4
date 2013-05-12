@@ -1,0 +1,11 @@
+var dist;
+var pts;
+function sliderdistance(dist)
+{
+	localStorage.setItem("distance",dist);
+}
+function sliderpoints(pts)
+{
+	localStorage.setItem("points",pts);
+	alert(checkpoints);
+}

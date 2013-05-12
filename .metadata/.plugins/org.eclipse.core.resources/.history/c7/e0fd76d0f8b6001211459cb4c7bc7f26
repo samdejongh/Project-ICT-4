@@ -1,0 +1,8 @@
+sliderdistance(dist)
+{
+	routelenght=dist;
+}
+sliderpoints(pts)
+{
+	pts=checkpoints;
+}

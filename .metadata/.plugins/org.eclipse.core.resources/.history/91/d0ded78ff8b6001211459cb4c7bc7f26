@@ -1,0 +1,4 @@
+sliderdistance(dist)
+{
+	routelenght=dist;
+}

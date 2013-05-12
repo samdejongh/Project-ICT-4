@@ -1,0 +1,10 @@
+var dist;
+var pts;
+function sliderdistance(dist)
+{
+	routelenght=dist;
+}
+function sliderpoints(pts)
+{
+	checkpoints=pts;
+}

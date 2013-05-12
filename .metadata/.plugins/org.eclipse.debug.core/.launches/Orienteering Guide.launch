@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.mobilesorcery.launchconfigurationtype">
+<booleanAttribute key="avd.auto.select" value="true"/>
+<stringAttribute key="launch.delegate" value="auto"/>
+<stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.cdt.debug.ui.DefaultSourceLocator"/>
+<stringAttribute key="process_factory_id" value="com.mobilesorcery.sdk.builder.nonterminableprocessfactory"/>
+<stringAttribute key="project" value="Orienteering Guide"/>
+<stringAttribute key="screen.height" value="480"/>
+<stringAttribute key="screen.width" value="320"/>
+</launchConfiguration>

@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" href="CSS/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<script type="text/javascript" charset="utf-8" src="js/wormhole.js"></script>
+<link rel="stylesheet" href="jQuery/jquery.mobile-1.3.1.min.css" />
+<script src="jQuery/jquery-1.9.1.min.js"></script>
+<link href="CSS/maps.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" charset="utf-8" src="js/Maps.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/PointCalculation.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/GlobalVariables.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/Database.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true&v=3&libraries=geometry">
+</script>
+<script src="jQuery/jquery.mobile-1.3.1.min.js"></script>
+<script type="text/javascript" src="js/layout.js"></script>
+<script>
+$(window).on('load', function () {
+    $(this).trigger('resize');
+	$(".set").bind('tap', function () {
+		if($("#hiddendiv").css("visibility") == 'visible')
+		{
+			$("#hiddendiv").css("visibility","hidden");
+		}
+		else
+		{
+			$("#hiddendiv").css("visibility","visible");
+		}
+	});
+	$(".og, .his").bind('tap', function () {
+		if(this.attributes["class"].value=="og")
+		   {pagina = "OrienteeringGuide";}
+		if(this.attributes["class"].value=="his")
+		   {pagina = "History";}
+		   	$('div[data-role="content"]').load('import.html #'+this.attributes["class"].value, function () {
+				$("#footer").html("");
+					$(".gotomap").bind('tap', function () {
+					window.location.replace("index1.html");
+					})	
+           	    $('div[data-role="content"]').trigger("create");$(".gotomap").trigger("create");});
+				})	
+});
+
+function local()
+{
+var checked = localStorage.getItem("rb_checked");	
+if(checked == "kilometers")
+{
+	$("#radio-choice-21").prop("checked", true).checkboxradio( "refresh" );;
+}
+					
+if(checked == "miles")
+{	
+	$("#radio-choice-22").prop("checked", true).checkboxradio( "refresh" );;	
+}
+					
+$('input[name=rb]:radio').change(function(){
+						
+		if($('#radio-choice-21').is(':checked')) 
+		{
+				localStorage.setItem("rb_checked", "kilometers");
+				checked = "kilometers";
+		}
+						
+		if($('#radio-choice-22').is(':checked')) 
+		{
+				localStorage.setItem("rb_checked", "miles");
+				checked = "miles";
+		}						
+});	
+}
+
+
+</script>
+</head>
+<body>
+
+<div data-role="page">
+<div data-role="header" data-position="fixed">
+<img src="images/newicon.svg" class="og" /> 
+<img src="images/newiconhistory.svg" class="his" />
+<img src="images/newiconoptions.svg" style="float:right;" class="set" />
+</div>
+<div id="hiddendiv"><a href="#popupBasic" onclick="local()" data-transition="pop" data-rel="popup">
+Metric</a></div>
+<div data-role="content">
+<pre>
+<h2><b>You ran</b></h2>
+<h1><b>815 km</b></h1>
+
+
+</pre>
+<div data-role="popup" id="popupBasic">
+<div data-role="fieldcontain">
+<fieldset data-role="controlgroup" data-type="horizontal" id="ps_test">
+<legend>Metric</legend>
+<input type="radio" class="radio_choice" name="rb" id="radio-choice-21" value="choice-1" />
+<label for="radio-choice-21">Kilometers</label>
+<input type="radio" class="radio_choice" name="rb" id="radio-choice-22" value="choice-2"  />
+<label for="radio-choice-22">Miles</label>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="footer">
+<pre>
+
+<b style="font-size:12px; font-family:Segoe UI
+">Checkpoints found</b>
+<b style="font-size:30px; font-family:Segoe UI
+">125</b>
+
+
+<img src="images/chrono.svg" /> <b style="font-size:12px; font-family:Segoe UI
+">Best time</b>
+<b style="font-size:30px; font-family:Segoe UI
+">5 min 23 sec</b>
+</pre>
+</div>
+
+</div>
+</body>
+</html>
