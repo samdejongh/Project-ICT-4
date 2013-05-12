@@ -18,6 +18,10 @@ function CheckStreet(point)
 	        alert('No results found');
 	      }
 	    } else {
+	    	if(status = "OVER_QUERY_LIMIT")
+	    		{
+	    			alert("please wait 1 second and try again")
+	    		}
 	      alert('Geocoder failed due to: ' + status);
 	    }
 	  });	

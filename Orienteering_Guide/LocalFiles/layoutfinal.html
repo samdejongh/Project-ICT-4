@@ -135,6 +135,10 @@ $('#flip-1').on('change',function(){
 		}						
 });	
 }
+function exit()
+{
+	mosync.app.exit();
+}
 
 
 </script>
@@ -151,6 +155,7 @@ $('#flip-1').on('change',function(){
 <div id="hiddendiv" data-role="controlgroup">
 <a href="#popupBasic" data-transition="pop" data-rel="popup" onclick="local()" data-role="button">Metric</a>
 <a href="index.html" data-role="button">About</a>
+<a href="#" data-role="button" onclick="exit()">Exit</a>
 </div>
 
 <div data-role="content">

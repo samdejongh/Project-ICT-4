@@ -148,12 +148,15 @@ function points()
 
 
 function Fysics() {
-		// Deletes all markers in the array by removing references to them
-		 //map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-    //This calculates the points for the orienteering guide	
-        //var lngSpan = northEast.lng() - southWest.lng(); // gives the span of the Current_lngtude (east-west position)
-        //var latSpan = northEast.lat() - southWest.lat(); // gives the span of the Current_lattude (north-south position)
-
+		if(markersArray!= null)
+			{
+				for (i in markersArray) 
+				{
+					markersArray[i].setMap(null);
+				}
+				PointsArray = [];
+				markersArray = [];
+			}
         for (var i = 0; i < checkpoints; i++) {
         	point = new google.maps.LatLng(checkpointlat[i],checkpointlon[i]);
         	if(city==true)//staat momenteel altijd op true moet nog een selectie worden in de ui
