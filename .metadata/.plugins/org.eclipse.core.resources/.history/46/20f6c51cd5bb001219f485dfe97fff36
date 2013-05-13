@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height,
+  initial-scale=1.0, maximum-scale=1.0,
+  user-scalable=no" >
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Map</title>
+<link href="CSS/maps.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="stylesheet" href="CSS/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="jQuery/jquery.mobile-1.3.1.min.css" />
+<script src="jQuery/jquery-1.9.1.min.js"></script>
+<script src="jQuery/jquery.mobile-1.3.1.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/wormhole.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/Maps.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/PointCalculation.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/GlobalVariables.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/Database.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/ui.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/reverse.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/Sliders.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true&v=3&libraries=geometry">
+</script>
+<script type="text/javascript" charset="utf-8" src="js/ui.js"></script>
+<style type="text/css">
+#popupPanel-popup {
+	z-index: 1500;
+}
+#popupPanel {
+z-index: 1500;
+    border: 1px solid #000;
+    border-right: none;
+    background: rgba(0,0,0,.5);
+}
+#popupPanel #text {
+	text-align:center;
+}
+#popupPanel #accuracy{
+	text-align:center;
+}
+</style>
+<script>
+$(document).ready(function(e) {
+    $(this).trigger('resize');
+		$(".back").bind('tap', function () {
+		window.location.replace("layoutfinal.html");
+		});
+	$("#add").bind('tap', function ()
+	{	
+		points();
+	});
+		
+	$("#delete").bind('tap', function ()
+	{
+		window.location.href="#popupPanel";
+
+		deleteOverlays();
+	});	
+	
+	$("#check").bind('tap', function ()
+	{
+		UserToPointDistance();
+	});
+});  
+</script>
+
+</head>
+<body onLoad="initialize()">
+<div data-role="page">
+<div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
+
+    <h2 id="text">Waiting for better accuracy...</h2>
+    <h2 id="accuracy"></h2>
+	 
+</div>
+<div data-role="header" data-position="fixed">
+  <img src="images/back.svg" class="back">
+  <img src="images/addicon.svg" id="add">
+  <img src="images/deleteicon.svg" id="delete"> 
+  <img src="images/checkpoint.svg" id="check"> </div>
+   
+
+<div data-role="content" id="content" >
+            <div id="map_content">
+                <div id="map_canvas"></div>
+			</div>
+			
+	</div>
+ </div>   
+    </body>
+</html>

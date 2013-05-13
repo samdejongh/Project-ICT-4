@@ -46,10 +46,23 @@ function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
     var accuracy = position.coords.accuracy;
     //document.getElementById("speed").innerHTML = 'Accuracy: '+accuracy;
     speed = ((Math.round((position.coords.speed * 3.6) * 10) / 10).toFixed(1));
-    //document.getElementById("speed").innerHTML = 'Speed: ' + speed + ' km/s';//weergeven van de snelheid
-    //	element.innerHTML = 'Current_lattude: ' + position.coords.Current_lattude + '</br> '
-    //	+ 'Current_lngtude: ' + position.coords.Current_lngtude ;//weergeven van de positie op de pagina
+    if(accuracy <= 20)
+    	{
+    	$('#popupPanel').popup('close', {transition: 'slide'});
+    		if(starttrain == false){
     		MapUpdate();//roep de functie mapUpdate aan
+    		}
+    	}
+    else
+    	{
+    		var t = $('div[data-role="header"]').height();
+			var w = $( window ).width();			
+			$( "#popupPanel" ).css( "width", w );
+			$('#popupPanel').popup('open', {transition: 'slide'});
+			$('#accuracy').html(accuracy);
+			$("#pop").css({"margin-top":t+"%"});
+    	}
+    		
    
 }
 

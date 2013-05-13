@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="125px" height="37px" viewBox="0 0 125 37" enable-background="new 0 0 125 37" xml:space="preserve">
+<path fill="#1C3664" stroke="#000000" stroke-miterlimit="10" d="M124.388,27.404c0,4.854-3.996,8.786-8.928,8.786H9.988
+	c-4.93,0-8.927-3.932-8.927-8.786V9.45c0-4.852,3.997-8.786,8.927-8.786H115.46c4.932,0,8.928,3.934,8.928,8.786V27.404z"/>
+<rect x="33.312" y="8.02" fill="none" width="83.319" height="21.966"/>
+<text transform="matrix(1.016 0 0 1 33.311 25.3633)" fill="#FFFFFF" font-family="'SegoeUI-Bold'" font-size="23.4297">Start</text>
+</svg>

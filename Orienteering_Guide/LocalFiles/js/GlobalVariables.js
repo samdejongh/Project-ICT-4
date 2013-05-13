@@ -20,3 +20,5 @@ var checkpoints;
 //Variables for database
 var nIntervId;
 var idnumber;
+
+var starttrain = false;

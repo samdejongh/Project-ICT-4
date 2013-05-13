@@ -6,14 +6,14 @@
 <rect fill="#0873AF" stroke="#000000" stroke-miterlimit="10" width="481" height="800"/>
 <polygon opacity="0.4" fill="#1B3D3F" points="77.345,577 273.802,655.404 430.113,604 481,601.427 480.801,569 480,522.632 
 	215,514 "/>
-<rect x="47.433" y="252.505" fill="none" width="519.018" height="42.334"/>
-<text transform="matrix(1 0 0 1 47.4326 288.0366)" fill="#106B75" font-family="'SegoeUI-Bold'" font-size="48">orienteering guide</text>
-<rect x="47.433" y="250.491" fill="none" width="519.017" height="42.334"/>
-<text transform="matrix(1 0 0 1 47.4331 286.0225)" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" font-family="'SegoeUI-Bold'" font-size="48">orienteering guide</text>
+<polygon fill="none" points="562.45,294.839 43.433,294.839 46.433,252.505 565.45,252.505 "/>
+<text transform="matrix(1 0 0 1 46.1812 288.0366)" fill="#106B75" font-family="'SegoeUI-Bold'" font-size="48">Orienteering Guide</text>
+<rect x="45.433" y="250.491" fill="none" width="519.017" height="42.334"/>
+<text transform="matrix(1 0 0 1 45.4331 286.0225)" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" font-family="'SegoeUI-Bold'" font-size="48">Orienteering Guide</text>
 <rect x="115" y="300" fill="none" width="562" height="105"/>
-<text transform="matrix(1 0 0 1 115 317.7656)" fill="#106B75" font-family="'SegoeUI-Bold'" font-size="24">start training your orienteering</text>
+<text transform="matrix(1 0 0 1 115 317.7656)" fill="#106B75" font-family="'SegoeUI-Bold'" font-size="24">Explore the world around you</text>
 <rect x="115" y="299" fill="none" width="562" height="105"/>
-<text transform="matrix(1 0 0 1 115 316.7656)" fill="#FCFCFC" font-family="'SegoeUI-Bold'" font-size="24">start training your orienteering</text>
+<text transform="matrix(1 0 0 1 115 316.7656)" fill="#FCFCFC" font-family="'SegoeUI-Bold'" font-size="24">Explore the world around you</text>
 <polygon fill="#1C3664" points="77.345,558.034 231.095,417.098 338.29,453.398 436.947,421.368 480,439.254 481,601.427 
 	430.113,577.251 273.802,655.404 "/>
 <polygon fill="#FFFFFF" points="277.005,636.834 107.24,555.476 236.004,426.07 335.301,462.585 437.16,422.227 480,439.254 

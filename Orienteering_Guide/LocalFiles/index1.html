@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<meta name="viewport" content="width=device-width, height=device-height,
+<meta name="viewport" content="width=device-width, 
   initial-scale=1.0, maximum-scale=1.0,
   user-scalable=no" >
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -23,40 +23,79 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true&v=3&libraries=geometry">
 </script>
 <script type="text/javascript" charset="utf-8" src="js/ui.js"></script>
+<style type="text/css">
+#popupPanel-popup {
+	height: 100px;
+	z-index: 1500;
+}
+#popupPanel {
+z-index: 1500;
+    border: 1px solid #000;
+    border-right: none;
+    background: rgba(0,0,0,.5);
+}
+#popupPanel #text {
+	text-align:center;
+}
+#popupPanel #accuracy{
+	text-align:center;
+}
+
+</style>
 <script>
 $(document).ready(function(e) {
-    $(this).trigger('resize');
-		$(".back").bind('tap', function () {
-		window.location.replace("layoutfinal.html");
+	var start = false;
+	$("#startbutton").bind('tap', function (){
+		if(start)
+		{
+			starttrain=true;
+		}
 		});
-	$("#add").bind('tap', function ()
-	{	
-		points();
-	});
-		
-	$("#delete").bind('tap', function ()
-	{
-		deleteOverlays();
-	});	
+	$("#startbutton").css("top", "18%");
 	
-	$("#check").bind('tap', function ()
-	{
-		UserToPointDistance();
+	$(this).trigger('resize');
+	$(".back").bind('tap', function () {
+	window.location.replace("layoutfinal.html");
 	});
+$("#add").bind('tap', function ()
+{	
+	$("#startbutton").css("opacity", "1");
+	start = true;
+	points();
+});
+	
+$("#delete").bind('tap', function ()
+{
+	$("#startbutton").css("opacity", "0.5");
+	start = false;
+	deleteOverlays();
+});	
+
+$("#check").bind('tap', function ()
+{
+	UserToPointDistance();
+});
+$(this).trigger('resize');
+
 });  
-
-
 </script>
 
 </head>
 <body onLoad="initialize()">
 <div data-role="page">
+<!--<div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
+	<div id="pop">
+    <h2 id="text">Waiting for better accuracy...</h2>
+    <h2 id="accuracy"></h2>
+	</div>
+</div>-->
 <div data-role="header" data-position="fixed">
   <img src="images/back.svg" class="back">
   <img src="images/addicon.svg" id="add">
   <img src="images/deleteicon.svg" id="delete"> 
   <img src="images/checkpoint.svg" id="check"> </div>
    
+   <div id="startbutton" style="position:absolute; z-index:1000; background-color:#0873af; opacity:0.5; width:90%; text-align:center; margin-left:5%; margin-right:5%"><b style="color:white; font-size:20px; font-family:Segoe UI">Start</b></div>
 
 <div data-role="content" id="content" >
             <div id="map_content">
@@ -65,14 +104,5 @@ $(document).ready(function(e) {
 			
 	</div>
  </div>   
-<div data-role="page" id="dialogPage">
-  <div data-role="header">
-    <h2>Dialog</h2>
-  </div>
-  <div data-role="content">
-    <p>I am a dialog</p>
-  </div>
-</div>
-
     </body>
 </html>

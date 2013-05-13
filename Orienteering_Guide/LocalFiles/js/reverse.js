@@ -22,7 +22,9 @@ function CheckStreet(point)
 	    		{
 	    			alert("please wait 1 second and try again")
 	    		}
+	    	else{
 	      alert('Geocoder failed due to: ' + status);
+	    	}
 	    }
 	  });	
 }
