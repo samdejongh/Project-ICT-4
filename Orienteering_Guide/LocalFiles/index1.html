@@ -2,9 +2,7 @@
 
 <html>
 <head>
-<meta name="viewport" content="width=device-width, 
-  initial-scale=1.0, maximum-scale=1.0,
-  user-scalable=no" >
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" >
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <title>Map</title>
 <link href="CSS/maps.css" rel="stylesheet" type="text/css" media="screen">
@@ -17,43 +15,23 @@
 <script type="text/javascript" charset="utf-8" src="js/PointCalculation.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/GlobalVariables.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/Database.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/ui.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/reverse.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/Sliders.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIOvwTrO5Q827GEZzFXjPeNwgMz4n9tI8&sensor=true&v=3&libraries=geometry">
 </script>
-<script type="text/javascript" charset="utf-8" src="js/ui.js"></script>
-<style type="text/css">
-#popupPanel-popup {
-	height: 100px;
-	z-index: 1500;
-}
-#popupPanel {
-z-index: 1500;
-    border: 1px solid #000;
-    border-right: none;
-    background: rgba(0,0,0,.5);
-}
-#popupPanel #text {
-	text-align:center;
-}
-#popupPanel #accuracy{
-	text-align:center;
-}
 
-</style>
 <script>
 $(document).ready(function(e) {
 	var start = false;
-	$("#startbutton").bind('tap', function (){
-		if(start)
-		{
-			starttrain=true;
-		}
-		});
-	$("#startbutton").css("top", "18%");
-	
-	$(this).trigger('resize');
+
+$("#startbutton").bind('tap', function (){
+	if(start)
+	{
+		alert("start");
+	}
+	});
+$("#startbutton").css("top", "18%");
+$(this).trigger('resize');
 	$(".back").bind('tap', function () {
 	window.location.replace("layoutfinal.html");
 	});
@@ -75,27 +53,24 @@ $("#check").bind('tap', function ()
 {
 	UserToPointDistance();
 });
-$(this).trigger('resize');
-
 });  
+
 </script>
 
 </head>
 <body onLoad="initialize()">
 <div data-role="page">
-<!--<div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
-	<div id="pop">
-    <h2 id="text">Waiting for better accuracy...</h2>
-    <h2 id="accuracy"></h2>
-	</div>
-</div>-->
 <div data-role="header" data-position="fixed">
   <img src="images/back.svg" class="back">
   <img src="images/addicon.svg" id="add">
   <img src="images/deleteicon.svg" id="delete"> 
   <img src="images/checkpoint.svg" id="check"> </div>
    
-   <div id="startbutton" style="position:absolute; z-index:1000; background-color:#0873af; opacity:0.5; width:90%; text-align:center; margin-left:5%; margin-right:5%"><b style="color:white; font-size:20px; font-family:Segoe UI">Start</b></div>
+   <div id="startbutton" style="position:absolute; 
+background-color:white; z-index:1000; opacity:0.5; width:90%; text-align:center; margin-left:5%; margin-right:5%"><b style="color:#0873af">Start</b></div>
+
+<div data-role="content" id="speed" style="position:absolute; 
+background-color:#333; z-index:1000; opacity:0.5; width:10; margin-top:13%; margin-left:80%; margin-right:5%; color:white; border-radius:10px;">Speed</div>
 
 <div data-role="content" id="content" >
             <div id="map_content">

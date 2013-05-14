@@ -44,8 +44,8 @@ function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
     Current_lat = position.coords.latitude;
     Current_lng = position.coords.longitude;
     var accuracy = position.coords.accuracy;
-    //document.getElementById("speed").innerHTML = 'Accuracy: '+accuracy;
     speed = ((Math.round((position.coords.speed * 3.6) * 10) / 10).toFixed(1));
+    document.getElementById("speed").innerHTML = speed;
     if(accuracy <= 20)
     	{
     	$('#popupPanel').popup('close', {transition: 'slide'});
@@ -55,12 +55,11 @@ function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
     	}
     else
     	{
-    		var t = $('div[data-role="header"]').height();
 			var w = $( window ).width();			
 			$( "#popupPanel" ).css( "width", w );
 			$('#popupPanel').popup('open', {transition: 'slide'});
 			$('#accuracy').html(accuracy);
-			$("#pop").css({"margin-top":t+"%"});
+			//$("#pop").css({"margin-top":t+"%"});
     	}
     		
    
