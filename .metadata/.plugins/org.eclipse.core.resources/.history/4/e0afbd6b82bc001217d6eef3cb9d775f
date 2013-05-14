@@ -29,7 +29,7 @@ $("#startbutton").bind('tap', function (){
 	{
 		starttrain = true;
 		alert("start");
-		document.getElementById("startbutton").style.visibility="hidden";		
+		startbutton
 	}
 	});
 $("#startbutton").css("top", "18%");
@@ -39,7 +39,6 @@ $(this).trigger('resize');
 	});
 $("#add").bind('tap', function ()
 {	
-	document.getElementById("startbutton").style.visibility="visible";		
 	starttrain=false;
 	$("#startbutton").css("opacity", "1");
 	start = true;
@@ -48,7 +47,6 @@ $("#add").bind('tap', function ()
 	
 $("#delete").bind('tap', function ()
 {
-	document.getElementById("startbutton").style.visibility="visible";		
 	starttrain=false;
 	$("#startbutton").css("opacity", "0.5");
 	start = false;

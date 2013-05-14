@@ -45,19 +45,24 @@ function onSuccess(position) {// als er succesvol een nieuwe locatie is gevonden
     Current_lng = position.coords.longitude;
     var accuracy = position.coords.accuracy;
     speed = ((Math.round((position.coords.speed * 3.6) * 10) / 10).toFixed(1));
-    document.getElementById("speed").innerHTML = speed +" Km/h";
+    document.getElementById("speed").innerHTML = speed +"Km/h";
     if(accuracy <= 20)
     	{
-			document.getElementById("accuracyt").style.visibility="hidden";
+    	$('#popupPanel').popup('close', {transition: 'slide'});
     		if(starttrain == false){
     		MapUpdate();//roep de functie mapUpdate aan
     		}
     	}
     else
     	{
-
+			var w = $( window ).width();			
+			$( "#popupPanel" ).css( "width", w );
+			$('#popupPanel').popup('open', {transition: 'slide'});
 			$('#accuracy').html(accuracy);
+			//$("#pop").css({"margin-top":t+"%"});
     	}
+    		
+   
 }
 
 function MapUpdate() {//de kaart centreren naar de nieuwe locatie
