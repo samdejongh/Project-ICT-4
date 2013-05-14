@@ -194,7 +194,6 @@ function UserToPointDistance()
 	var pointfound = false;
 
     for (var i = 0; i < checkpoints; i++) {
-
 			var distance = google.maps.geometry.spherical.computeDistanceBetween(currentlanglong, PointsArray[i]);
 			nearestpoint[i] = distance;
 			alert(nearestpoint[i]);
@@ -211,6 +210,7 @@ function UserToPointDistance()
 	}
 	if(pointfound == false)
 	{
+		nearestpoint.filter(function(val) { return val !== null; }).join(", ")
 	var clpoint = Math.min.apply(null, nearestpoint);
 						alert(Math.round(clpoint).toFixed(2));
 	}
