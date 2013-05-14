@@ -1,10 +1,10 @@
     var checkpointlon = new Array();
     var checkpointlat = new Array();
     var distance;
-    
     var city=true;
     checkpoints=localStorage.getItem("points");
     routelenght = localStorage.getItem("distance");
+
 function points()
 {
 	if(localStorage.getItem("slider_checked") == 'forest')
@@ -175,8 +175,6 @@ function Fysics() {
         	}
         	
         }
-
-    // Add 10 markers to the map at random locations
 }
 function markertomap()
 {
@@ -191,11 +189,15 @@ function markertomap()
 
 function UserToPointDistance()
 {
+    var nearestpoint = new Array();
 	var currentlanglong = new google.maps.LatLng(Current_lat,Current_lng);
+	var pointfound = false;
 
     for (var i = 0; i < checkpoints; i++) {
 
 			var distance = google.maps.geometry.spherical.computeDistanceBetween(currentlanglong, PointsArray[i]);
+			nearestpoint[i] = distance;
+			alert(nearestpoint[i]);
 				if(distance < 20) //point found
 				{
 					//play sound
@@ -203,8 +205,16 @@ function UserToPointDistance()
 					vibrate();
 					sound();
 					PointsArray[i] = 80000;
+					pointfound = true;
 				}
+						
 	}
+	if(pointfound == false)
+	{
+	var clpoint = Math.min.apply(null, nearestpoint);
+						alert(Math.round(clpoint).toFixed(2));
+	}
+	
 }
 
 function deleteOverlays() {
