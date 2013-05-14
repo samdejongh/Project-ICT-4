@@ -27,7 +27,9 @@ $(document).ready(function(e) {
 $("#startbutton").bind('tap', function (){
 	if(start)
 	{
+		starttrain = true;
 		alert("start");
+		document.getElementById("startbutton").style.visibility="hidden";		
 	}
 	});
 $("#startbutton").css("top", "18%");
@@ -37,6 +39,8 @@ $(this).trigger('resize');
 	});
 $("#add").bind('tap', function ()
 {	
+	document.getElementById("startbutton").style.visibility="visible";		
+	starttrain=false;
 	$("#startbutton").css("opacity", "1");
 	start = true;
 	points();
@@ -44,6 +48,8 @@ $("#add").bind('tap', function ()
 	
 $("#delete").bind('tap', function ()
 {
+	document.getElementById("startbutton").style.visibility="visible";		
+	starttrain=false;
 	$("#startbutton").css("opacity", "0.5");
 	start = false;
 	deleteOverlays();
@@ -51,6 +57,7 @@ $("#delete").bind('tap', function ()
 
 $("#check").bind('tap', function ()
 {
+
 	UserToPointDistance();
 });
 });  
@@ -72,6 +79,11 @@ background-color:white; z-index:1000; opacity:0.5; width:90%; text-align:center;
 <div data-role="content" id="speed" style="position:absolute; 
 background-color:#333; z-index:1000; opacity:0.5; width:10; margin-top:13%; margin-left:80%; margin-right:5%; color:white; border-radius:10px;">Speed</div>
 
+<div data-role="content" id="accuracyt" style="position:absolute; 
+background-color:#333;  top:45%; text-align:center; z-index:1000; opacity:0.5; width:100%; color:white; border-radius:10px;">
+<h2>Waiting for accuracy: </h2>
+<h2 id="accuracy"></h2>
+</div>
 <div data-role="content" id="content" >
             <div id="map_content">
                 <div id="map_canvas"></div>

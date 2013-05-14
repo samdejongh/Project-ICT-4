@@ -4,18 +4,18 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 	</section>
-	<section name="CleanDialogSettings">
-		<item value="662" key="DIALOG_WIDTH"/>
-		<item value="true" key="BUILD_NOW"/>
-		<item value="184" key="DIALOG_Y_ORIGIN"/>
-		<item value="false" key="BUILD_ALL"/>
-		<item value="629" key="DIALOG_X_ORIGIN"/>
-		<item value="498" key="DIALOG_HEIGHT"/>
-		<item value="true" key="TOGGLE_SELECTED"/>
-	</section>
 	<section name="NewWizardAction">
 		<item value="com.mobilesorcery.wizard.mosync.project" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item value="662" key="DIALOG_WIDTH"/>
+		<item value="true" key="BUILD_NOW"/>
+		<item value="false" key="BUILD_ALL"/>
+		<item value="184" key="DIALOG_Y_ORIGIN"/>
+		<item value="498" key="DIALOG_HEIGHT"/>
+		<item value="629" key="DIALOG_X_ORIGIN"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
 	</section>
 </section>
