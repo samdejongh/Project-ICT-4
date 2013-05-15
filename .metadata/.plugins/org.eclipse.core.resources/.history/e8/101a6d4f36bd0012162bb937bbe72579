@@ -205,15 +205,9 @@ function UserToPointDistance()
 					sound();
 					PointsArray[i] = 80000;
 					pointfound = true;
-					poi++;
 				}
 						
 	}
-    if(poi == checkpoints)
-    	{
-    		alert("all points found");
-    		stoptrail();
-    	}
 	if(pointfound == false)
 	{
 		nearestpoint.filter(function(val) { return val !== null; }).join(", ")

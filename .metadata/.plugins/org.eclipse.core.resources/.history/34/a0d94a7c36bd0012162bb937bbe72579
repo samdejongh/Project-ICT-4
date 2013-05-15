@@ -211,7 +211,6 @@ function UserToPointDistance()
 	}
     if(poi == checkpoints)
     	{
-    		alert("all points found");
     		stoptrail();
     	}
 	if(pointfound == false)

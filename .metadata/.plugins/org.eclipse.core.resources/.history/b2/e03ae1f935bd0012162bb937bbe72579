@@ -27,7 +27,6 @@ $(document).ready(function(e) {
 $("#startbutton").bind('tap', function (){
 	if(start)
 	{
-		trail();
 		starttrain = true;
 		alert("start");
 		document.getElementById("startbutton").style.visibility="hidden";		
