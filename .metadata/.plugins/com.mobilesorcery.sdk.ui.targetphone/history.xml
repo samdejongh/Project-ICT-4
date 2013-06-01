@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<history selected="0">
-<device ix="0" name="HT2ARLY05266" platform.profile="Android/Android" profile="" serialno="HT2ARLY05266" transport="android"/>
+<history selected="2">
+<device ix="0" name="0123456789ABCDEF" platform.profile="Android/Android" profile="" serialno="0123456789ABCDEF" transport="android"/>
 <device addr="BCCFCC1700F5" ix="1" name="Senne" platform.profile="Android/Android" port="12" profile="" transport="bt"/>
-<device ix="2" name="0123456789ABCDEF" platform.profile="Android/Android" profile="" serialno="0123456789ABCDEF" transport="android"/>
+<device ix="2" name="HT2ARLY05266" platform.profile="Android/Android" profile="" serialno="HT2ARLY05266" transport="android"/>
 </history>

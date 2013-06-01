@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="26" version="2.0">
 <workbenchAdvisor/>
-<window height="1032" maximized="true" width="960" x="960" y="0">
+<window height="720" maximized="true" width="512" x="2432" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="157" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="206" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.mobilesorcery.sdk.ui.targetphone" itemType="typeToolBarContribution" x="96" y="30"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="99" y="30"/>
@@ -20,9 +20,9 @@
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.mobilesorcery.sdk.ui.changeActiveConfigToolbar" itemType="typeToolBarContribution" x="178" y="30"/>
 <coolItem id="com.mobilesorcery.sdk.ui.profile.toolbar" itemType="typeToolBarContribution" x="249" y="30"/>
-<coolItem id="com.mobilesorcery.sdk.help.searchbox" itemType="typeToolBarContribution" x="165" y="30"/>
+<coolItem id="com.mobilesorcery.sdk.help.searchbox" itemType="typeToolBarContribution" x="165" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.jst.jsp.core.jspsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -47,13 +47,14 @@
 <part id="5"/>
 <part id="6"/>
 <part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="reverse.js" partName="reverse.js" path="C:/Users/senne/Documents/Git/Orienteering_Guide/LocalFiles/js/reverse.js" title="reverse.js" tooltip="Orienteering_Guide/LocalFiles/js/reverse.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering_Guide/LocalFiles/js/reverse.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="435" selectionTopPixel="67"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="62" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.wst.html.core.htmlsource.source" name="import.html" partName="import.html" path="C:/Users/senne/Documents/Git/Orienteering_Guide/LocalFiles/import.html" title="import.html" tooltip="Orienteering_Guide/LocalFiles/import.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering_Guide/LocalFiles/import.html"/>
@@ -69,11 +70,11 @@
 </editor>
 <editor id="org.eclipse.wst.css.core.csssource.source" name="style.css" partName="style.css" path="C:/Users/senne/Documents/Git/Orienteering_Guide/LocalFiles/CSS/style.css" title="style.css" tooltip="Orienteering_Guide/LocalFiles/CSS/style.css" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering_Guide/LocalFiles/CSS/style.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="128" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="128" selectionTopPixel="442"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" partName="Maps.js" path="C:/Users/senne/Documents/Git/Orienteering_Guide/LocalFiles/js/Maps.js" title="Maps.js" tooltip="Orienteering_Guide/LocalFiles/js/Maps.js" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Maps.js" partName="Maps.js" path="C:/Users/senne/Documents/Git/Orienteering_Guide/LocalFiles/js/Maps.js" title="Maps.js" tooltip="Orienteering_Guide/LocalFiles/js/Maps.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering_Guide/LocalFiles/js/Maps.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3189" selectionTopPixel="498"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2109" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.wst.css.core.csssource.source" name="maps.css" partName="maps.css" path="C:/Users/senne/Documents/Git/Orienteering_Guide/LocalFiles/CSS/maps.css" title="maps.css" tooltip="Orienteering_Guide/LocalFiles/CSS/maps.css" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering_Guide/LocalFiles/CSS/maps.css"/>
@@ -82,6 +83,10 @@
 <editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="GlobalVariables.js" partName="GlobalVariables.js" path="C:/Users/senne/Documents/Git/Orienteering_Guide/LocalFiles/js/GlobalVariables.js" title="GlobalVariables.js" tooltip="Orienteering_Guide/LocalFiles/js/GlobalVariables.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering_Guide/LocalFiles/js/GlobalVariables.js"/>
 <editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="409" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="PointCalculation.js" partName="PointCalculation.js" path="C:/Users/senne/Documents/Git/Orienteering_Guide/LocalFiles/js/PointCalculation.js" title="PointCalculation.js" tooltip="Orienteering_Guide/LocalFiles/js/PointCalculation.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Orienteering_Guide/LocalFiles/js/PointCalculation.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6528" selectionTopPixel="3346"/>
 </editor>
 </editors>
 <views>
@@ -176,7 +181,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="bottomRight" ratio="0.829932" ratioLeft="732" ratioRight="150" relationship="4" relative="topLeft">
+<info folder="true" part="bottomRight" ratio="0.91240877" ratioLeft="500" ratioRight="48" relationship="4" relative="topLeft">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -186,7 +191,7 @@
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.26960257" ratioLeft="251" ratioRight="680" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.11549852" ratioLeft="117" ratioRight="896" relationship="2" relative="topLeft"/>
 <info folder="true" part="topRight" ratio="0.69959944" ratioLeft="524" ratioRight="225" relationship="2" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="com.mobilesorcery.sdk.profiles.ui.view" label="LabelNotFound"/>
@@ -305,29 +310,16 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/Orienteering_Guide/LocalFiles/layoutfinal.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/Orienteering_Guide/LocalFiles/CSS/style.css"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/Orienteering_Guide/LocalFiles/CSS/maps.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/Orienteering_Guide/LocalFiles/CSS/maps.css"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering_Guide/LocalFiles/js/GlobalVariables.js"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering_Guide/LocalFiles/js/Database.js"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering_Guide/LocalFiles/js/Maps.js"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering_Guide/LocalFiles/js/GlobalVariables.js"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/Orienteering_Guide/LocalFiles/import.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering_Guide/LocalFiles/js/Maps.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering_Guide/LocalFiles/js/reverse.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/Orienteering_Guide/LocalFiles/CSS/style.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Orienteering_Guide/LocalFiles/js/PointCalculation.js"/>
 </editors>
-<item historyLabel="maps.css" index="5">
-<position info="not_deleted" x="1045" y="0"/>
-</item>
-<item historyLabel="layoutfinal.html" index="3">
-<position info="not_deleted" x="5335" y="0"/>
-</item>
-<item historyLabel="Maps.js" index="0">
-<position info="not_deleted" x="2026" y="0"/>
-</item>
-<item historyLabel="style.css" index="4">
-<position info="not_deleted" x="581" y="0"/>
-</item>
-<item historyLabel="index1.html" index="1">
-<position info="not_deleted" x="3274" y="0"/>
-</item>
 <item historyLabel="style.css" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
@@ -343,7 +335,7 @@
 <item historyLabel="Maps.js" index="0">
 <position/>
 </item>
-<item historyLabel="maps.css" index="6">
+<item historyLabel="maps.css" index="5">
 <position info="not_deleted" x="1046" y="0"/>
 </item>
 <item historyLabel="index1.html" index="1">
@@ -379,13 +371,13 @@
 <item historyLabel="index1.html" index="1">
 <position info="not_deleted" x="1851" y="0"/>
 </item>
-<item historyLabel="GlobalVariables.js" index="7">
+<item historyLabel="GlobalVariables.js" index="6">
 <position info="not_deleted" x="428" y="0"/>
 </item>
 <item historyLabel="Maps.js" index="0">
 <position info="not_deleted" x="2086" y="0"/>
 </item>
-<item historyLabel="Database.js" index="8">
+<item historyLabel="Database.js" index="7">
 <position info="not_deleted" x="16" y="0"/>
 </item>
 <item historyLabel="Maps.js" index="0">
@@ -394,7 +386,7 @@
 <item historyLabel="index1.html" index="1">
 <position/>
 </item>
-<item historyLabel="GlobalVariables.js" index="7">
+<item historyLabel="GlobalVariables.js" index="6">
 <position info="not_deleted" x="409" y="10"/>
 </item>
 <item historyLabel="Maps.js" index="0">
@@ -403,7 +395,7 @@
 <item historyLabel="index1.html" index="1">
 <position info="not_deleted" x="1935" y="0"/>
 </item>
-<item historyLabel="GlobalVariables.js" index="7">
+<item historyLabel="GlobalVariables.js" index="6">
 <position info="not_deleted" x="409" y="10"/>
 </item>
 <item historyLabel="index1.html" index="1">
@@ -418,7 +410,7 @@
 <item historyLabel="index1.html" index="1">
 <position/>
 </item>
-<item historyLabel="Maps.js" index="9">
+<item historyLabel="Maps.js" index="8">
 <position info="not_deleted" x="2335" y="0"/>
 </item>
 <item historyLabel="index1.html" index="1">
@@ -427,41 +419,56 @@
 <item historyLabel="index1.html" index="1">
 <position/>
 </item>
-<item historyLabel="Maps.js" index="9">
+<item historyLabel="Maps.js" index="8">
 <position info="not_deleted" x="2109" y="0"/>
 </item>
 <item historyLabel="index1.html" index="1">
 <position info="not_deleted" x="1456" y="0"/>
 </item>
-<item historyLabel="Maps.js" index="9">
+<item historyLabel="Maps.js" index="8">
 <position info="not_deleted" x="2109" y="0"/>
 </item>
 <item historyLabel="index1.html" index="1">
 <position info="not_deleted" x="1549" y="0"/>
 </item>
-<item historyLabel="Maps.js" index="9">
+<item historyLabel="Maps.js" index="8">
 <position info="not_deleted" x="2002" y="10"/>
 </item>
 <item historyLabel="index1.html" index="1">
 <position info="not_deleted" x="1549" y="0"/>
 </item>
-<item historyLabel="GlobalVariables.js" index="10">
+<item historyLabel="GlobalVariables.js" index="9">
 <position info="not_deleted" x="409" y="10"/>
 </item>
-<item historyLabel="import.html" index="11">
+<item historyLabel="import.html" index="10">
 <position info="not_deleted" x="678" y="0"/>
 </item>
 <item historyLabel="index1.html" index="1">
 <position info="not_deleted" x="1549" y="0"/>
 </item>
-<item historyLabel="Maps.js" index="9">
+<item historyLabel="Maps.js" index="8">
 <position info="not_deleted" x="1925" y="68"/>
 </item>
 <item historyLabel="index1.html" index="1">
 <position info="not_deleted" x="1549" y="0"/>
 </item>
-<item active="true" historyLabel="Maps.js" index="12">
+<item historyLabel="Maps.js" index="11">
 <position info="not_deleted" x="1925" y="68"/>
+</item>
+<item historyLabel="reverse.js" index="12">
+<position info="not_deleted" x="435" y="0"/>
+</item>
+<item historyLabel="style.css" index="13">
+<position info="not_deleted" x="128" y="0"/>
+</item>
+<item historyLabel="PointCalculation.js" index="14">
+<position info="not_deleted" x="6114" y="11"/>
+</item>
+<item historyLabel="reverse.js" index="12">
+<position info="not_deleted" x="62" y="6"/>
+</item>
+<item active="true" historyLabel="PointCalculation.js" index="14">
+<position info="not_deleted" x="6114" y="11"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -480,6 +487,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="PointCalculation.js" tooltip="Orienteering_Guide/LocalFiles/js/PointCalculation.js">
+<persistable path="/Orienteering_Guide/LocalFiles/js/PointCalculation.js"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Database.js" tooltip="Orienteering_Guide/LocalFiles/js/Database.js">
 <persistable path="/Orienteering_Guide/LocalFiles/js/Database.js"/>
 </file>
@@ -518,9 +528,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="Sliders.js" tooltip="Orienteering_Guide/LocalFiles/js/Sliders.js">
 <persistable path="/Orienteering_Guide/LocalFiles/js/Sliders.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="PointCalculation.js" tooltip="Orienteering_Guide/LocalFiles/js/PointCalculation.js">
-<persistable path="/Orienteering_Guide/LocalFiles/js/PointCalculation.js"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" tooltip="Orienteering_Guide/LocalFiles/index.html">
 <persistable path="/Orienteering_Guide/LocalFiles/index.html"/>
